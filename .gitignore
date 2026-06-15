@@ -1,0 +1,61 @@
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.so
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Large dataset files (download links in each README) ───────
+food101_export/
+food101_images/
+*.parquet
+*.parquet.gz
+
+# ── Large model checkpoints (not the final exported models) ───
+*/checkpoints/
+diabetix-checkpoints/
+diabetix-lora-adapter/
+*.bin          # raw PyTorch weights (use .pth for final models)
+*.safetensors
+
+# ── LightGBM / XGBoost raw intermediates ─────────────────────
+# (keep glucose_lgbm.txt and glucose_xgb.json — they ARE the final models)
+
+# ── Secrets / API keys ────────────────────────────────────────
+.env
+.env.*
+secrets.json
+
+# ── OS noise ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+
+# ── Misc scratch ─────────────────────────────────────────────
+tmp/
+remp/
+extracted/
+*.tmp
+notebook_contents.txt
+data.txt
+
+# ── Keep these explicitly (override any wildcard above) ───────
+!3_meal_scan/models/best_model.pth
+!3_meal_scan/models/food_classifier.onnx
+!3_meal_scan/models/food_classifier.tflite
+!3_meal_scan/models/food_classifier_fp16.tflite
+!2_glucose_forecasting/models/glucose_lgbm.txt
+!2_glucose_forecasting/models/glucose_xgb.json
