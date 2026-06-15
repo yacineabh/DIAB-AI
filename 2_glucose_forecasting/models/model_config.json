@@ -1,0 +1,75 @@
+{
+  "version": "2.1.0",
+  "prediction_horizon_min": 120,
+  "predict_target": "delta",
+  "ensemble_weights": {
+    "lgbm": 0.42,
+    "xgb": 0.38,
+    "physics": 0.2
+  },
+  "ensemble_weights_extreme": {
+    "lgbm": 0.28,
+    "xgb": 0.22,
+    "physics": 0.5
+  },
+  "glucose_floor": 40,
+  "glucose_ceiling": 400,
+  "trend_thresholds_delta_over_horizon": {
+    "stable": 15,
+    "rising": 15,
+    "rising_rapidly": 35,
+    "falling": -15,
+    "falling_rapidly": -35
+  },
+  "alert_thresholds": {
+    "severe_hypoglycemia_risk": 54,
+    "hypoglycemia_risk": 70,
+    "hyperglycemia_risk": 180
+  },
+  "trend_aware_alerts": true,
+  "confidence_thresholds": {
+    "high_readings_6h": 5,
+    "medium_readings_6h": 2
+  },
+  "safety_overrides": {
+    "cap_rise_if_bolus_gt": 5,
+    "cap_rise_if_cob_lt": 10,
+    "raise_floor_if_cob_gt": 15,
+    "floor_target": 60,
+    "driver_free_rise_cap": 10,
+    "dawn_min_rise_t1": 12,
+    "dawn_min_rise_t2": 6,
+    "phys_override_threshold": 20,
+    "phys_override_weight": 0.75
+  },
+  "monotone_constraints": {
+    "cob": 1,
+    "expected_cob_impact": 1,
+    "total_carbs_6h": 1,
+    "net_physiological_impact": 1,
+    "uncovered_carb_load": 1,
+    "carb_fat_ratio_last_meal": 1,
+    "iob_rapid": -1,
+    "iob_mixed": -1,
+    "iob_total": -1,
+    "bolus_iob": -1,
+    "basal_iob": -1,
+    "iob_long": -1,
+    "expected_iob_impact": -1,
+    "total_rapid_insulin_6h": -1,
+    "last_bolus_size": -1
+  },
+  "uncertainty_base_sigma": {
+    "high": 16.0,
+    "medium": 24.0,
+    "low": 32.0
+  },
+  "population_priors": {
+    "insulin_sens_mg_dl_per_u": 30.0,
+    "carb_sens_mg_dl_per_g": 3.0
+  },
+  "trained_on": "2026-06-03",
+  "n_training_users": 160,
+  "n_training_samples": 99670,
+  "feature_count": 72
+}
