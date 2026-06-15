@@ -1,0 +1,768 @@
+[
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 60,
+      "weight_kg": 101,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 04:00 G=128 | 07:00 G=172 | 08:00 M=eggs_toast C=28 I=4R | 09:00 I=24L | 22:00 G=140",
+      "D2 05:30 G=148 | 09:00 I=24L | 13:00 M=salad C=20 I=3R",
+      "D3 04:30 G=130 | 06:30 G=158 | 09:00 I=24L | 13:00 M=chicken_rice C=45 I=6R | 21:30 G=140",
+      "D4 07:00 G=158 | 09:30 I=24L | 14:00 M=tuna_salad C=18 I=2R",
+      "D5 04:00 G=128 | 07:00 G=175 | 08:30 M=oatmeal C=38 I=5R | 09:00 I=24L | 22:00 G=140",
+      "D6 06:00 G=148 | 09:30 I=24L | 14:00 M=stir_fry C=42 I=6R",
+      "D7 04:30 G=128 | 06:30 G=158 | 09:00 I=24L | 13:00 M=fish_quinoa C=42 I=6R | 21:30 G=138",
+      "D8 05:30 G=148 | 09:00 I=24L | 13:30 M=chicken_quinoa C=42 I=6R",
+      "D9 04:00 G=130 | 07:00 G=178 | 09:00 I=24L | 13:00 M=salmon_rice C=42 I=6R | 22:00 G=140",
+      "D10 06:00 G=148 | 09:30 I=24L | 14:00 M=salad_chicken C=22 I=3R"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Elderly T1 patient with severe obesity on 24 units basal shows dawn rise (44-48). Basal split + weight-targeted adjunct.",
+      "recommendations": [
+        {
+          "action": "Split basal coverage",
+          "priority": "high",
+          "reason": "Daily dawn rise 44-48 (D1 128->172, D3 130->158 at 06:30, D5 128->175, D7 128->158 at 06:30, D9 130->178).",
+          "concrete_alternative": "14U AM + 10U PM."
+        },
+        {
+          "action": "Discuss GLP-1 agonist for body weight (101kg)",
+          "priority": "medium",
+          "reason": "Severe obesity drives 24-unit basal need.",
+          "concrete_alternative": "Semaglutide; consult prescriber."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 48,
+      "weight_kg": 99,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:00 G=128 | 07:30 M=cereal_milk C=58 | 09:30 G=235 | 12:30 M=chicken_rice C=45 | 14:30 G=148 | 17:00 G=140 | 19:00 M=fish_quinoa C=38 | 21:00 G=144 | 22:30 G=138",
+      "D2 07:00 G=130 | 07:30 M=bagel C=58 | 09:30 G=228 | 12:30 M=salad_chicken C=22 | 14:30 G=145 | 17:00 G=140 | 19:00 M=pasta C=50 | 21:00 G=146 | 22:30 G=140",
+      "D3 07:00 G=125 | 07:30 M=pancakes_syrup C=62 | 09:30 G=245 | 12:30 M=turkey_wrap C=38 | 14:30 G=148 | 17:00 G=142 | 19:00 M=salmon_rice C=42 | 21:00 G=146 | 22:30 G=140",
+      "D4 07:00 G=128 | 07:30 M=waffles C=60 | 09:30 G=238 | 12:30 M=tuna_salad C=20 | 14:30 G=144 | 17:00 G=140 | 19:00 M=stir_fry C=42 | 21:00 G=146 | 22:30 G=140",
+      "D5 07:00 G=130 | 07:30 M=french_toast C=58 | 09:30 G=232 | 12:30 M=chicken_pasta C=48 | 14:30 G=148 | 17:00 G=142 | 19:00 M=fish_potato C=42 | 21:00 G=148 | 22:30 G=140",
+      "D6 07:00 G=125 | 07:30 M=muffin C=55 | 09:30 G=222 | 12:30 M=soup C=32 | 14:30 G=140 | 17:00 G=138 | 19:00 M=chicken_quinoa C=40 | 21:00 G=144 | 22:30 G=138",
+      "D7 07:00 G=128 | 07:30 M=cereal_fruit C=60 | 09:30 G=235 | 12:30 M=salmon_quinoa C=42 | 14:30 G=146 | 17:00 G=140 | 19:00 M=chicken_potato C=42 | 21:00 G=148 | 22:30 G=140",
+      "D8 07:00 G=130 | 07:30 M=toast_jam C=55 | 09:30 G=225 | 12:30 M=salad C=20 | 14:30 G=140 | 17:00 G=138 | 19:00 M=salmon_quinoa C=40 | 21:00 G=144 | 22:30 G=138",
+      "D9 07:00 G=125 | 07:30 M=pancakes C=62 | 09:30 G=248 | 12:30 M=chicken_rice C=46 | 14:30 G=148 | 17:00 G=142 | 19:00 M=fish_quinoa C=40 | 21:00 G=148 | 22:30 G=140",
+      "D10 07:00 G=128 | 07:30 M=cereal_milk C=58 | 09:30 G=230 | 12:30 M=turkey_pasta C=48 | 14:30 G=148 | 17:00 G=142 | 19:00 M=chicken_potato C=42 | 21:00 G=148 | 22:30 G=140"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Patient with obesity shows consistent breakfast spike (222-248). Lower-GI breakfast + activity.",
+      "recommendations": [
+        {
+          "action": "Switch to protein-rich lower-GI breakfast",
+          "priority": "high",
+          "reason": "Daily breakfast spike 222-248 (D1 235, D2 228, D3 245, D4 238, D5 232, D6 222, D7 235, D8 225, D9 248, D10 230).",
+          "concrete_alternative": "Eggs/Greek yogurt instead of cereal/pancakes/bagels."
+        },
+        {
+          "action": "Add 30-minute daily walking",
+          "priority": "medium",
+          "reason": "No exercise captured; activity improves both fasting and post-meal control.",
+          "concrete_alternative": "Walk 30 min after dinner."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 56,
+      "weight_kg": 57,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=118 | 09:00 I=10L | 13:00 M=salad_chicken C=12 I=3R | 15:00 G=68 | 15:15 M=apple C=20",
+      "D2 10:00 I=10L | 14:00 M=tuna_lettuce C=10 I=2R | 16:00 G=66",
+      "D3 07:30 G=118 | 08:00 M=cereal C=52 I=8R | 09:00 I=10L | 13:00 M=cobb_salad C=14 I=3R | 15:00 G=64 | 15:15 M=banana C=27",
+      "D4 09:30 I=10L | 14:00 M=chicken_lettuce C=10 I=2R | 16:00 G=70",
+      "D5 08:30 G=122 | 09:30 I=10L | 13:00 M=greek_salad C=12 I=2R | 15:00 G=66 | 15:15 M=cookies C=22",
+      "D6 10:00 I=10L | 14:00 M=salmon_lettuce C=8 I=2R | 16:00 G=62",
+      "D7 08:00 G=118 | 09:00 I=10L | 13:00 M=chicken_caesar C=14 I=3R | 15:00 G=68 | 15:15 M=raisins C=24",
+      "D8 09:00 I=10L | 13:30 M=tuna_avocado C=10 I=2R | 15:30 G=66",
+      "D9 07:30 G=118 | 08:00 M=pancakes C=55 I=8R | 09:00 I=10L | 13:00 M=lettuce_chicken C=12 I=3R | 15:00 G=64 | 15:15 M=cookies C=22",
+      "D10 09:30 I=10L | 14:00 M=salad C=14 I=3R | 16:00 G=68"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Lean T1 patient on 10 units basal shows daily reactive post-lunch hypo (62-70). Lunch ICR adjustment.",
+      "recommendations": [
+        {
+          "action": "Reduce lunch ICR and raise lunch carb content",
+          "priority": "high",
+          "reason": "Daily reactive hypo 62-70 (D1 68, D2 66, D3 64, D4 70, D5 66, D6 62, D7 68, D8 66, D9 64, D10 68); lean physique amplifies risk.",
+          "concrete_alternative": "1U bolus for 10g lunches; add whole grain."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 48,
+      "weight_kg": 117,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:00 G=132 | 07:30 M=oatmeal C=38 | 09:30 G=150 | 12:30 M=chicken_rice C=45 | 14:30 G=148 | 16:00 G=146 | 17:30 G=144 | 19:00 M=fish_quinoa C=38 | 21:00 G=148 | 22:30 G=142",
+      "D2 07:00 G=130 | 07:30 M=eggs_toast C=28 | 09:30 G=145 | 12:30 M=salad_chicken C=22 | 14:30 G=146 | 16:00 G=144 | 17:30 G=142 | 19:00 M=pasta C=50 | 21:00 G=148 | 22:30 G=142",
+      "D3 07:00 G=128 | 07:30 M=yogurt_granola C=40 | 09:30 G=148 | 12:30 M=turkey_sandwich C=38 | 14:30 G=148 | 16:00 G=146 | 17:30 G=144 | 19:00 M=salmon_rice C=42 | 21:00 G=148 | 22:30 G=142",
+      "D4 07:00 G=130 | 07:30 M=cereal C=42 | 09:30 G=152 | 12:30 M=tuna_salad C=20 | 14:30 G=146 | 16:00 G=144 | 17:30 G=142 | 19:00 M=stir_fry C=42 | 21:00 G=148 | 22:30 G=142",
+      "D5 07:00 G=128 | 07:30 M=toast_eggs C=28 | 09:30 G=142 | 12:30 M=lentil_soup C=38 | 14:30 G=146 | 16:00 G=144 | 17:30 G=142 | 19:00 M=salmon_quinoa C=40 | 21:00 G=148 | 22:30 G=142",
+      "D6 07:00 G=130 | 07:30 M=yogurt_honey C=38 | 09:30 G=148 | 12:30 M=chicken_quinoa C=42 | 14:30 G=148 | 16:00 G=146 | 17:30 G=144 | 19:00 M=pasta_veggies C=45 | 21:00 G=150 | 22:30 G=144",
+      "D7 07:00 G=128 | 07:30 M=eggs_avocado C=10 | 09:30 G=132 | 12:30 M=rice_beef C=48 | 14:30 G=150 | 16:00 G=148 | 17:30 G=146 | 19:00 M=chicken_potato C=42 | 21:00 G=150 | 22:30 G=144",
+      "D8 07:00 G=130 | 07:30 M=protein_shake C=22 | 09:30 G=135 | 12:30 M=salad_tuna C=18 | 14:30 G=146 | 16:00 G=144 | 17:30 G=142 | 19:00 M=fish_rice C=42 | 21:00 G=148 | 22:30 G=142",
+      "D9 07:00 G=128 | 07:30 M=cereal C=40 | 09:30 G=148 | 12:30 M=chicken_pasta C=46 | 14:30 G=148 | 16:00 G=146 | 17:30 G=144 | 19:00 M=stew C=38 | 21:00 G=148 | 22:30 G=142",
+      "D10 07:00 G=130 | 07:30 M=toast_jam C=42 | 09:30 G=152 | 12:30 M=turkey_wrap C=42 | 14:30 G=148 | 16:00 G=146 | 17:30 G=144 | 19:00 M=salmon_quinoa C=40 | 21:00 G=148 | 22:30 G=142"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Patient with severe obesity shows stable plateau 142-150. Pharmacotherapy + activity drive improvement.",
+      "recommendations": [
+        {
+          "action": "Initiate GLP-1 agonist therapy",
+          "priority": "high",
+          "reason": "Severe obesity (117kg) + stable but elevated plateau 142-150.",
+          "concrete_alternative": "Semaglutide or tirzepatide; consult prescriber."
+        },
+        {
+          "action": "Add 30 minutes daily walking",
+          "priority": "high",
+          "reason": "No exercise captured; activity reduces baseline and improves sensitivity.",
+          "concrete_alternative": "Walk after each meal; build to 10k steps."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 58,
+      "weight_kg": 90,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 04:00 G=125 | 06:00 G=150 | 07:30 G=168 | 08:00 M=oatmeal C=38 | 13:00 M=chicken_rice C=42 | 18:00 G=132",
+      "D2 05:30 G=145 | 07:30 G=162 | 08:00 M=eggs_toast C=28 | 13:00 M=salad C=22",
+      "D3 04:30 G=128 | 06:30 G=155 | 08:00 M=yogurt_granola C=40 | 13:00 M=fish_quinoa C=40 | 18:30 G=130",
+      "D4 05:00 G=140 | 07:00 G=162 | 08:00 M=cereal C=42 | 13:00 M=tuna_salad C=18",
+      "D5 04:00 G=125 | 06:00 G=148 | 07:30 G=170 | 08:00 M=eggs_avocado C=10 | 13:00 M=chicken_pasta C=45 | 18:00 G=132",
+      "D6 05:30 G=145 | 07:30 G=162 | 08:00 M=protein_shake C=22 | 13:00 M=stir_fry C=42",
+      "D7 04:30 G=128 | 06:30 G=155 | 08:00 M=toast_jam C=40 | 13:00 M=salmon_quinoa C=42 | 18:30 G=130",
+      "D8 05:00 G=142 | 07:00 G=162 | 08:00 M=oatmeal_fruit C=42 | 13:00 M=lentil_soup C=38",
+      "D9 04:00 G=128 | 06:00 G=150 | 07:30 G=172 | 08:00 M=yogurt_honey C=38 | 13:00 M=chicken_rice C=46 | 18:00 G=132",
+      "D10 05:30 G=148 | 07:30 G=162 | 08:00 M=cereal_milk C=42 | 13:00 M=fish_potato C=42"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Patient shows consistent dawn rise (43-47). Overnight medication.",
+      "recommendations": [
+        {
+          "action": "Add metformin XR at bedtime",
+          "priority": "high",
+          "reason": "Daily dawn rise 43-47 (D1 125->168, D3 128->155 at 06:30, D5 125->170, D7 128->155 at 06:30, D9 128->172).",
+          "concrete_alternative": "Metformin XR 1000mg at 22:00."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 53,
+      "weight_kg": 86,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 04:00 G=125 | 05:00 G=142 | 06:00 G=158 | 07:00 G=172 | 07:30 M=eggs_toast C=25 | 09:30 G=140 | 12:30 M=cheese_pizza C=68 | 14:30 G=148 | 16:00 G=145 | 17:30 G=142 | 19:00 G=215 | 21:00 G=230 | 22:30 G=240",
+      "D2 04:00 G=128 | 05:00 G=145 | 06:00 G=160 | 07:00 G=175 | 07:30 M=oatmeal C=35 | 09:30 G=148 | 12:30 M=chicken_salad C=20 | 14:30 G=138 | 16:00 G=135 | 17:30 G=132 | 19:00 M=fish_rice C=40 | 21:00 G=140 | 22:30 G=132",
+      "D3 04:00 G=122 | 05:00 G=140 | 06:00 G=155 | 07:00 G=168 | 07:30 M=yogurt_granola C=38 | 09:30 G=148 | 12:30 M=fried_chicken C=70 | 14:30 G=152 | 16:00 G=148 | 17:30 G=145 | 19:00 G=225 | 21:00 G=240 | 22:30 G=248",
+      "D4 04:00 G=128 | 05:00 G=145 | 06:00 G=160 | 07:00 G=175 | 07:30 M=cereal C=40 | 09:30 G=152 | 12:30 M=tuna_salad C=18 | 14:30 G=132 | 16:00 G=130 | 17:30 G=128 | 19:00 M=stir_fry C=42 | 21:00 G=138 | 22:30 G=132",
+      "D5 04:00 G=125 | 05:00 G=142 | 06:00 G=158 | 07:00 G=172 | 07:30 M=toast_jam C=38 | 09:30 G=152 | 12:30 M=lasagna C=72 | 14:30 G=158 | 16:00 G=152 | 17:30 G=148 | 19:00 G=232 | 21:00 G=245 | 22:30 G=252",
+      "D6 04:00 G=128 | 05:00 G=145 | 06:00 G=160 | 07:00 G=175 | 07:30 M=eggs_avocado C=10 | 09:30 G=128 | 12:30 M=salad C=22 | 14:30 G=132 | 16:00 G=130 | 17:30 G=128 | 19:00 M=chicken_rice C=42 | 21:00 G=140 | 22:30 G=132",
+      "D7 04:00 G=122 | 05:00 G=140 | 06:00 G=155 | 07:00 G=168 | 07:30 M=protein_shake C=22 | 09:30 G=135 | 12:30 M=burger_fries C=72 | 14:30 G=158 | 16:00 G=152 | 17:30 G=148 | 19:00 G=225 | 21:00 G=240 | 22:30 G=248",
+      "D8 04:00 G=128 | 05:00 G=145 | 06:00 G=160 | 07:00 G=176 | 07:30 M=yogurt_honey C=38 | 09:30 G=148 | 12:30 M=lentil_soup C=38 | 14:30 G=138 | 16:00 G=135 | 17:30 G=132 | 19:00 M=salmon_quinoa C=40 | 21:00 G=140 | 22:30 G=132",
+      "D9 04:00 G=125 | 05:00 G=142 | 06:00 G=158 | 07:00 G=172 | 07:30 M=toast_eggs C=28 | 09:30 G=148 | 12:30 M=mac_cheese C=78 | 14:30 G=162 | 16:00 G=158 | 17:30 G=152 | 19:00 G=232 | 21:00 G=245 | 22:30 G=255",
+      "D10 04:00 G=128 | 05:00 G=145 | 06:00 G=160 | 07:00 G=175 | 07:30 M=oatmeal_fruit C=42 | 09:30 G=152 | 12:30 M=chicken_quinoa C=40 | 14:30 G=138 | 16:00 G=135 | 17:30 G=132 | 19:00 M=fish_potato C=40 | 21:00 G=140 | 22:30 G=132"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Patient shows compounding dawn rise (44-48) and delayed late spike (240-255). Overnight medication + meal limits.",
+      "recommendations": [
+        {
+          "action": "Add metformin XR at bedtime",
+          "priority": "high",
+          "reason": "Daily dawn rise 44-48 mg/dL (D1 125->172, D2 128->175, D3 122->168, D5 125->172, D7 122->168, D9 125->172).",
+          "concrete_alternative": "Metformin XR 1000mg at 22:00."
+        },
+        {
+          "action": "Limit high-fat lunches to twice weekly",
+          "priority": "high",
+          "reason": "22:30 readings 240-255 (D1 240, D3 248, D5 252, D7 248, D9 255) on fatty days vs 132 on lean days.",
+          "concrete_alternative": "Grilled lean protein + complex carbs."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 25,
+      "weight_kg": 114,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=128 | 08:00 M=eggs_toast C=28 I=4R | 08:30 I=28L | 13:00 M=cheese_pizza C=68 I=10R | 17:30 EX=gym_45min | 18:30 G=92 | 22:00 G=232",
+      "D2 08:00 G=130 | 08:30 I=28L | 13:00 M=chicken_salad C=20 I=3R | 17:30 G=135",
+      "D3 07:45 G=125 | 08:15 M=oatmeal C=38 I=5R | 08:30 I=28L | 13:00 M=fried_chicken C=70 I=10R | 17:30 EX=cycling_40min | 18:30 G=88 | 22:00 G=245",
+      "D4 08:00 G=128 | 08:30 I=28L | 13:00 M=tuna_salad C=18 I=2R | 17:30 G=132",
+      "D5 07:30 G=128 | 08:00 M=yogurt_granola C=40 I=5R | 08:30 I=28L | 13:00 M=lasagna C=72 I=11R | 17:30 EX=run_30min | 18:30 G=90 | 22:00 G=250",
+      "D6 08:00 G=130 | 08:30 I=28L | 13:00 M=salad C=22 I=3R | 17:30 G=132",
+      "D7 07:45 G=124 | 08:15 M=toast_eggs C=28 I=4R | 08:30 I=28L | 13:00 M=burger_fries C=72 I=10R | 17:30 EX=gym_45min | 18:30 G=92 | 22:30 G=240",
+      "D8 08:00 G=128 | 08:30 I=28L | 13:00 M=lentil_soup C=38 I=5R | 17:30 G=130",
+      "D9 07:30 G=125 | 08:00 M=eggs C=4 I=2R | 08:30 I=28L | 13:00 M=mac_cheese C=78 I=11R | 17:30 EX=cycling_45min | 18:30 G=88 | 22:00 G=255",
+      "D10 08:00 G=128 | 08:30 I=28L | 13:00 M=turkey_wrap C=42 I=6R | 17:30 G=132"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Young T1 patient with severe obesity on 28 units basal shows reliable post-exercise drop (88-92) and delayed late spike (232-255). Bolus restructuring, continue exercise, weight adjunct.",
+      "recommendations": [
+        {
+          "action": "Use dual-wave bolus for fatty lunches",
+          "priority": "high",
+          "reason": "22:00-22:30 readings 232-255 (D1 232, D3 245, D5 250, D7 240, D9 255) on fatty days; exercise transiently masks the rise.",
+          "concrete_alternative": "Pump dual-wave 50/50 over 2h; MDI split 60/40."
+        },
+        {
+          "action": "Continue exercise routine",
+          "priority": "low",
+          "reason": "Post-exercise 88-92 (D1 92, D3 88, D5 90, D7 92, D9 88) favorable.",
+          "concrete_alternative": "Maintain 30-45 min sessions."
+        },
+        {
+          "action": "Discuss GLP-1 agonist for body weight (114kg)",
+          "priority": "medium",
+          "reason": "Severe obesity drives 28-unit basal need in young adult.",
+          "concrete_alternative": "Semaglutide as adjunct."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 40,
+      "weight_kg": 81,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 04:00 G=120 | 07:00 G=162 | 08:00 M=oatmeal C=38 | 13:00 M=cheese_pizza C=68 | 22:00 G=228",
+      "D2 05:30 G=140 | 09:00 M=eggs_toast C=28 | 14:00 M=salad C=22 | 21:00 G=138",
+      "D3 04:30 G=122 | 06:30 G=150 | 08:00 M=yogurt_granola C=40 | 13:00 M=fried_chicken C=70 | 22:00 G=242",
+      "D4 07:00 G=155 | 09:00 M=cereal C=42 | 14:00 M=tuna_salad C=18 | 21:00 G=140",
+      "D5 04:00 G=120 | 07:00 G=165 | 08:30 M=eggs_avocado C=10 | 13:00 M=lasagna C=72 | 22:00 G=248",
+      "D6 06:00 G=140 | 09:30 M=protein_shake C=22 | 14:00 M=stir_fry C=42 | 21:00 G=138",
+      "D7 04:30 G=122 | 06:30 G=148 | 08:00 M=toast_jam C=40 | 13:00 M=burger_fries C=72 | 22:30 G=235",
+      "D8 05:30 G=140 | 09:00 M=oatmeal_fruit C=42 | 14:00 M=lentil_soup C=38 | 21:00 G=138",
+      "D9 04:00 G=120 | 07:00 G=168 | 08:00 M=yogurt_honey C=38 | 13:00 M=mac_cheese C=78 | 22:00 G=250",
+      "D10 05:30 G=140 | 09:30 M=cereal_milk C=42 | 14:00 M=salad_chicken C=22 | 21:00 G=140"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Patient shows dawn rise (42-48) and delayed late spike (228-250) on fatty days. Overnight medication + meal limits.",
+      "recommendations": [
+        {
+          "action": "Add metformin XR at bedtime",
+          "priority": "high",
+          "reason": "Dawn rise 42-48 (D1 120->162, D3 122->150 at 06:30, D5 120->165, D7 122->148 at 06:30, D9 120->168).",
+          "concrete_alternative": "Metformin XR 1000mg at 22:00."
+        },
+        {
+          "action": "Limit high-fat lunches to twice weekly",
+          "priority": "high",
+          "reason": "22:00-22:30 readings 228-250 (D1 228, D3 242, D5 248, D7 235, D9 250) on fatty days.",
+          "concrete_alternative": "Grilled lean protein + complex carbs."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 36,
+      "weight_kg": 69,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:00 G=120 | 07:30 M=cereal_milk C=58 | 09:30 G=232 | 12:30 M=cheese_pizza C=68 | 14:30 G=148 | 16:00 G=145 | 17:30 G=142 | 19:00 G=218 | 21:00 G=232 | 22:30 G=240",
+      "D2 07:00 G=122 | 07:30 M=bagel C=58 | 09:30 G=228 | 12:30 M=chicken_salad C=20 | 14:30 G=138 | 16:00 G=135 | 17:30 G=132 | 19:00 M=fish_rice C=40 | 21:00 G=140 | 22:30 G=132",
+      "D3 07:00 G=118 | 07:30 M=pancakes_syrup C=62 | 09:30 G=245 | 12:30 M=fried_chicken C=70 | 14:30 G=152 | 16:00 G=148 | 17:30 G=145 | 19:00 G=225 | 21:00 G=240 | 22:30 G=248",
+      "D4 07:00 G=122 | 07:30 M=waffles C=60 | 09:30 G=238 | 12:30 M=tuna_salad C=18 | 14:30 G=132 | 16:00 G=130 | 17:30 G=128 | 19:00 M=stir_fry C=42 | 21:00 G=138 | 22:30 G=132",
+      "D5 07:00 G=120 | 07:30 M=french_toast C=58 | 09:30 G=232 | 12:30 M=lasagna C=72 | 14:30 G=158 | 16:00 G=152 | 17:30 G=148 | 19:00 G=232 | 21:00 G=245 | 22:30 G=252",
+      "D6 07:00 G=118 | 07:30 M=muffin C=55 | 09:30 G=222 | 12:30 M=salad C=22 | 14:30 G=132 | 16:00 G=130 | 17:30 G=128 | 19:00 M=chicken_rice C=42 | 21:00 G=138 | 22:30 G=132",
+      "D7 07:00 G=122 | 07:30 M=cereal_fruit C=60 | 09:30 G=232 | 12:30 M=burger_fries C=72 | 14:30 G=158 | 16:00 G=152 | 17:30 G=148 | 19:00 G=228 | 21:00 G=240 | 22:30 G=248",
+      "D8 07:00 G=120 | 07:30 M=toast_jam C=55 | 09:30 G=225 | 12:30 M=lentil_soup C=38 | 14:30 G=138 | 16:00 G=135 | 17:30 G=132 | 19:00 M=salmon_quinoa C=40 | 21:00 G=140 | 22:30 G=132",
+      "D9 07:00 G=118 | 07:30 M=pancakes C=62 | 09:30 G=245 | 12:30 M=mac_cheese C=78 | 14:30 G=162 | 16:00 G=158 | 17:30 G=152 | 19:00 G=232 | 21:00 G=245 | 22:30 G=255",
+      "D10 07:00 G=122 | 07:30 M=cereal_milk C=58 | 09:30 G=232 | 12:30 M=chicken_quinoa C=40 | 14:30 G=138 | 16:00 G=135 | 17:30 G=132 | 19:00 M=fish_potato C=40 | 21:00 G=140 | 22:30 G=132"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Lean patient shows breakfast spike (222-245) and delayed late spike (240-255) on fatty days. Breakfast change + meal limits + LADA screen.",
+      "recommendations": [
+        {
+          "action": "Switch to lower-GI breakfast",
+          "priority": "high",
+          "reason": "Daily breakfast spike 222-245 (D1 232, D2 228, D3 245, D4 238, D5 232, D6 222, D7 232, D8 225, D9 245, D10 232).",
+          "concrete_alternative": "Eggs/Greek yogurt."
+        },
+        {
+          "action": "Limit high-fat lunches to twice weekly",
+          "priority": "high",
+          "reason": "22:30 readings 240-255 (D1 240, D3 248, D5 252, D7 248, D9 255) on fatty days vs 132 on lean days.",
+          "concrete_alternative": "Grilled lean protein + complex carbs."
+        },
+        {
+          "action": "Screen for LADA",
+          "priority": "medium",
+          "reason": "Lean (69kg) middle-aged adult with two distinct patterns.",
+          "concrete_alternative": "GAD/IA-2 antibodies."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 30,
+      "weight_kg": 62,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 04:00 G=125 | 06:00 G=152 | 07:30 G=172 | 08:00 M=cereal_milk C=58 I=9R | 08:30 I=12L | 10:00 G=235 | 13:00 M=chicken_rice C=45 I=6R | 22:00 G=140",
+      "D2 05:30 G=142 | 07:30 G=162 | 08:00 M=oatmeal C=38 I=5R | 08:30 I=12L | 10:00 G=170 | 13:00 M=salad C=22 I=3R",
+      "D3 04:30 G=128 | 06:30 G=155 | 08:00 M=bagel C=55 I=8R | 08:30 I=12L | 10:00 G=232 | 13:00 M=fish_quinoa C=42 I=6R | 21:30 G=140",
+      "D4 05:00 G=140 | 07:00 G=160 | 08:00 M=eggs_toast C=28 I=4R | 08:30 I=12L | 10:00 G=165 | 12:30 M=tuna_salad C=18 I=2R",
+      "D5 04:00 G=125 | 06:00 G=152 | 07:30 G=175 | 08:00 M=pancakes_syrup C=62 I=10R | 08:30 I=12L | 10:00 G=248 | 13:00 M=chicken_pasta C=48 I=7R | 22:00 G=140",
+      "D6 05:30 G=142 | 07:30 G=162 | 08:00 M=protein_shake C=22 I=3R | 08:30 I=12L | 10:00 G=152 | 13:00 M=stir_fry C=42 I=6R",
+      "D7 04:30 G=128 | 06:30 G=155 | 08:00 M=waffles C=60 I=9R | 08:30 I=12L | 10:00 G=238 | 13:00 M=salmon_quinoa C=42 I=6R | 22:00 G=140",
+      "D8 05:00 G=142 | 07:00 G=160 | 08:00 M=yogurt_granola C=40 I=5R | 08:30 I=12L | 10:00 G=170 | 13:00 M=lentil_soup C=38 I=5R",
+      "D9 04:00 G=128 | 06:00 G=152 | 07:30 G=175 | 08:00 M=french_toast C=58 I=9R | 08:30 I=12L | 10:00 G=240 | 13:00 M=chicken_rice C=46 I=6R | 22:00 G=140",
+      "D10 05:30 G=142 | 07:30 G=162 | 08:00 M=toast_eggs C=28 I=4R | 08:30 I=12L | 10:00 G=162 | 13:00 M=turkey_pasta C=48 I=7R"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Lean T1 patient on 12 units basal shows compounding dawn rise (47-50) and high-GI breakfast spike. Basal split + breakfast change.",
+      "recommendations": [
+        {
+          "action": "Split basal coverage",
+          "priority": "high",
+          "reason": "Dawn rise 47-50 (D1 125->172, D3 128->155 at 06:30, D5 125->175, D7 128->155 at 06:30, D9 128->175).",
+          "concrete_alternative": "7U AM + 5U PM."
+        },
+        {
+          "action": "Pre-bolus high-GI breakfast and shift to protein-rich",
+          "priority": "high",
+          "reason": "High-GI days produce 232-248 vs low-GI 152-170.",
+          "concrete_alternative": "Pre-bolus 20 min; eggs/Greek yogurt."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 56,
+      "weight_kg": 93,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=128 | 08:00 M=oatmeal C=38 | 13:00 M=chicken_rice C=45 | 17:00 G=140 | 18:00 EX=walk_45min | 19:00 G=92 | 20:00 M=fish_quinoa C=35",
+      "D2 08:00 G=130 | 08:30 M=eggs_toast C=28 | 13:00 M=salad C=22 | 17:30 G=132",
+      "D3 07:45 G=125 | 08:15 M=yogurt_granola C=40 | 12:30 M=turkey_sandwich C=38 | 17:00 G=130 | 18:00 EX=cycling_40min | 19:00 G=88 | 20:00 M=chicken_veggies C=30",
+      "D4 08:00 G=128 | 08:30 M=cereal C=42 | 13:00 M=pasta C=50 | 17:30 G=140",
+      "D5 07:30 G=128 | 08:00 M=toast_avocado C=24 | 12:30 M=fish_rice C=40 | 17:00 G=132 | 18:00 EX=walk_40min | 19:00 G=90 | 20:00 M=stir_fry C=32",
+      "D6 08:00 G=128 | 08:30 M=eggs C=4 | 13:00 M=chicken_salad C=18 | 17:30 G=128",
+      "D7 07:45 G=126 | 08:15 M=oatmeal_fruit C=42 | 12:30 M=salmon_quinoa C=38 | 17:00 G=132 | 18:00 EX=jog_30min | 19:00 G=85 | 20:00 M=veggie_bowl C=30",
+      "D8 08:00 G=128 | 08:30 M=protein_shake C=22 | 13:00 M=soup C=30 | 17:30 G=130",
+      "D9 07:30 G=128 | 08:00 M=eggs_toast C=30 | 12:30 M=chicken_pasta C=45 | 17:00 G=135 | 18:00 EX=cycling_45min | 19:00 G=86 | 20:00 M=fish_potato C=35",
+      "D10 08:00 G=128 | 08:30 M=yogurt_honey C=38 | 13:00 M=turkey_wrap C=42 | 17:30 G=132"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Patient shows reliable post-exercise drop (85-92). Continue routine; weight adjunct.",
+      "recommendations": [
+        {
+          "action": "Continue exercise routine",
+          "priority": "low",
+          "reason": "Post-exercise 85-92 (D1 92, D3 88, D5 90, D7 85, D9 86) every workout day.",
+          "concrete_alternative": "Maintain sessions."
+        },
+        {
+          "action": "Discuss GLP-1 agonist for body weight (93kg)",
+          "priority": "medium",
+          "reason": "Obesity drives baseline resistance.",
+          "concrete_alternative": "Semaglutide; consult prescriber."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 64,
+      "weight_kg": 106,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=120 | 13:00 M=salad_chicken C=12 | 15:00 G=68 | 15:15 M=apple C=20",
+      "D2 09:30 M=cereal_milk C=50 | 14:00 M=tuna_lettuce C=10 | 16:00 G=66",
+      "D3 07:30 G=118 | 08:00 M=toast_jam C=48 | 13:00 M=cobb_salad C=14 | 15:00 G=64 | 15:15 M=banana C=27",
+      "D4 10:00 M=pancakes C=55 | 14:30 M=chicken_lettuce C=10 | 16:30 G=70",
+      "D5 08:30 G=120 | 09:00 M=french_toast C=55 | 13:30 M=turkey_lettuce C=10 | 15:30 G=66 | 15:45 M=cookies C=22",
+      "D6 09:30 M=muffin C=52 | 14:00 M=salmon_lettuce C=8 | 16:00 G=62",
+      "D7 08:00 G=118 | 13:00 M=greek_salad C=14 | 15:00 G=68 | 15:15 M=raisins C=24",
+      "D8 10:30 M=waffles C=58 | 14:30 M=tuna_avocado C=10 | 16:30 G=70",
+      "D9 07:30 G=118 | 08:00 M=cereal_fruit C=50 | 13:00 M=lettuce_chicken C=12 | 15:00 G=64 | 15:15 M=cookies C=22",
+      "D10 09:00 M=bagel C=55 | 14:00 M=chicken_caesar C=14 | 16:00 G=68"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Elderly patient with severe obesity shows daily post-lunch hypo (62-70). Meal rebalance + medication review.",
+      "recommendations": [
+        {
+          "action": "Balance lunch carbs to 25-30g + lower-GI breakfast",
+          "priority": "high",
+          "reason": "Daily reactive hypo 62-70 (D1 68, D2 66, D3 64, D4 70, D5 66, D6 62, D7 68, D8 70, D9 64, D10 68); elderly hypo risk.",
+          "concrete_alternative": "Eggs at breakfast; whole grain at lunch."
+        },
+        {
+          "action": "Review sulfonylurea use; consider GLP-1",
+          "priority": "high",
+          "reason": "Elderly with severe obesity (106kg) and reactive hypo.",
+          "concrete_alternative": "Metformin + GLP-1 with prescriber."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 39,
+      "weight_kg": 95,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:00 G=128 | 07:30 M=cereal_milk C=58 I=9R | 08:00 I=22L | 09:30 G=232 | 13:00 M=chicken_rice C=45 I=6R | 15:00 G=142 | 17:00 G=140 | 19:00 M=fish_quinoa C=38 I=5R",
+      "D2 07:15 G=130 | 07:45 M=bagel C=55 I=8R | 08:00 I=22L | 09:45 G=228 | 13:00 M=salad C=22 I=3R | 15:30 G=140 | 17:00 G=138",
+      "D3 07:00 G=125 | 07:30 M=pancakes_syrup C=62 I=10R | 08:00 I=22L | 09:30 G=245 | 13:00 M=fish_quinoa C=42 I=6R | 15:00 G=142 | 17:00 G=140 | 22:00 G=130",
+      "D4 07:30 G=128 | 08:00 M=waffles C=60 I=9R | 08:30 I=22L | 10:00 G=240 | 12:30 M=tuna_salad C=18 I=2R | 15:30 G=138 | 17:00 G=136",
+      "D5 07:00 G=130 | 07:30 M=french_toast C=58 I=9R | 08:00 I=22L | 09:30 G=232 | 13:00 M=chicken_pasta C=48 I=7R | 15:00 G=142 | 17:00 G=140",
+      "D6 07:15 G=125 | 07:45 M=muffin C=55 I=8R | 08:00 I=22L | 09:45 G=222 | 13:00 M=stir_fry C=42 I=6R | 15:30 G=138 | 17:00 G=136",
+      "D7 07:00 G=128 | 07:30 M=cereal_fruit C=60 I=9R | 08:00 I=22L | 09:30 G=232 | 13:00 M=salmon_quinoa C=42 I=6R | 15:00 G=142 | 17:00 G=140 | 22:00 G=130",
+      "D8 07:30 G=130 | 08:00 M=toast_jam C=55 I=8R | 08:30 I=22L | 10:00 G=225 | 13:00 M=lentil_soup C=38 I=5R | 15:30 G=138 | 17:00 G=136",
+      "D9 07:00 G=125 | 07:30 M=pancakes C=62 I=10R | 08:00 I=22L | 09:30 G=245 | 13:00 M=chicken_rice C=46 I=6R | 15:00 G=144 | 17:00 G=142",
+      "D10 07:15 G=128 | 07:45 M=cereal_milk C=58 I=9R | 08:00 I=22L | 09:45 G=228 | 13:00 M=turkey_pasta C=48 I=7R | 15:30 G=140 | 17:00 G=138"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "T1 patient on 22 units basal shows breakfast spike (222-245) and stable afternoons. Pre-bolus + lower-GI swap.",
+      "recommendations": [
+        {
+          "action": "Pre-bolus and switch to lower-GI breakfast",
+          "priority": "high",
+          "reason": "Daily breakfast spike 222-245 (D1 232, D2 228, D3 245, D4 240, D5 232, D6 222, D7 232, D8 225, D9 245, D10 228).",
+          "concrete_alternative": "20-min pre-bolus; eggs/Greek yogurt."
+        },
+        {
+          "action": "Maintain afternoon bolus regimen",
+          "priority": "low",
+          "reason": "Afternoons 136-144 stable.",
+          "concrete_alternative": "No change."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 75,
+      "weight_kg": 75,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=125 | 08:00 M=oatmeal C=38 | 13:00 M=chicken_rice C=45 | 15:00 G=138 | 17:00 G=136 | 18:00 EX=walk_45min | 19:00 G=88 | 20:00 M=fish_quinoa C=35",
+      "D2 08:00 G=128 | 08:30 M=eggs_toast C=28 | 13:30 M=salad C=22 | 15:30 G=136 | 17:00 G=134",
+      "D3 07:45 G=122 | 08:15 M=yogurt_granola C=40 | 12:30 M=fish_quinoa C=40 | 15:00 G=138 | 17:00 G=136 | 18:00 EX=walk_40min | 19:00 G=85",
+      "D4 08:00 G=125 | 08:30 M=cereal C=42 | 13:00 M=tuna_salad C=18 | 15:30 G=134 | 17:00 G=132",
+      "D5 07:30 G=125 | 08:00 M=toast_jam C=40 | 13:00 M=chicken_pasta C=48 | 15:00 G=140 | 17:00 G=138 | 18:00 EX=walk_40min | 19:00 G=88",
+      "D6 08:00 G=128 | 08:30 M=oatmeal_fruit C=42 | 13:30 M=tuna_salad C=20 | 15:30 G=136 | 17:00 G=134",
+      "D7 07:45 G=124 | 08:15 M=eggs_avocado C=10 | 12:30 M=lentil_soup C=38 | 15:00 G=138 | 17:00 G=136 | 18:00 EX=walk_45min | 19:00 G=86",
+      "D8 08:00 G=128 | 08:30 M=yogurt_honey C=38 | 13:00 M=stir_fry C=42 | 15:30 G=138 | 17:00 G=136",
+      "D9 07:30 G=125 | 08:00 M=cereal_milk C=42 | 13:00 M=salmon_rice C=42 | 15:00 G=140 | 17:00 G=138 | 18:00 EX=walk_40min | 19:00 G=88",
+      "D10 08:00 G=128 | 08:30 M=toast_eggs C=26 | 13:30 M=turkey_quinoa C=40 | 15:30 G=138 | 17:00 G=136"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Elderly patient shows stable afternoons (132-140) and reliable post-walk drop (85-88). Continue routine with monitoring.",
+      "recommendations": [
+        {
+          "action": "Continue current routine",
+          "priority": "low",
+          "reason": "Afternoons 132-140 stable; post-walk 85-88 favorable on workout days.",
+          "concrete_alternative": "Maintain 30-45 min walks."
+        },
+        {
+          "action": "Monitor for borderline lows on longer sessions",
+          "priority": "medium",
+          "reason": "Elderly hypo risk; D3 (85) and D5/D9 (88) lower bound.",
+          "concrete_alternative": "Eat 10-15g carbs midway if >60 min."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 74,
+      "weight_kg": 68,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=125 | 09:00 I=14L | 13:00 M=chicken_rice C=45 I=6R | 17:30 EX=walk_45min | 18:30 G=82",
+      "D2 10:00 I=14L | 14:00 M=salad C=22 I=3R | 19:30 G=130",
+      "D3 07:30 G=122 | 08:00 M=oatmeal C=38 I=5R | 09:00 I=14L | 13:00 M=fish_quinoa C=40 I=5R | 17:30 EX=walk_30min | 18:30 G=78",
+      "D4 09:30 I=14L | 14:00 M=pasta C=50 I=7R | 19:00 G=130",
+      "D5 08:30 G=125 | 09:30 I=14L | 13:00 M=chicken_pasta C=45 I=6R | 17:30 EX=walk_40min | 18:30 G=80",
+      "D6 10:00 I=14L | 14:00 M=tuna_salad C=18 I=2R | 19:30 G=128",
+      "D7 08:00 G=122 | 09:00 I=14L | 13:00 M=salmon_quinoa C=42 I=6R | 17:30 EX=walk_45min | 18:30 G=78",
+      "D8 09:00 I=14L | 13:30 M=chicken_quinoa C=42 I=6R | 19:00 G=130",
+      "D9 07:30 G=122 | 08:00 M=yogurt_granola C=40 I=5R | 09:00 I=14L | 13:00 M=stir_fry C=42 I=6R | 17:30 EX=walk_40min | 18:30 G=76",
+      "D10 09:30 I=14L | 14:00 M=salad_chicken C=22 I=3R | 19:00 G=128"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Elderly lean T1 patient on 14 units basal shows post-walk drops 76-82. Pre-walk carbs + lunch bolus reduction.",
+      "recommendations": [
+        {
+          "action": "Eat 10-15g pre-walk carbs",
+          "priority": "high",
+          "reason": "Post-walk readings 76-82 (D1 82, D3 78, D5 80, D7 78, D9 76); elderly hypo risk severe at D9.",
+          "concrete_alternative": "Half a banana 15 min before walks."
+        },
+        {
+          "action": "Reduce lunch bolus on workout days",
+          "priority": "medium",
+          "reason": "Lunch ICR contributes to post-walk drop.",
+          "concrete_alternative": "1U less bolus on walking days."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 42,
+      "weight_kg": 91,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 04:00 G=128 | 07:00 G=170 | 07:30 M=cereal_milk C=58 | 09:30 G=235",
+      "D2 05:30 G=148 | 09:00 M=pancakes C=60 | 11:00 G=238",
+      "D3 04:30 G=130 | 06:30 G=158 | 08:00 M=bagel C=55 | 10:00 G=242",
+      "D4 07:00 G=158 | 09:30 M=waffles C=62 | 11:30 G=245",
+      "D5 04:00 G=128 | 07:00 G=172 | 08:00 M=french_toast C=58 | 10:00 G=238",
+      "D6 06:00 G=148 | 09:30 M=muffin C=55 | 11:30 G=228",
+      "D7 04:30 G=128 | 06:30 G=158 | 08:00 M=cereal C=58 | 10:00 G=232 | 22:00 G=148",
+      "D8 05:30 G=148 | 09:00 M=pancakes_syrup C=62 | 11:00 G=250",
+      "D9 04:00 G=130 | 07:00 G=175 | 08:00 M=bagel C=55 | 10:00 G=238",
+      "D10 06:00 G=148 | 09:30 M=waffles C=60 | 11:30 G=240"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Patient shows compounding dawn rise (42-47) and severe breakfast spike (228-250). Overnight medication + breakfast change.",
+      "recommendations": [
+        {
+          "action": "Add metformin XR at bedtime",
+          "priority": "high",
+          "reason": "Dawn rise 42-47 (D1 128->170, D3 130->158 at 06:30, D5 128->172, D7 128->158 at 06:30, D9 130->175).",
+          "concrete_alternative": "Metformin XR 1000mg at 22:00."
+        },
+        {
+          "action": "Switch to lower-GI breakfast",
+          "priority": "high",
+          "reason": "Daily breakfast spike 228-250 (D1 235, D2 238, D3 242, D4 245, D5 238, D6 228, D7 232, D8 250, D9 238, D10 240).",
+          "concrete_alternative": "Eggs/Greek yogurt."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 40,
+      "weight_kg": 118,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=130 | 08:00 M=eggs C=4 I=2R | 08:30 I=30L | 13:00 M=cheese_pizza C=68 I=10R | 15:00 G=152 | 17:00 G=148 | 21:00 G=225 | 22:30 G=240",
+      "D2 08:00 G=132 | 08:30 I=30L | 13:00 M=chicken_salad C=20 I=3R | 15:30 G=140 | 19:30 G=132",
+      "D3 07:30 G=128 | 08:00 M=toast_jam C=40 I=6R | 08:30 I=30L | 13:00 M=fried_chicken C=70 I=10R | 15:00 G=155 | 17:00 G=152 | 21:00 G=232 | 22:30 G=248",
+      "D4 08:00 G=130 | 08:30 I=30L | 13:00 M=tuna_salad C=18 I=2R | 15:00 G=138 | 19:30 G=132",
+      "D5 07:30 G=128 | 08:00 M=oatmeal C=35 I=5R | 08:30 I=30L | 13:00 M=lasagna C=72 I=11R | 15:00 G=160 | 17:00 G=155 | 21:00 G=235 | 22:30 G=250",
+      "D6 08:00 G=130 | 08:30 I=30L | 13:00 M=salad C=18 I=3R | 15:30 G=140 | 19:30 G=132",
+      "D7 07:30 G=128 | 08:00 M=yogurt_granola C=38 I=5R | 08:30 I=30L | 13:00 M=burger_fries C=72 I=10R | 15:00 G=162 | 17:00 G=158 | 21:00 G=240 | 22:30 G=250",
+      "D8 08:00 G=130 | 08:30 I=30L | 13:00 M=tuna_lettuce C=10 I=2R | 15:30 G=138 | 19:30 G=132",
+      "D9 07:30 G=128 | 08:00 M=toast_eggs C=28 I=4R | 08:30 I=30L | 13:00 M=mac_cheese C=78 I=11R | 15:00 G=165 | 17:00 G=160 | 21:00 G=245 | 22:30 G=255",
+      "D10 08:00 G=132 | 08:30 I=30L | 13:00 M=chicken_quinoa C=40 I=6R | 15:30 G=140 | 19:30 G=132"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "T1 patient with severe obesity on 30 units basal shows clean fatty-vs-lean contrast. Bolus restructuring + weight-targeted adjunct.",
+      "recommendations": [
+        {
+          "action": "Use dual-wave bolus for fatty lunches",
+          "priority": "high",
+          "reason": "22:30 readings 240-255 (D1 240, D3 248, D5 250, D7 250, D9 255) on fatty days vs 132 on lean days.",
+          "concrete_alternative": "Pump dual-wave 50/50 over 2h; MDI split 60/40."
+        },
+        {
+          "action": "Discuss GLP-1 agonist for body weight (118kg)",
+          "priority": "high",
+          "reason": "Severe obesity drives 30-unit basal need.",
+          "concrete_alternative": "Semaglutide as adjunct."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 66,
+      "weight_kg": 62,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 04:00 G=125 | 06:00 G=152 | 07:30 G=168 | 08:00 M=eggs C=4 I=2R | 08:30 I=12L | 13:00 M=cheese_pizza C=68 I=10R | 15:00 G=148 | 17:00 G=145 | 21:00 G=222 | 22:30 G=238",
+      "D2 05:30 G=140 | 07:30 G=160 | 08:00 M=oatmeal C=35 I=5R | 08:30 I=12L | 13:00 M=chicken_salad C=20 I=3R | 15:30 G=135 | 19:30 G=128",
+      "D3 04:30 G=128 | 06:30 G=155 | 08:00 M=toast_jam C=40 I=6R | 08:30 I=12L | 13:00 M=fried_chicken C=70 I=10R | 15:00 G=152 | 17:00 G=148 | 21:00 G=230 | 22:30 G=245",
+      "D4 05:00 G=140 | 07:00 G=160 | 08:00 M=yogurt_granola C=38 I=5R | 08:30 I=12L | 13:00 M=tuna_salad C=18 I=2R | 15:00 G=132 | 19:30 G=128",
+      "D5 04:00 G=125 | 06:00 G=150 | 07:30 G=170 | 08:00 M=cereal C=42 I=6R | 08:30 I=12L | 13:00 M=lasagna C=72 I=11R | 15:00 G=158 | 17:00 G=152 | 21:00 G=232 | 22:30 G=248",
+      "D6 05:30 G=140 | 07:30 G=160 | 08:00 M=eggs_avocado C=10 I=2R | 08:30 I=12L | 13:00 M=salad C=22 I=3R | 15:00 G=132 | 19:30 G=130",
+      "D7 04:30 G=128 | 06:30 G=155 | 08:00 M=protein_shake C=22 I=3R | 08:30 I=12L | 13:00 M=burger_fries C=72 I=10R | 15:00 G=158 | 17:00 G=152 | 21:00 G=235 | 22:30 G=245",
+      "D8 05:00 G=140 | 07:00 G=160 | 08:00 M=yogurt_honey C=38 I=5R | 08:30 I=12L | 13:00 M=lentil_soup C=38 I=5R | 15:30 G=135 | 19:30 G=128",
+      "D9 04:00 G=125 | 06:00 G=150 | 07:30 G=172 | 08:00 M=toast_eggs C=28 I=4R | 08:30 I=12L | 13:00 M=mac_cheese C=78 I=11R | 15:00 G=162 | 17:00 G=158 | 21:00 G=240 | 22:30 G=252",
+      "D10 05:30 G=140 | 07:30 G=160 | 08:00 M=oatmeal_fruit C=42 I=6R | 08:30 I=12L | 13:00 M=chicken_quinoa C=42 I=6R | 15:30 G=135 | 19:30 G=128"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Lean elderly T1 patient on 12 units basal shows compounding dawn rise (43-47) and delayed late spike (238-252). Basal split + bolus restructuring.",
+      "recommendations": [
+        {
+          "action": "Split basal coverage",
+          "priority": "high",
+          "reason": "Dawn rise 43-47 (D1 125->168, D3 128->155 at 06:30, D5 125->170, D7 128->155 at 06:30, D9 125->172).",
+          "concrete_alternative": "7U AM + 5U PM."
+        },
+        {
+          "action": "Use dual-wave bolus for fatty lunches",
+          "priority": "high",
+          "reason": "22:30 readings 238-252 (D1 238, D3 245, D5 248, D7 245, D9 252) on fatty days vs 128 on lean days.",
+          "concrete_alternative": "Pump dual-wave or MDI split 60/40."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 35,
+      "weight_kg": 59,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 04:00 G=115 | 05:00 G=130 | 06:00 G=145 | 07:00 G=160 | 07:30 M=oatmeal C=38 | 09:30 G=175 | 12:30 M=chicken_salad C=22 | 14:30 G=132 | 17:00 G=130 | 18:00 EX=walk_45min | 19:00 G=82 | 20:00 M=fish_quinoa C=35 | 22:00 G=128",
+      "D2 04:00 G=118 | 05:00 G=132 | 06:00 G=148 | 07:00 G=162 | 07:30 M=eggs_toast C=28 | 09:30 G=170 | 12:30 M=turkey_wrap C=38 | 14:30 G=130 | 17:00 G=128 | 18:00 EX=cycling_40min | 19:00 G=80 | 20:00 M=chicken_veggies C=30 | 22:00 G=128",
+      "D3 04:00 G=112 | 05:00 G=128 | 06:00 G=142 | 07:00 G=158 | 07:30 M=yogurt_granola C=40 | 09:30 G=172 | 12:30 M=salad_chicken C=20 | 14:30 G=128 | 17:00 G=126 | 18:00 EX=walk_45min | 19:00 G=78 | 20:00 M=fish_potato C=38 | 22:00 G=128",
+      "D4 04:00 G=118 | 05:00 G=132 | 06:00 G=148 | 07:00 G=162 | 07:30 M=cereal C=42 | 09:30 G=180 | 12:30 M=soup C=32 | 14:30 G=132 | 17:00 G=130 | 18:00 EX=walk_40min | 19:00 G=82 | 20:00 M=stir_fry C=42 | 22:00 G=130",
+      "D5 04:00 G=115 | 05:00 G=130 | 06:00 G=145 | 07:00 G=160 | 07:30 M=eggs_avocado C=10 | 09:30 G=148 | 12:30 M=chicken_quinoa C=40 | 14:30 G=130 | 17:00 G=128 | 18:00 EX=cycling_45min | 19:00 G=82 | 20:00 M=salmon_quinoa C=40 | 22:00 G=130",
+      "D6 04:00 G=118 | 05:00 G=132 | 06:00 G=148 | 07:00 G=162 | 07:30 M=protein_shake C=22 | 09:30 G=150 | 12:30 M=tuna_salad C=18 | 14:30 G=130 | 17:00 G=128 | 18:00 EX=walk_45min | 19:00 G=82 | 20:00 M=pasta_veggies C=45 | 22:00 G=130",
+      "D7 04:00 G=112 | 05:00 G=128 | 06:00 G=142 | 07:00 G=158 | 07:30 M=oatmeal_fruit C=42 | 09:30 G=172 | 12:30 M=salmon_rice C=40 | 14:30 G=132 | 17:00 G=130 | 18:00 EX=jog_30min | 19:00 G=76 | 20:00 M=chicken_potato C=42 | 22:00 G=128",
+      "D8 04:00 G=118 | 05:00 G=132 | 06:00 G=148 | 07:00 G=162 | 07:30 M=yogurt_honey C=38 | 09:30 G=170 | 12:30 M=chicken_pasta C=45 | 14:30 G=130 | 17:00 G=128 | 18:00 EX=cycling_40min | 19:00 G=78 | 20:00 M=fish_rice C=42 | 22:00 G=128",
+      "D9 04:00 G=115 | 05:00 G=130 | 06:00 G=145 | 07:00 G=160 | 07:30 M=toast_jam C=40 | 09:30 G=175 | 12:30 M=lentil_soup C=38 | 14:30 G=130 | 17:00 G=128 | 18:00 EX=walk_45min | 19:00 G=80 | 20:00 M=stew C=38 | 22:00 G=130",
+      "D10 04:00 G=118 | 05:00 G=132 | 06:00 G=148 | 07:00 G=162 | 07:30 M=cereal_milk C=42 | 09:30 G=172 | 12:30 M=chicken_salad C=22 | 14:30 G=130 | 17:00 G=128 | 18:00 EX=walk_40min | 19:00 G=82 | 20:00 M=salmon_quinoa C=40 | 22:00 G=130"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Lean young patient shows dawn rise (44-48) and reliable post-exercise drop (76-82). LADA screen + targeted therapy.",
+      "recommendations": [
+        {
+          "action": "Screen for LADA",
+          "priority": "high",
+          "reason": "Lean (59kg) young adult with dawn rise 44-48 (D1 115->160, D2 118->162, D3 112->158, D4 118->162, D5 115->160, D6 118->162, D7 112->158, D8 118->162, D9 115->160, D10 118->162) and reliable exercise drop.",
+          "concrete_alternative": "GAD/IA-2 antibodies and C-peptide."
+        },
+        {
+          "action": "Add metformin XR at bedtime if T2 confirmed",
+          "priority": "high",
+          "reason": "Directly counters overnight rise.",
+          "concrete_alternative": "Metformin XR 500mg at 22:00."
+        },
+        {
+          "action": "Continue exercise routine",
+          "priority": "low",
+          "reason": "Post-exercise 76-82 (D1 82, D2 80, D3 78, D4 82, D5 82, D6 82, D7 76, D8 78, D9 80, D10 82).",
+          "concrete_alternative": "Maintain; D7 (76) borderline — add pre-workout snack on harder sessions."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 33,
+      "weight_kg": 106,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:00 G=128 | 07:30 M=cereal_milk C=58 I=9R | 08:00 I=24L | 09:30 G=232 | 13:00 M=chicken_rice C=45 I=6R | 15:00 G=142 | 17:00 G=140 | 19:00 M=fish_quinoa C=38 I=5R",
+      "D2 07:15 G=130 | 07:45 M=bagel C=55 I=8R | 08:00 I=24L | 09:45 G=228 | 13:00 M=salad C=22 I=3R | 15:30 G=140 | 17:00 G=138",
+      "D3 07:00 G=125 | 07:30 M=pancakes_syrup C=62 I=10R | 08:00 I=24L | 09:30 G=245 | 13:00 M=fish_quinoa C=42 I=6R | 15:00 G=142 | 17:00 G=140 | 22:00 G=132",
+      "D4 07:30 G=128 | 08:00 M=waffles C=60 I=9R | 08:30 I=24L | 10:00 G=240 | 12:30 M=tuna_salad C=18 I=2R | 15:30 G=140 | 17:00 G=138",
+      "D5 07:00 G=130 | 07:30 M=french_toast C=58 I=9R | 08:00 I=24L | 09:30 G=232 | 13:00 M=chicken_pasta C=48 I=7R | 15:00 G=142 | 17:00 G=140",
+      "D6 07:15 G=125 | 07:45 M=muffin C=55 I=8R | 08:00 I=24L | 09:45 G=222 | 13:00 M=stir_fry C=42 I=6R | 15:30 G=138 | 17:00 G=136",
+      "D7 07:00 G=128 | 07:30 M=cereal_fruit C=60 I=9R | 08:00 I=24L | 09:30 G=232 | 13:00 M=salmon_quinoa C=42 I=6R | 15:00 G=142 | 17:00 G=140 | 22:00 G=132",
+      "D8 07:30 G=130 | 08:00 M=toast_jam C=55 I=8R | 08:30 I=24L | 10:00 G=225 | 13:00 M=lentil_soup C=38 I=5R | 15:30 G=140 | 17:00 G=138",
+      "D9 07:00 G=125 | 07:30 M=pancakes C=62 I=10R | 08:00 I=24L | 09:30 G=245 | 13:00 M=chicken_rice C=46 I=6R | 15:00 G=144 | 17:00 G=142",
+      "D10 07:15 G=128 | 07:45 M=cereal_milk C=58 I=9R | 08:00 I=24L | 09:45 G=228 | 13:00 M=turkey_pasta C=48 I=7R | 15:30 G=140 | 17:00 G=138"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "T1 patient with severe obesity on 24 units basal shows breakfast spike (222-245) and stable afternoons. Pre-bolus + lower-GI swap + weight-targeted adjunct.",
+      "recommendations": [
+        {
+          "action": "Pre-bolus 15-20 minutes before breakfast",
+          "priority": "high",
+          "reason": "Daily breakfast spike 222-245 (D1 232, D2 228, D3 245, D4 240, D5 232, D6 222, D7 232, D8 225, D9 245, D10 228) with otherwise stable afternoons 136-144.",
+          "concrete_alternative": "Inject rapid at 07:10; eggs/Greek yogurt as breakfast base."
+        },
+        {
+          "action": "Discuss GLP-1 agonist for body weight (106kg)",
+          "priority": "medium",
+          "reason": "Severe obesity drives 24-unit basal need.",
+          "concrete_alternative": "Semaglutide as adjunct to insulin."
+        }
+      ]
+    }
+  }
+]

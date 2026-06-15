@@ -1,0 +1,652 @@
+Here is the next batch of 50 seeds. Generate the log and JSON for each. Remember to fully write out all 10 days for every single patient.
+
+{
+  "user": {
+    "age": 63,
+    "sex": "F",
+    "type": "T2",
+    "weight": "117kg"
+  },
+  "dominant_pattern": "afternoon_stable",
+  "secondary_pattern": null,
+  "log_quality": "messy_irregular",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 39,
+    "sex": "M",
+    "type": "T2",
+    "weight": "100kg"
+  },
+  "dominant_pattern": "delayed_high_fat_spike",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 58,
+    "sex": "F",
+    "type": "T1",
+    "weight": "55kg"
+  },
+  "dominant_pattern": "delayed_high_fat_spike",
+  "secondary_pattern": "exercise_induced_drop",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 59,
+    "sex": "F",
+    "type": "T2",
+    "weight": "61kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 68,
+    "sex": "M",
+    "type": "T1",
+    "weight": "84kg"
+  },
+  "dominant_pattern": "post_lunch_hypo",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 74,
+    "sex": "F",
+    "type": "T1",
+    "weight": "83kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": null,
+  "log_quality": "clean",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 21,
+    "sex": "F",
+    "type": "T1",
+    "weight": "95kg"
+  },
+  "dominant_pattern": "dawn_phenomenon",
+  "secondary_pattern": "delayed_high_fat_spike",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 52,
+    "sex": "F",
+    "type": "T2",
+    "weight": "97kg"
+  },
+  "dominant_pattern": "exercise_induced_drop",
+  "secondary_pattern": null,
+  "log_quality": "messy_irregular",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 31,
+    "sex": "M",
+    "type": "T2",
+    "weight": "119kg"
+  },
+  "dominant_pattern": "delayed_high_fat_spike",
+  "secondary_pattern": "dawn_phenomenon",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 64,
+    "sex": "M",
+    "type": "T2",
+    "weight": "103kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": "afternoon_stable",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 48,
+    "sex": "F",
+    "type": "T1",
+    "weight": "67kg"
+  },
+  "dominant_pattern": "dawn_phenomenon",
+  "secondary_pattern": "exercise_induced_drop",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 72,
+    "sex": "F",
+    "type": "T2",
+    "weight": "77kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": "delayed_high_fat_spike",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 74,
+    "sex": "M",
+    "type": "T1",
+    "weight": "117kg"
+  },
+  "dominant_pattern": "post_lunch_hypo",
+  "secondary_pattern": null,
+  "log_quality": "clean",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 38,
+    "sex": "F",
+    "type": "T2",
+    "weight": "72kg"
+  },
+  "dominant_pattern": "dawn_phenomenon",
+  "secondary_pattern": null,
+  "log_quality": "clean",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 55,
+    "sex": "F",
+    "type": "T2",
+    "weight": "111kg"
+  },
+  "dominant_pattern": "afternoon_stable",
+  "secondary_pattern": "post_lunch_hypo",
+  "log_quality": "messy_irregular",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 68,
+    "sex": "M",
+    "type": "T2",
+    "weight": "82kg"
+  },
+  "dominant_pattern": "afternoon_stable",
+  "secondary_pattern": "post_lunch_hypo",
+  "log_quality": "messy_irregular",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 52,
+    "sex": "M",
+    "type": "T1",
+    "weight": "113kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 56,
+    "sex": "F",
+    "type": "T2",
+    "weight": "84kg"
+  },
+  "dominant_pattern": "delayed_high_fat_spike",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 20,
+    "sex": "F",
+    "type": "T1",
+    "weight": "72kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": "exercise_induced_drop",
+  "log_quality": "messy_irregular",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 25,
+    "sex": "F",
+    "type": "T2",
+    "weight": "108kg"
+  },
+  "dominant_pattern": "delayed_high_fat_spike",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 48,
+    "sex": "M",
+    "type": "T1",
+    "weight": "84kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 72,
+    "sex": "M",
+    "type": "T2",
+    "weight": "99kg"
+  },
+  "dominant_pattern": "post_lunch_hypo",
+  "secondary_pattern": "exercise_induced_drop",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 56,
+    "sex": "M",
+    "type": "T2",
+    "weight": "68kg"
+  },
+  "dominant_pattern": "exercise_induced_drop",
+  "secondary_pattern": "post_lunch_hypo",
+  "log_quality": "messy_irregular",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 28,
+    "sex": "M",
+    "type": "T1",
+    "weight": "86kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": "exercise_induced_drop",
+  "log_quality": "clean",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 70,
+    "sex": "M",
+    "type": "T1",
+    "weight": "56kg"
+  },
+  "dominant_pattern": "exercise_induced_drop",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 31,
+    "sex": "F",
+    "type": "T2",
+    "weight": "117kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 56,
+    "sex": "M",
+    "type": "T2",
+    "weight": "88kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 36,
+    "sex": "M",
+    "type": "T2",
+    "weight": "62kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": "dawn_phenomenon",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 43,
+    "sex": "M",
+    "type": "T2",
+    "weight": "117kg"
+  },
+  "dominant_pattern": "afternoon_stable",
+  "secondary_pattern": "morning_breakfast_spike",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 49,
+    "sex": "M",
+    "type": "T1",
+    "weight": "115kg"
+  },
+  "dominant_pattern": "post_lunch_hypo",
+  "secondary_pattern": null,
+  "log_quality": "messy_irregular",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 43,
+    "sex": "M",
+    "type": "T1",
+    "weight": "116kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": null,
+  "log_quality": "messy_irregular",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 35,
+    "sex": "M",
+    "type": "T1",
+    "weight": "120kg"
+  },
+  "dominant_pattern": "afternoon_stable",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 55,
+    "sex": "M",
+    "type": "T2",
+    "weight": "65kg"
+  },
+  "dominant_pattern": "afternoon_stable",
+  "secondary_pattern": "morning_breakfast_spike",
+  "log_quality": "clean",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 20,
+    "sex": "F",
+    "type": "T1",
+    "weight": "62kg"
+  },
+  "dominant_pattern": "exercise_induced_drop",
+  "secondary_pattern": "afternoon_stable",
+  "log_quality": "clean",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 75,
+    "sex": "F",
+    "type": "T1",
+    "weight": "80kg"
+  },
+  "dominant_pattern": "dawn_phenomenon",
+  "secondary_pattern": "post_lunch_hypo",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 35,
+    "sex": "M",
+    "type": "T1",
+    "weight": "75kg"
+  },
+  "dominant_pattern": "delayed_high_fat_spike",
+  "secondary_pattern": "exercise_induced_drop",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 31,
+    "sex": "M",
+    "type": "T2",
+    "weight": "117kg"
+  },
+  "dominant_pattern": "delayed_high_fat_spike",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 65,
+    "sex": "M",
+    "type": "T2",
+    "weight": "103kg"
+  },
+  "dominant_pattern": "delayed_high_fat_spike",
+  "secondary_pattern": "post_lunch_hypo",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 46,
+    "sex": "M",
+    "type": "T1",
+    "weight": "104kg"
+  },
+  "dominant_pattern": "delayed_high_fat_spike",
+  "secondary_pattern": "dawn_phenomenon",
+  "log_quality": "messy_irregular",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 55,
+    "sex": "F",
+    "type": "T2",
+    "weight": "111kg"
+  },
+  "dominant_pattern": "exercise_induced_drop",
+  "secondary_pattern": "post_lunch_hypo",
+  "log_quality": "clean",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 32,
+    "sex": "F",
+    "type": "T1",
+    "weight": "118kg"
+  },
+  "dominant_pattern": "delayed_high_fat_spike",
+  "secondary_pattern": "exercise_induced_drop",
+  "log_quality": "clean",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 72,
+    "sex": "M",
+    "type": "T2",
+    "weight": "107kg"
+  },
+  "dominant_pattern": "post_lunch_hypo",
+  "secondary_pattern": "exercise_induced_drop",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 58,
+    "sex": "M",
+    "type": "T2",
+    "weight": "77kg"
+  },
+  "dominant_pattern": "delayed_high_fat_spike",
+  "secondary_pattern": null,
+  "log_quality": "clean",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 50,
+    "sex": "M",
+    "type": "T1",
+    "weight": "116kg"
+  },
+  "dominant_pattern": "exercise_induced_drop",
+  "secondary_pattern": "delayed_high_fat_spike",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 18,
+    "sex": "F",
+    "type": "T2",
+    "weight": "73kg"
+  },
+  "dominant_pattern": "afternoon_stable",
+  "secondary_pattern": null,
+  "log_quality": "messy_irregular",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 20,
+    "sex": "F",
+    "type": "T2",
+    "weight": "69kg"
+  },
+  "dominant_pattern": "afternoon_stable",
+  "secondary_pattern": "exercise_induced_drop",
+  "log_quality": "messy_irregular",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 61,
+    "sex": "M",
+    "type": "T1",
+    "weight": "77kg"
+  },
+  "dominant_pattern": "morning_breakfast_spike",
+  "secondary_pattern": "delayed_high_fat_spike",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 71,
+    "sex": "F",
+    "type": "T1",
+    "weight": "81kg"
+  },
+  "dominant_pattern": "post_lunch_hypo",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 44,
+    "sex": "M",
+    "type": "T2",
+    "weight": "70kg"
+  },
+  "dominant_pattern": "post_lunch_hypo",
+  "secondary_pattern": "dawn_phenomenon",
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+
+{
+  "user": {
+    "age": 18,
+    "sex": "M",
+    "type": "T1",
+    "weight": "98kg"
+  },
+  "dominant_pattern": "dawn_phenomenon",
+  "secondary_pattern": null,
+  "log_quality": "moderate_gaps",
+  "feature": "PATTERNS"
+}
+

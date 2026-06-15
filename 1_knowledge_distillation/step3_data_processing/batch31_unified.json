@@ -1,0 +1,1638 @@
+[
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 38,
+      "weight_kg": 84,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=128 | 07:45 M=toast&eggs C=25 I=2.5R | 12:15 G=105 | 12:20 M=salad_chicken C=20 I=2.0R | 17:00 G=95 | 17:30 EX=run_5k | 18:15 G=58 | 18:20 M=juice C=15 | 19:00 G=82 | 19:15 M=steak_potato C=35 I=3.0R | 22:00 G=140 I=22L",
+      "D2 07:45 G=135 | 08:00 M=omelet C=5 I=0.5R | 12:30 G=118 | 12:35 M=tuna_wrap C=30 I=3.0R | 17:15 G=88 | 17:45 EX=gym_weights | 18:30 G=62 | 18:35 M=glucose_tabs C=10 | 19:00 G=95 | 19:30 M=salmon_rice C=40 I=3.5R | 22:00 G=130 I=22L",
+      "D3 08:10 G=142 | 12:00 G=110 | 12:10 M=burger_no_bun C=10 I=1.0R | 16:30 G=90 | 17:00 EX=bike_30min | 17:40 G=55 | 17:45 M=banana C=20 | 18:30 G=85 | 19:00 M=pasta C=45 I=4.0R | 22:00 G=145 I=22L",
+      "D4 07:30 G=125 | 07:45 M=cereal C=35 I=3.5R | 12:00 G=150 | 12:30 M=leftover_pasta C=40 I=4.0R | 15:00 G=102 | 18:00 G=78 | 18:30 EX=walk_45min | 19:15 G=65 | 19:20 M=crackers C=15 | 20:00 G=90 | 20:15 M=chicken_veg C=15 I=1.5R | 22:00 G=125 I=22L",
+      "D5 08:00 G=138 | 08:15 M=yogurt_granola C=35 I=3.5R | 12:15 G=115 | 12:20 M=soup_bread C=35 I=3.0R | 17:00 G=85 | 17:30 M=soccer_practice | 18:45 G=52 | 18:50 M=gatorade C=20 | 19:30 G=88 | 20:00 M=tacos C=40 I=3.5R | 22:00 G=135 I=22L",
+      "D6 07:50 G=130 | 12:00 G=108 | 12:05 M=eggs_bacon C=5 I=0.5R | 16:30 G=92 | 17:00 EX=run_45min | 18:00 G=60 | 18:05 M=apple C=15 | 18:45 G=80 | 19:00 M=stirfry_rice C=45 I=4.0R | 22:00 G=140 I=22L",
+      "D7 07:35 G=122 | 07:50 M=oatmeal C=30 I=3.0R | 12:30 G=140 | 13:00 M=sandwich C=35 I=3.5R | 16:00 G=98 | 17:30 G=75 | 18:00 M=yoga | 18:45 G=68 | 19:15 M=fish_potato C=30 I=2.5R | 22:00 G=120 I=22L",
+      "D8 08:10 G=145 | 08:20 M=toast_peanutbutter C=25 I=2.5R | 12:15 G=112 | 12:20 M=quinoa_salad C=30 I=3.0R | 17:15 G=88 | 17:45 M=spin_class | 18:30 G=54 | 18:35 M=juice_box C=20 | 19:15 G=90 | 19:30 M=burger_sweetpotato C=40 I=3.5R | 22:00 G=138 I=22L",
+      "D9 07:30 G=118 | 08:00 M=smoothie C=40 I=4.0R | 11:45 G=95 | 12:30 G=135 | 13:00 M=burrito_bowl C=45 I=4.0R | 17:00 G=105 | 17:30 EX=tennis | 18:45 G=63 | 18:50 M=gels C=15 | 19:15 G=85 | 19:45 M=pizza_salad C=40 I=3.5R | 22:00 G=130 I=22L",
+      "D10 07:45 G=132 | 08:00 M=eggs_toast C=20 I=2.0R | 12:00 G=100 | 12:30 M=chicken_salad C=15 I=1.5R | 17:00 G=80 | 17:30 EX=run_30min | 18:10 G=50 | 18:15 M=candy C=15 | 19:00 G=92 | 19:30 M=salmon_asparagus C=10 I=1.0R | 22:00 G=125 I=22L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps in data, mostly around lunch boluses. The primary concern is the consistent and severe exercise-induced hypoglycemia occurring in the late afternoon/early evening across all logged weeks. Immediate pre-exercise glucose on several days was borderline low (80-95 mg/dL), increasing the risk. Consider a proactive snack strategy.",
+      "recommendations": [
+        {
+          "action": "Reduce pre-exercise bolus insulin by 50% or consume 15-20g uncovered carbs immediately before exercise",
+          "priority": "high",
+          "reason": "Multiple exercise sessions (D1 run, D3 bike, D5 soccer, D8 spin, D10 run) resulted in hypoglycemic events (G drops to 58, 55, 52, 54, 50 respectively) requiring rescue carbs. Pre-exercise G levels were under 100 on D3, D5, D8 and D10.",
+          "concrete_alternative": "If reducing insulin is not desired, schedule exercise within 1-2 hours post-meal when glucose is peaking."
+        },
+        {
+          "action": "Set a temporary basal rate reduction of 50% for 1 hour during and after exercise on the insulin pump, or consume a small snack pre-workout if on MDI",
+          "priority": "high",
+          "reason": "Recurrent delayed post-exercise hypoglycemia not consistently caught. The long-acting dose (I=22L) appears appropriate given stable overnight and fasting values around 120-145.",
+          "concrete_alternative": "Consume a protein and complex carb snack (e.g., half sandwich) 1 hour before planned activity instead of adjusting basal."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 31,
+      "weight_kg": 105,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=142 | 08:15 M=bagel_creamcheese | 12:30 G=135 | 12:45 M=turkey_sandwich | 15:00 G=128 | 18:30 G=130 | 19:00 M=grilled_chicken_veg",
+      "D2 07:45 G=148 | 08:00 M=cereal_milk | 12:00 G=140 | 15:30 G=125 | 18:00 G=132 | 18:30 M=salmon_salad",
+      "D3 08:30 G=155 | 08:45 M=pancakes_syrup | 12:45 G=145 | 15:00 G=138 | 18:15 G=140 | 18:45 M=beef_stirfry",
+      "D4 07:50 G=138 | 08:00 M=toast_eggs | 13:00 G=130 | 15:45 G=122 | 19:00 G=135 | 19:15 M=pasta_meatballs",
+      "D5 08:10 G=145 | 12:30 G=138 | 12:45 M=leftover_pasta | 15:30 G=132 | 18:30 G=128 | 19:00 M=tacos",
+      "D6 07:30 G=135 | 07:45 M=oatmeal | 12:15 G=128 | 15:00 G=120 | 18:00 G=125 | 18:30 M=roast_chicken",
+      "D7 08:00 G=150 | 08:20 M=waffles | 12:45 G=142 | 15:30 G=135 | 18:30 G=138 | 19:00 M=burger_salad",
+      "D8 07:45 G=140 | 08:00 M=eggs_bacon | 12:30 G=130 | 15:15 G=124 | 19:00 G=132 | 19:15 M=fish_quinoa",
+      "D9 08:20 G=152 | 12:45 G=144 | 13:00 M=soup_sandwich | 15:45 G=136 | 18:30 G=140 | 19:00 M=steak_veg",
+      "D10 07:50 G=138 | 08:00 M=smoothie | 12:30 G=130 | 15:00 G=122 | 18:15 G=128 | 18:45 M=chicken_curry"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps in log but consistent entries for breakfast, lunch, and dinner. Overall glycemic control is fair with a clear pattern of higher morning readings stabilizing into a flat afternoon profile. Current management appears effective for afternoon and evening, but breakfast choices (bagels, pancakes, waffles, cereal) may be driving the morning elevations.",
+      "recommendations": [
+        {
+          "action": "Shift higher carbohydrate intake to lunch to leverage stable afternoon insulin sensitivity, reduce breakfast carbs to <30g",
+          "priority": "medium",
+          "reason": "Morning readings consistently show borderline hyperglycemia (avg 144 mg/dL, peaking at 155 D3). Afternoons demonstrate excellent stability (avg 129 mg/dL). Evening values stay stable around 133 mg/dL. No current insulin use, managing with diet/exercise.",
+          "concrete_alternative": "If morning fasting remains high, consider adding a 10-15 minute post-breakfast walk to blunt the slight elevation."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 59,
+      "weight_kg": 106,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=135 | 07:45 M=toast_eggs C=20 I=3.0R | 12:00 G=110 | 12:15 M=salad_chicken C=15 I=2.0R | 18:00 G=95 | 18:30 M=pizza_pepperoni C=45 I=6.0R (extended) | 20:00 G=150 | 22:00 G=185 I=30L | 02:00 G=210",
+      "D2 08:00 G=165 | 08:15 M=omelet C=5 I=1.0R_corr | 12:15 G=140 | 12:30 M=soup C=20 I=3.0R | 17:30 G=105 | 18:00 EX=run_30min | 18:45 G=72 | 18:50 M=juice C=15 | 19:30 G=110 | 20:00 M=burger_fries C=50 I=7.0R (extended) | 22:00 G=160 I=30L | 01:00 G=200",
+      "D3 07:45 G=170 | 08:00 M=yogurt_granola C=35 I=5.0R | 12:15 G=125 | 12:30 M=tuna_wrap C=25 I=3.5R | 18:00 G=98 | 18:30 M=steak_macncheese C=40 I=6.0R (extended) | 20:30 G=145 | 22:00 G=170 I=30L | 23:30 G=190",
+      "D4 08:00 G=155 | 08:15 M=cereal C=30 I=4.5R | 12:30 G=130 | 12:45 M=leftover_steak C=10 I=1.5R | 18:00 G=110 | 18:30 M=takeout_curry_rice C=55 I=7.5R (extended) | 20:00 G=160 | 22:00 G=195 I=30L | 01:30 G=215",
+      "D5 07:30 G=160 | 07:45 M=toast_avocado C=25 I=4.0R | 12:00 G=118 | 12:15 M=chicken_salad C=15 I=2.0R | 17:00 G=90 | 17:30 EX=weights | 18:15 G=68 | 18:20 M=gels C=15 | 19:00 G=105 | 19:30 M=fried_rice C=50 I=7.0R (extended) | 22:00 G=175 I=30L",
+      "D6 08:10 G=168 | 08:25 M=omelet C=5 I=1.0R_corr | 12:15 G=140 | 12:30 M=quinoa_bowl C=35 I=5.0R | 18:00 G=105 | 18:30 M=lasagna C=45 I=6.5R (extended) | 20:30 G=155 | 22:00 G=180 I=30L | 00:00 G=205",
+      "D7 07:45 G=150 | 08:00 M=smoothie C=40 I=6.0R | 12:30 G=120 | 12:45 M=turkey_sandwich C=30 I=4.0R | 18:00 G=95 | 18:30 M=burger_onion_rings C=50 I=7.0R (extended) | 20:00 G=165 | 22:00 G=190 I=30L",
+      "D8 08:00 G=175 | 08:15 M=eggs_bacon C=5 I=1.5R_corr | 12:15 G=145 | 12:30 M=salad_salmon C=15 I=2.0R | 17:30 G=100 | 18:00 M=jog | 18:40 G=70 | 18:45 M=crackers C=15 | 19:15 G=108 | 19:45 M=pasta_creamy C=50 I=7.0R (extended) | 22:00 G=185 I=30L",
+      "D9 07:30 G=162 | 07:45 M=oatmeal C=30 I=4.5R | 12:00 G=115 | 12:30 M=wrap_fries C=45 I=6.5R | 18:00 G=108 | 18:30 M=steak_fries C=40 I=5.5R (extended) | 20:15 G=150 | 22:00 G=170 I=30L | 02:00 G=195",
+      "D10 08:10 G=170 | 08:25 M=toast_peanutbutter C=25 I=4.0R_corr | 12:30 G=135 | 12:45 M=chicken_rice C=40 I=5.5R | 18:00 G=100 | 18:30 M=movie_popcorn_nachos C=55 I=7.5R (extended) | 20:30 G=170 | 22:00 G=200 I=30L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clean log with good data capture. Two distinct patterns require intervention: 1) Significant nocturnal hyperglycemia secondary to delayed high-fat meal digestion, suggesting need for bolus strategy adjustment. 2) Mild exercise-related hypoglycemia manageable with proactive carb intake. Basal dose (30L) appears sufficient given dawn phenomenon is well-controlled.",
+      "recommendations": [
+        {
+          "action": "Adjust dinner insulin strategy: split bolus to 50% pre-meal and 50% extended over 3 hours via pump (or NPH/Regular mix if on MDI), or switch to dual-wave bolus",
+          "priority": "high",
+          "reason": "Consistent delayed hyperglycemia spikes post-dinner (typically 4-6 hours later, reaching 185-215 mg/dL at 22:00-02:00) following high-fat meals (pizza D1, burger/fries D2, macncheese D3, curry D4, fried rice D5, lasagna D6, onion rings D7, creamy pasta D8, popcorn/nachos D10). Standard bolus timing fails to cover the fat/protein delayed glucose rise.",
+          "concrete_alternative": "If pump/dual-wave is not available, add a second small bolus (2-3 units) 2-3 hours after dinner or use Regular insulin for the high-fat portion of the meal."
+        },
+        {
+          "action": "Take 15g prophylactic carbs before afternoon exercise, without insulin coverage",
+          "priority": "medium",
+          "reason": "Exercise-induced drops observed on D2 (drop to 72), D5 (drop to 68), and D8 (drop to 70) during late afternoon activities. Pre-exercise glucose was borderline low (105, 90, 100) on those days.",
+          "concrete_alternative": "If averse to extra carbs, reduce any lunch bolus by 1-2 units when afternoon exercise is planned, aiming for pre-exercise glucose >130."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 75,
+      "weight_kg": 81,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=165 | 08:00 M=cereal_banana | 10:00 G=210 | 12:30 G=155 | 12:45 M=soup_crackers | 16:00 G=130 | 18:00 EX=walk_20min | 18:40 G=105 | 19:00 M=chicken_veg",
+      "D2 08:00 G=158 | 08:15 M=pancake_syrup | 10:30 G=225 | 12:15 G=170 | 15:30 G=145 | 18:30 M=salmon_salad | 19:00 G=135",
+      "D3 07:45 G=160 | 08:00 M=toast_jam_juice | 09:45 G=195 | 12:30 G=148 | 13:00 M=tuna_sandwich | 17:00 G=125 | 18:00 EX=gardening_1hr | 19:00 G=95 | 19:15 M=roast_beef_potato",
+      "D4 08:15 G=170 | 08:30 M=bagel_cream_cheese | 10:30 G=215 | 12:45 G=165 | 15:00 G=140 | 18:30 M=pasta_marinara | 19:00 G=130",
+      "D5 07:30 G=155 | 07:45 M=oatmeal_honey | 10:00 G=205 | 12:15 G=150 | 12:30 M=chicken_salad | 16:30 G=132 | 18:00 M=brisk_walk | 18:50 G=102 | 19:15 M=fish_quinoa",
+      "D6 08:00 G=162 | 08:15 M=waffles_berries | 10:15 G=210 | 12:45 G=160 | 15:30 G=138 | 18:30 M=grilled_cheese_tomato | 19:00 G=140",
+      "D7 07:45 G=150 | 08:00 M=muffin_latte | 09:30 G=200 | 12:15 G=145 | 16:00 G=120 | 18:00 M=light_yoga | 18:45 G=98 | 19:00 M=turkey_burger_salad",
+      "D8 08:10 G=168 | 08:25 M=cereal_milk | 10:30 G=220 | 12:30 G=162 | 15:45 G=135 | 18:30 M=stirfry_veg_tofu | 19:00 G=128",
+      "D9 07:30 G=152 | 08:00 M=scrambled_eggs_toast_oj | 09:45 G=190 | 12:30 G=140 | 13:00 M=leftover_stirfry | 17:00 G=118 | 18:00 M=grocery_shopping | 19:15 G=110 | 19:30 M=chicken_thighs_broccoli",
+      "D10 08:00 G=165 | 08:15 M=granola_yogurt | 10:30 G=215 | 12:45 G=158 | 15:30 G=130 | 18:30 M=pork_chop_sweetpotato | 19:00 G=135"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps primarily at lunch and afternoon snacks. The dominant concern is the significant post-breakfast glycemic excursion. Early evening exercise is beneficial. Consider meal order (protein/fiber before carbs) if changing breakfast type is difficult.",
+      "recommendations": [
+        {
+          "action": "Replace current high-glycemic breakfast (cereal, pancakes, bagels, muffins, waffles) with low-carb, high-protein alternatives like eggs, Greek yogurt with nuts, or cottage cheese to reduce the magnitude of the morning spike",
+          "priority": "high",
+          "reason": "Consistent severe post-breakfast hyperglycemia with postprandial peaks reaching 190-225 mg/dL (avg spike +55 mg/dL) within 2 hours of the morning meal. Fasting values are moderately elevated at 150-170 mg/dL.",
+          "concrete_alternative": "If breakfast composition cannot change, add a 20-minute walk immediately after breakfast, or discuss adding a small dose of short-acting insulin (e.g., 4-6 units Lispro) with breakfast."
+        },
+        {
+          "action": "Continue afternoon/evening light exercise, as it effectively lowers glucose without inducing concerning hypoglycemia in this non-insulin patient",
+          "priority": "low",
+          "reason": "Evening walks (D1, D5), gardening (D3), and yoga (D7) produce safe drops from ~125-130 mg/dL to 95-110 mg/dL, demonstrating good exercise tolerance. No rescue interventions needed.",
+          "concrete_alternative": "Encourage maintaining consistent timing of evening activity to maximize insulin sensitivity for the following morning."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 48,
+      "weight_kg": 79,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:45 G=138 | 08:00 M=toast_egg | 12:30 G=98 | 12:45 M=salad_beans | 15:00 G=65 | 15:05 M=apple | 16:00 G=95 | 19:00 M=chicken_rice | 22:00 G=130",
+      "D2 08:00 G=145 | 08:15 M=cereal | 12:15 G=105 | 12:30 M=turkey_wrap | 15:30 G=72 | 15:35 M=crackers | 17:00 G=100 | 18:30 M=salmon_veg",
+      "D3 07:30 G=132 | 07:45 M=oatmeal | 12:45 G=110 | 13:00 M=lentil_soup | 15:00 G=68 | 15:10 M=juice | 16:30 G=110 | 18:30 M=tacos",
+      "D4 08:15 G=150 | 08:30 M=pancake | 12:30 G=118 | 12:45 M=quinoa_salad | 15:45 G=78 | 16:00 M=nuts | 18:00 G=120 | 19:00 M=beef_veg",
+      "D5 07:45 G=135 | 08:00 M=eggs_bacon | 12:15 G=95 | 12:30 M=chicken_noodle_soup | 14:45 G=60 | 14:50 M=glucose_tabs | 15:30 G=85 | 19:00 M=pizza_salad",
+      "D6 08:00 G=140 | 12:30 G=102 | 12:45 M=tuna_sandwich | 15:30 G=70 | 15:45 M=granola_bar | 17:00 G=105 | 18:30 M=burger_no_bun",
+      "D7 07:30 G=128 | 07:45 M=smoothie | 12:45 G=108 | 13:00 M=veggie_chili | 15:15 G=74 | 16:00 G=92 | 19:00 M=fish_sweetpotato",
+      "D8 08:10 G=145 | 08:25 M=toast_avocado | 12:30 G=115 | 12:45 M=leftover_chili | 15:45 G=80 | 18:00 G=110 | 19:00 M=steak_salad",
+      "D9 07:45 G=130 | 08:00 M=yogurt_fruit | 12:15 G=98 | 12:30 M=salad_grilled_chicken | 15:00 G=62 | 15:05 M=banana | 16:00 G=100 | 18:30 M=pasta",
+      "D10 08:00 G=142 | 12:30 G=105 | 12:45 M=wrap_hummus | 15:30 G=69 | 15:35 M=apple_juice | 17:00 G=108 | 19:00 M=roast_chicken"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate log gaps exist. A clear and predictable pattern of post-lunch hypoglycemia is evident. Fasting and post-dinner values are acceptable. The primary risk is the regular afternoon drop. Consider reviewing current T2 medication timing and dosage (e.g., sulfonylurea or meglitinide peak) with the provider.",
+      "recommendations": [
+        {
+          "action": "Add a 15-20g complex carbohydrate snack (e.g., whole grain crackers, small fruit) at ~2:30-3:00 PM to prevent the consistent mid-afternoon hypoglycemia",
+          "priority": "high",
+          "reason": "Patient experiences recurrent hypoglycemic events (60-80 mg/dL) at ~15:00-15:45 on 9/10 logged days, approximately 2-3 hours after lunch. Lunches tend to be moderate-carb, high-fiber, or low-calorie (salad, soup, wrap). Rescue carbs consistently required (apple, juice, crackers, tabs). No long-acting insulin involved, suggesting reactive hypoglycemia or medication peak.",
+          "concrete_alternative": "If not feasible to add a snack, adjust lunch composition to include more protein and healthy fats (avocado, nuts, olive oil) to slow gastric emptying and blunt the post-prandial insulin surge."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 59,
+      "weight_kg": 57,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=135 | 08:15 M=toast_jam | 12:30 G=125 | 12:45 M=salad_chicken | 18:30 G=118 | 19:00 M=steak_fries | 22:00 G=165",
+      "D2 07:45 G=140 | 08:00 M=oatmeal | 12:15 G=130 | 15:30 G=120 | 18:30 G=128 | 19:00 M=fried_chicken_mash | 23:00 G=180",
+      "D3 08:15 G=145 | 08:30 M=yogurt | 12:45 G=135 | 13:00 M=soup_crackers | 18:00 G=122 | 18:30 M=cheeseburger_onionrings | 22:30 G=190",
+      "D4 07:30 G=132 | 07:45 M=eggs | 12:30 G=128 | 12:45 M=tuna_wrap | 19:00 G=130 | 19:30 M=pizza_meatlovers | 23:00 G=175",
+      "D5 08:00 G=138 | 08:15 M=cereal | 12:30 G=125 | 15:00 G=118 | 18:30 G=120 | 19:00 M=fish_chips | 22:00 G=158",
+      "D6 07:50 G=142 | 12:30 G=132 | 12:45 M=quinoa_bowl | 18:30 G=125 | 19:00 M=ribs_macncheese | 22:30 G=185",
+      "D7 08:10 G=148 | 08:25 M=granola | 12:45 G=138 | 13:00 M=chicken_salad | 18:00 G=128 | 18:30 M=curry_rice | 22:00 G=162",
+      "D8 07:45 G=136 | 08:00 M=smoothie | 12:30 G=130 | 15:30 G=122 | 19:00 M=lasagna | 23:00 G=195",
+      "D9 08:00 G=140 | 08:15 M=toast_peanutbutter | 12:30 G=128 | 12:45 M=leftover_lasagna | 18:30 G=135 | 19:00 M=pulled_pork_fries | 22:15 G=170",
+      "D10 07:30 G=130 | 07:45 M=eggs_toast | 12:15 G=120 | 15:00 G=115 | 18:30 G=118 | 19:00 M=meatball_sub | 22:30 G=180"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate log gaps. Glycemic control is excellent before dinner. The issue is exclusively nocturnal, driven by dietary fat content. Sleep-time glucose is consistently elevated, increasing average glucose. No hypoglycemia risk.",
+      "recommendations": [
+        {
+          "action": "Replace high-fat dinner sides (fries, onion rings, chips, mac and cheese, creamy sauces) with non-starchy vegetables or complex carbs (quinoa, sweet potato), and limit saturated fat intake to <25g per meal",
+          "priority": "high",
+          "reason": "Consistent delayed hyperglycemia 3-4 hours post-dinner (22:00-23:00 readings ranging 158-195 mg/dL) following high-fat meals. Pre-dinner values are well-controlled (118-135 mg/dL), indicating delayed gastric emptying and insulin resistance induced by fat is the primary driver.",
+          "concrete_alternative": "If meal composition is non-negotiable, a 20-30 minute post-dinner walk (around 20:30-21:00) can significantly attenuate the late spike by improving insulin sensitivity and glucose uptake."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 74,
+      "weight_kg": 66,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=168 | 08:15 M=bagel_creamcheese | 10:30 G=215 | 12:30 G=150 | 12:45 M=soup_crackers | 15:30 G=68 | 15:35 M=juice | 18:30 M=chicken_veg",
+      "D2 07:45 G=155 | 08:00 M=cereal_banana | 10:00 G=205 | 12:15 G=135 | 12:30 M=tuna_salad | 15:00 G=72 | 15:05 M=crackers | 18:00 M=salmon_rice",
+      "D3 08:15 G=172 | 08:30 M=pancakes | 10:30 G=225 | 12:45 G=160 | 13:00 M=turkey_wrap | 15:45 G=75 | 16:00 M=apple | 18:30 M=beef_stew",
+      "D4 07:30 G=150 | 07:45 M=toast_jam | 10:15 G=195 | 12:30 G=140 | 12:45 M=leftover_stew | 15:30 G=65 | 15:35 M=glucose_tabs | 19:00 M=pasta",
+      "D5 08:00 G=165 | 08:15 M=muffin | 10:30 G=210 | 12:30 G=145 | 15:00 G=70 | 15:05 M=granola_bar | 18:30 M=grilled_chicken",
+      "D6 07:45 G=158 | 08:00 M=oatmeal_brownsugar | 10:15 G=200 | 12:45 G=138 | 13:00 M=salad_beans | 15:30 G=62 | 15:45 M=banana | 18:00 M=fish_veg",
+      "D7 08:10 G=170 | 08:25 M=waffles | 10:45 G=220 | 12:30 G=155 | 12:45 M=chicken_soup | 15:30 G=70 | 16:00 M=nuts | 18:30 M=tacos",
+      "D8 07:30 G=148 | 07:45 M=toast_egg | 10:00 G=190 | 12:15 G=130 | 12:30 M=quinoa_bowl | 15:15 G=68 | 15:20 M=juice_box | 19:00 M=salmon_salad",
+      "D9 08:00 G=162 | 08:15 M=cereal | 10:30 G=210 | 12:45 G=148 | 13:00 M=turkey_sandwich | 15:45 G=75 | 18:30 M=steak_potato",
+      "D10 07:45 G=155 | 08:00 M=smoothie_large | 10:15 G=195 | 12:30 G=142 | 15:15 G=64 | 15:20 M=candy | 16:30 G=95 | 18:30 M=pork_chop"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps exist mainly at mid-morning. The patient exhibits a classic 'rollercoaster' pattern: high morning spike followed by an afternoon crash. Addressing breakfast will likely flatten the entire daily curve, potentially reducing the reactive afternoon hypoglycemia severity. Medication review is critical.",
+      "recommendations": [
+        {
+          "action": "Switch to low-GI breakfast (e.g., steel-cut oats with nuts, Greek yogurt with berries, eggs with whole grain toast) and reduce total breakfast carbs to <30g",
+          "priority": "high",
+          "reason": "Severe post-breakfast hyperglycemic peaks (190-225 mg/dL) consistently follow high-sugar/high-refined carb breakfasts (bagels, cereal, pancakes, muffins, waffles). Fasting glucose is mildly elevated (148-172).",
+          "concrete_alternative": "Add a small dose of rapid-acting insulin (e.g., 3-5 units Aspart) 15 min before breakfast if dietary changes are insufficient."
+        },
+        {
+          "action": "Prescribe a mandatory 15-20g complex carbohydrate snack at 14:30 to prevent the daily afternoon hypoglycemic drop",
+          "priority": "high",
+          "reason": "Recurrent hypoglycemia (62-75 mg/dL) observed daily between 15:00-15:45, approximately 2-3 hours after typically light lunches (soup, salad, wrap). This requires consistent rescue carb intake. Risk of neuroglycopenia in a 74-year-old patient.",
+          "concrete_alternative": "If snacks are refused, review current sulfonylurea/meglitinide medication regimen for possible dose reduction or timing change to prevent the insulin peak overlapping with the post-lunch nadir."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 74,
+      "weight_kg": 82,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=168 | 07:45 M=toast_egg C=15 I=2.0R | 12:00 G=125 | 12:15 M=salad_tuna C=10 I=1.5R | 18:00 G=110 | 18:30 M=pizza_supreme C=45 I=5.5R (ext) | 22:00 G=155 I=24L | 03:00 G=180 | 07:30 G=160",
+      "D2 08:00 G=175 | 08:15 M=omelet C=5 I=1.5R_corr | 12:30 G=130 | 12:45 M=soup_sandwich C=35 I=4.0R | 18:30 G=115 | 19:00 M=burger_fries C=50 I=6.0R (ext) | 22:00 G=170 I=24L | 04:00 G=190",
+      "D3 07:45 G=165 | 08:00 M=yogurt_fruit C=30 I=4.0R | 12:15 G=118 | 12:30 M=chicken_salad C=15 I=2.0R | 18:00 G=105 | 18:30 M=curry_rice C=45 I=5.5R (ext) | 22:00 G=160 I=24L | 02:30 G=175",
+      "D4 08:10 G=178 | 08:25 M=cereal C=30 I=4.5R_corr | 12:45 G=135 | 13:00 M=wrap C=30 I=3.5R | 18:30 G=120 | 19:00 M=steak_fries C=40 I=5.0R (ext) | 22:00 G=168 I=24L | 05:00 G=185",
+      "D5 07:30 G=158 | 07:45 M=toast_avocado C=20 I=3.0R | 12:15 G=112 | 12:30 M=quinoa_bowl C=30 I=4.0R | 18:00 G=108 | 18:30 M=fried_chicken C=45 I=5.5R (ext) | 22:00 G=162 I=24L | 03:30 G=178",
+      "D6 08:00 G=170 | 08:15 M=eggs_bacon C=5 I=1.0R_corr | 12:30 G=128 | 12:45 M=tuna_wrap C=25 I=3.0R | 18:30 G=118 | 19:00 M=lasagna C=45 I=5.5R (ext) | 22:00 G=165 I=24L | 04:00 G=180",
+      "D7 07:45 G=162 | 08:00 M=oatmeal C=25 I=3.5R | 12:15 G=120 | 12:30 M=salad_salmon C=10 I=1.0R | 18:00 G=105 | 18:30 M=ribs_mac C=45 I=5.5R (ext) | 22:00 G=158 I=24L | 02:00 G=172",
+      "D8 08:10 G=180 | 08:25 M=smoothie C=35 I=5.0R_corr | 12:45 G=138 | 13:00 M=veggie_burger C=30 I=3.5R | 18:30 G=122 | 19:00 M=pasta_meatballs C=50 I=6.0R (ext) | 22:00 G=175 I=24L | 05:00 G=195",
+      "D9 07:30 G=155 | 07:45 M=toast_cheese C=20 I=3.0R | 12:15 G=110 | 12:30 M=lentil_soup C=30 I=4.0R | 18:00 G=100 | 18:30 M=fish_chips C=45 I=5.5R (ext) | 22:00 G=150 I=24L | 03:00 G=165",
+      "D10 08:00 G=172 | 08:15 M=pancake_small C=35 I=5.0R_corr | 12:45 G=132 | 13:00 M=chicken_veg C=15 I=2.0R | 18:30 G=115 | 19:00 M=takeout_burger C=40 I=5.0R (ext) | 22:00 G=160 I=24L | 04:30 G=175"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clean log. Two overlapping nocturnal hyperglycemic patterns are visible: an early post-dinner fat spike and a late dawn phenomenon rise. Addressing both will significantly improve time-in-range (TIR) and fasting glucose. Ensure renal function and eGFR are checked before adding Metformin.",
+      "recommendations": [
+        {
+          "action": "Increase long-acting insulin (Lantus/Basaglar) from 24U to 26U, or split the dose to 12U AM / 14U PM to combat the dawn phenomenon without causing daytime hypoglycemia",
+          "priority": "high",
+          "reason": "Fasting glucose consistently elevated 158-180 mg/dL, with dawn phenomenon clearly present (3 AM - 7 AM rise from ~150-160 to 165-178 mg/dL). Bedtime values are moderately controlled (150-175 mg/dL). The current basal dose (24L) is insufficient to suppress overnight hepatic glucose output.",
+          "concrete_alternative": "If dose increase causes daytime lows, consider shifting basal insulin injection from bedtime to morning, or adding Metformin (if renal function allows) to reduce hepatic glucose production overnight."
+        },
+        {
+          "action": "Utilize extended/dual-wave bolus for dinner (50:50 split over 3-4 hours) to cover the high-fat meal content",
+          "priority": "medium",
+          "reason": "Consistent delayed postprandial hyperglycemia (150-175 mg/dL at 22:00, rising to 165-195 mg/dL overnight) follows high-fat dinners. Combined with the dawn phenomenon, this results in prolonged nocturnal hyperglycemia.",
+          "concrete_alternative": "If pump/dual-wave is unavailable, take 50% of dinner bolus at meal time and the remaining 50% 2 hours post-meal."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 55,
+      "weight_kg": 104,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=168 | 08:00 M=toast | 12:00 G=145 | 15:30 G=135 | 18:30 M=chicken_salad",
+      "D2 08:10 G=175 | 12:30 G=150 | 15:00 G=140 | 18:30 M=fish_veg",
+      "D3 07:45 G=160 | 08:00 M=cereal | 12:15 G=138 | 18:00 G=130 | 19:00 M=beef_stew",
+      "D4 08:00 G=172 | 08:15 M=bagel | 12:45 G=155 | 15:30 G=145 | 18:30 M=turkey_burger",
+      "D5 07:30 G=155 | 07:45 M=eggs | 12:15 G=135 | 15:00 G=128 | 18:00 G=125 | 19:00 M=pasta",
+      "D6 08:10 G=178 | 12:30 G=152 | 15:30 G=142 | 18:30 M=salmon_salad",
+      "D7 08:00 G=165 | 08:15 M=smoothie | 12:45 G=140 | 18:00 G=132 | 19:00 M=steak_veg",
+      "D8 07:45 G=162 | 08:00 M=oatmeal | 12:15 G=132 | 15:00 G=125 | 18:30 M=chicken_curry",
+      "D9 08:15 G=180 | 08:30 M=pancake | 12:30 G=155 | 15:45 G=145 | 18:30 M=pizza",
+      "D10 07:30 G=158 | 12:15 G=135 | 15:15 G=128 | 18:00 G=130 | 19:00 M=tacos"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy/irregular log with significant missing data. Clear dawn phenomenon pattern is present based on consistently elevated fasting values. Daytime control is stable but uniformly above target, likely due to insulin resistance from obesity. Pharmacotherapy intensification is indicated.",
+      "recommendations": [
+        {
+          "action": "Initiate or titrate basal insulin (e.g., 10-15 units Glargine at bedtime) or add Metformin ER 1000mg at dinner to target the overnight fasting hyperglycemia",
+          "priority": "high",
+          "reason": "Consistent fasting hyperglycemia (155-180 mg/dL) indicating significant dawn phenomenon/hepatic glucose overproduction. Daytime values are stable but elevated (afternoon average 135 mg/dL). Current diet/exercise alone is insufficient to achieve fasting targets.",
+          "concrete_alternative": "If injectable therapy is refused, start with a low dose of an SGLT-2 inhibitor or GLP-1 RA, which have shown benefit in reducing fasting glucose and body weight in obese T2 patients."
+        },
+        {
+          "action": "Formalize evening meal timing and composition, avoiding late-night high-carb snacks",
+          "priority": "medium",
+          "reason": "Evening meals are inconsistently logged. Bedtime values are not recorded, making it difficult to assess the overnight trajectory. Stable afternoon readings suggest this is largely a dawn phenomenon issue, not dietary.",
+          "concrete_alternative": "Log bedtime glucose for 5 days to rule out Somogyi effect (rebound hyperglycemia from nighttime hypo) vs. true dawn phenomenon."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 55,
+      "weight_kg": 116,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:45 G=145 | 08:00 M=cereal C=35 I=5.0R | 12:15 G=128 | 12:30 M=turkey_sandwich C=35 I=5.0R | 17:00 G=105 | 17:30 EX=basketball_1hr | 18:45 G=52 | 18:50 M=gatorade C=30 | 19:30 G=88 | 20:00 M=chicken_rice C=40 I=4.5R | 22:00 G=135 I=32L",
+      "D2 08:00 G=155 | 08:15 M=toast_omelet C=20 I=3.0R | 12:30 G=135 | 12:45 M=salad_chicken C=15 I=2.0R | 17:15 G=98 | 17:45 EX=run_5k | 18:30 G=58 | 18:35 M=juice C=20 | 19:15 G=95 | 19:30 M=salmon_pasta C=45 I=5.5R | 22:00 G=145 I=32L",
+      "D3 07:30 G=135 | 07:45 M=oatmeal C=30 I=4.5R | 12:00 G=115 | 12:30 M=leftover_pasta C=40 I=5.0R | 16:30 G=90 | 17:00 EX=cycling_45min | 17:55 G=60 | 18:00 M=banana C=20 | 18:45 G=98 | 19:00 M=tacos C=40 I=4.5R | 22:00 G=130 I=32L",
+      "D4 08:10 G=150 | 08:25 M=smoothie C=40 I=6.0R | 12:30 G=140 | 12:45 M=quinoa_bowl C=35 I=5.0R | 17:00 G=112 | 17:30 EX=weights | 18:40 G=65 | 18:45 M=crackers C=15 | 19:15 G=90 | 19:30 M=steak_potato C=35 I=4.0R | 22:00 G=140 I=32L",
+      "D5 07:45 G=140 | 08:00 M=toast_peanutbutter C=25 I=4.0R | 12:15 G=120 | 12:30 M=tuna_wrap C=30 I=4.0R | 17:30 G=102 | 18:00 M=soccer | 19:15 G=48 | 19:20 M=candy C=25 | 20:00 G=85 | 20:15 M=burger_fries C=50 I=5.0R | 22:00 G=128 I=32L",
+      "D6 08:00 G=152 | 12:15 G=130 | 12:30 M=eggs_bacon C=5 I=1.0R | 16:45 G=95 | 17:15 M=jog | 18:00 G=62 | 18:05 M=apple C=15 | 18:45 G=95 | 19:00 M=fish_veg C=15 I=2.0R | 22:00 G=138 I=32L",
+      "D7 07:30 G=138 | 07:45 M=yogurt_granola C=35 I=5.0R | 12:30 G=142 | 13:00 M=burrito C=45 I=6.0R | 17:00 G=108 | 17:30 M=spin_class | 18:40 G=55 | 18:45 M=gels C=20 | 19:30 G=92 | 20:00 M=pizza_salad C=40 I=4.5R | 22:00 G=145 I=32L",
+      "D8 08:10 G=148 | 08:25 M=eggs_toast C=20 I=3.0R | 12:15 G=125 | 12:30 M=salad C=15 I=2.0R | 17:15 G=100 | 17:45 EX=run | 18:30 G=50 | 18:35 M=juice_box C=20 | 19:10 G=88 | 19:30 M=chicken_curry_rice C=45 I=5.5R | 22:00 G=140 I=32L",
+      "D9 07:45 G=142 | 08:00 M=bagel C=40 I=6.0R | 12:15 G=130 | 12:30 M=soup_salad C=20 I=2.5R | 16:30 G=92 | 17:00 EX=bike | 17:55 G=58 | 18:00 M=gatorade C=25 | 18:45 G=105 | 19:00 M=steak_veg C=15 I=2.0R | 22:00 G=135 I=32L",
+      "D10 08:00 G=155 | 12:30 G=135 | 12:45 M=chicken_wrap C=30 I=4.0R | 17:00 G=110 | 17:30 EX=basketball | 18:50 G=53 | 18:55 M=glucose_tabs C=16 | 19:30 G=90 | 19:45 M=salmon_rice C=40 I=4.5R | 22:00 G=130 I=32L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps in log but clear pattern. Basal insulin (32L) appears correctly dosed based on fasting and bedtime values. The critical issue is the mismatch between circulating insulin from previous meals and the high-intensity exercise sessions. Consistent, proactive management will eliminate these dangerous lows.",
+      "recommendations": [
+        {
+          "action": "Implement a consistent pre-exercise fueling protocol: consume 20-30g uncovered carbohydrates 15-20 minutes before starting exercise, and reduce pre-exercise bolus insulin by 50% if exercise is within 2 hours of a meal bolus",
+          "priority": "high",
+          "reason": "Severe, recurrent exercise-induced hypoglycemia on 10/10 days (nadirs: 48, 50, 52, 53, 55, 58, 58, 60, 62, 65 mg/dL) requiring immediate rescue carbs. Pre-exercise glucose levels are consistently between 90-112 mg/dL, which is too low for safe initiation of intensive activity without proactive carbohydrate intake.",
+          "concrete_alternative": "If pre-eating is not preferred, set a reduced temporary basal rate on a pump (50% reduction) for 60-90 minutes starting at exercise onset. For MDI, consider switching the afternoon snack to include more complex carbs."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 62,
+      "weight_kg": 79,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=155 | 08:00 M=donut_coffee | 10:00 G=240 | 12:15 G=175 | 12:30 M=sandwich | 15:30 G=145 | 18:30 M=steak_veg",
+      "D2 08:10 G=160 | 08:25 M=bagel_juice | 10:30 G=255 | 12:45 G=185 | 13:00 M=leftover_steak | 18:00 M=chicken_rice",
+      "D3 08:00 G=148 | 08:15 M=sugary_cereal | 10:15 G=230 | 12:00 G=165 | 15:45 G=138 | 18:30 M=fish_salad",
+      "D4 07:45 G=152 | 08:00 M=pancake_syrup | 10:00 G=245 | 12:30 G=180 | 15:00 G=150 | 19:00 M=tacos",
+      "D5 08:15 G=165 | 08:30 M=muffin_latte | 10:45 G=250 | 12:45 G=182 | 18:15 M=pasta_meatballs",
+      "D6 07:30 G=145 | 07:45 M=toast_jam_oj | 10:00 G=225 | 12:15 G=160 | 15:30 G=135 | 18:30 M=salmon_salad",
+      "D7 08:00 G=158 | 08:15 M=cinnamon_roll | 10:30 G=260 | 12:45 G=190 | 15:00 G=155 | 18:00 M=chicken_veg",
+      "D8 07:45 G=150 | 08:00 M=waffle_syrup | 10:15 G=235 | 12:15 G=170 | 18:30 M=beef_stew",
+      "D9 08:10 G=162 | 08:25 M=scone_jam | 10:45 G=248 | 12:45 G=178 | 15:30 G=148 | 19:00 M=burger_salad",
+      "D10 08:00 G=155 | 08:15 M=cereal_banana | 10:30 G=238 | 12:30 G=168 | 15:45 G=140 | 18:30 M=turkey_veg"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy irregular log with frequent missing lunch/dinner items, but breakfast is consistently logged. The pattern is unequivocal: severe breakfast-induced hyperglycemia driven by high glycemic index food choices. This level of postprandial hyperglycemia (consistently >200 mg/dL) significantly increases cardiovascular risk in a 62-year-old male.",
+      "recommendations": [
+        {
+          "action": "Eliminate high-sugar, refined carbohydrate breakfasts (donuts, pastries, sugary cereal, pancakes, cinnamon rolls, waffles, scones) and replace with a high-protein, high-fiber breakfast (e.g., 3-egg omelet with vegetables, Greek yogurt with nuts and berries) within 1 hour of waking",
+          "priority": "high",
+          "reason": "Extreme post-breakfast glycemic excursions with peaks exceeding 225-260 mg/dL by 10:00 AM consistently across all logged days. This represents a rise of 80-110 mg/dL from fasting values. Fasting glucose is moderately elevated (145-165 mg/dL) but is significantly worsened by breakfast choices.",
+          "concrete_alternative": "If dietary change is completely refused, urgent pharmacological intervention is needed: add a rapid-acting insulin secretagogue or GLP-1 RA with breakfast, or initiate basal/bolus insulin therapy."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 66,
+      "weight_kg": 85,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=132 | 07:45 M=toast_egg C=20 I=2.5R | 12:00 G=115 | 12:30 M=salad C=15 I=2.0R | 15:00 G=118 | 18:00 G=122 | 19:00 M=chicken_potato C=35 I=4.0R | 22:00 G=128 I=24L",
+      "D2 08:00 G=140 | 08:15 M=cereal C=30 I=3.5R | 12:30 G=125 | 15:30 G=120 | 18:30 M=fish_rice C=40 I=4.5R | 22:00 G=135 I=24L",
+      "D3 08:10 G=145 | 12:15 G=130 | 12:45 M=turkey_wrap C=30 I=3.5R | 15:00 G=128 | 18:00 M=beef_veg C=15 I=2.0R | 22:00 G=130 I=24L",
+      "D4 07:45 G=138 | 08:00 M=omelet C=5 I=1.0R | 12:15 G=120 | 15:45 G=115 | 18:30 M=pasta C=45 I=5.0R | 22:00 G=140 I=24L",
+      "D5 08:00 G=135 | 08:15 M=smoothie C=35 I=4.0R | 12:30 G=122 | 15:00 G=125 | 19:00 M=steak_salad C=15 I=2.0R | 22:00 G=125 I=24L",
+      "D6 07:30 G=128 | 12:30 G=118 | 12:45 M=chicken_veg C=15 I=2.0R | 15:30 G=112 | 18:30 M=tacos C=40 I=4.5R | 22:00 G=132 I=24L",
+      "D7 08:10 G=142 | 08:25 M=oatmeal C=25 I=3.0R | 12:15 G=128 | 15:00 G=125 | 18:00 M=salmon_quinoa C=35 I=4.0R | 22:00 G=138 I=24L",
+      "D8 08:00 G=140 | 12:45 G=130 | 15:45 G=128 | 18:30 M=burger_no_bun C=10 I=1.5R | 22:00 G=130 I=24L",
+      "D9 07:45 G=130 | 08:00 M=yogurt C=20 I=2.5R | 12:15 G=115 | 15:00 G=118 | 19:00 M=curry_rice C=45 I=5.0R | 22:00 G=140 I=24L",
+      "D10 08:15 G=148 | 12:30 G=132 | 15:30 G=130 | 18:30 M=chicken_salad C=15 I=2.0R | 22:00 G=135 I=24L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy irregular log with missing breakfast data on D3, D6, D8, D10. Despite gaps, a clear pattern of afternoon euglycemia is evident. Basal insulin (24L) is optimally titrated. The log suggests good adherence to dinner boluses. Focus on completing log entries to confirm morning trend.",
+      "recommendations": [
+        {
+          "action": "Maintain current insulin-to-carb ratio (ICR) and basal rate, as afternoon stability is excellent. Consider a slight increase in breakfast ICR (currently ~1:10) to target the mild morning elevation, aiming for fasting <130 and 2hr post-breakfast <160",
+          "priority": "low",
+          "reason": "Overall control is remarkably stable, particularly in the afternoon block (12:00-18:00) where glucose variance is minimal (mean 123, SD 7 mg/dL). Morning values run mildly elevated (135-148 mg/dL) and breakfast occasionally missed. No hypoglycemia or hyperglycemic excursions noted.",
+          "concrete_alternative": "If increasing breakfast bolus is undesirable, add a 10-15 minute post-breakfast walk to lower the mild peak without pharmacological adjustment."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 54,
+      "weight_kg": 86,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=140 | 08:00 M=toast_egg | 12:30 G=105 | 12:45 M=salad_chicken | 15:15 G=68 | 15:20 M=juice | 18:30 M=steak_veg",
+      "D2 08:15 G=150 | 08:30 M=oatmeal | 12:15 G=110 | 12:30 M=soup | 15:45 G=72 | 16:00 M=crackers | 19:00 M=salmon_rice",
+      "D3 07:45 G=135 | 08:00 M=yogurt | 12:45 G=115 | 13:00 M=tuna_wrap | 15:30 G=75 | 15:45 M=apple | 18:30 M=chicken_curry",
+      "D4 08:00 G=145 | 08:15 M=cereal | 12:30 G=118 | 12:45 M=quinoa_bowl | 15:00 G=65 | 15:05 M=glucose_tabs | 18:00 M=beef_stew",
+      "D5 07:30 G=132 | 12:15 G=98 | 12:30 M=chicken_salad | 14:45 G=60 | 14:50 M=banana | 16:00 G=90 | 19:00 M=pasta",
+      "D6 08:10 G=148 | 08:25 M=toast_jam | 12:45 G=112 | 13:00 M=leftover_pasta | 15:45 G=78 | 18:30 M=tacos",
+      "D7 07:45 G=138 | 08:00 M=eggs_bacon | 12:15 G=100 | 12:30 M=salad_beans | 15:15 G=62 | 15:20 M=candy | 17:00 G=95 | 18:30 M=fish_veg",
+      "D8 08:00 G=142 | 12:30 G=108 | 12:45 M=turkey_sandwich | 15:30 G=70 | 15:35 M=juice_box | 18:00 M=grilled_chicken",
+      "D9 07:30 G=130 | 07:45 M=smoothie | 12:45 G=105 | 13:00 M=soup_salad | 15:00 G=68 | 16:00 M=nuts | 19:00 M=steak_salad",
+      "D10 08:15 G=155 | 12:30 G=120 | 12:45 M=wrap | 15:45 G=80 | 18:30 M=salmon_veg"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps in log. Clear post-lunch hypoglycemia pattern. Morning readings mildly elevated. Nocturnal values not captured but dinner is modest. Medication adjustment might be more effective than dietary intervention if current regimen includes insulin or secretagogues.",
+      "recommendations": [
+        {
+          "action": "Add a structured afternoon snack containing 15-20g of complex carbohydrates and protein (e.g., half a turkey sandwich, apple with peanut butter) precisely at 14:30",
+          "priority": "high",
+          "reason": "Predictable daily hypoglycemic events (60-80 mg/dL) occurring between 14:45 and 15:45. This pattern is consistent with a peak in endogenous insulin or medication effect. Fasting and post-dinner readings are well-controlled. Rescue carbs are required almost daily.",
+          "concrete_alternative": "If a snack is refused due to weight concerns (86kg), discuss with the physician reducing the dose of sulfonylurea or mealtime insulin secretagogue, or switching medication class to one with lower hypoglycemia risk (e.g., GLP-1 RA, SGLT-2i)."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 70,
+      "weight_kg": 81,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=168 | 07:45 M=cereal C=35 I=5.0R | 10:00 G=210 | 12:15 G=140 | 15:00 G=135 | 18:00 M=chicken_veg C=15 I=2.0R | 22:00 G=150 I=22L",
+      "D2 08:00 G=175 | 08:15 M=bagel C=40 I=5.5R | 10:30 G=225 | 12:30 G=155 | 15:30 G=145 | 18:30 M=fish_salad C=10 I=1.5R | 22:00 G=160 I=22L",
+      "D3 08:10 G=180 | 08:25 M=pancakes C=45 I=6.0R | 10:45 G=235 | 12:45 G=160 | 15:00 G=148 | 18:00 M=beef_veg C=15 I=2.0R | 22:00 G=155 I=22L",
+      "D4 07:45 G=165 | 08:00 M=toast_jam C=30 I=4.5R | 10:15 G=200 | 12:30 G=138 | 15:30 G=130 | 19:00 M=pasta C=45 I=5.5R | 22:00 G=148 I=22L",
+      "D5 08:00 G=172 | 12:30 G=148 | 15:00 G=142 | 18:30 M=salmon_rice C=40 I=5.0R | 22:00 G=152 I=22L",
+      "D6 07:30 G=158 | 07:45 M=oatmeal C=25 I=4.0R | 10:00 G=195 | 12:15 G=135 | 15:45 G=128 | 18:00 M=tacos C=35 I=4.5R | 22:00 G=145 I=22L",
+      "D7 08:10 G=178 | 08:25 M=smoothie C=40 I=5.5R | 10:45 G=220 | 12:45 G=152 | 15:15 G=140 | 19:00 M=chicken_salad C=15 I=2.0R | 22:00 G=155 I=22L",
+      "D8 08:00 G=170 | 12:15 G=145 | 12:30 M=turkey_wrap C=30 I=4.0R | 15:30 G=138 | 18:30 M=steak_veg C=15 I=2.0R | 22:00 G=150 I=22L",
+      "D9 07:45 G=162 | 08:00 M=eggs_toast C=20 I=3.0R | 10:15 G=190 | 12:30 G=130 | 15:00 G=125 | 18:00 M=curry_rice C=45 I=5.5R | 22:00 G=148 I=22L",
+      "D10 08:10 G=185 | 08:25 M=waffles C=45 I=6.5R | 10:45 G=240 | 12:45 G=165 | 15:30 G=150 | 18:30 M=fish_veg C=15 I=2.0R | 22:00 G=160 I=22L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy irregular log, but a clear pattern emerges: morning insulin resistance/severe postprandial spike followed by excellent afternoon stability. Basal dose (22L) looks appropriate. Aggressive management of the morning spike is needed to improve overall TIR.",
+      "recommendations": [
+        {
+          "action": "Increase breakfast insulin-to-carb ratio to 1:6 (currently ~1:8) and administer bolus 20-30 minutes pre-meal to combat the rapid postprandial spike",
+          "priority": "high",
+          "reason": "Severe post-breakfast hyperglycemia (190-240 mg/dL) occurs within 2 hours on every logged day, despite bolusing. Post-breakfast peaks are excessive relative to well-controlled afternoon values (avg 138 mg/dL). This suggests inadequate bolus timing or ratio for the morning insulin resistance.",
+          "concrete_alternative": "If increasing ratio causes late morning hypoglycemia, keep current ratio but replace high-GI breakfast (cereal, bagel, pancakes, waffles) with low-GI, high-protein options to slow absorption and reduce peak."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 40,
+      "weight_kg": 94,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=148 | 07:45 M=toast_egg C=20 I=3.0R | 12:15 G=125 | 12:30 M=salad C=15 I=2.0R | 18:30 G=130 | 19:00 M=burger_fries C=45 I=6.0R | 22:00 G=165 I=28L | 01:00 G=195",
+      "D2 08:00 G=155 | 12:30 G=135 | 12:45 M=soup C=20 I=3.0R | 18:00 G=120 | 18:30 M=pizza C=50 I=6.5R | 22:30 G=180 I=28L | 02:00 G=205",
+      "D3 08:10 G=160 | 08:25 M=smoothie C=35 I=4.5R | 12:15 G=130 | 18:00 G=125 | 18:30 M=lasagna C=45 I=6.0R | 22:00 G=170 I=28L | 23:30 G=190",
+      "D4 07:45 G=142 | 08:00 M=oatmeal C=30 I=4.0R | 12:30 G=128 | 12:45 M=quinoa_bowl C=30 I=4.0R | 18:30 G=135 | 19:00 M=fish_chips C=45 I=6.0R | 22:00 G=175 I=28L",
+      "D5 08:00 G=158 | 08:15 M=eggs C=5 I=1.0R | 12:15 G=120 | 12:30 M=tuna_wrap C=25 I=3.5R | 18:00 G=115 | 18:30 M=steak_fries C=40 I=5.5R | 22:00 G=160 I=28L | 01:30 G=188",
+      "D6 07:30 G=145 | 07:45 M=cereal C=30 I=4.0R | 12:30 G=132 | 15:30 G=128 | 19:00 M=takeout_curry C=50 I=6.5R | 22:00 G=185 I=28L | 02:00 G=210",
+      "D7 08:10 G=152 | 08:25 M=yogurt C=20 I=3.0R | 12:15 G=125 | 12:30 M=chicken_salad C=15 I=2.0R | 18:30 G=122 | 19:00 M=ribs_mac C=50 I=6.5R | 22:00 G=180 I=28L",
+      "D8 07:45 G=150 | 12:30 G=135 | 12:45 M=leftover_ribs C=20 I=3.0R | 18:00 G=128 | 18:30 M=pasta_meatballs C=50 I=6.5R | 22:00 G=172 I=28L | 01:00 G=198",
+      "D9 08:00 G=160 | 08:15 M=toast_avocado C=20 I=3.0R | 12:15 G=130 | 18:00 G=118 | 18:30 M=burrito_bowl C=50 I=6.5R | 22:00 G=178 I=28L | 23:45 G=200",
+      "D10 07:30 G=148 | 07:45 M=omelet C=5 I=1.0R | 12:30 G=122 | 12:45 M=soup_sandwich C=35 I=4.5R | 18:30 G=130 | 19:00 M=fried_rice C=50 I=6.5R | 22:00 G=175 I=28L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy irregular log with some missing meals. The dominant feature is the nocturnal hyperglycemia driven by high-fat dinner choices. Basal insulin (28L) is likely adequate given the stable daytime readings and lack of fasting hypoglycemia. Post-dinner bolus strategy needs adjustment.",
+      "recommendations": [
+        {
+          "action": "Implement a dual-wave or extended bolus for dinner, delivering 50% immediately and 50% over the subsequent 3-4 hours to match the delayed fat/protein-induced glycemic rise",
+          "priority": "high",
+          "reason": "Consistent delayed nocturnal hyperglycemia (170-185 mg/dL at 22:00, rising further to 188-210 mg/dL overnight) follows high-fat dinners (burger, pizza, lasagna, chips, curry, ribs, mac and cheese, fried rice). Standard bolus is unable to cover the extended digestion curve.",
+          "concrete_alternative": "If dual-wave pump therapy is not available, switch dinner bolus to Regular insulin (onset 30-60 min, peak 2-4 hours) instead of rapid-acting analogue to better match the high-fat meal profile, or add a correction bolus at 22:00."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 68,
+      "weight_kg": 85,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=165 | 07:45 M=cereal_juice C=45 I=5.5R | 10:00 G=230 | 12:15 G=155 | 15:00 G=140 | 18:00 M=chicken_veg C=15 I=2.0R | 22:00 G=145 I=24L",
+      "D2 08:00 G=172 | 08:15 M=bagel_creamcheese C=40 I=5.0R | 10:30 G=245 | 12:30 G=165 | 15:30 G=148 | 18:30 M=fish_rice C=40 I=4.5R | 22:00 G=155 I=24L",
+      "D3 08:10 G=178 | 08:25 M=pancakes_syrup C=50 I=6.0R | 10:45 G=255 | 12:45 G=175 | 15:00 G=152 | 18:00 M=steak_salad C=15 I=2.0R | 22:00 G=150 I=24L",
+      "D4 07:45 G=160 | 08:00 M=toast_jam C=30 I=4.0R | 10:15 G=210 | 12:30 G=148 | 15:30 G=135 | 19:00 M=pasta C=45 I=5.0R | 22:00 G=148 I=24L",
+      "D5 08:00 G=170 | 12:30 G=155 | 15:00 G=145 | 18:30 M=salmon_veg C=15 I=2.0R | 22:00 G=152 I=24L",
+      "D6 07:30 G=155 | 07:45 M=oatmeal C=30 I=4.0R | 10:00 G=205 | 12:15 G=138 | 15:45 G=132 | 18:00 M=tacos C=35 I=4.0R | 22:00 G=140 I=24L",
+      "D7 08:10 G=180 | 08:25 M=smoothie C=45 I=5.5R | 10:45 G=240 | 12:45 G=162 | 15:15 G=148 | 19:00 M=chicken_curry C=40 I=4.5R | 22:00 G=158 I=24L",
+      "D8 08:00 G=168 | 12:15 G=148 | 12:30 M=turkey_wrap C=30 I=3.5R | 15:30 G=140 | 18:30 M=burger_no_bun C=10 I=1.5R | 22:00 G=145 I=24L",
+      "D9 07:45 G=162 | 08:00 M=eggs_toast C=20 I=2.5R | 10:15 G=195 | 12:30 G=135 | 15:00 G=130 | 18:00 M=beef_stew C=30 I=3.5R | 22:00 G=140 I=24L",
+      "D10 08:10 G=185 | 08:25 M=waffles C=45 I=6.0R | 10:45 G=250 | 12:45 G=170 | 15:30 G=155 | 18:30 M=salad_chicken C=15 I=2.0R | 22:00 G=155 I=24L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy irregular log. Clear bifurcation of control: poorly controlled mornings versus tightly controlled afternoons. Basal insulin (24L) is correctly set. The aggressive morning spike requires immediate bolus and/or dietary intervention.",
+      "recommendations": [
+        {
+          "action": "Administer breakfast bolus 25-30 minutes before eating and increase breakfast insulin-to-carb ratio to 1:7 (from current ~1:10), or switch to a lower GI breakfast (e.g., eggs, Greek yogurt, nuts) to reduce the post-meal peak",
+          "priority": "high",
+          "reason": "Exaggerated post-breakfast hyperglycemia with peaks consistently reaching 205-255 mg/dL within 2 hours, despite bolusing. This contrasts sharply with the stable and well-controlled afternoon readings (avg 143 mg/dL). Morning insulin resistance is pronounced.",
+          "concrete_alternative": "If increasing bolus leads to late morning hypoglycemia, split the breakfast into two smaller meals separated by 1.5 hours, or add a 15-minute walk immediately post-breakfast."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 54,
+      "weight_kg": 72,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=155 | 08:00 M=toast_egg | 12:30 G=130 | 15:00 G=125 | 18:30 M=chicken_salad | 22:00 G=140",
+      "D2 08:00 G=162 | 08:15 M=oatmeal | 12:15 G=135 | 15:30 G=128 | 18:30 M=salmon_veg | 22:00 G=145",
+      "D3 07:45 G=150 | 12:30 G=128 | 15:00 G=122 | 18:00 M=steak_rice | 22:00 G=138",
+      "D4 08:10 G=168 | 08:25 M=cereal | 12:45 G=140 | 15:45 G=132 | 18:30 M=fish_salad | 22:00 G=148",
+      "D5 07:30 G=145 | 07:45 M=eggs_bacon | 12:15 G=125 | 15:00 G=120 | 19:00 M=pasta | 22:00 G=135",
+      "D6 08:00 G=158 | 12:30 G=135 | 15:30 G=130 | 18:30 M=chicken_veg | 22:00 G=142",
+      "D7 07:45 G=160 | 08:00 M=smoothie | 12:45 G=138 | 15:15 G=132 | 18:00 M=tacos | 22:00 G=150",
+      "D8 08:15 G=170 | 12:30 G=142 | 15:45 G=135 | 18:30 M=burger_salad | 22:00 G=155",
+      "D9 07:30 G=148 | 08:00 M=toast_avocado | 12:15 G=128 | 15:00 G=122 | 18:30 M=salmon_quinoa | 22:00 G=140",
+      "D10 08:00 G=165 | 12:45 G=140 | 15:30 G=132 | 18:00 M=beef_veg | 22:00 G=145"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. The afternoon stability is commendable. The isolated fasting hyperglycemia (dawn phenomenon) is the primary barrier to achieving A1c goals. Since postprandial control is excellent, treatment should specifically target the fasting period without risking daytime hypoglycemia.",
+      "recommendations": [
+        {
+          "action": "Initiate Metformin ER 500-1000mg with dinner, or consider a low-dose long-acting GLP-1 RA to specifically target hepatic glucose overproduction during the overnight fast",
+          "priority": "high",
+          "reason": "Consistent dawn phenomenon with fasting glucose elevated to 145-170 mg/dL. Daytime and postprandial control (afternoon avg 128 mg/dL) is excellent with current lifestyle management, indicating isolated nocturnal hepatic insulin resistance. Bedtime values are mildly elevated at 135-155 mg/dL.",
+          "concrete_alternative": "If medication is refused, a small protein/fat snack immediately before bed (e.g., cheese stick, handful of almonds) might blunt the early morning glucose rise by providing a small insulin stimulus, though evidence is mixed."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 29,
+      "weight_kg": 56,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=128 | 07:45 M=toast_egg C=20 I=2.0R | 12:00 G=105 | 12:15 M=salad C=15 I=1.5R | 17:00 G=90 | 17:30 EX=run_45min | 18:30 G=48 | 18:35 M=juice C=20 | 19:15 G=85 | 19:30 M=chicken_rice C=35 I=3.0R | 22:00 G=125 I=16L",
+      "D2 08:00 G=135 | 08:15 M=cereal C=30 I=2.5R | 12:30 G=115 | 12:45 M=tuna_wrap C=25 I=2.0R | 16:45 G=88 | 17:15 EX=cycling | 18:00 G=52 | 18:05 M=gels C=15 | 18:45 G=90 | 19:00 M=salmon_veg C=15 I=1.5R | 22:00 G=120 I=16L",
+      "D3 07:45 G=120 | 08:00 M=yogurt C=20 I=2.0R | 12:15 G=100 | 12:30 M=soup_salad C=20 I=2.0R | 17:30 G=85 | 18:00 M=yoga | 18:45 G=68 | 19:15 M=steak_salad C=10 I=1.0R | 22:00 G=115 I=16L",
+      "D4 08:10 G=140 | 08:25 M=oatmeal C=25 I=2.5R | 12:30 G=120 | 12:45 M=chicken_veg C=15 I=1.5R | 17:00 G=95 | 17:30 EX=run | 18:20 G=45 | 18:25 M=glucose_tabs C=15 | 19:00 G=80 | 19:15 M=pasta C=40 I=3.5R | 22:00 G=130 I=16L",
+      "D5 07:30 G=125 | 07:45 M=omelet C=5 I=0.5R | 12:15 G=98 | 12:30 M=turkey_sandwich C=30 I=2.5R | 16:30 G=82 | 17:00 EX=tennis | 18:00 G=55 | 18:05 M=banana C=20 | 18:45 G=95 | 19:00 M=fish_veg C=15 I=1.5R | 22:00 G=122 I=16L",
+      "D6 08:00 G=132 | 12:30 G=110 | 12:45 M=quinoa_bowl C=30 I=2.5R | 17:15 G=92 | 17:45 EX=walk_hills | 18:30 G=60 | 18:35 M=crackers C=15 | 19:00 G=88 | 19:30 M=burger_no_bun C=10 I=1.0R | 22:00 G=128 I=16L",
+      "D7 07:45 G=118 | 08:00 M=toast_avocado C=20 I=2.0R | 12:15 G=105 | 12:30 M=salad_salmon C=15 I=1.5R | 17:00 G=80 | 17:30 M=spin_class | 18:25 G=42 | 18:30 M=gatorade C=25 | 19:15 G=82 | 19:30 M=tacos C=35 I=3.0R | 22:00 G=125 I=16L",
+      "D8 08:10 G=138 | 08:25 M=smoothie C=35 I=3.0R | 12:30 G=125 | 12:45 M=leftover_tacos C=35 I=3.0R | 17:00 G=98 | 17:30 EX=run | 18:20 G=50 | 18:25 M=candy C=18 | 19:00 G=88 | 19:15 M=chicken_salad C=15 I=1.5R | 22:00 G=130 I=16L",
+      "D9 07:30 G=122 | 07:45 M=eggs C=5 I=0.5R | 12:00 G=102 | 12:30 M=wrap C=30 I=2.5R | 16:30 G=85 | 17:00 EX=bike | 17:50 G=55 | 17:55 M=juice_box C=20 | 18:30 G=90 | 19:00 M=salmon_rice C=35 I=3.0R | 22:00 G=120 I=16L",
+      "D10 08:00 G=135 | 12:30 G=118 | 12:45 M=soup C=20 I=2.0R | 17:15 G=95 | 17:45 EX=weights | 18:40 G=62 | 18:45 M=apple C=15 | 19:15 G=85 | 19:30 M=steak_veg C=15 I=1.5R | 22:00 G=125 I=16L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. This young, active T1 patient demonstrates extreme insulin sensitivity during exercise. The basal dose (16L) appears appropriate for rest days. The consistent and severe nature of these drops poses a significant safety risk and requires an immediate pre-exercise carbohydrate protocol.",
+      "recommendations": [
+        {
+          "action": "Consume 20-25g of fast-acting carbohydrates 15 minutes BEFORE exercise, without insulin coverage, and/or reduce any bolus insulin given within 2 hours of exercise by 50%",
+          "priority": "high",
+          "reason": "Life-threatening severe hypoglycemia (42-62 mg/dL) induced by every exercise session (running, cycling, tennis, spin, weights). Pre-exercise glucose values are consistently borderline or low (80-98 mg/dL), making exercise initiation dangerous without proactive fueling.",
+          "concrete_alternative": "If unable to eat pre-exercise, set a temporary basal rate of 50% for 1 hour prior to and during exercise (if on pump). On MDI, consider a small reduction in morning long-acting insulin (15L instead of 16L) on planned exercise days, but this is less precise."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 69,
+      "weight_kg": 113,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=148 | 08:15 M=toast | 12:30 G=138 | 12:45 M=salad | 18:30 G=130 | 19:00 M=steak_fries | 22:30 G=185",
+      "D2 07:45 G=155 | 08:00 M=oatmeal | 12:15 G=142 | 15:30 G=135 | 18:30 M=fried_chicken_mash | 23:00 G=200",
+      "D3 08:15 G=160 | 12:45 G=145 | 13:00 M=soup | 18:00 G=138 | 18:30 M=burger_onionrings | 22:00 G=175",
+      "D4 07:30 G=145 | 07:45 M=eggs | 12:30 G=135 | 12:45 M=tuna_salad | 19:00 M=pizza_meat | 23:00 G=195",
+      "D5 08:00 G=152 | 08:15 M=cereal | 12:30 G=140 | 15:00 G=132 | 18:30 M=fish_chips | 22:15 G=180",
+      "D6 07:50 G=150 | 12:30 G=138 | 12:45 M=quinoa_bowl | 18:30 M=ribs_macncheese | 22:30 G=190",
+      "D7 08:10 G=158 | 08:25 M=yogurt | 12:45 G=145 | 13:00 M=chicken_wrap | 18:00 G=135 | 18:30 M=curry_rice | 22:00 G=170",
+      "D8 07:45 G=148 | 08:00 M=smoothie | 12:30 G=138 | 15:30 G=130 | 19:00 M=lasagna | 23:00 G=205",
+      "D9 08:00 G=155 | 08:15 M=toast_peanutbutter | 12:30 G=142 | 12:45 M=leftover_lasagna | 18:30 G=140 | 19:00 M=pulled_pork_fries | 22:15 G=188",
+      "D10 07:30 G=142 | 12:15 G=132 | 15:00 G=128 | 18:30 G=130 | 19:00 M=meatball_sub | 22:30 G=195"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate log gaps. Fasting and daytime values are near target, indicating good baseline insulin sensitivity. The isolated but consistent high-fat meal spike is the primary defect. Given the patient's age and weight, dietary counseling is the first-line intervention.",
+      "recommendations": [
+        {
+          "action": "Adopt a consistent dinner composition of lean protein, non-starchy vegetables, and a small portion (<30g) of complex carbohydrates. Eliminate deep-fried sides and cheese-heavy sauces.",
+          "priority": "high",
+          "reason": "Severe nocturnal hyperglycemia (170-205 mg/dL at 22:00-23:00) directly follows high-fat dinners (steak fries, fried chicken, onion rings, pizza, ribs, mac and cheese, lasagna). Fasting glucose is modestly elevated (142-160), but these late spikes push the average glucose dangerously high for a 69-year-old.",
+          "concrete_alternative": "If dietary change is difficult, a 30-minute post-dinner walk at ~20:00 combined with Metformin or an SGLT-2 inhibitor can improve postprandial glucose disposal and partially offset the high-fat load."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 55,
+      "weight_kg": 92,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=165 | 07:45 M=cereal C=35 I=5.0R | 10:00 G=240 | 12:15 G=145 | 12:30 M=salad_turkey C=15 I=1.5R | 15:00 G=68 | 15:05 M=juice | 18:30 M=steak_rice C=40 I=5.0R | 22:00 G=155 I=26L",
+      "D2 08:00 G=172 | 08:15 M=bagel C=40 I=6.0R | 10:30 G=255 | 12:30 G=160 | 12:45 M=soup C=20 I=2.0R | 15:30 G=72 | 15:45 M=crackers | 18:00 M=chicken_veg C=15 I=2.0R | 22:00 G=160 I=26L",
+      "D3 08:10 G=178 | 08:25 M=pancakes C=45 I=6.5R | 10:45 G=260 | 12:45 G=170 | 13:00 M=wrap C=30 I=3.0R | 15:45 G=78 | 18:30 M=salmon_salad C=15 I=2.0R | 22:00 G=165 I=26L",
+      "D4 07:45 G=160 | 08:00 M=toast_jam C=30 I=4.5R | 10:15 G=220 | 12:30 G=148 | 12:45 M=quinoa_bowl C=30 I=3.5R | 15:15 G=65 | 15:20 M=glucose_tabs | 19:00 M=pasta C=45 I=5.5R | 22:00 G=150 I=26L",
+      "D5 08:00 G=175 | 12:30 G=155 | 12:45 M=chicken_salad C=15 I=1.5R | 15:00 G=70 | 15:10 M=banana | 18:30 M=fish_veg C=15 I=2.0R | 22:00 G=158 I=26L",
+      "D6 07:30 G=158 | 07:45 M=oatmeal C=25 I=4.0R | 10:00 G=210 | 12:15 G=140 | 12:30 M=tuna_salad C=10 I=1.0R | 14:45 G=60 | 14:50 M=candy | 16:00 G=92 | 18:00 M=tacos C=35 I=4.0R | 22:00 G=148 I=26L",
+      "D7 08:10 G=182 | 08:25 M=smoothie C=40 I=6.0R | 10:45 G=250 | 12:45 G=165 | 13:00 M=leftover_tacos C=30 I=3.0R | 15:30 G=75 | 18:30 M=burger_salad C=20 I=2.5R | 22:00 G=162 I=26L",
+      "D8 08:00 G=168 | 12:15 G=150 | 12:30 M=eggs_bacon C=5 I=0.5R | 15:15 G=68 | 15:25 M=apple | 18:00 M=steak_veg C=15 I=2.0R | 22:00 G=155 I=26L",
+      "D9 07:45 G=162 | 08:00 M=toast_egg C=20 I=3.0R | 10:15 G=215 | 12:30 G=138 | 12:45 M=salad_beans C=25 I=2.5R | 15:00 G=62 | 15:05 M=juice_box | 19:00 M=salmon_rice C=40 I=5.0R | 22:00 G=150 I=26L",
+      "D10 08:10 G=185 | 08:25 M=waffles C=45 I=6.5R | 10:45 G=265 | 12:45 G=175 | 13:00 M=soup C=20 I=2.0R | 15:45 G=80 | 18:30 M=chicken_curry C=35 I=4.0R | 22:00 G=165 I=26L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy irregular log. Displays 'brittle' pattern with severe oscillations between hyperglycemia (mornings) and hypoglycemia (afternoons). Basal (26L) appears slightly high given the afternoon lows, but the dominant issue is bolus strategy. Consider a CGM to track the rapid dynamics.",
+      "recommendations": [
+        {
+          "action": "Increase breakfast insulin-to-carb ratio to 1:6 (currently ~1:8) and administer bolus 20-30 minutes pre-meal to address the morning spike. For lunch, reduce the bolus by 1-2 units or add a 15g carb snack at 14:30 to prevent the subsequent hypo.",
+          "priority": "high",
+          "reason": "Two critical patterns: 1) Severe morning postprandial hyperglycemia (210-265 mg/dL) indicating inadequate bolus timing/ratio. 2) Recurrent post-lunch hypoglycemia (60-78 mg/dL) around 15:00, likely due to over-bolusing for the modest lunch or a 'stacking' effect from the large morning correction.",
+          "concrete_alternative": "Switch breakfast to low-GI foods (eggs, Greek yogurt) to flatten the curve without changing ratios, and consider splitting lunch into two smaller meals to avoid the nadir."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 60,
+      "weight_kg": 114,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=172 | 07:45 M=cereal_milk C=35 I=5.5R | 10:15 G=245 | 12:30 G=160 | 12:45 M=turkey_sandwich C=35 I=5.5R | 18:00 M=chicken_rice C=40 I=6.0R | 22:00 G=155 I=32L",
+      "D2 08:00 G=180 | 08:15 M=bagel_creamcheese C=40 I=6.0R | 10:45 G=260 | 12:45 G=175 | 13:00 M=salad_chicken C=15 I=2.0R | 18:30 M=salmon_veg C=15 I=2.5R | 22:00 G=160 I=32L",
+      "D3 08:10 G=185 | 08:25 M=pancakes_syrup C=50 I=7.5R | 11:00 G=270 | 12:45 G=180 | 18:00 M=steak_salad C=15 I=2.5R | 22:00 G=165 I=32L",
+      "D4 07:45 G=168 | 08:00 M=toast_jam_oj C=40 I=6.0R | 10:30 G=235 | 12:30 G=155 | 12:45 M=leftover_steak C=10 I=1.5R | 18:30 M=pasta C=45 I=6.5R | 22:00 G=150 I=32L",
+      "D5 08:00 G=178 | 12:30 G=162 | 12:45 M=tuna_wrap C=30 I=4.5R | 15:30 G=148 | 19:00 M=burger_fries C=50 I=7.0R | 22:00 G=170 I=32L",
+      "D6 07:30 G=160 | 07:45 M=oatmeal C=25 I=4.0R | 10:15 G=210 | 12:15 G=145 | 12:30 M=soup_salad C=20 I=3.0R | 18:00 M=tacos C=40 I=6.0R | 22:00 G=148 I=32L",
+      "D7 08:10 G=190 | 08:25 M=smoothie_large C=50 I=7.5R | 11:00 G=265 | 12:45 G=178 | 18:30 M=fish_veg C=15 I=2.5R | 22:00 G=165 I=32L",
+      "D8 08:00 G=175 | 12:15 G=158 | 12:30 M=chicken_wrap C=30 I=4.5R | 15:45 G=142 | 18:00 M=beef_stew C=30 I=4.5R | 22:00 G=155 I=32L",
+      "D9 07:45 G=165 | 08:00 M=eggs_toast C=20 I=3.0R | 10:30 G=200 | 12:30 G=140 | 12:45 M=quinoa_bowl C=35 I=5.0R | 18:30 M=salmon_rice C=40 I=6.0R | 22:00 G=152 I=32L",
+      "D10 08:10 G=195 | 08:25 M=waffles_berries C=45 I=7.0R | 11:00 G=275 | 12:45 G=185 | 18:00 M=chicken_veg C=15 I=2.5R | 22:00 G=170 I=32L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. The morning period is dangerously uncontrolled, while afternoons and evenings are manageable. The high fasting glucose (160-195) combined with the spike indicates both basal insufficiency and severe prandial mismatch. Weight management and dietary counseling are crucial adjuncts.",
+      "recommendations": [
+        {
+          "action": "Administer breakfast bolus 30 minutes before the meal and increase breakfast ICR to 1:5 (currently ~1:7). Consider switching to a low-GI breakfast (e.g., eggs, vegetables, high-fiber toast) to minimize the glucose surge.",
+          "priority": "high",
+          "reason": "Consistent extreme post-breakfast hyperglycemic spikes reaching 200-275 mg/dL (average peak 245 mg/dL). This represents an 80-100 mg/dL rise from fasting values (160-195 mg/dL). Basal dose (32L) is appropriate given weight (114kg) and near-normal bedtime values.",
+          "concrete_alternative": "If bolus timing and ratio adjustment fails, consider adding a GLP-1 RA (e.g., semaglutide) to delay gastric emptying and blunt postprandial spikes, leveraging its weight loss benefit for this 114kg patient."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 48,
+      "weight_kg": 55,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=128 | 08:00 M=toast | 12:30 G=102 | 12:45 M=salad_chicken | 15:00 G=68 | 15:05 M=juice | 18:30 M=steak_veg",
+      "D2 08:15 G=135 | 12:15 G=108 | 12:30 M=soup | 15:30 G=72 | 15:45 M=crackers | 19:00 M=salmon_rice",
+      "D3 07:45 G=125 | 08:00 M=oatmeal | 12:45 G=110 | 13:00 M=tuna_wrap | 15:15 G=65 | 15:20 M=glucose_tabs | 18:30 M=chicken_curry",
+      "D4 08:00 G=132 | 08:15 M=yogurt | 12:30 G=105 | 12:45 M=quinoa_bowl | 15:45 G=70 | 16:00 M=apple | 18:00 M=beef_stew",
+      "D5 07:30 G=120 | 12:15 G=98 | 12:30 M=chicken_salad | 14:45 G=60 | 14:50 M=banana | 16:00 G=90 | 19:00 M=pasta",
+      "D6 08:10 G=138 | 12:45 G=115 | 13:00 M=leftover_pasta | 15:30 G=75 | 18:30 M=tacos",
+      "D7 07:45 G=122 | 08:00 M=eggs | 12:15 G=95 | 12:30 M=salad_beans | 15:00 G=62 | 15:05 M=candy | 17:00 G=88 | 18:30 M=fish_veg",
+      "D8 08:00 G=130 | 12:30 G=108 | 12:45 M=turkey_sandwich | 15:30 G=68 | 15:35 M=juice_box | 18:00 M=grilled_chicken",
+      "D9 07:30 G=118 | 12:45 G=105 | 13:00 M=soup_salad | 15:00 G=70 | 16:00 M=nuts | 19:00 M=steak_salad",
+      "D10 08:15 G=140 | 12:30 G=112 | 12:45 M=wrap | 15:45 G=78 | 18:30 M=salmon_veg"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. The patient has excellent baseline control except for the predictable afternoon hypoglycemia. Given the patient's low body weight, pharmacotherapy may be overly aggressive. De-escalation of therapy should be considered to reduce hypoglycemia risk.",
+      "recommendations": [
+        {
+          "action": "Review and likely reduce the dose of sulfonylurea or rapid-acting insulin secretagogue, as the consistent pattern of post-lunch hypoglycemia (60-78 mg/dL) suggests excessive medication action relative to modest carbohydrate intake. Alternatively, add a mandatory 15g carb snack at 14:30.",
+          "priority": "high",
+          "reason": "Recurrent hypoglycemic events daily at ~15:00, approximately 2-3 hours post-lunch, requiring rescue carbs. Fasting and evening glucose values are well-controlled (118-140 mg/dL) and afternoon/evening stability is otherwise excellent. The low BMI (55kg) may predispose to higher drug sensitivity.",
+          "concrete_alternative": "If medication reduction is not immediately possible, switch lunch to include more complex carbs and protein/fat to delay absorption and provide a 'flatter' glycemic profile."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 31,
+      "weight_kg": 119,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=155 | 08:00 M=cereal | 12:30 G=140 | 12:45 M=burger_fries | 17:00 G=130 | 18:00 EX=run_30min | 18:45 G=78 | 19:00 M=chicken_rice",
+      "D2 08:15 G=162 | 08:30 M=bagel | 12:15 G=145 | 15:30 G=135 | 18:00 EX=basketball | 19:00 G=82 | 19:15 M=steak_veg",
+      "D3 07:45 G=148 | 12:30 G=138 | 12:45 M=pizza | 16:30 G=125 | 17:30 EX=cycling | 18:30 G=75 | 19:00 M=salmon_salad",
+      "D4 08:00 G=160 | 08:15 M=pancakes | 12:45 G=150 | 13:00 M=chicken_salad | 18:00 EX=walk_1hr | 19:00 G=88 | 19:15 M=tacos",
+      "D5 07:30 G=145 | 07:45 M=toast_eggs | 12:15 G=132 | 15:00 G=128 | 18:00 EX=weights | 19:00 G=72 | 19:05 M=juice | 19:30 M=fish_rice",
+      "D6 08:10 G=168 | 12:30 G=148 | 12:45 M=turkey_wrap | 17:30 G=135 | 18:30 M=jog | 19:15 G=80 | 19:30 M=chicken_veg",
+      "D7 07:45 G=152 | 08:00 M=oatmeal | 12:30 G=142 | 15:30 G=132 | 18:00 M=soccer | 19:15 G=70 | 19:20 M=gatorade | 20:00 M=burger_salad",
+      "D8 08:00 G=158 | 12:15 G=140 | 15:45 G=130 | 18:00 M=spin_class | 19:00 G=68 | 19:05 M=banana | 19:30 M=salmon_veg",
+      "D9 07:30 G=142 | 07:45 M=smoothie | 12:30 G=135 | 12:45 M=salad | 17:00 G=120 | 18:00 EX=bike | 18:45 G=74 | 19:00 M=steak_potato",
+      "D10 08:15 G=165 | 12:45 G=150 | 13:00 M=leftover_steak | 18:00 EX=run | 18:50 G=76 | 19:15 M=chicken_salad"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. Overall control is fair with fasting levels mildly elevated. Exercise is effectively lowering glucose but without proper fueling. As a T2 patient on non-insulin therapy, hypoglycemia risk is moderate but present during extended activity. Proactive nutrition management is the safest approach.",
+      "recommendations": [
+        {
+          "action": "Consume a small pre-exercise snack containing 15-20g of complex carbohydrates and protein (e.g., half a peanut butter sandwich, apple with cheese) 30-45 minutes before activity",
+          "priority": "medium",
+          "reason": "Moderate but consistent exercise-induced glucose drops (from ~125-135 mg/dL pre-exercise to 68-82 mg/dL post-exercise). While no severe hypoglycemic events (<60 mg/dL) are recorded, the post-exercise readings are below the recommended 80 mg/dL threshold, and rescue carbs were required on D5, D7, D8.",
+          "concrete_alternative": "If unable to eat pre-exercise, time the workout to start within 1-2 hours of a main meal when glucose is naturally peaking, rather than in the late afternoon when glucose is at its nadir."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 49,
+      "weight_kg": 83,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=162 | 08:00 M=toast_egg | 12:30 G=135 | 15:00 G=128 | 18:30 M=chicken_veg | 22:00 G=140",
+      "D2 08:15 G=175 | 08:30 M=oatmeal | 12:15 G=142 | 15:30 G=132 | 18:30 M=fish_salad | 22:00 G=148",
+      "D3 07:45 G=158 | 12:30 G=135 | 15:00 G=125 | 18:00 M=steak_rice | 22:00 G=142",
+      "D4 08:00 G=168 | 08:15 M=cereal | 12:45 G=140 | 15:45 G=135 | 18:30 M=salmon_veg | 22:00 G=150",
+      "D5 07:30 G=155 | 07:45 M=eggs | 12:15 G=128 | 15:00 G=122 | 19:00 M=pasta | 22:00 G=145",
+      "D6 08:10 G=170 | 12:30 G=138 | 15:30 G=130 | 18:30 M=chicken_curry | 22:00 G=148",
+      "D7 07:45 G=160 | 08:00 M=yogurt | 12:45 G=140 | 15:15 G=132 | 18:00 M=tacos | 22:00 G=150",
+      "D8 08:00 G=172 | 12:30 G=145 | 15:45 G=135 | 18:30 M=burger_salad | 22:00 G=155",
+      "D9 07:30 G=150 | 08:00 M=smoothie | 12:15 G=130 | 15:00 G=125 | 18:30 M=fish_rice | 22:00 G=142",
+      "D10 08:15 G=178 | 12:45 G=148 | 15:30 G=140 | 18:00 M=beef_veg | 22:00 G=152"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. Isolated fasting hyperglycemia is the primary concern. Lifestyle management (diet/exercise) appears effective for postprandial control. Pharmacological intervention targeting the dawn phenomenon is the logical next step to improve overall A1c without risking daytime hypoglycemia.",
+      "recommendations": [
+        {
+          "action": "Initiate Metformin ER 1000mg with the evening meal to suppress overnight hepatic gluconeogenesis. If already on Metformin, add a small dose of long-acting GLP-1 RA or basal insulin (e.g., 10 units Glargine at bedtime) to target fasting hyperglycemia.",
+          "priority": "high",
+          "reason": "Consistent dawn phenomenon with fasting glucose elevated to 150-178 mg/dL. Daytime control is excellent (afternoon avg 130 mg/dL) and bedtime readings (140-155 mg/dL) do not fully explain the morning rise, indicating a clear overnight hepatic glucose output issue.",
+          "concrete_alternative": "If medication is refused, a bedtime snack of 15g complex carbs with protein (e.g., whole grain toast with peanut butter) may theoretically reduce the dawn phenomenon by stimulating a small insulin release, though efficacy varies."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 19,
+      "weight_kg": 101,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=175 | 07:45 M=cereal C=45 I=6.0R | 10:15 G=260 | 12:15 G=165 | 12:30 M=burger_fries C=50 I=6.5R | 18:00 G=152 | 18:30 M=pizza C=60 I=8.0R | 22:00 G=180 I=28L",
+      "D2 08:00 G=185 | 08:15 M=bagel C=50 I=6.5R | 10:45 G=275 | 12:45 G=180 | 13:00 M=leftover_pizza C=50 I=6.5R | 18:30 M=chicken_rice C=45 I=6.0R | 22:00 G=175 I=28L",
+      "D3 08:10 G=190 | 08:25 M=pancakes C=55 I=7.0R | 11:00 G=285 | 12:45 G=185 | 18:00 M=tacos C=45 I=6.0R | 22:00 G=170 I=28L",
+      "D4 07:45 G=170 | 08:00 M=toast_jam_oj C=45 I=6.0R | 10:30 G=250 | 12:30 G=160 | 12:45 M=burrito C=55 I=7.0R | 18:30 M=salmon_veg C=15 I=2.0R | 22:00 G=165 I=28L",
+      "D5 08:00 G=180 | 12:30 G=170 | 12:45 M=tuna_melt C=40 I=5.5R | 15:30 G=155 | 19:00 M=steak_fries C=50 I=6.5R | 22:00 G=185 I=28L",
+      "D6 07:30 G=165 | 07:45 M=oatmeal C=30 I=4.0R | 10:15 G=220 | 12:15 G=148 | 12:30 M=soup_sandwich C=40 I=5.5R | 18:00 M=chicken_veg C=15 I=2.0R | 22:00 G=160 I=28L",
+      "D7 08:10 G=195 | 08:25 M=smoothie C=50 I=6.5R | 11:00 G=280 | 12:45 G=182 | 18:30 M=burger_salad C=35 I=4.5R | 22:00 G=178 I=28L",
+      "D8 08:00 G=178 | 12:15 G=165 | 12:30 M=chicken_wrap C=35 I=4.5R | 15:45 G=150 | 18:00 M=fish_chips C=50 I=6.5R | 22:00 G=175 I=28L",
+      "D9 07:45 G=168 | 08:00 M=eggs_toast C=25 I=3.5R | 10:30 G=210 | 12:30 G=145 | 12:45 M=quinoa_bowl C=35 I=4.5R | 18:30 M=pasta_meatballs C=55 I=7.0R | 22:00 G=172 I=28L",
+      "D10 08:10 G=200 | 08:25 M=waffles C=55 I=7.5R | 11:00 G=290 | 12:45 G=190 | 18:00 M=turkey_veg C=15 I=2.0R | 22:00 G=180 I=28L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy irregular log, typical of a younger patient. The glycemic pattern is chaotic but morning spikes are the most prominent feature. Fasting hyperglycemia indicates basal insufficiency, while the post-breakfast surge indicates bolus mismanagement and dietary indiscretion. Education on pre-bolusing is crucial.",
+      "recommendations": [
+        {
+          "action": "Implement a strict low-glycemic index breakfast (e.g., eggs, Greek yogurt, nuts) and administer breakfast bolus 30 minutes pre-meal with an increased ICR of 1:5. Consider a higher basal dose (30L) to lower the fasting glucose baseline.",
+          "priority": "high",
+          "reason": "Extreme post-breakfast hyperglycemia (210-290 mg/dL) occurring daily from a high baseline (165-200 mg/dL). The high-fat, high-carb breakfast choices (cereal, bagels, pancakes, waffles) combined with insufficient bolus timing and ratio are driving A1c upwards. Weight is 101kg, suggesting significant insulin resistance.",
+          "concrete_alternative": "If dietary adherence is challenging in a 19-year-old, consider automated insulin delivery (hybrid closed-loop pump) to aggressively manage the morning spikes, or add Metformin off-label to improve hepatic insulin sensitivity."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 55,
+      "weight_kg": 78,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=168 | 07:45 M=cereal C=35 I=4.5R | 10:15 G=235 | 12:15 G=150 | 12:30 M=salad C=15 I=2.0R | 17:00 G=110 | 17:30 EX=walk_45min | 18:30 G=65 | 18:35 M=juice | 19:00 G=90 | 19:30 M=chicken_rice C=35 I=4.0R | 22:00 G=140 I=22L",
+      "D2 08:00 G=175 | 08:15 M=bagel C=40 I=5.0R | 10:45 G=250 | 12:30 G=160 | 12:45 M=turkey_wrap C=30 I=3.5R | 16:45 G=105 | 17:30 EX=cycling | 18:30 G=58 | 18:35 M=crackers C=15 | 19:15 G=85 | 19:30 M=salmon_veg C=15 I=2.0R | 22:00 G=135 I=22L",
+      "D3 08:10 G=180 | 08:25 M=pancakes C=45 I=5.5R | 10:45 G=260 | 12:45 G=170 | 13:00 M=soup C=20 I=2.5R | 17:15 G=112 | 18:00 M=yoga | 18:45 G=72 | 19:15 M=steak_salad C=15 I=2.0R | 22:00 G=145 I=22L",
+      "D4 07:45 G=160 | 08:00 M=toast_jam C=30 I=4.0R | 10:30 G=220 | 12:30 G=145 | 12:45 M=quinoa_bowl C=30 I=3.5R | 17:00 G=98 | 17:30 EX=run | 18:25 G=50 | 18:30 M=glucose_tabs C=15 | 19:00 G=82 | 19:30 M=tacos C=35 I=4.0R | 22:00 G=130 I=22L",
+      "D5 08:00 G=172 | 12:30 G=155 | 12:45 M=chicken_salad C=15 I=2.0R | 16:30 G=102 | 17:00 EX=tennis | 18:15 G=62 | 18:20 M=apple C=15 | 18:45 G=88 | 19:00 M=fish_rice C=40 I=4.5R | 22:00 G=142 I=22L",
+      "D6 07:30 G=158 | 07:45 M=oatmeal C=25 I=3.5R | 10:15 G=210 | 12:15 G=138 | 12:30 M=tuna_salad C=15 I=2.0R | 17:30 G=108 | 18:00 EX=weights | 18:45 G=68 | 19:00 M=burger_no_bun C=10 I=1.5R | 22:00 G=138 I=22L",
+      "D7 08:10 G=185 | 08:25 M=smoothie C=40 I=5.0R | 10:45 G=255 | 12:45 G=165 | 13:00 M=leftover_tacos C=30 I=3.5R | 17:15 G=115 | 17:45 EX=bike | 18:35 G=55 | 18:40 M=gatorade C=20 | 19:30 G=90 | 20:00 M=chicken_veg C=15 I=2.0R | 22:00 G=140 I=22L",
+      "D8 08:00 G=170 | 12:15 G=148 | 12:30 M=wrap C=30 I=3.5R | 17:00 G=100 | 17:30 EX=walk | 18:30 G=70 | 18:45 M=salmon_salad C=10 I=1.0R | 22:00 G=135 I=22L",
+      "D9 07:45 G=162 | 08:00 M=eggs_toast C=20 I=2.5R | 10:30 G=200 | 12:30 G=135 | 12:45 M=salad_beans C=25 I=3.0R | 16:45 G=95 | 17:30 EX=run | 18:20 G=48 | 18:25 M=candy C=20 | 19:00 G=85 | 19:30 M=steak_veg C=15 I=2.0R | 22:00 G=130 I=22L",
+      "D10 08:10 G=178 | 08:25 M=cereal C=35 I=4.5R | 10:45 G=245 | 12:45 G=158 | 13:00 M=soup_sandwich C=35 I=4.0R | 17:30 G=105 | 18:00 M=yoga | 18:45 G=75 | 19:15 M=pasta C=45 I=5.0R | 22:00 G=148 I=22L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy irregular log. The patient experiences dangerous swings from extreme hyperglycemia to hypoglycemia daily. Basal (22L) appears appropriate. The primary issue is bolus strategy around two critical events: breakfast and exercise. Education on carbohydrate loading and timing is essential.",
+      "recommendations": [
+        {
+          "action": "Increase breakfast ICR to 1:6 (from ~1:8) and pre-bolus by 25-30 minutes. Consume 15-20g uncovered carbs before afternoon exercise, and reduce any bolus given within 3 hours of exercise by 25%.",
+          "priority": "high",
+          "reason": "Dual critical patterns: 1) Severe morning hyperglycemia (200-260 mg/dL) due to high-carb breakfast and inadequate bolus. 2) Consistent exercise-induced hypoglycemia (48-72 mg/dL) occurring in the late afternoon. Pre-exercise glucose is often borderline (95-115 mg/dL), insufficient for activity without fueling.",
+          "concrete_alternative": "If pre-exercise eating is not feasible, shift exercise to the morning shortly after the breakfast bolus when glucose is peaking, though this risks exacerbating the spike if not timed perfectly. Alternatively, set a temporary basal reduction for afternoon exercise."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 44,
+      "weight_kg": 95,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=145 | 08:00 M=toast_egg | 12:30 G=105 | 12:45 M=salad_chicken | 15:00 G=68 | 15:05 M=juice | 16:00 G=95 | 18:30 M=steak_veg",
+      "D2 08:15 G=155 | 08:30 M=oatmeal | 12:15 G=112 | 12:30 M=soup | 15:30 G=72 | 15:45 M=crackers | 17:00 G=98 | 19:00 M=salmon_rice",
+      "D3 07:45 G=138 | 08:00 M=yogurt | 12:45 G=118 | 13:00 M=tuna_wrap | 15:15 G=70 | 15:20 M=apple | 16:30 G=100 | 18:30 M=chicken_curry",
+      "D4 08:00 G=150 | 08:15 M=cereal | 12:30 G=115 | 12:45 M=quinoa_bowl | 15:45 G=78 | 16:00 M=nuts | 18:00 G=105 | 18:30 M=beef_stew",
+      "D5 07:30 G=135 | 12:15 G=100 | 12:30 M=chicken_salad | 14:45 G=62 | 14:50 M=banana | 16:00 G=88 | 19:00 M=pasta",
+      "D6 08:10 G=152 | 12:45 G=120 | 13:00 M=leftover_pasta | 15:30 G=75 | 18:00 G=108 | 18:30 M=tacos",
+      "D7 07:45 G=140 | 08:00 M=eggs_bacon | 12:15 G=98 | 12:30 M=salad_beans | 15:00 G=65 | 15:05 M=glucose_tabs | 16:30 G=92 | 18:30 M=fish_veg",
+      "D8 08:00 G=148 | 12:30 G=110 | 12:45 M=turkey_sandwich | 15:30 G=70 | 15:35 M=juice_box | 17:00 G=100 | 18:00 M=grilled_chicken",
+      "D9 07:30 G=132 | 12:45 G=108 | 13:00 M=soup_salad | 15:00 G=68 | 16:00 G=92 | 19:00 M=steak_salad",
+      "D10 08:15 G=158 | 12:30 G=118 | 12:45 M=wrap | 15:45 G=80 | 17:15 G=102 | 18:30 M=salmon_veg"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clean log. Excellent overall control with the exception of the scheduled afternoon hypoglycemia. This is a classic case of 'the highs are treated, but the lows are created'. Medication adjustment (de-escalation) is likely the safest and most effective long-term solution.",
+      "recommendations": [
+        {
+          "action": "Add a structured 15-20g carbohydrate snack at 14:30 (e.g., small apple, whole-grain crackers) to prevent the daily 15:00 hypoglycemic nadir, or review and reduce the dose of insulin secretagogue/sulfonylurea if currently prescribed",
+          "priority": "high",
+          "reason": "Predictable post-lunch hypoglycemia (62-80 mg/dL) occurring consistently around 15:00 on all 10 days. Afternoon values recover well to 88-108 mg/dL, demonstrating excellent endogenous pancreatic reserve. The hypo is likely driven by medication peak or reactive hyperinsulinemia.",
+          "concrete_alternative": "If medication reduction is chosen over snacking, switch lunch to a lower glycemic index, higher protein/fat composition to flatten the postprandial insulin response naturally."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 75,
+      "weight_kg": 94,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=172 | 08:00 M=donut_coffee | 10:30 G=260 | 12:45 G=185 | 15:30 G=155 | 18:30 M=chicken_veg",
+      "D2 08:00 G=180 | 08:15 M=bagel_juice | 10:45 G=275 | 12:30 G=190 | 18:00 M=fish_salad",
+      "D3 07:45 G=168 | 08:00 M=cereal_sugar | 10:15 G=250 | 12:15 G=175 | 15:45 G=150 | 18:30 M=steak_rice",
+      "D4 08:15 G=185 | 08:30 M=pancake_syrup | 10:45 G=280 | 12:45 G=195 | 15:00 G=160 | 19:00 M=pasta",
+      "D5 07:30 G=162 | 07:45 M=muffin | 10:15 G=245 | 12:30 G=170 | 15:30 G=148 | 18:30 M=salmon_veg",
+      "D6 08:10 G=178 | 08:25 M=waffles | 10:45 G=270 | 12:45 G=188 | 18:00 M=burger_salad",
+      "D7 07:45 G=175 | 08:00 M=toast_jam_oj | 10:30 G=255 | 12:30 G=180 | 15:15 G=155 | 18:30 M=chicken_rice",
+      "D8 08:00 G=190 | 08:15 M=cinnamon_roll | 10:45 G=285 | 12:45 G=198 | 15:30 G=165 | 18:00 M=turkey_veg",
+      "D9 07:30 G=158 | 08:00 M=sugary_oatmeal | 10:15 G=240 | 12:30 G=165 | 15:00 G=145 | 18:30 M=beef_stew",
+      "D10 08:15 G=188 | 08:30 M=french_toast | 10:45 G=290 | 12:45 G=200 | 15:30 G=168 | 18:00 M=fish_veg"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy irregular log. This patient's glycemic control is dangerously poor, with fasting values near 200 and postprandial values approaching 300 mg/dL. A multi-pronged approach involving immediate dietary intervention and pharmacotherapy intensification is required.",
+      "recommendations": [
+        {
+          "action": "Immediately eliminate all concentrated sugars and refined carbohydrates at breakfast. Prescribe a low-carb, high-protein breakfast (e.g., 3-egg omelet with vegetables and cheese). Initiate or titrate basal insulin (e.g., 15-20 units Glargine at bedtime) to address both the dawn phenomenon and the post-breakfast surge.",
+          "priority": "high",
+          "reason": "Extreme fasting hyperglycemia (158-190 mg/dL) indicating dawn phenomenon, severely compounded by high-glycemic breakfasts (donuts, bagels, sugary cereal, pancakes, muffins, waffles, cinnamon rolls) causing postprandial spikes to 240-290 mg/dL. This represents a critical cardiovascular risk in a 75-year-old male.",
+          "concrete_alternative": "If insulin is refused, a combination of Metformin, GLP-1 RA, and SGLT-2 inhibitor should be initiated to aggressively manage both fasting and prandial glucose. Dietary education is non-negotiable."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 67,
+      "weight_kg": 112,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=160 | 08:00 M=cereal_banana | 10:30 G=235 | 12:30 G=165 | 12:45 M=turkey_sandwich | 18:30 M=chicken_veg",
+      "D2 08:15 G=168 | 08:30 M=bagel_creamcheese | 10:45 G=250 | 12:45 G=175 | 15:30 G=155 | 18:30 M=salmon_rice",
+      "D3 07:45 G=155 | 08:00 M=pancakes | 10:30 G=240 | 12:30 G=168 | 18:00 M=steak_veg",
+      "D4 08:00 G=172 | 08:15 M=toast_jam | 10:45 G=245 | 12:45 G=178 | 15:45 G=160 | 19:00 M=pasta",
+      "D5 07:30 G=148 | 07:45 M=oatmeal_honey | 10:15 G=225 | 12:15 G=158 | 15:00 G=148 | 18:30 M=fish_salad",
+      "D6 08:10 G=165 | 08:25 M=muffin | 10:30 G=248 | 12:45 G=172 | 18:30 M=chicken_curry",
+      "D7 07:45 G=158 | 08:00 M=smoothie_large | 10:30 G=230 | 12:30 G=162 | 15:15 G=150 | 18:00 M=beef_stew",
+      "D8 08:00 G=170 | 12:30 G=160 | 12:45 M=wrap | 15:30 G=148 | 18:30 M=burger_no_bun",
+      "D9 07:30 G=152 | 07:45 M=yogurt_fruit | 10:15 G=220 | 12:30 G=155 | 15:00 G=145 | 19:00 M=tacos",
+      "D10 08:15 G=175 | 08:30 M=waffles | 10:45 G=255 | 12:45 G=180 | 15:30 G=162 | 18:30 M=salmon_veg"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. The post-breakfast hyperglycemia is the dominant feature. While not as extreme as some patients, the sustained elevation over 200 mg/dL daily is a significant risk for microvascular complications. Weight management is crucial for long-term metabolic improvement.",
+      "recommendations": [
+        {
+          "action": "Switch to a low-glycemic index, high-protein breakfast (e.g., eggs with vegetables, cottage cheese with nuts) and eliminate liquid calories (juice, large smoothies). Consider adding a GLP-1 RA (e.g., semaglutide) to target both postprandial spikes and weight loss (BMI >35).",
+          "priority": "high",
+          "reason": "Consistent post-breakfast hyperglycemic spikes reaching 220-255 mg/dL from a moderately elevated fasting baseline (148-175 mg/dL). The average morning peak is 85 mg/dL above fasting, indicating severe prandial intolerance to current high-sugar/high-refined carb breakfasts.",
+          "concrete_alternative": "If dietary changes are not sustainable, prescribe a mealtime insulin (e.g., 8-10 units Lispro) with breakfast to cover the carbohydrate load, titrating to 2-hour postprandial target <180 mg/dL."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 65,
+      "weight_kg": 86,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=135 | 07:45 M=toast_egg C=20 I=2.5R | 12:15 G=118 | 12:30 M=salad_chicken C=15 I=2.0R | 15:00 G=120 | 18:30 M=steak_veg C=15 I=2.0R | 22:00 G=130 I=24L",
+      "D2 08:00 G=142 | 08:15 M=oatmeal C=25 I=3.0R | 12:30 G=125 | 15:30 G=122 | 18:00 M=salmon_rice C=35 I=4.0R | 22:00 G=138 I=24L",
+      "D3 08:10 G=148 | 08:25 M=yogurt C=20 I=2.5R | 12:15 G=130 | 15:00 G=128 | 18:30 M=chicken_pasta C=40 I=4.5R | 22:00 G=140 I=24L",
+      "D4 07:45 G=130 | 12:30 G=115 | 12:45 M=tuna_salad C=10 I=1.5R | 15:45 G=118 | 19:00 M=burger_salad C=20 I=2.5R | 22:00 G=135 I=24L",
+      "D5 08:00 G=140 | 08:15 M=cereal C=30 I=3.5R | 12:30 G=128 | 15:00 G=125 | 18:30 M=fish_veg C=15 I=2.0R | 22:00 G=132 I=24L",
+      "D6 07:30 G=125 | 07:45 M=eggs_bacon C=5 I=0.5R | 12:15 G=112 | 15:30 G=115 | 18:00 M=tacos C=35 I=4.0R | 22:00 G=128 I=24L",
+      "D7 08:10 G=145 | 08:25 M=smoothie C=35 I=4.0R | 12:30 G=132 | 15:00 G=130 | 18:30 M=steak_salad C=15 I=2.0R | 22:00 G=140 I=24L",
+      "D8 08:00 G=138 | 12:45 G=125 | 15:45 G=122 | 18:30 M=salmon_veg C=15 I=2.0R | 22:00 G=135 I=24L",
+      "D9 07:45 G=132 | 08:00 M=toast_avocado C=20 I=2.5R | 12:15 G=118 | 15:00 G=120 | 19:00 M=chicken_curry C=35 I=4.0R | 22:00 G=130 I=24L",
+      "D10 08:15 G=150 | 12:30 G=135 | 15:30 G=130 | 18:00 M=beef_stew C=30 I=3.5R | 22:00 G=138 I=24L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clean log. This patient is a model of stable T1 management. Insulin sensitivity appears consistent, and meal bolusing is precise. The only potential improvement is a slight reduction in the mild fasting hyperglycemia, but this is optional given the outstanding TIR.",
+      "recommendations": [
+        {
+          "action": "Maintain current excellent regimen. Consider a minor increase in basal insulin to 25L if aiming for tighter fasting control (target <130), but current control is clinically very good. No significant interventions required.",
+          "priority": "low",
+          "reason": "Exceptional glycemic stability, particularly in the afternoon window (12:00-18:00) where glucose remains a flat line between 112-130 mg/dL across all 10 days. Fasting is mildly elevated (125-150 mg/dL) but postprandial control is excellent. No hypoglycemia or hyperglycemic excursions.",
+          "concrete_alternative": "If fasting <120 is desired, an increase of 1-2 units of basal insulin is safe, but given the stability, the risk of nocturnal hypoglycemia should be weighed against the marginal benefit."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 36,
+      "weight_kg": 59,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=155 | 08:00 M=toast_egg | 12:30 G=132 | 15:00 G=128 | 18:30 M=chicken_veg | 22:00 G=140",
+      "D2 08:15 G=165 | 08:30 M=oatmeal | 12:15 G=138 | 15:30 G=132 | 18:30 M=salmon_salad | 22:00 G=148",
+      "D3 07:45 G=150 | 12:30 G=130 | 15:00 G=125 | 18:00 M=steak_rice | 22:00 G=142",
+      "D4 08:00 G=162 | 08:15 M=cereal | 12:45 G=140 | 15:45 G=135 | 18:30 M=fish_veg | 22:00 G=150",
+      "D5 07:30 G=148 | 07:45 M=eggs | 12:15 G=128 | 15:00 G=122 | 19:00 M=pasta | 22:00 G=145",
+      "D6 08:10 G=170 | 12:30 G=142 | 15:30 G=135 | 18:30 M=chicken_curry | 22:00 G=152",
+      "D7 07:45 G=158 | 08:00 M=smoothie | 12:45 G=138 | 15:15 G=130 | 18:00 M=tacos | 22:00 G=148",
+      "D8 08:00 G=168 | 12:30 G=140 | 15:45 G=135 | 18:30 M=burger_salad | 22:00 G=155",
+      "D9 07:30 G=145 | 08:00 M=yogurt | 12:15 G=128 | 15:00 G=125 | 18:30 M=fish_rice | 22:00 G=140",
+      "D10 08:15 G=175 | 12:45 G=145 | 15:30 G=138 | 18:00 M=beef_veg | 22:00 G=150"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy irregular log. The pattern is clear despite gaps: excellent daytime stability with isolated fasting hyperglycemia. A targeted pharmacological intervention at bedtime is the most logical step to improve overall control without disrupting the well-managed daytime profile.",
+      "recommendations": [
+        {
+          "action": "Initiate Metformin ER 500-1000mg at bedtime to suppress overnight hepatic glucose production and lower fasting glucose. Given low body weight (59kg), avoid insulin secretagogues that may induce hypoglycemia.",
+          "priority": "high",
+          "reason": "Isolated dawn phenomenon causing fasting hyperglycemia (145-175 mg/dL). Daytime control is remarkably stable and well-controlled (afternoon avg 130 mg/dL). Bedtime values are mildly elevated (140-155 mg/dL), indicating the overnight fasting period is the primary glycemic defect.",
+          "concrete_alternative": "If Metformin is contraindicated or not tolerated, a small dose of a long-acting GLP-1 RA (e.g., oral semaglutide) could be considered for its effect on hepatic glucose output, though caution is needed given the patient's low BMI."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 47,
+      "weight_kg": 94,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=140 | 07:45 M=toast_egg C=20 I=3.0R | 12:00 G=125 | 12:30 M=salad_tuna C=15 I=2.0R | 15:00 G=128 | 18:30 M=chicken_rice C=40 I=5.0R | 22:00 G=140 I=26L",
+      "D2 08:00 G=148 | 08:15 M=oatmeal C=30 I=4.0R | 12:30 G=130 | 15:30 G=125 | 18:00 M=salmon_veg C=15 I=2.0R | 22:00 G=145 I=26L",
+      "D3 08:10 G=152 | 08:25 M=cereal C=35 I=4.5R | 12:15 G=135 | 15:00 G=132 | 18:30 M=steak_potato C=35 I=4.5R | 22:00 G=148 I=26L",
+      "D4 07:45 G=135 | 12:30 G=118 | 12:45 M=turkey_wrap C=30 I=4.0R | 15:45 G=120 | 19:00 M=pasta C=45 I=5.5R | 22:00 G=142 I=26L",
+      "D5 08:00 G=145 | 08:15 M=yogurt C=20 I=2.5R | 12:30 G=128 | 15:00 G=125 | 18:30 M=burger_salad C=20 I=2.5R | 22:00 G=138 I=26L",
+      "D6 07:30 G=130 | 07:45 M=eggs C=5 I=1.0R | 12:15 G=115 | 15:30 G=118 | 18:00 M=tacos C=40 I=5.0R | 22:00 G=135 I=26L",
+      "D7 08:10 G=150 | 08:25 M=smoothie C=40 I=5.0R | 12:30 G=138 | 15:00 G=135 | 18:30 M=fish_rice C=40 I=5.0R | 22:00 G=145 I=26L",
+      "D8 08:00 G=142 | 12:45 G=128 | 15:45 G=125 | 18:30 M=chicken_veg C=15 I=2.0R | 22:00 G=140 I=26L",
+      "D9 07:45 G=138 | 08:00 M=toast_avocado C=20 I=3.0R | 12:15 G=122 | 15:00 G=125 | 19:00 M=curry_rice C=45 I=5.5R | 22:00 G=142 I=26L",
+      "D10 08:15 G=155 | 12:30 G=140 | 15:30 G=135 | 18:00 M=beef_veg C=15 I=2.0R | 22:00 G=148 I=26L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. This patient demonstrates excellent T1 management. The basal/bolus balance is well-established. The mild fasting hyperglycemia is the only parameter slightly out of range, but the stability and lack of hypoglycemia suggest the current regimen is highly effective.",
+      "recommendations": [
+        {
+          "action": "Continue current insulin regimen. Consider slight adjustment of breakfast ICR to target the mild fasting and post-breakfast elevation (aim for post-breakfast <160). The basal dose of 26L is correctly titrated.",
+          "priority": "low",
+          "reason": "Very stable glycemic control across all time periods. Afternoon stability is particularly notable with minimal variance (118-135 mg/dL). Fasting values are mildly elevated (130-155 mg/dL) but not critically so. No hypoglycemic events.",
+          "concrete_alternative": "If tighter fasting control is desired, a 1-2 unit increase in basal insulin can be trialed, but the current 26L dose is already providing near-optimal control."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 20,
+      "weight_kg": 101,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=142 | 08:00 M=toast_egg | 12:30 G=132 | 15:00 G=128 | 18:30 M=chicken_veg",
+      "D2 08:15 G=150 | 08:30 M=cereal | 12:15 G=138 | 15:30 G=130 | 18:30 M=burger_salad",
+      "D3 07:45 G=138 | 12:30 G=128 | 15:00 G=125 | 18:00 M=salmon_rice",
+      "D4 08:00 G=148 | 08:15 M=oatmeal | 12:45 G=135 | 15:45 G=132 | 19:00 M=pasta",
+      "D5 07:30 G=135 | 07:45 M=eggs | 12:15 G=125 | 15:00 G=122 | 18:30 M=steak_veg",
+      "D6 08:10 G=155 | 12:30 G=140 | 15:30 G=135 | 18:30 M=chicken_curry",
+      "D7 07:45 G=145 | 08:00 M=yogurt | 12:45 G=135 | 15:15 G=128 | 18:00 M=tacos",
+      "D8 08:00 G=152 | 12:30 G=138 | 15:45 G=132 | 18:30 M=fish_veg",
+      "D9 07:30 G=140 | 08:00 M=smoothie | 12:15 G=130 | 15:00 G=125 | 19:00 M=beef_stew",
+      "D10 08:15 G=160 | 12:45 G=142 | 15:30 G=135 | 18:00 M=turkey_veg"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clean log. This is early-stage T2 with minimal glycemic variability. The primary issue is weight and insulin resistance. Aggressive lifestyle intervention now can significantly alter the disease trajectory. Pharmacotherapy is supportive, not urgent.",
+      "recommendations": [
+        {
+          "action": "Implement lifestyle modifications focusing on weight loss (target 5-7% body weight reduction) and regular exercise. Consider initiating Metformin 500mg BID to improve insulin sensitivity and support weight management.",
+          "priority": "medium",
+          "reason": "Young obese T2 patient (101kg, BMI ~33) with mild-moderate hyperglycemia that is very stable across the day (fasting avg 146, afternoon avg 129 mg/dL). The excellent afternoon stability suggests preserved beta-cell function and insulin sensitivity. Pharmacotherapy can be moderate given the low glycemic variability.",
+          "concrete_alternative": "If Metformin is not tolerated, a GLP-1 RA (e.g., semaglutide) would be ideal given the age (20) and obesity, offering significant weight loss and cardiovascular benefits."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 24,
+      "weight_kg": 117,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=168 | 08:00 M=toast | 12:30 G=145 | 12:45 M=salad | 18:30 G=135 | 19:00 M=burger_fries | 22:30 G=185",
+      "D2 08:15 G=178 | 08:30 M=oatmeal | 12:15 G=150 | 15:30 G=140 | 18:30 M=pizza_meat | 23:00 G=210",
+      "D3 07:45 G=162 | 12:45 G=148 | 13:00 M=soup | 18:00 G=138 | 18:30 M=fried_chicken | 22:15 G=195",
+      "D4 08:00 G=175 | 08:15 M=cereal | 12:30 G=152 | 12:45 M=tuna_wrap | 19:00 M=lasagna | 23:00 G=220",
+      "D5 07:30 G=158 | 07:45 M=eggs | 12:30 G=140 | 15:00 G=135 | 18:30 M=fish_chips | 22:30 G=190",
+      "D6 08:10 G=180 | 12:30 G=155 | 12:45 M=quinoa | 18:30 M=ribs_macncheese | 22:45 G=205",
+      "D7 07:45 G=170 | 08:00 M=yogurt | 12:45 G=150 | 13:00 M=chicken_salad | 18:00 G=142 | 18:30 M=curry_rice | 22:00 G=180",
+      "D8 08:00 G=172 | 12:30 G=148 | 15:30 G=138 | 19:00 M=steak_fries | 22:45 G=195",
+      "D9 07:30 G=155 | 08:00 M=smoothie | 12:30 G=145 | 12:45 M=leftover_steak | 18:30 G=140 | 19:00 M=pulled_pork | 22:30 G=188",
+      "D10 08:15 G=185 | 12:45 G=158 | 13:00 M=wrap | 18:30 M=meatball_sub | 23:00 G=215"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. The combination of dawn phenomenon and high-fat meal spikes creates prolonged nocturnal hyperglycemia. This young patient is on a trajectory for early complications without aggressive intervention. Weight loss is a critical therapeutic goal.",
+      "recommendations": [
+        {
+          "action": "Initiate combination therapy with Metformin 1000mg BID and a GLP-1 RA (e.g., semaglutide) to address both the dawn phenomenon (hepatic glucose output) and the postprandial high-fat spikes (delayed gastric emptying), while also promoting weight loss in this 117kg patient.",
+          "priority": "high",
+          "reason": "Severe dual pattern: 1) Dawn phenomenon causing fasting hyperglycemia (155-185 mg/dL). 2) Delayed postprandial spikes up to 220 mg/dL at 23:00 following high-fat dinners. Combined, this means the patient spends >12 hours/day in significant hyperglycemia.",
+          "concrete_alternative": "If injectables are refused, start Metformin with an SGLT-2 inhibitor, and emphasize strict dietary changes: low-fat, low-GI dinner options. A bedtime snack of 15g protein/fat may help the dawn phenomenon slightly."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 58,
+      "weight_kg": 100,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=145 | 08:00 M=toast_egg | 12:30 G=108 | 12:45 M=salad_chicken | 15:00 G=68 | 15:05 M=juice | 18:30 M=steak_veg",
+      "D2 08:15 G=152 | 08:30 M=oatmeal | 12:15 G=115 | 12:30 M=soup | 15:30 G=72 | 15:45 M=crackers | 19:00 M=salmon_rice",
+      "D3 07:45 G=140 | 12:45 G=118 | 13:00 M=tuna_wrap | 15:15 G=70 | 15:20 M=apple | 18:30 M=chicken_curry",
+      "D4 08:00 G=150 | 08:15 M=cereal | 12:30 G=120 | 12:45 M=quinoa_bowl | 15:45 G=78 | 16:00 M=nuts | 18:00 M=beef_stew",
+      "D5 07:30 G=135 | 12:15 G=102 | 12:30 M=chicken_salad | 14:45 G=62 | 14:50 M=banana | 16:00 G=90 | 19:00 M=pasta",
+      "D6 08:10 G=148 | 12:45 G=112 | 13:00 M=leftover_pasta | 15:30 G=75 | 18:30 M=tacos",
+      "D7 07:45 G=138 | 08:00 M=eggs | 12:15 G=98 | 12:30 M=salad_beans | 15:00 G=65 | 15:05 M=glucose_tabs | 17:00 G=95 | 18:30 M=fish_veg",
+      "D8 08:00 G=142 | 12:30 G=108 | 12:45 M=turkey_sandwich | 15:30 G=70 | 15:35 M=juice_box | 18:00 M=grilled_chicken",
+      "D9 07:30 G=130 | 12:45 G=110 | 13:00 M=soup_salad | 15:00 G=68 | 16:00 M=nuts | 19:00 M=steak_salad",
+      "D10 08:15 G=155 | 12:30 G=118 | 12:45 M=wrap | 15:45 G=80 | 18:30 M=salmon_veg"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. The clinical picture is straightforward: excessive pharmacotherapy relative to lunchtime carbohydrate intake. The 100kg patient likely has significant insulin resistance, but the lunch doses are causing mismatch. De-escalation of therapy is safer than treating lows with additional calories.",
+      "recommendations": [
+        {
+          "action": "Reduce or discontinue sulfonylurea or glinide medication. If on basal insulin, reduce the dose by 20%. Alternatively, add a mandatory 15-20g complex carbohydrate and protein snack at 14:30.",
+          "priority": "high",
+          "reason": "Consistent, predictable post-lunch hypoglycemia (62-80 mg/dL) occurring daily around 15:00, approximately 2-3 hours after lunch. Fasting and evening values are well-controlled (130-155 mg/dL), indicating the hypoglycemia is iatrogenic (medication-induced) rather than a sign of overall poor control.",
+          "concrete_alternative": "If medication adjustment is not possible, switch lunch to a higher fiber/protein composition with a lower glycemic index to naturally delay absorption and prevent the rapid insulin peak."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 64,
+      "weight_kg": 78,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=165 | 08:00 M=toast_egg | 12:30 G=135 | 12:45 M=salad | 17:00 G=125 | 18:00 EX=walk_30min | 18:45 G=82 | 19:00 M=chicken_rice",
+      "D2 08:00 G=175 | 08:15 M=oatmeal | 12:15 G=142 | 15:30 G=132 | 17:30 EX=cycling | 18:30 G=78 | 19:00 M=salmon_veg",
+      "D3 07:45 G=160 | 12:30 G=138 | 15:00 G=130 | 18:00 EX=gardening_1hr | 19:00 G=85 | 19:15 M=steak_salad",
+      "D4 08:15 G=172 | 08:30 M=yogurt | 12:45 G=140 | 15:45 G=135 | 17:30 M=brisk_walk | 18:30 G=80 | 19:00 M=fish_veg",
+      "D5 07:30 G=155 | 07:45 M=eggs | 12:15 G=128 | 15:00 G=125 | 18:00 M=tai_chi | 18:45 G=88 | 19:00 M=pasta",
+      "D6 08:10 G=178 | 12:30 G=145 | 12:45 M=turkey_sandwich | 17:00 G=130 | 18:00 M=light_jog | 18:50 G=75 | 19:15 M=chicken_veg",
+      "D7 07:45 G=168 | 08:00 M=smoothie | 12:45 G=142 | 15:15 G=135 | 17:30 M=yoga | 18:30 G=82 | 19:00 M=tacos",
+      "D8 08:00 G=170 | 12:30 G=138 | 15:30 G=130 | 18:00 EX=walk | 18:45 G=80 | 19:00 M=salmon_salad",
+      "D9 07:30 G=158 | 08:00 M=toast_avocado | 12:15 G=132 | 15:00 G=128 | 17:30 EX=cycling | 18:30 G=76 | 19:15 M=steak_veg",
+      "D10 08:15 G=180 | 12:45 G=148 | 15:30 G=140 | 18:00 M=swimming | 19:00 G=85 | 19:30 M=burger_salad"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clean log. This is a well-managed patient with two mild patterns. The dawn phenomenon is the primary target for improvement. The exercise-induced drops are predictable and easily managed with proactive nutrition.",
+      "recommendations": [
+        {
+          "action": "Initiate low-dose Metformin ER (500mg) at bedtime to address the dawn phenomenon. For exercise, consume a small pre-activity snack (10-15g carbs) such as a small apple or a few whole-grain crackers to prevent the drop below 85 mg/dL.",
+          "priority": "medium",
+          "reason": "Moderate dawn phenomenon (155-180 mg/dL fasting) combined with consistent, gentle exercise-induced glucose drops (from ~130 to 75-88 mg/dL). The drops are not severe (<70) but represent a trend. The post-exercise values are near the lower end of the target range.",
+          "concrete_alternative": "If Metformin is contraindicated, consider a bedtime snack of 10-15g complex carbs to blunt the dawn phenomenon, though Metformin is first-line. For exercise, simply timing the activity 30 minutes post-dinner could leverage the prandial glucose rise."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 55,
+      "weight_kg": 117,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=178 | 07:45 M=cereal C=40 I=6.0R | 10:15 G=265 | 12:15 G=165 | 12:30 M=salad C=15 I=2.0R | 18:30 M=chicken_rice C=40 I=6.0R | 22:00 G=165 I=32L",
+      "D2 08:00 G=185 | 08:15 M=bagel C=45 I=7.0R | 10:45 G=280 | 12:45 G=180 | 13:00 M=turkey_wrap C=30 I=4.5R | 18:00 M=steak_veg C=15 I=2.0R | 22:00 G=170 I=32L",
+      "D3 08:10 G=190 | 08:25 M=pancakes C=50 I=7.5R | 11:00 G=290 | 12:45 G=185 | 18:30 M=salmon_salad C=15 I=2.0R | 22:00 G=175 I=32L",
+      "D4 07:45 G=172 | 08:00 M=toast_jam_oj C=45 I=6.5R | 10:30 G=255 | 12:30 G=160 | 12:45 M=soup C=20 I=3.0R | 18:30 M=pasta C=45 I=6.5R | 22:00 G=160 I=32L",
+      "D5 08:00 G=180 | 12:30 G=170 | 12:45 M=chicken_wrap C=30 I=4.5R | 15:30 G=155 | 19:00 M=burger_fries C=50 I=7.0R | 22:00 G=180 I=32L",
+      "D6 07:30 G=168 | 07:45 M=oatmeal C=30 I=4.5R | 10:15 G=235 | 12:15 G=150 | 12:30 M=tuna_salad C=10 I=1.5R | 18:00 M=tacos C=40 I=6.0R | 22:00 G=158 I=32L",
+      "D7 08:10 G=195 | 08:25 M=smoothie C=45 I=7.0R | 11:00 G=275 | 12:45 G=182 | 13:00 M=leftover_tacos C=35 I=5.0R | 18:30 M=fish_veg C=15 I=2.0R | 22:00 G=172 I=32L",
+      "D8 08:00 G=182 | 12:15 G=168 | 12:30 M=quinoa_bowl C=35 I=5.0R | 15:45 G=152 | 18:00 M=beef_stew C=30 I=4.5R | 22:00 G=165 I=32L",
+      "D9 07:45 G=170 | 08:00 M=eggs_toast C=20 I=3.0R | 10:30 G=220 | 12:30 G=145 | 12:45 M=salad_beans C=25 I=3.5R | 18:30 M=curry_rice C=45 I=6.5R | 22:00 G=168 I=32L",
+      "D10 08:10 G=200 | 08:25 M=waffles C=50 I=7.5R | 11:00 G=295 | 12:45 G=190 | 18:00 M=chicken_veg C=15 I=2.0R | 22:00 G=178 I=32L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. This patient has severe insulin resistance (117kg) with profound morning hyperglycemia. The current basal dose of 32L is insufficient. A combination of basal optimization, strict pre-bolusing discipline, and dietary modification is necessary to reduce cardiovascular risk.",
+      "recommendations": [
+        {
+          "action": "Increase basal insulin to 36L (from 32L) to target dawn phenomenon and lower fasting glucose. Adjust breakfast ICR to 1:5 and administer bolus 30 minutes pre-meal. Strongly recommend transitioning to a low-glycemic index, high-protein breakfast.",
+          "priority": "high",
+          "reason": "Severe dual morning pathology: 1) Dawn phenomenon causing fasting hyperglycemia (168-200 mg/dL). 2) Post-breakfast spikes reaching 220-295 mg/dL due to high-carb meals and insufficient bolus timing/ratio. Combined, this results in dangerous morning hyperglycemia averaging >240 mg/dL.",
+          "concrete_alternative": "Consider adding Metformin (off-label for T1) to improve hepatic insulin sensitivity and reduce the dawn phenomenon, allowing a smaller basal increase. Automated insulin delivery (closed-loop pump) would be highly beneficial for this challenging morning pattern given weight 117kg."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 38,
+      "weight_kg": 104,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=158 | 08:00 M=donut_coffee | 10:30 G=250 | 12:30 G=165 | 12:45 M=burger | 18:30 M=chicken_veg",
+      "D2 08:15 G=165 | 08:30 M=muffin_latte | 10:45 G=260 | 12:45 G=172 | 15:30 G=155 | 18:30 M=salmon_salad",
+      "D3 08:00 G=150 | 08:15 M=cereal_sugar | 10:15 G=240 | 12:30 G=160 | 18:00 M=steak_rice",
+      "D4 07:45 G=162 | 08:00 M=bagel_juice | 10:30 G=255 | 12:45 G=175 | 15:45 G=158 | 19:00 M=pasta",
+      "D5 08:10 G=170 | 12:30 G=168 | 12:45 M=sandwich | 15:00 G=150 | 18:30 M=fish_veg",
+      "D6 07:30 G=148 | 07:45 M=pancake | 10:15 G=245 | 12:30 G=162 | 18:30 M=chicken_curry",
+      "D7 08:00 G=155 | 08:15 M=smoothie_large | 10:30 G=235 | 12:45 G=158 | 15:15 G=148 | 18:00 M=beef_stew",
+      "D8 08:15 G=172 | 08:30 M=waffles | 10:45 G=270 | 12:45 G=180 | 15:30 G=160 | 18:30 M=tacos",
+      "D9 07:30 G=145 | 07:45 M=toast_jam | 10:15 G=230 | 12:30 G=155 | 15:00 G=142 | 19:00 M=burger_salad",
+      "D10 08:10 G=168 | 08:25 M=cinnamon_roll | 10:45 G=265 | 12:45 G=178 | 15:30 G=162 | 18:30 M=turkey_veg"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy irregular log. The post-breakfast spike is the dominant and most dangerous feature. The patient's weight and age suggest metabolic syndrome. A strict dietary intervention combined with pharmacotherapy is the standard of care. Basal insulin may eventually be required if diet and oral agents fail.",
+      "recommendations": [
+        {
+          "action": "Urgently eliminate high-sugar, refined carbohydrate breakfasts (donuts, muffins, sugary cereal, bagels, pancakes, waffles, cinnamon rolls). Replace with a high-protein, high-fiber breakfast (e.g., eggs, vegetables, Greek yogurt with nuts). Initiate Metformin 1000mg BID and consider a GLP-1 RA for weight loss.",
+          "priority": "high",
+          "reason": "Extreme post-breakfast hyperglycemia (230-270 mg/dL) representing a ~90-100 mg/dL spike from fasting (145-172 mg/dL). This occurs daily without fail. The pattern is entirely diet-driven. At 38 years old and 104kg, aggressive intervention is needed to prevent early complications and promote weight loss.",
+          "concrete_alternative": "If dietary adherence is impossible, pharmacotherapy must be rapidly escalated: add a rapid-acting insulin secretagogue with breakfast or initiate basal/bolus insulin therapy to cover the morning carbohydrate load."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 43,
+      "weight_kg": 113,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=148 | 08:00 M=toast_egg | 12:30 G=138 | 12:45 M=salad_chicken | 17:00 G=128 | 18:00 EX=walk_1hr | 19:00 G=80 | 19:15 M=steak_rice",
+      "D2 08:15 G=155 | 08:30 M=oatmeal | 12:15 G=142 | 15:30 G=132 | 17:30 EX=cycling | 18:30 G=78 | 19:00 M=salmon_veg",
+      "D3 07:45 G=140 | 12:30 G=130 | 15:00 G=125 | 18:00 M=jog | 18:45 G=72 | 18:50 M=juice | 19:15 M=chicken_veg",
+      "D4 08:00 G=152 | 08:15 M=cereal | 12:45 G=140 | 15:45 G=135 | 17:30 EX=weights | 18:30 G=82 | 19:00 M=burger_salad",
+      "D5 07:30 G=138 | 07:45 M=eggs | 12:15 G=128 | 15:00 G=122 | 18:00 EX=basketball | 19:15 G=68 | 19:20 M=gatorade | 20:00 M=tacos",
+      "D6 08:10 G=160 | 12:30 G=145 | 12:45 M=turkey_wrap | 17:00 G=132 | 18:00 EX=run | 18:50 G=75 | 19:15 M=fish_veg",
+      "D7 07:45 G=145 | 08:00 M=yogurt | 12:45 G=135 | 15:15 G=128 | 17:30 EX=bike | 18:30 G=70 | 18:35 M=banana | 19:00 M=steak_salad",
+      "D8 08:00 G=158 | 12:30 G=138 | 15:30 G=130 | 18:00 M=spin_class | 19:00 G=65 | 19:05 M=candy | 19:30 M=chicken_rice",
+      "D9 07:30 G=135 | 08:00 M=smoothie | 12:15 G=125 | 15:00 G=120 | 17:30 M=swim | 18:30 G=74 | 19:00 M=salmon_salad",
+      "D10 08:15 G=165 | 12:45 G=148 | 15:30 G=138 | 18:00 EX=walk_hills | 19:00 G=82 | 19:15 M=beef_veg"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. Overall control is fair to good. The exercise-induced drops are predictable and manageable with proactive nutrition. Given the patient's weight (113kg), exercise is highly beneficial and should not be discouraged; simply fuel it correctly.",
+      "recommendations": [
+        {
+          "action": "Consume a pre-exercise snack of 15-20g carbohydrates (e.g., small banana, granola bar) 20-30 minutes before activity. If on any diabetes medication (e.g., sulfonylurea), review the dose as it may be contributing to the exercise-induced drop.",
+          "priority": "medium",
+          "reason": "Consistent mild to moderate exercise-induced hypoglycemic dips (65-82 mg/dL) following afternoon activities. Pre-exercise glucose values are borderline (120-132 mg/dL). While no severe hypoglycemia (<60) occurred, the drops are symptomatic and required rescue on D3, D5, D7, D8. Fasting control is fair (135-165 mg/dL).",
+          "concrete_alternative": "If pre-exercise eating is not feasible, timing exercise 1-2 hours after lunch when glucose is peaking could mitigate the drop without requiring extra calories."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 26,
+      "weight_kg": 88,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=158 | 08:00 M=toast_egg | 12:30 G=132 | 15:00 G=128 | 18:30 M=chicken_veg | 22:00 G=140",
+      "D2 08:15 G=168 | 08:30 M=oatmeal | 12:15 G=140 | 15:30 G=132 | 18:30 M=salmon_salad | 22:00 G=148",
+      "D3 07:45 G=155 | 12:30 G=130 | 15:00 G=125 | 18:00 M=steak_rice | 22:00 G=142",
+      "D4 08:00 G=165 | 08:15 M=cereal | 12:45 G=138 | 15:45 G=130 | 18:30 M=fish_veg | 22:00 G=150",
+      "D5 07:30 G=148 | 07:45 M=eggs | 12:15 G=128 | 15:00 G=122 | 19:00 M=pasta | 22:00 G=145",
+      "D6 08:10 G=172 | 12:30 G=142 | 15:30 G=135 | 18:30 M=chicken_curry | 22:00 G=152",
+      "D7 07:45 G=160 | 08:00 M=yogurt | 12:45 G=135 | 15:15 G=128 | 18:00 M=tacos | 22:00 G=148",
+      "D8 08:00 G=170 | 12:30 G=140 | 15:45 G=132 | 18:30 M=burger_salad | 22:00 G=155",
+      "D9 07:30 G=150 | 08:00 M=smoothie | 12:15 G=130 | 15:00 G=125 | 18:30 M=fish_rice | 22:00 G=142",
+      "D10 08:15 G=175 | 12:45 G=145 | 15:30 G=138 | 18:00 M=beef_veg | 22:00 G=150"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. This is a straightforward case of dawn phenomenon in a young T2 patient. Daytime control is near-target. A single bedtime dose of Metformin ER is the simplest and most effective intervention to bring fasting glucose into range.",
+      "recommendations": [
+        {
+          "action": "Start Metformin ER 500-1000mg at bedtime to suppress hepatic glucose output. The isolated dawn phenomenon is clearly the dominant issue, as daytime control is excellent.",
+          "priority": "high",
+          "reason": "Consistent isolated fasting hyperglycemia (148-175 mg/dL) with excellent daytime stability (afternoon avg 130 mg/dL). Bedtime readings (140-155 mg/dL) are mildly elevated but cannot fully account for the morning rise, confirming a classic dawn phenomenon driven by overnight counter-regulatory hormones.",
+          "concrete_alternative": "If Metformin is not tolerated, a low-carbohydrate, high-protein bedtime snack (e.g., cottage cheese) may provide a mild insulin stimulus to counteract the dawn hormone surge. However, pharmacotherapy is likely more effective."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 38,
+      "weight_kg": 120,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=165 | 08:00 M=cereal_banana | 10:30 G=255 | 12:30 G=160 | 12:45 M=salad_chicken | 15:15 G=72 | 15:20 M=juice | 18:30 M=steak_veg",
+      "D2 08:00 G=172 | 08:15 M=bagel_creamcheese | 10:45 G=270 | 12:45 G=175 | 13:00 M=soup | 15:30 G=68 | 15:45 M=crackers | 19:00 M=salmon_rice",
+      "D3 07:45 G=158 | 08:00 M=pancakes | 10:30 G=260 | 12:45 G=168 | 13:00 M=tuna_wrap | 15:00 G=65 | 15:05 M=glucose_tabs | 18:30 M=chicken_curry",
+      "D4 08:15 G=175 | 08:30 M=toast_jam_oj | 10:45 G=265 | 12:30 G=170 | 12:45 M=quinoa_bowl | 15:30 G=78 | 18:00 M=beef_stew",
+      "D5 07:30 G=155 | 07:45 M=muffin | 10:15 G=245 | 12:15 G=152 | 12:30 M=chicken_salad | 14:45 G=62 | 14:50 M=banana | 16:00 G=92 | 19:00 M=pasta",
+      "D6 08:10 G=180 | 08:25 M=waffles | 10:45 G=280 | 12:45 G=180 | 13:00 M=leftover_pasta | 15:30 G=75 | 18:30 M=tacos",
+      "D7 07:45 G=162 | 08:00 M=sugary_oatmeal | 10:30 G=250 | 12:30 G=155 | 12:45 M=salad_beans | 15:00 G=70 | 15:10 M=apple | 18:30 M=fish_veg",
+      "D8 08:00 G=170 | 12:30 G=162 | 12:45 M=turkey_sandwich | 15:30 G=72 | 15:45 M=juice_box | 18:00 M=grilled_chicken",
+      "D9 07:30 G=150 | 08:00 M=cereal_milk | 10:15 G=240 | 12:45 G=158 | 13:00 M=soup_salad | 15:00 G=68 | 16:00 M=nuts | 19:00 M=steak_salad",
+      "D10 08:15 G=178 | 08:30 M=donut | 10:45 G=275 | 12:30 G=170 | 12:45 M=wrap | 15:45 G=80 | 18:30 M=salmon_veg"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. This patient exhibits severe glycemic variability. The pattern suggests a classic 'over-treat then crash' cycle often seen with sulfonylurea therapy. Weight loss is critical, and GLP-1 RAs offer a dual benefit of weight loss and glycemic control.",
+      "recommendations": [
+        {
+          "action": "Immediately replace high-glycemic breakfast with low-carb, high-protein options. Initiate Metformin and a GLP-1 RA (e.g., tirzepatide or semaglutide) to simultaneously address the morning spike, promote weight loss, and smooth postprandial glucose. Review sulfonylurea dose if applicable, as it may be causing the afternoon hypo.",
+          "priority": "high",
+          "reason": "Severe 'roller coaster' pattern: 1) Morning spikes to 240-280 mg/dL. 2) Reactive afternoon hypoglycemia (62-80 mg/dL) likely due to endogenous insulin surge from sulfonylurea or rapid-acting secretagogue, compounded by a light lunch. The combination of severe hyper- and hypoglycemia is highly dangerous.",
+          "concrete_alternative": "If GLP-1 RA is not accessible, consider basal insulin with Metformin and strict dietary control. Eliminating the sulfonylurea may resolve the afternoon hypos but will require the morning spike to be controlled by diet and basal insulin."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 31,
+      "weight_kg": 114,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=145 | 07:45 M=toast_egg C=20 I=3.0R | 12:15 G=108 | 12:30 M=salad C=15 I=2.5R | 15:00 G=62 | 15:05 M=juice | 18:30 M=chicken_rice C=40 I=6.0R | 22:00 G=148 I=32L",
+      "D2 08:00 G=152 | 08:15 M=oatmeal C=30 I=4.5R | 12:30 G=118 | 12:45 M=soup C=20 I=3.0R | 15:30 G=68 | 15:45 M=crackers | 19:00 M=salmon_veg C=15 I=2.0R | 22:00 G=155 I=32L",
+      "D3 08:10 G=158 | 08:25 M=yogurt C=20 I=3.0R | 12:15 G=112 | 12:30 M=tuna_wrap C=25 I=3.5R | 15:15 G=65 | 15:20 M=apple | 18:30 M=steak_salad C=15 I=2.0R | 22:00 G=150 I=32L",
+      "D4 07:45 G=140 | 08:00 M=cereal C=35 I=5.0R | 12:30 G=120 | 12:45 M=quinoa_bowl C=30 I=4.0R | 15:45 G=72 | 16:00 M=nuts | 18:00 M=beef_stew C=30 I=4.5R | 22:00 G=145 I=32L",
+      "D5 08:00 G=150 | 12:15 G=105 | 12:30 M=chicken_salad C=15 I=2.0R | 14:45 G=58 | 14:50 M=banana | 16:00 G=88 | 19:00 M=pasta C=45 I=6.5R | 22:00 G=160 I=32L",
+      "D6 07:30 G=135 | 07:45 M=eggs C=5 I=1.0R | 12:30 G=108 | 12:45 M=turkey_sandwich C=30 I=4.0R | 15:30 G=70 | 15:45 M=juice_box | 18:00 M=fish_veg C=15 I=2.0R | 22:00 G=140 I=32L",
+      "D7 08:10 G=155 | 08:25 M=smoothie C=40 I=6.0R | 12:45 G=125 | 13:00 M=leftover_fish C=15 I=2.0R | 15:15 G=68 | 15:20 M=candy | 18:30 M=tacos C=40 I=6.0R | 22:00 G=158 I=32L",
+      "D8 08:00 G=148 | 12:15 G=110 | 12:30 M=salad_beans C=25 I=3.5R | 15:45 G=75 | 18:00 M=grilled_chicken C=15 I=2.0R | 22:00 G=150 I=32L",
+      "D9 07:45 G=142 | 08:00 M=toast_avocado C=20 I=3.0R | 12:30 G=115 | 12:45 M=soup_salad C=20 I=3.0R | 15:00 G=60 | 15:05 M=glucose_tabs | 16:00 G=90 | 19:00 M=steak_veg C=15 I=2.0R | 22:00 G=148 I=32L",
+      "D10 08:15 G=160 | 12:30 G=122 | 12:45 M=wrap C=30 I=4.5R | 15:30 G=72 | 15:35 M=apple | 18:30 M=salmon_veg C=15 I=2.0R | 22:00 G=155 I=32L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clean log. Basal insulin (32L) is correctly dosed for weight (114kg) as evidenced by stable fasting and bedtime values. The isolated issue is the lunchtime bolus strategy causing iatrogenic hypoglycemia. This is a simple insulin-to-carb ratio adjustment.",
+      "recommendations": [
+        {
+          "action": "Reduce lunchtime insulin-to-carb ratio from ~1:7 to 1:10, and/or reduce the pre-lunch bolus by 1-2 units. Ensure lunch contains adequate protein and fat to slow absorption. Add a scheduled 15g carb snack at 14:30 if hypoglycemia persists.",
+          "priority": "high",
+          "reason": "Consistent, severe post-lunch hypoglycemia (58-75 mg/dL) occurring around 15:00 on every logged day. Pre-lunch glucose values are near-normal (105-125 mg/dL) and lunch carbohydrate intake is modest (15-30g). The current bolus dosing is excessive for the meal size, leading to a predictable afternoon nadir.",
+          "concrete_alternative": "If adjusting the ratio causes post-lunch hyperglycemia, consider switching lunch to a higher protein/fat composition to naturally delay absorption, or splitting the lunch into two smaller meals 1.5 hours apart."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 53,
+      "weight_kg": 93,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=158 | 08:00 M=bagel | 10:30 G=245 | 12:30 G=155 | 12:45 M=turkey_sandwich | 18:30 M=steak_fries | 22:30 G=185",
+      "D2 08:15 G=165 | 08:30 M=cereal | 10:45 G=250 | 12:45 G=160 | 13:00 M=salad_chicken | 19:00 M=burger_onionrings | 23:00 G=195",
+      "D3 07:45 G=152 | 08:00 M=pancakes | 10:30 G=240 | 12:30 G=150 | 18:00 M=fried_chicken_mash | 22:15 G=180",
+      "D4 08:00 G=160 | 08:15 M=toast_jam | 10:45 G=235 | 12:45 G=155 | 15:30 G=142 | 19:00 M=ribs_macncheese | 22:45 G=190",
+      "D5 07:30 G=148 | 07:45 M=oatmeal | 10:15 G=225 | 12:15 G=145 | 15:00 G=138 | 18:30 M=fish_chips | 22:30 G=178",
+      "D6 08:10 G=168 | 08:25 M=muffin | 10:30 G=255 | 12:45 G=165 | 18:30 M=pizza_meat | 23:00 G=200",
+      "D7 07:45 G=155 | 08:00 M=smoothie | 10:30 G=230 | 12:30 G=148 | 15:15 G=140 | 18:00 M=curry_rice | 22:15 G=175",
+      "D8 08:00 G=162 | 12:30 G=152 | 12:45 M=tuna_wrap | 15:30 G=142 | 19:00 M=lasagna | 23:00 G=205",
+      "D9 07:30 G=150 | 08:00 M=yogurt | 10:15 G=220 | 12:30 G=142 | 15:00 G=135 | 18:30 M=pulled_pork_fries | 22:30 G=188",
+      "D10 08:15 G=170 | 08:30 M=waffles | 10:45 G=260 | 12:45 G=168 | 18:00 M=meatball_sub | 22:45 G=195"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. This is a severely uncontrolled T2 patient with dual prandial pathology. Pharmacotherapy alone is unlikely to achieve targets without significant dietary modification. Combination therapy with a GLP-1 RA could address both the spikes and the patient's weight (93kg).",
+      "recommendations": [
+        {
+          "action": "Aggressive dual dietary intervention: 1) Switch breakfast to low-GI (eggs, Greek yogurt) to eliminate the morning spike. 2) Switch dinner sides from fried/fatty to non-starchy vegetables. Initiate Metformin 1000mg BID and consider a GLP-1 RA to slow gastric emptying for the high-fat evening meals.",
+          "priority": "high",
+          "reason": "Two distinct hyperglycemic peaks daily: 1) Morning post-breakfast spikes to 220-260 mg/dL. 2) Delayed nocturnal spikes to 175-205 mg/dL at 22:00-23:00 following high-fat dinners. The patient spends the vast majority of the day significantly above target range.",
+          "concrete_alternative": "If diet cannot be modified, basal/bolus insulin therapy is likely required: a basal dose to cover fasting, and rapid-acting insulin with both breakfast and dinner to cover the high-carb and high-fat loads respectively."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 19,
+      "weight_kg": 97,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=168 | 08:00 M=toast_egg | 12:30 G=148 | 12:45 M=salad | 17:00 G=135 | 18:00 EX=run_30min | 18:45 G=80 | 19:00 M=chicken_rice",
+      "D2 08:15 G=178 | 08:30 M=oatmeal | 12:15 G=155 | 15:30 G=145 | 17:30 EX=cycling | 18:30 G=78 | 19:00 M=salmon_veg",
+      "D3 07:45 G=162 | 12:30 G=145 | 15:00 G=138 | 18:00 EX=dance_class | 19:00 G=82 | 19:15 M=steak_salad",
+      "D4 08:00 G=175 | 08:15 M=cereal | 12:45 G=158 | 15:45 G=148 | 17:30 M=jog | 18:30 G=75 | 18:45 M=crackers | 19:00 M=fish_veg",
+      "D5 07:30 G=158 | 07:45 M=eggs | 12:15 G=138 | 15:00 G=132 | 18:00 EX=basketball | 19:15 G=70 | 19:20 M=gatorade | 19:45 M=tacos",
+      "D6 08:10 G=180 | 12:30 G=160 | 12:45 M=turkey_wrap | 17:00 G=140 | 18:00 M=swim | 18:50 G=76 | 19:15 M=burger_salad",
+      "D7 07:45 G=170 | 08:00 M=smoothie | 12:45 G=155 | 15:15 G=145 | 17:30 M=yoga | 18:30 G=85 | 19:00 M=chicken_veg",
+      "D8 08:00 G=172 | 12:30 G=150 | 15:30 G=140 | 18:00 EX=weights | 19:00 G=72 | 19:05 M=banana | 19:30 M=salmon_rice",
+      "D9 07:30 G=160 | 08:00 M=yogurt | 12:15 G=142 | 15:00 G=135 | 17:30 EX=run | 18:30 G=68 | 18:35 M=juice | 19:00 M=steak_veg",
+      "D10 08:15 G=185 | 12:45 G=162 | 15:30 G=150 | 18:00 M=spin_class | 19:00 G=74 | 19:15 M=chicken_salad"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. A young patient with two distinct patterns. The dawn phenomenon requires pharmacotherapy. The exercise-induced drops are a sign of improving insulin sensitivity with activity, which is positive but needs nutritional support to prevent hypoglycemia.",
+      "recommendations": [
+        {
+          "action": "Initiate Metformin ER 500mg at bedtime for dawn phenomenon. For exercise, adopt a consistent pre-workout fueling protocol: 15-20g carbs (e.g., half a banana, granola bar) 20 minutes before starting, without additional insulin if on secretagogues.",
+          "priority": "medium",
+          "reason": "Moderate dawn phenomenon (158-185 mg/dL fasting) combined with consistent exercise-induced glucose drops (68-85 mg/dL) requiring rescue on D4, D5, D8, D9. Pre-exercise glucose is borderline (132-140 mg/dL). The drops are manageable but consistent.",
+          "concrete_alternative": "If pre-workout fueling is not desired, shifting exercise to immediately after a meal (post-lunch or post-dinner) would leverage the natural prandial glucose rise to buffer against the drop."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 41,
+      "weight_kg": 80,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=162 | 07:45 M=cereal C=35 I=4.5R | 10:15 G=235 | 12:15 G=145 | 15:00 G=138 | 18:30 M=chicken_rice C=40 I=5.0R | 22:00 G=148 I=22L",
+      "D2 08:00 G=170 | 08:15 M=bagel C=40 I=5.0R | 10:45 G=250 | 12:30 G=155 | 15:30 G=142 | 18:00 M=salmon_veg C=15 I=2.0R | 22:00 G=155 I=22L",
+      "D3 08:10 G=175 | 08:25 M=pancakes C=45 I=5.5R | 10:45 G=260 | 12:45 G=160 | 15:00 G=145 | 18:30 M=steak_salad C=15 I=2.0R | 22:00 G=150 I=22L",
+      "D4 07:45 G=158 | 08:00 M=toast_jam C=30 I=4.0R | 10:30 G=225 | 12:30 G=140 | 15:30 G=135 | 19:00 M=pasta C=45 I=5.5R | 22:00 G=145 I=22L",
+      "D5 08:00 G=165 | 12:30 G=148 | 15:00 G=140 | 18:30 M=burger_salad C=20 I=2.5R | 22:00 G=152 I=22L",
+      "D6 07:30 G=152 | 07:45 M=oatmeal C=25 I=3.5R | 10:15 G=210 | 12:15 G=135 | 15:45 G=130 | 18:00 M=tacos C=35 I=4.5R | 22:00 G=140 I=22L",
+      "D7 08:10 G=178 | 08:25 M=smoothie C=40 I=5.0R | 10:45 G=245 | 12:45 G=158 | 15:15 G=148 | 18:30 M=fish_veg C=15 I=2.0R | 22:00 G=155 I=22L",
+      "D8 08:00 G=168 | 12:15 G=150 | 12:30 M=turkey_wrap C=30 I=4.0R | 15:30 G=142 | 18:00 M=chicken_veg C=15 I=2.0R | 22:00 G=150 I=22L",
+      "D9 07:45 G=155 | 08:00 M=eggs_toast C=20 I=2.5R | 10:30 G=205 | 12:30 G=132 | 15:00 G=128 | 18:30 M=curry_rice C=45 I=5.5R | 22:00 G=145 I=22L",
+      "D10 08:10 G=180 | 08:25 M=waffles C=45 I=6.0R | 10:45 G=255 | 12:45 G=165 | 15:30 G=150 | 18:00 M=salad_chicken C=15 I=2.0R | 22:00 G=158 I=22L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. The afternoon stability is excellent, indicating good basal dosing (22L) and lunch/dinner ratios. The morning spike is the sole significant issue. Pre-bolusing discipline and ratio adjustment are the primary levers to fix this.",
+      "recommendations": [
+        {
+          "action": "Administer breakfast bolus 25-30 minutes before eating and increase breakfast ICR to 1:6 (from ~1:8). Consider switching to a lower GI breakfast or adding a small correction bolus to the meal dose to cover the morning insulin resistance.",
+          "priority": "high",
+          "reason": "Consistent post-breakfast hyperglycemic spikes (205-260 mg/dL) contrasting sharply with excellent afternoon stability (avg 140 mg/dL). Fasting values are mildly elevated (152-180 mg/dL). The morning spike is driven by a combination of breakfast carbs and dawn phenomenon insulin resistance.",
+          "concrete_alternative": "If increasing bolus causes late morning hypoglycemia, split the breakfast into two smaller meals separated by 2 hours, or add a 15-minute walk immediately after breakfast to improve insulin action."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 30,
+      "weight_kg": 103,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=162 | 08:00 M=toast_egg | 12:30 G=138 | 15:00 G=130 | 18:30 M=chicken_veg | 22:00 G=145",
+      "D2 08:15 G=175 | 08:30 M=oatmeal | 12:15 G=145 | 15:30 G=138 | 18:30 M=salmon_salad | 22:00 G=152",
+      "D3 07:45 G=158 | 12:30 G=135 | 15:00 G=128 | 18:00 M=steak_rice | 22:00 G=142",
+      "D4 08:00 G=168 | 08:15 M=cereal | 12:45 G=142 | 15:45 G=135 | 18:30 M=fish_veg | 22:00 G=150",
+      "D5 07:30 G=152 | 07:45 M=eggs | 12:15 G=132 | 15:00 G=125 | 19:00 M=pasta | 22:00 G=148",
+      "D6 08:10 G=170 | 12:30 G=140 | 15:30 G=132 | 18:30 M=chicken_curry | 22:00 G=155",
+      "D7 07:45 G=160 | 08:00 M=yogurt | 12:45 G=138 | 15:15 G=130 | 18:00 M=tacos | 22:00 G=150",
+      "D8 08:00 G=172 | 12:30 G=142 | 15:45 G=135 | 18:30 M=burger_salad | 22:00 G=158",
+      "D9 07:30 G=155 | 08:00 M=smoothie | 12:15 G=130 | 15:00 G=125 | 18:30 M=fish_rice | 22:00 G=145",
+      "D10 08:15 G=178 | 12:45 G=148 | 15:30 G=140 | 18:00 M=beef_veg | 22:00 G=155"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. This is a classic isolated dawn phenomenon in an obese T2 patient. Daytime control is excellent, indicating adequate beta-cell function for prandial control. A single targeted bedtime intervention can fix the fasting hyperglycemia and significantly improve A1c.",
+      "recommendations": [
+        {
+          "action": "Start Metformin ER 1000mg at bedtime. If already on Metformin, add a low dose of basal insulin (e.g., 10-15 units Glargine) at bedtime to specifically target fasting hyperglycemia. Consider SGLT-2 inhibitor as an alternative.",
+          "priority": "high",
+          "reason": "Consistent dawn phenomenon with fasting glucose 152-178 mg/dL, while daytime and postprandial glucose is well-controlled (afternoon avg 133 mg/dL). Bedtime readings (142-158 mg/dL) are mildly elevated but do not fully account for the morning fasting level, confirming overnight hepatic glucose overproduction.",
+          "concrete_alternative": "If pharmacotherapy is declined, a high-protein, low-carb bedtime snack (e.g., cheese and nuts) may provide a minor insulin stimulus to counteract the dawn rise, but is unlikely to normalize fasting glucose to <130 mg/dL."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 23,
+      "weight_kg": 108,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=152 | 07:45 M=cereal C=35 I=5.0R | 12:15 G=110 | 12:30 M=salad C=15 I=2.5R | 15:00 G=62 | 15:05 M=juice | 17:00 G=90 | 17:30 EX=run | 18:20 G=48 | 18:25 M=glucose_tabs | 19:00 G=85 | 19:30 M=chicken_rice C=35 I=5.0R | 22:00 G=140 I=30L",
+      "D2 08:00 G=160 | 08:15 M=bagel C=40 I=5.5R | 12:30 G=118 | 12:45 M=soup C=20 I=3.0R | 15:30 G=68 | 15:45 M=crackers | 16:30 G=85 | 17:00 EX=cycling | 18:00 G=55 | 18:05 M=gels | 18:45 G=82 | 19:00 M=salmon_veg C=15 I=2.0R | 22:00 G=145 I=30L",
+      "D3 08:10 G=165 | 08:25 M=pancakes C=45 I=6.0R | 12:45 G=125 | 13:00 M=tuna_wrap C=25 I=3.5R | 15:15 G=70 | 15:20 M=apple | 17:30 G=95 | 18:00 M=yoga | 18:45 G=72 | 19:15 M=steak_salad C=15 I=2.0R | 22:00 G=150 I=30L",
+      "D4 07:45 G=148 | 08:00 M=toast_jam C=30 I=4.0R | 12:30 G=115 | 12:45 M=quinoa_bowl C=30 I=4.0R | 15:45 G=75 | 16:00 M=nuts | 17:15 G=92 | 17:45 EX=weights | 18:40 G=60 | 18:45 M=juice_box | 19:15 G=90 | 19:45 M=burger_fries C=45 I=6.0R | 22:00 G=155 I=30L",
+      "D5 08:00 G=158 | 12:15 G=108 | 12:30 M=chicken_salad C=15 I=2.0R | 14:45 G=58 | 14:50 M=banana | 16:00 G=82 | 17:30 EX=basketball | 18:45 G=52 | 18:50 M=gatorade | 19:30 G=88 | 20:00 M=tacos C=40 I=5.5R | 22:00 G=148 I=30L",
+      "D6 07:30 G=142 | 07:45 M=eggs C=5 I=1.0R | 12:30 G=105 | 12:45 M=turkey_sandwich C=30 I=4.0R | 15:30 G=65 | 15:45 M=juice | 17:00 G=88 | 17:30 M=jog | 18:15 G=50 | 18:20 M=candy | 19:00 G=85 | 19:30 M=fish_veg C=15 I=2.0R | 22:00 G=135 I=30L",
+      "D7 08:10 G=168 | 08:25 M=smoothie C=40 I=5.5R | 12:45 G=128 | 13:00 M=leftover_fish C=15 I=2.0R | 15:15 G=72 | 15:30 M=crackers | 17:15 G=95 | 17:45 M=spin_class | 18:40 G=58 | 18:45 M=glucose_tabs | 19:30 G=90 | 20:00 M=chicken_veg C=15 I=2.0R | 22:00 G=150 I=30L",
+      "D8 08:00 G=155 | 12:15 G=112 | 12:30 M=salad_beans C=25 I=3.5R | 15:45 G=78 | 17:00 G=98 | 17:30 EX=run | 18:20 G=55 | 18:25 M=gels | 19:00 G=82 | 19:15 M=salmon_rice C=40 I=5.5R | 22:00 G=145 I=30L",
+      "D9 07:45 G=150 | 08:00 M=toast_avocado C=20 I=3.0R | 12:30 G=108 | 12:45 M=soup_salad C=20 I=3.0R | 15:00 G=60 | 15:05 M=juice | 16:30 G=88 | 17:00 EX=bike | 17:50 G=45 | 17:55 M=banana | 18:30 G=78 | 19:00 M=steak_veg C=15 I=2.0R | 22:00 G=140 I=30L",
+      "D10 08:15 G=162 | 12:30 G=115 | 12:45 M=wrap C=30 I=4.0R | 15:30 G=70 | 15:35 M=apple | 17:15 G=90 | 17:45 M=swim | 18:40 G=52 | 18:45 M=gatorade | 19:30 G=85 | 20:00 M=chicken_curry C=35 I=5.0R | 22:00 G=148 I=30L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Messy irregular log. This patient's management is currently unsafe due to the daily occurrence of severe hypoglycemia in two distinct time blocks. An urgent comprehensive review of insulin-to-carb ratios and exercise protocols is required. Consider a CGM with low-glucose suspend functionality.",
+      "recommendations": [
+        {
+          "action": "Reduce lunchtime ICR to 1:10 (from ~1:7) to prevent the 15:00 hypo. Implement a mandatory pre-exercise snack of 25-30g carbs (uncovered) and reduce any pre-exercise bolus within 2 hours by 50%. Consider a temporary basal rate reduction of 50% for 1 hour during exercise.",
+          "priority": "high",
+          "reason": "Extremely dangerous double-dip hypoglycemia pattern daily: 1) Post-lunch hypo (58-78 mg/dL) around 15:00. 2) Exercise-induced hypo (45-60 mg/dL) around 18:00-18:45. These events are severe, frequent, and occur when the patient is likely away from immediate medical assistance. Basal (30L) appears appropriate for weight.",
+          "concrete_alternative": "If pump therapy is available, this patient is an ideal candidate for a hybrid closed-loop system with exercise mode to automatically reduce insulin delivery during activity. On MDI, splitting lunch into two smaller meals and having a structured pre-workout meal are critical."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 24,
+      "weight_kg": 120,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=150 | 08:00 M=toast_egg | 12:30 G=140 | 12:45 M=salad_chicken | 17:00 G=132 | 18:00 EX=walk_1hr | 19:00 G=82 | 19:15 M=steak_rice",
+      "D2 08:15 G=160 | 08:30 M=oatmeal | 12:15 G=148 | 15:30 G=138 | 17:30 EX=cycling | 18:30 G=78 | 19:00 M=salmon_veg",
+      "D3 07:45 G=145 | 12:30 G=135 | 15:00 G=128 | 18:00 EX=dance | 18:45 G=75 | 18:50 M=juice | 19:15 M=chicken_veg",
+      "D4 08:00 G=158 | 08:15 M=cereal | 12:45 G=145 | 15:45 G=138 | 17:30 EX=weights | 18:30 G=82 | 19:00 M=burger_salad",
+      "D5 07:30 G=140 | 07:45 M=eggs | 12:15 G=130 | 15:00 G=125 | 18:00 M=jog | 18:50 G=72 | 18:55 M=banana | 19:15 M=tacos",
+      "D6 08:10 G=162 | 12:30 G=150 | 12:45 M=turkey_wrap | 17:00 G=135 | 18:00 M=swim | 19:00 G=76 | 19:15 M=fish_veg",
+      "D7 07:45 G=148 | 08:00 M=yogurt | 12:45 G=140 | 15:15 G=132 | 17:30 EX=bike | 18:30 G=70 | 18:35 M=candy | 19:00 M=steak_salad",
+      "D8 08:00 G=155 | 12:30 G=142 | 15:30 G=135 | 18:00 EX=run | 18:45 G=68 | 18:50 M=gatorade | 19:30 M=salmon_rice",
+      "D9 07:30 G=142 | 08:00 M=smoothie | 12:15 G=132 | 15:00 G=128 | 17:30 M=spin | 18:30 G=65 | 18:35 M=juice_box | 19:15 M=chicken_curry",
+      "D10 08:15 G=165 | 12:45 G=152 | 15:30 G=142 | 18:00 M=yoga | 18:45 G=80 | 19:00 M=beef_veg"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. The exercise-induced drops are a sign of improving insulin sensitivity with activity. Given the patient's weight (120kg), exercise is highly beneficial and should be encouraged with proper nutritional support to make it safe and sustainable.",
+      "recommendations": [
+        {
+          "action": "Consume a pre-exercise snack of 15-20g carbohydrates (e.g., a small piece of fruit, granola bar) 20-30 minutes before activity. This is particularly important when pre-exercise glucose is <130 mg/dL. If on any diabetes medication, review dose to ensure it is not contributing to the drop.",
+          "priority": "medium",
+          "reason": "Consistent exercise-induced glycemic drops (from ~132-140 mg/dL to 65-82 mg/dL). While no severe events (<60) are recorded, the post-exercise values are frequently below the 80 mg/dL threshold, and rescue carbs were required on D3, D5, D7, D8, D9. Fasting glucose is mildly elevated (140-165 mg/dL).",
+          "concrete_alternative": "If pre-exercise eating is not desired, time the workout to start within 1-2 hours after a main meal when glucose is naturally peaking, rather than in the late afternoon when glucose is at its nadir."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 51,
+      "weight_kg": 78,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=162 | 08:00 M=bagel_creamcheese | 10:30 G=245 | 12:30 G=155 | 15:00 G=142 | 18:30 M=chicken_veg",
+      "D2 08:15 G=170 | 08:30 M=cereal_sugar | 10:45 G=255 | 12:45 G=162 | 15:30 G=148 | 18:30 M=salmon_salad",
+      "D3 07:45 G=158 | 08:00 M=pancakes | 10:30 G=240 | 12:30 G=150 | 15:00 G=140 | 18:00 M=steak_rice",
+      "D4 08:00 G=168 | 08:15 M=toast_jam_oj | 10:45 G=250 | 12:45 G=160 | 15:45 G=145 | 19:00 M=pasta",
+      "D5 07:30 G=152 | 12:30 G=145 | 15:00 G=138 | 18:30 M=burger_salad",
+      "D6 08:10 G=175 | 08:25 M=muffin | 10:45 G=260 | 12:45 G=168 | 15:30 G=150 | 18:00 M=fish_veg",
+      "D7 07:45 G=160 | 08:00 M=oatmeal_honey | 10:30 G=235 | 12:30 G=148 | 15:15 G=140 | 18:30 M=chicken_curry",
+      "D8 08:00 G=165 | 12:30 G=152 | 15:30 G=142 | 18:30 M=tacos",
+      "D9 07:30 G=155 | 08:00 M=smoothie | 10:15 G=230 | 12:30 G=145 | 15:00 G=135 | 19:00 M=beef_stew",
+      "D10 08:15 G=172 | 08:30 M=waffles | 10:45 G=265 | 12:45 G=170 | 15:30 G=155 | 18:30 M=salmon_rice"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. The sharp contrast between the uncontrolled morning and well-controlled afternoon suggests isolated morning insulin resistance compounded by high-carb meal choices. Dietary modification is the first-line, lowest-cost intervention with the highest potential impact.",
+      "recommendations": [
+        {
+          "action": "Switch to a low-glycemic index, high-protein breakfast (e.g., eggs, lean meat, vegetables). Initiate Metformin 500mg BID. If breakfast hyperglycemia persists, add a DPP-4 inhibitor or low-dose GLP-1 RA to specifically target postprandial spikes.",
+          "priority": "high",
+          "reason": "Severe post-breakfast hyperglycemic spikes (230-265 mg/dL) followed by excellent afternoon stability (avg 144 mg/dL). This pattern indicates significant prandial intolerance to high-carb breakfasts, but preserved afternoon insulin sensitivity. Fasting glucose is moderately elevated (152-175 mg/dL).",
+          "concrete_alternative": "If dietary change is not possible, prescribe a rapid-acting insulin secretagogue (e.g., Repaglinide) with breakfast to cover the carbohydrate load, or initiate basal/bolus insulin therapy."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 64,
+      "weight_kg": 61,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=160 | 08:00 M=toast_egg | 12:30 G=132 | 15:00 G=125 | 18:30 M=chicken_veg | 22:00 G=140",
+      "D2 08:15 G=172 | 08:30 M=oatmeal | 12:15 G=138 | 15:30 G=130 | 18:30 M=salmon_salad | 22:00 G=148",
+      "D3 07:45 G=155 | 12:30 G=128 | 15:00 G=122 | 18:00 M=steak_rice | 22:00 G=142",
+      "D4 08:00 G=168 | 08:15 M=cereal | 12:45 G=135 | 15:45 G=128 | 18:30 M=fish_veg | 22:00 G=150",
+      "D5 07:30 G=150 | 07:45 M=eggs | 12:15 G=125 | 15:00 G=120 | 19:00 M=pasta | 22:00 G=145",
+      "D6 08:10 G=175 | 12:30 G=140 | 15:30 G=132 | 18:30 M=chicken_curry | 22:00 G=152",
+      "D7 07:45 G=162 | 08:00 M=yogurt | 12:45 G=135 | 15:15 G=128 | 18:00 M=tacos | 22:00 G=148",
+      "D8 08:00 G=170 | 12:30 G=138 | 15:45 G=130 | 18:30 M=burger_salad | 22:00 G=155",
+      "D9 07:30 G=148 | 08:00 M=smoothie | 12:15 G=128 | 15:00 G=122 | 18:30 M=fish_rice | 22:00 G=142",
+      "D10 08:15 G=178 | 12:45 G=142 | 15:30 G=135 | 18:00 M=beef_veg | 22:00 G=150"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Moderate gaps. Isolated fasting hyperglycemia in a lean T2 patient. The pattern is clear and highly amenable to a single bedtime intervention. The low body weight is atypical for T2 and should prompt consideration of latent autoimmune diabetes in adults (LADA).",
+      "recommendations": [
+        {
+          "action": "Initiate low-dose Metformin ER 500mg at bedtime to suppress overnight hepatic gluconeogenesis. Given low body weight (61kg), avoid sulfonylureas and start with the lowest effective Metformin dose to minimize GI side effects.",
+          "priority": "high",
+          "reason": "Consistent isolated dawn phenomenon with fasting glucose 148-178 mg/dL. Daytime control is excellent (afternoon avg 128 mg/dL) and bedtime readings are mildly elevated (140-155 mg/dL). The low BMI suggests insulin deficiency (e.g., LADA) or hepatic insulin resistance rather than typical obesity-driven T2.",
+          "concrete_alternative": "If Metformin is not tolerated, a small dose of basal insulin (e.g., 6-8 units Glargine) at bedtime may be necessary. GLP-1 RA is less appropriate given the low BMI. Consider checking GAD antibodies to rule out LADA."
+        }
+      ]
+    }
+  }
+]

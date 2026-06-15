@@ -1,0 +1,1638 @@
+[
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 31,
+      "weight_kg": 103,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=148 | 08:00 M=toast C=25 | 12:30 G=135 | 13:00 M=wrap C=35 | 15:00 G=132 | 17:30 G=65 | M=juice C=20 | 18:30 G=88 | 19:00 M=pizza C=60 | 23:00 G=172",
+      "D2 07:20 G=145 | 12:00 G=130 | 12:30 M=salad C=15 | 15:30 G=128 | 17:20 G=60 | M=soda C=20 | 18:40 G=85 | 19:10 M=burger_fries C=55 | 23:00 G=168",
+      "D3 07:40 G=150 | 08:10 M=oatmeal C=30 | 12:30 G=138 | 13:00 M=soup C=25 | 15:10 G=135 | 17:30 G=62 | M=candy C=15 | 18:30 M=steak_veggies C=10 | 21:30 G=140",
+      "D4 07:30 G=142 | 12:30 G=132 | 13:00 M=burger C=35 | 15:20 G=138 | 17:40 G=58 | M=glucose_tabs C=16 | 19:00 M=alfredo_pasta C=55 | 23:00 G=178",
+      "D5 07:50 G=152 | 12:30 G=140 | 13:00 M=wrap C=30 | 15:00 G=135 | 17:30 G=65 | M=crackers C=10 | 18:30 M=salmon_risotto C=50 | 22:30 G=165",
+      "D6 07:20 G=148 | 08:00 M=yogurt C=20 | 12:30 G=130 | 13:00 M=soup_crackers C=30 | 15:10 G=132 | 17:20 G=62 | M=juice C=15 | 18:40 M=fish_veggies C=15 | 21:30 G=142",
+      "D7 07:30 G=150 | 12:30 G=138 | 13:00 M=rice_bowl C=45 | 15:00 G=140 | 17:30 G=60 | M=gel C=12 | 18:30 M=chicken_kale C=10 | 21:30 G=138",
+      "D8 07:40 G=152 | 12:30 G=140 | 13:00 M=salad_nicoise C=20 | 15:30 G=138 | 17:40 G=68 | M=banana C=20 | 19:00 M=mac_cheese C=55 | 23:00 G=180",
+      "D9 07:20 G=148 | 12:00 G=132 | 12:30 M=wrap C=30 | 15:10 G=130 | 17:20 G=62 | M=soda C=20 | 18:30 M=lamb_chops C=5 | 21:30 G=135",
+      "D10 07:30 G=150 | 08:00 M=toast_eggs C=20 | 12:30 G=135 | 13:00 M=soup C=20 | 15:00 G=132 | 17:30 G=65 | M=glucose_tabs C=12 | 19:00 M=fried_chicken C=45 | 23:00 G=175"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Triple pattern: delayed high-fat spikes, post-lunch hypoglycemia, and baseline hyperglycemia. At 103kg, dietary modification is the cornerstone. Medication review warranted for hypoglycemia.",
+      "recommendations": [
+        {
+          "action": "Eliminate high-fat dinners (pizza, alfredo, mac & cheese, fried chicken, burger/fries, risotto) causing nocturnal hyperglycemia (165-180 at 23:00) AND add mandatory 20g carb snack at 16:00 for post-lunch hypoglycemia (58-68 at 17:30).",
+          "priority": "high",
+          "reason": "D3 (steak/veggies G=140), D6 (fish/veggies G=142), D7 (chicken kale G=138), D9 (lamb chops G=135) prove low-fat dinners prevent delayed spikes. Post-lunch hypoglycemia occurs daily (D4 G=58, D7 G=60). Both patterns are diet-driven and correctable.",
+          "concrete_alternative": "If dietary changes challenging, add 20-min post-dinner walk AND 16:00 snack as combined intervention. Review medications for sulfonylurea contribution to hypoglycemia."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 26,
+      "weight_kg": 115,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 06:30 G=170 | 06:50 M=toast C=25 I=3R (corr) | 09:00 G=158 | 12:30 G=142 | 13:00 M=wrap C=35 I=4R | 18:30 G=148 | 19:00 M=chicken_rice C=45 I=4.5R | 21:30 G=155 I=34L",
+      "D2 06:40 G=175 | 12:00 G=148 | 12:30 M=salad C=15 I=1.5R | 18:40 G=150 | 19:10 M=pizza C=60 I=6R | 22:00 G=170 I=34L",
+      "D3 06:20 G=168 | 06:40 M=yogurt C=20 I=2.5R (corr) | 12:30 G=140 | 13:00 M=soup C=25 I=2.5R | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=34L",
+      "D4 06:50 G=178 | 07:10 M=bagel C=40 I=5R (corr) | 12:30 G=150 | 13:00 M=burger C=35 I=3.5R | 19:00 M=tacos C=40 I=4R | 21:30 I=34L",
+      "D5 06:30 G=172 | 12:00 G=145 | 12:30 M=wrap C=30 I=3R | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=165 I=34L",
+      "D6 06:40 G=175 | 07:00 M=cereal C=30 I=4R (corr) | 12:30 G=148 | 13:00 M=rice_bowl C=45 I=4.5R | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=34L",
+      "D7 06:30 G=165 | 07:00 M=smoothie C=35 I=4R (corr) | 12:30 G=142 | 13:00 M=soup C=20 I=2R | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=34L",
+      "D8 06:50 G=180 | 07:20 M=waffle C=30 I=4R (corr) | 12:30 G=152 | 13:00 M=salad C=15 I=1.5R | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=34L",
+      "D9 06:30 G=170 | 12:00 G=142 | 12:30 M=wrap C=30 I=3R | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=168 I=34L",
+      "D10 06:40 G=175 | 07:00 M=toast_eggs C=20 I=3R (corr) | 12:30 G=145 | 13:00 M=soup C=25 I=2.5R | 18:40 M=stirfry C=30 I=3R | 21:30 G=152 I=34L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Dawn phenomenon dominant pattern at 115kg. Basal insulin optimization primary intervention. At age 26, aggressive titration appropriate with monitoring for nocturnal hypoglycemia.",
+      "recommendations": [
+        {
+          "action": "Increase long-acting insulin from 34L to 40L to address dawn phenomenon (fasting 165-180 mg/dL).",
+          "priority": "high",
+          "reason": "Fasting readings consistently 165-180. Morning corrections (2.5-5R) bring readings to 158-165 by 09:00 but basal insulin insufficient. At 115kg, current 34L (0.3 units/kg) is low-normal; 40L (0.35 units/kg) clinically appropriate.",
+          "concrete_alternative": "Split basal: 25L at 21:00, 15L at 09:00 for dual-coverage against dawn phenomenon for larger body mass."
+        },
+        {
+          "action": "Extend dinner bolus for high-fat meals (pizza D2, risotto D5, D9) using dual-wave to prevent 22:00 spikes (165-170 mg/dL).",
+          "priority": "medium",
+          "reason": "D2 pizza G=170 at 22:00, D5 risotto G=165, D9 risotto G=168. Control meals (D3 steak, D8 lamb) show good control. Delayed fat-induced spike consistent.",
+          "concrete_alternative": "Check glucose at 22:00 and administer 2-3 unit correction if >150 after high-fat dinners."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 55,
+      "weight_kg": 75,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=142 | 08:30 M=toast C=20 | 13:00 G=132 | 13:30 M=soup C=25 | 15:30 G=130 | 18:30 G=135 | 19:00 M=pizza C=55 | 23:00 G=170",
+      "D2 07:30 G=140 | 12:30 G=130 | 13:00 M=salad C=15 | 15:00 G=128 | 18:30 M=chicken_rice C=40",
+      "D3 09:00 G=148 | 09:30 M=cereal C=30 | 13:30 G=138 | 14:00 M=wrap C=35 | 16:00 G=135 | 19:30 M=burger_fries C=55 | 23:30 G=168",
+      "D4 08:10 G=145 | 12:40 G=132 | 13:10 M=rice_bowl C=45 | 15:30 G=138 | 19:00 M=steak_veggies C=10",
+      "D5 07:50 G=142 | 12:30 G=135 | 13:00 M=wrap C=30 | 15:00 G=132 | 18:40 M=salmon_risotto C=50 | 22:30 G=162",
+      "D6 08:30 G=150 | 13:00 G=140 | 13:30 M=burger C=35 | 16:00 G=138 | 19:30 M=alfredo_pasta C=55 | 23:00 G=175",
+      "D7 07:20 G=138 | 07:40 M=yogurt C=20 | 12:30 G=125 | 13:00 M=soup C=20 | 15:00 G=122 | 18:30 M=chicken_kale C=10",
+      "D8 08:00 G=148 | 12:30 G=138 | 13:00 M=salad_nicoise C=20 | 15:30 G=135 | 19:30 M=mac_cheese C=55 | 23:00 G=178",
+      "D9 07:40 G=142 | 12:30 G=132 | 13:00 M=wrap C=30 | 15:10 G=130 | 18:30 M=lamb_chops C=5",
+      "D10 08:20 G=152 | 13:30 G=142 | 14:00 M=leftover_mac C=50 | 16:00 G=140 | 19:00 M=fried_chicken C=45 | 23:00 G=172"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Dual pattern: genuine afternoon stability undermined by delayed high-fat dinner spikes. Dietary modification will resolve nocturnal hyperglycemia while preserving excellent daytime control.",
+      "recommendations": [
+        {
+          "action": "Eliminate high-fat dinners (pizza, alfredo, mac & cheese, fried chicken, burger/fries, risotto) causing nocturnal hyperglycemia (162-178 at 23:00).",
+          "priority": "high",
+          "reason": "D4 (steak/veggies), D7 (chicken kale), D9 (lamb chops) show excellent afternoon stability (122-138) and no late spike. Contrast D8 mac & cheese G=178, D6 alfredo G=175. Afternoon stability genuine and should be preserved.",
+          "concrete_alternative": "If high-fat meals unavoidable, add 20-min post-dinner walk. At 75kg, this could reduce peak by 20-30 mg/dL. Standardize meal timing to reduce variability."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 52,
+      "weight_kg": 106,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=142 | 08:00 M=toast C=25 I=3R | 12:30 G=62 | M=juice C=20 | 13:00 G=78 | 13:30 M=wrap C=35 I=4R | 18:30 G=140 | 19:00 M=chicken_rice C=45 I=4.5R | 21:30 G=148 I=32L",
+      "D2 07:20 G=140 | 12:00 G=58 | M=soda C=25 | 12:30 G=72 | 13:00 M=salad C=15 I=1.5R | 18:40 G=138 | 19:10 M=salmon_veggies C=15 I=1.5R | 21:00 I=32L",
+      "D3 07:40 G=145 | 08:10 M=oatmeal C=30 I=3.5R | 12:30 G=65 | M=candy C=15 | 13:00 G=78 | 13:30 M=soup C=25 I=2.5R | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=32L",
+      "D4 07:30 G=138 | 12:30 G=60 | M=glucose_tabs C=15 | 13:00 G=72 | 13:30 M=burger C=35 I=3.5R | 19:00 M=tacos C=40 I=4R | 21:30 I=32L",
+      "D5 07:50 G=148 | 12:30 G=68 | M=crackers C=10 | 13:00 G=80 | 13:30 M=wrap C=30 I=3R | 18:30 M=pasta C=50 I=5R | 21:30 G=155 I=32L",
+      "D6 07:20 G=140 | 08:00 M=yogurt C=20 I=2.5R | 12:30 G=62 | M=juice C=20 | 13:00 G=75 | 13:30 M=soup_crackers C=30 I=3R | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=32L",
+      "D7 07:30 G=142 | 12:30 G=58 | M=gel C=15 | 13:00 G=72 | 13:30 M=rice_bowl C=45 I=4.5R | 19:00 M=chicken_kale C=10 I=1R | 21:00 I=32L",
+      "D8 07:40 G=145 | 12:30 G=65 | M=banana C=20 | 13:00 G=80 | 13:30 M=salad C=15 I=1.5R | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=32L",
+      "D9 07:20 G=140 | 12:00 G=60 | M=soda C=20 | 12:30 G=72 | 13:00 M=wrap C=30 I=3R | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=160 I=32L",
+      "D10 07:30 G=142 | 08:00 M=toast_eggs C=20 I=2.5R | 12:30 G=68 | M=juice C=15 | 13:00 G=80 | 13:30 M=soup C=20 I=2R | 18:40 M=stirfry C=30 I=3R | 21:30 G=148 I=32L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Severe post-lunch hypoglycemia from overly aggressive breakfast insulin-to-carb ratio at 106kg. Basal insulin also insufficient. Both require systematic adjustment.",
+      "recommendations": [
+        {
+          "action": "Reduce breakfast rapid insulin by 2-3 units and add mandatory 15g carb snack at 11:00 to prevent severe post-lunch hypoglycemia (58-68 mg/dL).",
+          "priority": "high",
+          "reason": "All 10 days show hypoglycemia at 12:00-12:30 (range 58-68). D2 G=58, D7 G=58. At 106kg, current breakfast insulin-to-carb ratio too aggressive. Afternoon readings post-treatment (72-80) confirm over-insulinization.",
+          "concrete_alternative": "Switch to 1:12 insulin-to-carb ratio for breakfast (currently ~1:8) and add protein to breakfast to slow gastric emptying."
+        },
+        {
+          "action": "Increase long-acting insulin from 32L to 36L to address elevated fasting (138-148) and overall hyperglycemic trend.",
+          "priority": "medium",
+          "reason": "Fasting readings 138-148. At 106kg, current 32L (0.3 units/kg) at lower end. Basal optimization may improve entire day's trajectory.",
+          "concrete_alternative": "If increasing basal, monitor for nocturnal hypoglycemia first 3 nights after dose change."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 63,
+      "weight_kg": 59,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=138 | 08:30 M=toast C=20 | 13:00 G=128 | 13:30 M=soup C=25 | 18:30 G=130 | 19:00 M=pizza C=55 | 23:00 G=168",
+      "D2 07:30 G=135 | 12:30 G=125 | 13:00 M=salad C=15 | 18:30 M=chicken_rice C=40",
+      "D3 09:00 G=142 | 09:30 M=cereal C=30 | 13:30 G=132 | 14:00 M=wrap C=35 | 19:30 M=burger_fries C=55 | 23:30 G=165",
+      "D4 08:10 G=140 | 12:40 G=128 | 13:10 M=rice_bowl C=45 | 19:00 M=steak_veggies C=10",
+      "D5 07:50 G=138 | 12:30 G=130 | 13:00 M=wrap C=30 | 18:40 M=salmon_risotto C=50 | 22:30 G=160",
+      "D6 08:30 G=145 | 13:00 G=135 | 13:30 M=burger C=35 | 19:30 M=alfredo_pasta C=55 | 23:00 G=172",
+      "D7 07:20 G=132 | 07:40 M=yogurt C=20 | 12:30 G=120 | 13:00 M=soup C=20 | 18:30 M=chicken_kale C=10",
+      "D8 08:00 G=142 | 12:30 G=132 | 13:00 M=salad_nicoise C=20 | 19:30 M=mac_cheese C=55 | 23:00 G=175",
+      "D9 07:40 G=135 | 12:30 G=125 | 13:00 M=wrap C=30 | 18:30 M=lamb_chops C=5",
+      "D10 08:20 G=148 | 13:30 G=138 | 14:00 M=leftover_mac C=50 | 19:00 M=fried_chicken C=45 | 23:00 G=170"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clear high-fat-induced nocturnal hyperglycemia in lean T2 patient. Dietary modification definitive treatment. No medication changes indicated.",
+      "recommendations": [
+        {
+          "action": "Eliminate high-fat dinners (pizza, alfredo, mac & cheese, fried chicken, burger/fries, risotto) causing nocturnal hyperglycemia (160-175 at 23:00).",
+          "priority": "high",
+          "reason": "D4 (steak/veggies), D7 (chicken kale), D9 (lamb chops) show excellent control without late spike. Contrast D8 mac & cheese G=175, D6 alfredo G=172. At 59kg, lean patient; dietary modification highly effective without medication.",
+          "concrete_alternative": "If high-fat meals unavoidable, add 20-min post-dinner walk. At 59kg, this could reduce peak by 20-25 mg/dL. Standardize meal timing."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 49,
+      "weight_kg": 73,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=140 | 08:30 M=toast C=25 I=2.5R | 12:40 G=122 | 13:10 M=wrap C=35 I=3.5R | 15:30 G=118 | 18:30 G=128 | 19:00 M=chicken_rice C=40 I=4R | 21:30 G=135 I=22L",
+      "D2 07:30 G=138 | 12:30 G=120 | 13:00 M=salad C=15 I=1.5R | 15:00 G=115 | 18:40 G=125 | 19:10 M=pizza C=55 I=5.5R | 22:00 G=158 I=22L",
+      "D3 09:00 G=142 | 09:30 M=cereal C=30 I=3R | 13:30 G=125 | 14:00 M=soup C=25 I=2.5R | 16:00 G=120 | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=22L",
+      "D4 08:10 G=135 | 12:40 G=118 | 13:10 M=burger C=35 I=3.5R | 15:30 G=122 | 19:00 M=tacos C=40 I=4R | 21:30 I=22L",
+      "D5 07:50 G=142 | 12:30 G=125 | 13:00 M=wrap C=30 I=3R | 15:00 G=120 | 18:30 M=pasta C=45 I=4.5R | 21:30 G=145 I=22L",
+      "D6 08:30 G=140 | 13:00 G=125 | 13:30 M=soup_crackers C=30 I=3R | 16:00 G=122 | 19:00 M=fish_veggies C=15 I=1.5R | 21:00 I=22L",
+      "D7 07:20 G=135 | 07:50 M=yogurt C=20 I=2R | 12:30 G=118 | 13:00 M=rice_bowl C=45 I=4.5R | 15:00 G=122 | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=22L",
+      "D8 08:00 G=142 | 12:30 G=128 | 13:00 M=salad_nicoise C=20 I=2R | 15:30 G=125 | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=22L",
+      "D9 07:40 G=138 | 12:30 G=122 | 13:00 M=wrap C=30 I=3R | 15:10 G=118 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=155 I=22L",
+      "D10 08:20 G=145 | 13:30 G=128 | 14:00 M=soup C=20 I=2R | 16:00 G=122 | 18:40 M=stirfry C=30 I=3R | 21:30 G=142 I=22L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Genuine afternoon stability is clinical asset. Only variance from high-fat dinners. Dual-wave bolus strategy will optimize evening control while preserving excellent daytime stability.",
+      "recommendations": [
+        {
+          "action": "Maintain current basal-bolus regimen given genuine afternoon stability (115-125 mg/dL); no medication changes for daytime control.",
+          "priority": "low",
+          "reason": "Afternoon readings average 120 mg/dL with tight standard deviation. Stability reflects good insulin dosing and meal timing despite messy log. At 73kg, insulin sensitivity adequate.",
+          "concrete_alternative": "Continue current management. Standardize meal timing to reduce log variability."
+        },
+        {
+          "action": "Extend dinner bolus for high-fat meals (pizza D2, risotto D9, pasta D5) using dual-wave to prevent 22:00 spikes (145-158 mg/dL).",
+          "priority": "medium",
+          "reason": "D2 pizza G=158 at 22:00, D9 risotto G=155, D5 pasta G=145. Delayed fat-induced spike consistent but modest. Afternoon stability preserved throughout.",
+          "concrete_alternative": "Check glucose at 22:00 after high-fat dinners and administer 1-unit correction if >145."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 45,
+      "weight_kg": 61,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=135 | 08:30 M=toast C=20 | 13:00 G=125 | 13:30 M=soup C=25 | 18:30 G=128 | 19:00 M=pizza C=60 | 23:00 G=168",
+      "D2 07:30 G=132 | 12:30 G=122 | 13:00 M=salad C=15 | 18:30 M=chicken_rice C=40",
+      "D3 09:00 G=140 | 09:30 M=cereal C=30 | 13:30 G=130 | 14:00 M=wrap C=35 | 19:30 M=burger_fries C=55 | 23:30 G=165",
+      "D4 08:10 G=138 | 12:40 G=128 | 13:10 M=rice_bowl C=45 | 19:00 M=steak_veggies C=10",
+      "D5 07:50 G=140 | 12:30 G=130 | 13:00 M=wrap C=30 | 18:40 M=salmon_risotto C=50 | 22:30 G=160",
+      "D6 08:30 G=142 | 13:00 G=132 | 13:30 M=burger C=35 | 19:30 M=alfredo_pasta C=55 | 23:00 G=172",
+      "D7 07:20 G=130 | 07:40 M=yogurt C=20 | 12:30 G=120 | 13:00 M=soup C=20 | 18:30 M=chicken_kale C=10",
+      "D8 08:00 G=138 | 12:30 G=130 | 13:00 M=salad_nicoise C=20 | 19:30 M=mac_cheese C=55 | 23:00 G=175",
+      "D9 07:40 G=132 | 12:30 G=122 | 13:00 M=wrap C=30 | 18:30 M=lamb_chops C=5",
+      "D10 08:20 G=145 | 13:30 G=135 | 14:00 M=leftover_mac C=50 | 19:00 M=fried_chicken C=45 | 23:00 G=170"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clear high-fat-induced nocturnal hyperglycemia in lean T2 patient. Dietary modification alone will resolve problem. No medication changes indicated.",
+      "recommendations": [
+        {
+          "action": "Eliminate high-fat dinners (pizza, alfredo, mac & cheese, fried chicken, burger/fries, risotto) causing nocturnal hyperglycemia (160-175 at 23:00).",
+          "priority": "high",
+          "reason": "D4 (steak/veggies), D7 (chicken kale), D9 (lamb chops) show excellent control without late spike. Contrast D8 mac & cheese G=175, D6 alfredo G=172. At 61kg, lean patient; dietary modification definitive without medication.",
+          "concrete_alternative": "If high-fat meals unavoidable, add 20-min post-dinner walk. At 61kg, this could reduce peak by 20-25 mg/dL. Standardize meal timing to reduce variability."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 33,
+      "weight_kg": 110,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=150 | 08:30 M=cereal C=35 | 12:40 G=138 | 13:10 M=wrap C=35 | 15:30 G=140 | 17:00 G=68 | M=juice C=20 | 18:30 G=145",
+      "D2 07:30 G=148 | 12:30 G=135 | 13:00 M=salad C=15 | 17:30 G=62 | M=soda C=20 | 18:40 G=142",
+      "D3 09:00 G=155 | 09:30 M=bagel C=45 | 13:30 G=142 | 14:00 M=soup C=25 | 17:20 G=65 | M=candy C=15 | 18:30 M=chicken_rice C=40",
+      "D4 08:10 G=145 | 12:30 G=132 | 13:00 M=burger C=35 | 17:40 G=58 | M=glucose_tabs C=20 | 19:00 M=tacos C=40",
+      "D5 07:50 G=152 | 12:30 G=140 | 13:00 M=wrap C=30 | 17:30 G=68 | M=crackers C=10 | 18:30 M=pasta C=50",
+      "D6 08:30 G=158 | 13:00 G=142 | 13:30 M=soup_crackers C=30 | 17:10 G=62 | M=juice C=15 | 18:30 M=fish_veggies C=15",
+      "D7 07:20 G=142 | 07:50 M=yogurt C=20 | 12:30 G=130 | 13:00 M=rice_bowl C=45 | 17:20 G=65 | M=gel C=12 | 18:30 M=chicken_kale C=10",
+      "D8 08:00 G=152 | 12:30 G=140 | 13:00 M=salad C=15 | 17:30 G=60 | M=banana C=20 | 18:40 M=lamb_veggies C=5",
+      "D9 07:40 G=148 | 12:30 G=135 | 13:00 M=wrap C=30 | 17:20 G=58 | M=soda C=20 | 18:30 M=salmon_risotto C=50",
+      "D10 08:20 G=160 | 13:30 G=145 | 14:00 M=soup C=20 | 17:10 G=65 | M=glucose_tabs C=15 | 18:40 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Severe exercise-induced hypoglycemia pattern at 110kg. Pre-exercise fueling immediate intervention. Medication review and metformin optimization for baseline hyperglycemia.",
+      "recommendations": [
+        {
+          "action": "Schedule mandatory 20g carb snack at 16:00 daily to preempt exercise-induced hypoglycemia (58-68 at 17:00-17:40).",
+          "priority": "high",
+          "reason": "All 10 days show hypoglycemia at 17:00-17:40. D4 G=58, D9 G=58. At 110kg, exercise essential for weight management but requires fuel support. Afternoon readings (130-145) stable but elevated.",
+          "concrete_alternative": "If snack not feasible, reduce lunch carbohydrate by 15g to lower insulin response. Review medications for sulfonylurea contribution to hypoglycemia."
+        },
+        {
+          "action": "Consider metformin initiation or dose optimization; consistent mild hyperglycemia (fasting 142-160) at 110kg suggests significant insulin resistance.",
+          "priority": "medium",
+          "reason": "Fasting and pre-meal readings elevated. Metformin would improve insulin sensitivity and support weight loss without increasing hypoglycemia risk.",
+          "concrete_alternative": "If already on metformin, focus on dietary modification and exercise consistency as primary interventions."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 72,
+      "weight_kg": 55,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=142 | 08:30 M=toast C=20 I=2R | 12:40 G=125 | 13:10 M=wrap C=35 I=3.5R | 17:00 G=62 | M=juice C=20 | 18:30 G=88 | 19:00 M=pizza C=55 I=5.5R | 22:00 G=168 I=16L",
+      "D2 07:30 G=140 | 12:30 G=120 | 13:00 M=salad C=15 I=1.5R | 17:30 G=58 | M=gel C=15 | 18:40 G=80 | 19:10 M=burger_fries C=50 I=5R | 22:00 G=162 I=16L",
+      "D3 09:00 G=145 | 09:30 M=cereal C=30 I=3R | 13:30 G=130 | 14:00 M=soup C=25 I=2.5R | 17:20 G=65 | M=candy C=15 | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=16L",
+      "D4 08:10 G=138 | 12:40 G=128 | 13:10 M=rice_bowl C=45 I=4.5R | 17:40 G=60 | M=glucose_tabs C=16 | 19:00 M=alfredo_pasta C=50 I=5R | 23:00 G=172 I=16L",
+      "D5 07:50 G=142 | 12:30 G=132 | 13:00 M=wrap C=30 I=3R | 17:30 G=62 | M=crackers C=10 | 18:30 M=salmon_risotto C=45 I=4.5R | 22:00 G=158 I=16L",
+      "D6 08:30 G=148 | 13:00 G=135 | 13:30 M=burger C=35 I=3.5R | 17:20 G=58 | M=juice C=20 | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=16L",
+      "D7 07:20 G=135 | 07:40 M=yogurt C=20 I=2R | 12:30 G=118 | 13:00 M=soup C=20 I=2R | 17:30 G=60 | M=gel C=12 | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=16L",
+      "D8 08:00 G=142 | 12:30 G=132 | 13:00 M=salad_nicoise C=20 I=2R | 17:40 G=65 | M=banana C=20 | 19:00 M=mac_cheese C=50 I=5R | 23:00 G=175 I=16L",
+      "D9 07:40 G=138 | 12:30 G=125 | 13:00 M=wrap C=30 I=3R | 17:20 G=60 | M=soda C=20 | 18:30 M=lamb_chops C=5 I=0.5R | 21:00 I=16L",
+      "D10 08:20 G=148 | 13:30 G=138 | 14:00 M=soup C=20 I=2R | 17:30 G=62 | M=glucose_tabs C=12 | 19:00 M=fried_chicken C=40 I=4R | 23:00 G=170 I=16L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Elderly lean T1 patient with dangerous dual pattern: exercise-induced hypoglycemia and delayed high-fat spikes. Hypoglycemia prevention is safety priority. Conservative insulin adjustments essential at age 72.",
+      "recommendations": [
+        {
+          "action": "Add mandatory 20g carb snack at 16:00 for exercise-induced hypoglycemia (58-65 at 17:00-17:40) AND implement extended dinner bolus for high-fat meals causing nocturnal hyperglycemia (158-175 at 22:00-23:00).",
+          "priority": "high",
+          "reason": "Daily hypoglycemia (D2 G=58, D6 G=58, D7 G=60) combined with nocturnal spikes after high-fat dinners (D8 mac & cheese G=175, D4 alfredo G=172). At 55kg and age 72, hypoglycemia major safety risk. Control meals (D3 steak, D9 lamb) show excellent results.",
+          "concrete_alternative": "Reduce lunch bolus by 1 unit AND use dual-wave for dinner: 50% upfront, 50% over 3 hours. Given age 72, conservative adjustments essential."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 71,
+      "weight_kg": 114,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=155 | 08:00 M=toast C=25 I=3R | 12:30 G=138 | 13:00 M=wrap C=35 I=4R | 17:30 G=65 | M=juice C=20 | 18:30 G=88 | 19:00 M=pizza C=65 I=6.5R | 22:00 G=178 I=34L",
+      "D2 07:20 G=152 | 12:00 G=135 | 12:30 M=salad C=15 I=1.5R | 17:20 G=60 | M=gel C=15 | 18:40 G=85 | 19:10 M=burger_fries C=55 I=5.5R | 22:00 G=172 I=34L",
+      "D3 07:40 G=158 | 08:10 M=oatmeal C=30 I=3.5R | 12:30 G=142 | 13:00 M=soup C=25 I=2.5R | 17:30 G=68 | M=candy C=15 | 18:30 M=steak_veggies C=10 I=1R | 21:30 G=140 I=34L",
+      "D4 07:30 G=150 | 12:30 G=140 | 13:00 M=burger C=35 I=3.5R | 17:40 G=62 | M=glucose_tabs C=16 | 19:00 M=alfredo_pasta C=60 I=6R | 23:00 G=185 I=34L",
+      "D5 07:50 G=155 | 12:30 G=142 | 13:00 M=wrap C=30 I=3R | 17:30 G=65 | M=crackers C=10 | 18:30 M=salmon_risotto C=55 I=5.5R | 22:30 G=170 I=34L",
+      "D6 07:20 G=152 | 08:00 M=yogurt C=20 I=2.5R | 12:30 G=138 | 13:00 M=soup_crackers C=30 I=3R | 17:20 G=62 | M=juice C=15 | 18:40 M=fish_veggies C=15 I=1.5R | 21:30 G=142 I=34L",
+      "D7 07:30 G=155 | 12:30 G=140 | 13:00 M=rice_bowl C=45 I=4.5R | 17:30 G=60 | M=gel C=15 | 18:30 M=chicken_kale C=10 I=1R | 21:00 G=138 I=34L",
+      "D8 07:40 G=158 | 12:30 G=145 | 13:00 M=salad_nicoise C=20 I=2R | 17:40 G=68 | M=banana C=20 | 19:00 M=mac_cheese C=60 I=6R | 23:00 G=188 I=34L",
+      "D9 07:20 G=152 | 12:00 G=138 | 12:30 M=wrap C=30 I=3R | 17:20 G=62 | M=soda C=20 | 18:30 M=lamb_chops C=5 I=0.5R | 21:30 G=135 I=34L",
+      "D10 07:30 G=155 | 08:00 M=toast_eggs C=20 I=2.5R | 12:30 G=140 | 13:00 M=soup C=25 I=2.5R | 17:30 G=65 | M=glucose_tabs C=12 | 19:00 M=fried_chicken C=45 I=4.5R | 23:00 G=180 I=34L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Dual challenge at 114kg: severe post-lunch hypoglycemia and delayed high-fat dinner spikes. Both patterns demand immediate intervention. Extended bolus and pre-exercise snack are essential.",
+      "recommendations": [
+        {
+          "action": "Implement mandatory extended dinner bolus (dual-wave: 40% upfront, 60% over 3-4 hours) for all high-fat dinners causing nocturnal hyperglycemia (170-188 at 22:00-23:00).",
+          "priority": "high",
+          "reason": "D3 steak/veggies G=140, D6 fish/veggies G=142, D7 chicken kale G=138, D9 lamb chops G=135 prove low-fat dinners prevent spikes. Contrast D8 mac & cheese G=188, D4 alfredo G=185. Post-lunch hypoglycemia (60-68) also requires 16:00 snack.",
+          "concrete_alternative": "If pens used, split dinner bolus: 60% mealtime, 40% 2 hours later. Add 20g carb snack at 16:00 for hypoglycemia prevention."
+        },
+        {
+          "action": "Add mandatory 20g carb snack at 16:00 to preempt post-lunch hypoglycemia (60-68 at 17:20-17:40).",
+          "priority": "high",
+          "reason": "Daily hypoglycemia. D7 G=60, D2 G=60. At 114kg and age 71, hypoglycemia significant safety risk. Combined with nocturnal hyperglycemia, creates dangerous glucose variability.",
+          "concrete_alternative": "Reduce lunch bolus by 2 units to decrease circulating insulin during late afternoon window."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 73,
+      "weight_kg": 81,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 06:30 G=162 | 07:00 M=toast C=20 I=2.5R (corr) | 12:40 G=135 | 13:10 M=wrap C=35 I=3.5R | 18:30 G=142 | 19:00 M=pizza C=60 I=6R | 22:00 G=175 I=24L",
+      "D2 08:00 G=168 | 08:30 M=cereal C=30 I=3.5R (corr) | 13:00 G=140 | 13:30 M=salad C=15 I=1.5R | 18:30 M=chicken_rice C=45 I=4.5R | 21:00 I=24L",
+      "D3 06:40 G=158 | 07:20 M=oatmeal C=25 I=3R (corr) | 12:30 G=132 | 13:00 M=soup C=25 I=2.5R | 18:40 M=steak_veggies C=10 I=1R | 21:00 I=24L",
+      "D4 07:10 G=165 | 12:30 G=140 | 13:00 M=burger C=35 I=3.5R | 19:00 M=alfredo_pasta C=55 I=5.5R | 23:00 G=180 I=24L",
+      "D5 06:20 G=155 | 07:00 M=yogurt C=20 I=2R (corr) | 12:30 G=128 | 13:00 M=wrap C=30 I=3R | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=168 I=24L",
+      "D6 08:30 G=170 | 09:00 M=bagel C=40 I=4R (corr) | 13:30 G=145 | 14:00 M=soup_crackers C=30 I=3R | 19:30 M=pasta C=50 I=5R | 23:00 G=172 I=24L",
+      "D7 06:50 G=160 | 07:30 M=toast_eggs C=20 I=2.5R (corr) | 12:30 G=130 | 13:00 M=rice_bowl C=45 I=4.5R | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=24L",
+      "D8 07:30 G=165 | 12:30 G=140 | 13:00 M=salad C=15 I=1.5R | 19:00 M=mac_cheese C=55 I=5.5R | 23:00 G=182 I=24L",
+      "D9 06:30 G=158 | 07:00 M=waffle C=30 I=3R (corr) | 13:00 G=135 | 13:30 M=wrap C=30 I=3R | 18:30 M=lamb_chops C=5 I=0.5R | 21:00 I=24L",
+      "D10 08:10 G=170 | 12:40 G=142 | 13:10 M=soup C=20 I=2R | 19:00 M=fried_chicken C=45 I=4.5R | 23:00 G=178 I=24L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Triple pattern at 81kg: dawn phenomenon, delayed high-fat spikes, and messy log suggesting irregular routine. Basal optimization and extended bolus strategy primary interventions.",
+      "recommendations": [
+        {
+          "action": "Increase long-acting insulin from 24L to 28L for dawn phenomenon (fasting 155-170) AND implement extended dinner bolus for high-fat meals causing nocturnal hyperglycemia (168-182 at 22:00-23:00).",
+          "priority": "high",
+          "reason": "Fasting readings 155-170 with dawn phenomenon. D3 steak/veggies G=140, D7 chicken kale G=130, D9 lamb chops G=135 prove low-fat dinners prevent delayed spikes. Contrast D8 mac & cheese G=182, D4 alfredo G=180. Dual pattern requires dual intervention.",
+          "concrete_alternative": "Split basal: 15L at 21:00, 13L at 09:00 for better coverage. Use dual-wave for high-fat dinners: 40% upfront, 60% over 3 hours."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 72,
+      "weight_kg": 64,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=132 | 08:00 M=bagel_juice C=50 | 10:00 G=215 | 12:30 G=130 | 13:00 M=salad C=15 | 18:30 G=125 | 19:00 M=chicken_veggies C=15",
+      "D2 07:20 G=128 | 12:00 G=125 | 12:30 M=wrap C=30 | 18:40 G=122 | 19:10 M=salmon_rice C=35",
+      "D3 07:40 G=132 | 08:10 M=pancakes C=45 | 10:20 G=225 | 12:30 G=132 | 13:00 M=soup C=25 | 18:30 M=steak_asparagus C=10",
+      "D4 07:30 G=130 | 12:30 G=122 | 13:00 M=tuna_salad C=15 | 18:40 M=pasta C=45",
+      "D5 07:50 G=135 | 08:20 M=cereal C=35 | 10:10 G=210 | 12:30 G=130 | 13:00 M=wrap C=30 | 18:30 M=tacos C=40",
+      "D6 07:20 G=128 | 08:00 M=toast_jam C=30 | 10:00 G=200 | 12:30 G=128 | 13:00 M=soup_crackers C=30 | 18:40 M=fish_veggies C=15",
+      "D7 07:30 G=128 | 12:30 G=122 | 13:00 M=rice_bowl C=45 | 18:30 M=chicken_breast C=10",
+      "D8 07:40 G=132 | 08:10 M=waffle C=35 | 10:20 G=220 | 12:30 G=130 | 13:00 M=salad C=15 | 18:50 M=lamb_chops C=5",
+      "D9 07:20 G=128 | 12:00 G=125 | 12:30 M=wrap C=30 | 18:30 M=salmon_risotto C=50",
+      "D10 07:30 G=130 | 08:00 M=oatmeal C=30 | 10:10 G=205 | 12:30 G=130 | 13:00 M=soup C=20 | 18:40 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Morning breakfast spike severe and carbohydrate-dependent in lean elderly T2 patient. Dietary modification definitive treatment. No medication changes indicated at this time.",
+      "recommendations": [
+        {
+          "action": "Reduce breakfast carbohydrate from 35-50g to 20g to address 10:00 spike (200-225 mg/dL).",
+          "priority": "high",
+          "reason": "Post-breakfast readings 200-225 when breakfast carb exceeds 30g. Afternoon and evening readings (122-132) good, isolating problem to breakfast carbohydrate. At 64kg and age 72, dietary modification safest intervention.",
+          "concrete_alternative": "Add 15-min post-breakfast walk; at 64kg, this could reduce peak by 25-35 mg/dL without dietary changes."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 58,
+      "weight_kg": 90,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=138 | 08:00 M=toast C=25 I=3R | 12:30 G=122 | 13:00 M=wrap C=35 I=3.5R | 15:00 G=118 | 17:30 G=65 | M=juice C=20 | 18:30 G=88 | 19:00 M=chicken_rice C=40 I=4R | 21:30 G=140 I=27L",
+      "D2 07:20 G=140 | 12:00 G=125 | 12:30 M=salad C=15 I=1.5R | 15:30 G=115 | 17:20 G=60 | M=gel C=15 | 18:40 G=85 | 19:10 M=salmon_veggies C=15 I=1.5R | 21:00 I=27L",
+      "D3 07:40 G=142 | 08:10 M=oatmeal C=30 I=3.5R | 12:30 G=128 | 13:00 M=soup C=25 I=2.5R | 15:10 G=122 | 17:30 G=62 | M=candy C=15 | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=27L",
+      "D4 07:30 G=135 | 12:30 G=120 | 13:00 M=burger C=35 I=3.5R | 15:20 G=122 | 17:40 G=58 | M=glucose_tabs C=16 | 19:00 M=tacos C=40 I=4R | 21:30 I=27L",
+      "D5 07:50 G=145 | 12:30 G=130 | 13:00 M=wrap C=30 I=3R | 15:00 G=125 | 17:30 G=65 | M=crackers C=10 | 18:30 M=pasta C=45 I=4.5R | 21:30 G=148 I=27L",
+      "D6 07:20 G=138 | 08:00 M=yogurt C=20 I=2.5R | 12:30 G=122 | 13:00 M=soup_crackers C=30 I=3R | 15:10 G=120 | 17:20 G=62 | M=juice C=15 | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=27L",
+      "D7 07:30 G=140 | 12:30 G=125 | 13:00 M=rice_bowl C=45 I=4.5R | 15:30 G=128 | 17:30 G=60 | M=gel C=15 | 19:00 M=chicken_kale C=10 I=1R | 21:00 I=27L",
+      "D8 07:40 G=142 | 12:30 G=128 | 13:00 M=salad_nicoise C=20 I=2R | 15:20 G=125 | 17:40 G=68 | M=banana C=20 | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=27L",
+      "D9 07:20 G=138 | 12:00 G=122 | 12:30 M=wrap C=30 I=3R | 15:10 G=118 | 17:20 G=62 | M=soda C=20 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=155 I=27L",
+      "D10 07:30 G=140 | 08:00 M=toast_eggs C=20 I=2.5R | 12:30 G=125 | 13:00 M=soup C=20 I=2R | 15:10 G=120 | 17:30 G=65 | M=glucose_tabs C=12 | 18:40 M=stirfry C=30 I=3R | 21:30 G=142 I=27L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Excellent afternoon stability undermined by post-lunch hypoglycemia. Simple pre-exercise snack will resolve lows. Dual-wave for high-fat dinners will complete optimization.",
+      "recommendations": [
+        {
+          "action": "Add mandatory 20g carb snack at 16:00 to preempt post-lunch hypoglycemia (58-68 at 17:20-17:40). Afternoon stability (115-128) is excellent clinical asset to preserve.",
+          "priority": "high",
+          "reason": "Daily hypoglycemia. D4 G=58, D7 G=60. Afternoon readings average 121 mg/dL with tight SD. Stability reflects good insulin dosing. Pre-exercise snack will resolve lows without disrupting stable afternoon control.",
+          "concrete_alternative": "Reduce lunch bolus by 1-2 units to decrease circulating insulin during late afternoon window."
+        },
+        {
+          "action": "Extend dinner bolus for high-fat meals (risotto D9, pasta D5) using dual-wave to prevent 22:00 spikes (148-155 mg/dL).",
+          "priority": "medium",
+          "reason": "D9 salmon risotto G=155 at 22:00, D5 pasta G=148. Modest elevations but opportunity for optimization.",
+          "concrete_alternative": "Check glucose at 22:00 and administer 1-unit correction if >145."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 19,
+      "weight_kg": 101,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 06:30 G=158 | 07:00 M=toast C=20 | 12:00 G=142 | 12:30 M=chicken_salad C=15 | 15:00 G=140 | 18:30 G=148 | 19:00 M=salmon_veggies C=20",
+      "D2 06:40 G=160 | 07:10 M=oatmeal C=25 | 12:10 G=145 | 12:30 M=turkey_wrap C=30 | 15:20 G=142 | 18:40 G=150 | 19:00 M=steak_asparagus C=10",
+      "D3 06:20 G=155 | 06:50 M=yogurt C=20 | 12:00 G=140 | 12:30 M=lentil_soup C=35 | 15:10 G=142 | 18:30 G=148 | 19:00 M=chicken_breast C=10",
+      "D4 06:50 G=162 | 07:20 M=bagel C=45 | 12:10 G=148 | 12:30 M=quinoa_bowl C=40 | 15:00 G=145 | 18:50 G=152 | 19:10 M=shrimp_stirfry C=25",
+      "D5 06:30 G=158 | 07:00 M=toast_avocado C=20 | 12:10 G=142 | 12:30 M=leftover_quinoa C=35 | 15:20 G=140 | 18:30 G=148 | 19:00 M=cod_veggies C=15",
+      "D6 06:40 G=160 | 07:10 M=omelet C=5 | 12:10 G=138 | 12:30 M=tuna_salad C=15 | 15:10 G=138 | 18:40 G=145 | 19:00 M=lamb_chops C=5",
+      "D7 06:30 G=155 | 07:00 M=granola C=30 | 12:00 G=142 | 12:30 M=chicken_soup C=25 | 15:00 G=140 | 18:30 G=148 | 19:00 M=tofu_bowl C=30",
+      "D8 06:50 G=162 | 07:20 M=waffle C=35 | 12:10 G=148 | 12:30 M=salad_nicoise C=20 | 15:20 G=145 | 18:50 G=150 | 19:10 M=pork_chops C=5",
+      "D9 06:30 G=158 | 07:00 M=pancake C=25 | 12:00 G=142 | 12:30 M=bean_burrito C=45 | 15:10 G=145 | 18:30 G=150 | 19:00 M=salmon_risotto C=50",
+      "D10 06:40 G=160 | 07:10 M=toast_eggs C=20 | 12:10 G=145 | 12:30 M=leftover_risotto C=40 | 15:00 G=142 | 18:40 G=148 | 19:00 M=chicken_kale C=15"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Afternoon stability genuine but reflects stable hyperglycemia at 101kg. Young T2 patient with dawn phenomenon and significant insulin resistance. Pharmacotherapy strongly recommended.",
+      "recommendations": [
+        {
+          "action": "Initiate metformin 1000mg BID and consider adding GLP-1 RA for dawn phenomenon (fasting 155-162) and weight management at 101kg.",
+          "priority": "high",
+          "reason": "Fasting readings 155-162 with dawn phenomenon. Afternoon stability (138-145) genuine but reflects stable hyperglycemia. At 101kg and age 19, pharmacotherapy combined with lifestyle intervention offers best chance for glycemic targets and weight loss.",
+          "concrete_alternative": "If medication refused, strict low-carb diet (<30g per meal) with daily post-meal walks is minimum intervention. Reduce breakfast carbohydrate to 15g."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 18,
+      "weight_kg": 110,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=155 | 08:30 M=cereal C=35 | 13:00 G=145 | 13:30 M=wrap C=35 | 16:00 G=142 | 19:00 G=150 | 19:30 M=chicken_rice C=45",
+      "D2 07:30 G=152 | 12:30 G=142 | 13:00 M=salad C=15 | 15:00 G=140 | 18:30 M=salmon_veggies C=15",
+      "D3 09:00 G=158 | 09:30 M=bagel C=45 | 13:30 G=148 | 14:00 M=soup C=25 | 16:30 G=145 | 19:30 M=steak_veggies C=10",
+      "D4 08:10 G=150 | 12:40 G=142 | 13:10 M=burger C=35 | 15:30 G=145 | 19:00 M=tacos C=40",
+      "D5 07:50 G=155 | 12:30 G=148 | 13:00 M=wrap C=30 | 15:00 G=145 | 18:30 M=pasta C=50",
+      "D6 08:30 G=160 | 13:00 G=150 | 13:30 M=soup_crackers C=30 | 16:00 G=148 | 19:00 M=fish_veggies C=15",
+      "D7 07:20 G=148 | 07:50 M=yogurt C=20 | 12:30 G=140 | 13:00 M=rice_bowl C=45 | 15:00 G=142 | 18:30 M=chicken_kale C=10",
+      "D8 08:00 G=155 | 12:30 G=148 | 13:00 M=salad_nicoise C=20 | 15:30 G=145 | 19:00 M=lamb_veggies C=5",
+      "D9 07:40 G=152 | 12:30 G=145 | 13:00 M=wrap C=30 | 15:10 G=142 | 18:30 M=salmon_risotto C=50",
+      "D10 08:20 G=160 | 13:30 G=152 | 14:00 M=soup C=20 | 16:00 G=148 | 19:00 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Afternoon 'stable' pattern actually persistent hyperglycemia at 110kg. Young T2 patient needs aggressive pharmacotherapy and lifestyle intervention. Weight loss primary lever for improvement.",
+      "recommendations": [
+        {
+          "action": "Initiate metformin 1000mg BID and strongly consider GLP-1 RA for afternoon stable hyperglycemia (140-148) and weight management at 110kg.",
+          "priority": "high",
+          "reason": "Afternoon 'stability' is stable hyperglycemia at 140-148 for all 10 days. At 110kg and age 18, significant insulin resistance requires aggressive pharmacotherapy. GLP-1 RA would address weight and glycemia simultaneously.",
+          "concrete_alternative": "If medication refused, structured weight loss program with 10% body weight reduction could significantly improve insulin sensitivity. Standardize meal timing to reduce variability."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 75,
+      "weight_kg": 106,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 06:30 G=172 | 06:50 M=toast C=25 I=3R (corr) | 09:00 G=158 | 12:30 G=145 | 13:00 M=wrap C=35 I=4R | 18:30 G=150 | 19:00 M=chicken_rice C=45 I=4.5R | 21:30 G=158 I=32L",
+      "D2 06:40 G=178 | 12:00 G=150 | 12:30 M=salad C=15 I=1.5R | 18:40 G=152 | 19:10 M=pizza C=60 I=6R | 22:00 G=172 I=32L",
+      "D3 06:20 G=168 | 06:40 M=yogurt C=20 I=2.5R (corr) | 12:30 G=142 | 13:00 M=soup C=25 I=2.5R | 18:30 M=steak_veggies C=10 I=1R | 21:30 G=142 I=32L",
+      "D4 06:50 G=180 | 07:10 M=bagel C=40 I=5R (corr) | 12:30 G=152 | 13:00 M=burger C=35 I=3.5R | 19:00 M=tacos C=40 I=4R | 21:30 I=32L",
+      "D5 06:30 G=175 | 12:00 G=148 | 12:30 M=wrap C=30 I=3R | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=168 I=32L",
+      "D6 06:40 G=175 | 07:00 M=cereal C=30 I=4R (corr) | 12:30 G=150 | 13:00 M=rice_bowl C=45 I=4.5R | 18:40 M=fish_veggies C=15 I=1.5R | 21:30 G=148 I=32L",
+      "D7 06:30 G=168 | 07:00 M=smoothie C=35 I=4R (corr) | 12:30 G=145 | 13:00 M=soup C=20 I=2R | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=32L",
+      "D8 06:50 G=182 | 07:20 M=waffle C=30 I=4R (corr) | 12:30 G=155 | 13:00 M=salad C=15 I=1.5R | 18:50 M=lamb_chops C=5 I=0.5R | 21:30 G=142 I=32L",
+      "D9 06:30 G=172 | 12:00 G=148 | 12:30 M=wrap C=30 I=3R | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=170 I=32L",
+      "D10 06:40 G=178 | 07:00 M=toast_eggs C=20 I=3R (corr) | 12:30 G=148 | 13:00 M=soup C=25 I=2.5R | 18:40 M=stirfry C=30 I=3R | 21:30 G=155 I=32L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Elderly T1 patient at 106kg with dual pattern: dawn phenomenon and delayed high-fat spikes. Basal optimization primary. Conservative titration essential at age 75.",
+      "recommendations": [
+        {
+          "action": "Increase long-acting insulin from 32L to 38L for dawn phenomenon (fasting 168-182) AND implement extended dinner bolus for high-fat meals causing nocturnal hyperglycemia (168-172 at 22:00).",
+          "priority": "high",
+          "reason": "Fasting readings 168-182 despite morning corrections. At 106kg, current 32L (0.3 units/kg) insufficient. D3 steak/veggies G=142, D8 lamb chops G=142 prove low-fat dinners prevent spikes. Contrast D2 pizza G=172, D5 risotto G=168.",
+          "concrete_alternative": "Split basal: 22L at 21:00, 16L at 09:00 for dual-coverage. Use dual-wave for high-fat dinners: 40% upfront, 60% over 3 hours. At age 75, titrate carefully."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 75,
+      "weight_kg": 74,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=142 | 08:30 M=toast C=20 I=2R | 12:40 G=128 | 13:10 M=wrap C=35 I=3.5R | 18:30 G=135 | 19:00 M=pizza C=60 I=6R | 22:00 G=170 I=22L",
+      "D2 07:30 G=140 | 12:30 G=125 | 13:00 M=salad C=15 I=1.5R | 18:30 M=chicken_rice C=40 I=4R | 21:00 I=22L",
+      "D3 09:00 G=148 | 09:30 M=cereal C=30 I=3R | 13:30 G=135 | 14:00 M=soup C=25 I=2.5R | 19:30 M=burger_fries C=55 I=5.5R | 23:00 G=168 I=22L",
+      "D4 08:10 G=145 | 12:40 G=132 | 13:10 M=rice_bowl C=45 I=4.5R | 19:00 M=steak_veggies C=10 I=1R | 21:00 I=22L",
+      "D5 07:50 G=142 | 12:30 G=130 | 13:00 M=wrap C=30 I=3R | 18:40 M=salmon_risotto C=50 I=5R | 22:00 G=165 I=22L",
+      "D6 08:30 G=150 | 13:00 G=138 | 13:30 M=burger C=35 I=3.5R | 19:30 M=alfredo_pasta C=55 I=5.5R | 23:00 G=175 I=22L",
+      "D7 07:20 G=138 | 07:40 M=yogurt C=20 I=2R | 12:30 G=122 | 13:00 M=soup C=20 I=2R | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=22L",
+      "D8 08:00 G=145 | 12:30 G=135 | 13:00 M=salad_nicoise C=20 I=2R | 19:30 M=mac_cheese C=55 I=5.5R | 23:00 G=178 I=22L",
+      "D9 07:40 G=140 | 12:30 G=128 | 13:00 M=wrap C=30 I=3R | 18:30 M=lamb_chops C=5 I=0.5R | 21:00 I=22L",
+      "D10 08:20 G=150 | 13:30 G=140 | 14:00 M=leftover_mac C=50 I=5R | 19:00 M=fried_chicken C=45 I=4.5R | 23:00 G=172 I=22L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clear high-fat-induced nocturnal hyperglycemia in elderly T1 patient. Dual-wave bolus strategy definitive intervention. At age 75, preventing nocturnal hyperglycemia reduces complication risk.",
+      "recommendations": [
+        {
+          "action": "Implement mandatory extended dinner bolus (dual-wave: 40% upfront, 60% over 3-4 hours) for all high-fat dinners causing nocturnal hyperglycemia (165-178 at 22:00-23:00).",
+          "priority": "high",
+          "reason": "D4 steak/veggies G=135, D7 chicken kale G=122, D9 lamb chops G=128 prove low-fat dinners prevent spikes. Contrast D8 mac & cheese G=178, D6 alfredo G=175. At 74kg and age 75, preventing nocturnal hyperglycemia important for cardiovascular risk reduction.",
+          "concrete_alternative": "If pens used, split dinner bolus: 60% mealtime, 40% 2 hours later. Standardize meal timing to reduce log variability."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 52,
+      "weight_kg": 98,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=148 | 08:00 M=toast C=25 I=3R | 12:30 G=135 | 13:00 M=wrap C=35 I=4R | 17:30 G=65 | M=juice C=20 | 18:30 G=88 | 19:00 M=pizza C=65 I=6.5R | 22:00 G=178 I=29L",
+      "D2 07:20 G=145 | 12:00 G=132 | 12:30 M=salad C=15 I=1.5R | 17:20 G=60 | M=gel C=15 | 18:40 G=85 | 19:10 M=burger_fries C=55 I=5.5R | 22:00 G=172 I=29L",
+      "D3 07:40 G=150 | 08:10 M=oatmeal C=30 I=3.5R | 12:30 G=138 | 13:00 M=soup C=25 I=2.5R | 17:30 G=62 | M=candy C=15 | 18:30 M=steak_veggies C=10 I=1R | 21:30 G=140 I=29L",
+      "D4 07:30 G=142 | 12:30 G=140 | 13:00 M=burger C=35 I=3.5R | 17:40 G=58 | M=glucose_tabs C=16 | 19:00 M=alfredo_pasta C=60 I=6R | 23:00 G=185 I=29L",
+      "D5 07:50 G=152 | 12:30 G=142 | 13:00 M=wrap C=30 I=3R | 17:30 G=65 | M=crackers C=10 | 18:30 M=salmon_risotto C=55 I=5.5R | 22:30 G=170 I=29L",
+      "D6 07:20 G=145 | 08:00 M=yogurt C=20 I=2.5R | 12:30 G=135 | 13:00 M=soup_crackers C=30 I=3R | 17:20 G=62 | M=juice C=15 | 18:40 M=fish_veggies C=15 I=1.5R | 21:30 G=142 I=29L",
+      "D7 07:30 G=148 | 12:30 G=140 | 13:00 M=rice_bowl C=45 I=4.5R | 17:30 G=60 | M=gel C=15 | 18:30 M=chicken_kale C=10 I=1R | 21:00 G=138 I=29L",
+      "D8 07:40 G=152 | 12:30 G=142 | 13:00 M=salad_nicoise C=20 I=2R | 17:40 G=68 | M=banana C=20 | 19:00 M=mac_cheese C=60 I=6R | 23:00 G=188 I=29L",
+      "D9 07:20 G=145 | 12:00 G=135 | 12:30 M=wrap C=30 I=3R | 17:20 G=62 | M=soda C=20 | 18:30 M=lamb_chops C=5 I=0.5R | 21:30 G=135 I=29L",
+      "D10 07:30 G=148 | 08:00 M=toast_eggs C=20 I=2.5R | 12:30 G=138 | 13:00 M=soup C=25 I=2.5R | 17:30 G=65 | M=glucose_tabs C=12 | 19:00 M=fried_chicken C=45 I=4.5R | 23:00 G=180 I=29L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Dual pattern at 98kg: post-lunch hypoglycemia and severe delayed high-fat spikes. Both demand immediate intervention. Extended bolus and pre-meal snack essential.",
+      "recommendations": [
+        {
+          "action": "Add mandatory 20g carb snack at 16:00 for post-lunch hypoglycemia (58-68 at 17:20-17:40) AND implement extended dinner bolus for high-fat meals causing nocturnal hyperglycemia (170-188 at 22:00-23:00).",
+          "priority": "high",
+          "reason": "Daily hypoglycemia (D4 G=58, D7 G=60) combined with severe nocturnal spikes after high-fat dinners (D8 mac & cheese G=188, D4 alfredo G=185). Control meals (D3 steak G=140, D9 lamb G=135) prove low-fat dinners prevent spikes.",
+          "concrete_alternative": "Reduce lunch bolus by 2 units AND use dual-wave for dinner: 40% upfront, 60% over 3 hours. At 98kg, significant insulin resistance drives need for higher doses."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 37,
+      "weight_kg": 96,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=148 | 08:30 M=cereal C=35 | 12:40 G=132 | 13:10 M=wrap C=35 | 15:00 G=135 | 17:00 G=65 | M=juice C=20 | 18:30 G=88 | 19:00 M=chicken_rice C=45",
+      "D2 07:30 G=145 | 12:30 G=128 | 13:00 M=salad C=15 | 17:30 G=60 | M=soda C=20 | 18:40 G=85",
+      "D3 09:00 G=152 | 09:30 M=bagel C=45 | 13:30 G=140 | 14:00 M=soup C=25 | 17:20 G=62 | M=candy C=15 | 18:30 M=steak_veggies C=10",
+      "D4 08:10 G=142 | 12:30 G=130 | 13:00 M=burger C=35 | 17:40 G=58 | M=glucose_tabs C=20 | 19:00 M=tacos C=40",
+      "D5 07:50 G=150 | 12:30 G=138 | 13:00 M=wrap C=30 | 17:30 G=68 | M=crackers C=10 | 18:30 M=pasta C=50",
+      "D6 08:30 G=155 | 13:00 G=140 | 13:30 M=soup_crackers C=30 | 17:10 G=62 | M=juice C=15 | 18:30 M=fish_veggies C=15",
+      "D7 07:20 G=140 | 07:50 M=yogurt C=20 | 12:30 G=125 | 13:00 M=rice_bowl C=45 | 17:20 G=65 | M=gel C=12 | 18:30 M=chicken_kale C=10",
+      "D8 08:00 G=148 | 12:30 G=135 | 13:00 M=salad C=15 | 17:30 G=60 | M=banana C=20 | 18:40 M=lamb_veggies C=5",
+      "D9 07:40 G=145 | 12:30 G=130 | 13:00 M=wrap C=30 | 17:20 G=58 | M=soda C=20 | 18:30 M=salmon_risotto C=50",
+      "D10 08:20 G=155 | 13:30 G=142 | 14:00 M=soup C=20 | 17:10 G=65 | M=glucose_tabs C=15 | 18:40 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Severe exercise-induced hypoglycemia combined with post-lunch drops at 96kg. Medication review critical first step. Pre-exercise snack immediate safety intervention.",
+      "recommendations": [
+        {
+          "action": "Schedule mandatory 20g carb snack at 16:00 for exercise-induced hypoglycemia (58-68 at 17:00-17:40) AND review medications for sulfonylurea contribution.",
+          "priority": "high",
+          "reason": "All 10 days show hypoglycemia. D4 G=58, D9 G=58. At 96kg, if on sulfonylurea, dose likely too high. Post-lunch hypoglycemia also present (125-142 dropping to 58-68). Dual hypoglycemia pattern suggests medication mismatch.",
+          "concrete_alternative": "If on sulfonylurea, reduce dose or switch to metformin/SGLT2 inhibitor/GLP-1 RA. Add 16:00 snack as immediate safety measure."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 33,
+      "weight_kg": 87,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=140 | 08:00 M=bagel C=45 I=4.5R | 10:00 G=230 | 12:30 G=130 | 13:00 M=wrap C=35 I=3.5R | 16:00 G=78 | M=banana C=20 | 17:30 G=62 | M=juice C=20 | 18:30 G=88 | 19:00 M=chicken_rice C=40 I=4R | 21:30 G=142 I=26L",
+      "D2 07:20 G=138 | 12:00 G=128 | 12:30 M=salad C=15 I=1.5R | 16:30 G=72 | M=crackers C=10 | 17:20 G=58 | M=gel C=15 | 18:40 G=82 | 19:10 M=pasta C=50 I=5R | 21:40 G=150 I=26L",
+      "D3 07:40 G=142 | 08:10 M=cereal C=35 I=3.5R | 10:20 G=225 | 12:30 G=132 | 13:00 M=soup C=25 I=2.5R | 16:00 G=75 | M=apple C=15 | 17:40 G=60 | M=soda C=20 | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=26L",
+      "D4 07:30 G=135 | 12:30 G=125 | 13:00 M=burger C=35 I=3.5R | 16:30 G=80 | M=granola_bar C=15 | 17:50 G=65 | M=glucose_tabs C=16 | 19:00 M=tacos C=40 I=4R | 21:30 I=26L",
+      "D5 07:50 G=145 | 08:20 M=pancakes C=40 I=4R | 10:30 G=240 | 12:30 G=135 | 13:00 M=wrap C=30 I=3R | 16:00 G=78 | M=juice C=15 | 17:30 G=62 | M=candy C=15 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=155 I=26L",
+      "D6 07:20 G=138 | 08:00 M=toast_eggs C=20 I=2R | 10:00 G=195 | 12:30 G=125 | 13:00 M=soup_crackers C=30 I=3R | 16:30 G=75 | M=crackers C=10 | 17:20 G=58 | M=juice C=20 | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=26L",
+      "D7 07:30 G=140 | 12:30 G=130 | 13:00 M=rice_bowl C=45 I=4.5R | 16:30 G=78 | M=banana C=20 | 17:40 G=65 | M=gel C=15 | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=26L",
+      "D8 07:40 G=145 | 08:10 M=waffle C=35 I=3.5R | 10:20 G=230 | 12:30 G=132 | 13:00 M=salad C=15 I=1.5R | 16:00 G=80 | M=apple C=15 | 17:30 G=68 | M=glucose_tabs C=12 | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=26L",
+      "D9 07:20 G=138 | 12:00 G=128 | 12:30 M=wrap C=30 I=3R | 16:30 G=78 | M=granola_bar C=15 | 17:20 G=60 | M=soda C=20 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=158 I=26L",
+      "D10 07:30 G=142 | 08:00 M=oatmeal C=30 I=3R | 10:10 G=215 | 12:30 G=130 | 13:00 M=soup C=20 I=2R | 16:00 G=75 | M=juice C=15 | 17:30 G=65 | M=glucose_tabs C=12 | 18:40 M=stirfry C=30 I=3R | 21:30 G=145 I=26L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Dual pattern at 87kg: morning breakfast spikes and exercise-induced hypoglycemia. Both patterns linked to insulin timing/dose. Systematic adjustment of breakfast and lunch boluses essential.",
+      "recommendations": [
+        {
+          "action": "Increase breakfast pre-bolus timing to 25 min and add 1-2 units for 10:00 spike (195-240) AND add mandatory 20g carb snack at 16:00 for exercise-induced hypoglycemia (58-68 at 17:20-17:50).",
+          "priority": "high",
+          "reason": "Post-breakfast spikes 195-240. D6 (toast/eggs 20g, 2R) best result (195). Daily exercise-induced hypoglycemia (D2 G=58, D6 G=58). Dual pattern requires dual intervention. At 87kg, insulin sensitivity adequate later in day.",
+          "concrete_alternative": "Reduce breakfast carbohydrate to 15g to eliminate spike without increasing insulin. Reduce lunch bolus by 1-2 units for exercise window."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 19,
+      "weight_kg": 78,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=140 | 08:30 M=toast C=25 I=2.5R | 12:40 G=128 | 13:10 M=wrap C=35 I=3.5R | 18:30 G=135 | 19:00 M=pizza C=65 I=6.5R | 22:00 G=172 I=23L",
+      "D2 07:30 G=138 | 12:30 G=125 | 13:00 M=salad C=15 I=1.5R | 18:30 M=chicken_rice C=40 I=4R | 21:00 I=23L",
+      "D3 09:00 G=145 | 09:30 M=cereal C=35 I=3.5R | 13:30 G=135 | 14:00 M=soup C=25 I=2.5R | 19:30 M=burger_fries C=55 I=5.5R | 23:00 G=168 I=23L",
+      "D4 08:10 G=142 | 12:40 G=132 | 13:10 M=rice_bowl C=45 I=4.5R | 19:00 M=steak_veggies C=10 I=1R | 21:00 I=23L",
+      "D5 07:50 G=142 | 12:30 G=130 | 13:00 M=wrap C=30 I=3R | 18:40 M=salmon_risotto C=50 I=5R | 22:00 G=165 I=23L",
+      "D6 08:30 G=148 | 13:00 G=138 | 13:30 M=burger C=35 I=3.5R | 19:30 M=alfredo_pasta C=55 I=5.5R | 23:00 G=175 I=23L",
+      "D7 07:20 G=135 | 07:40 M=yogurt C=20 I=2R | 12:30 G=120 | 13:00 M=soup C=20 I=2R | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=23L",
+      "D8 08:00 G=142 | 12:30 G=132 | 13:00 M=salad_nicoise C=20 I=2R | 19:30 M=mac_cheese C=55 I=5.5R | 23:00 G=178 I=23L",
+      "D9 07:40 G=138 | 12:30 G=128 | 13:00 M=wrap C=30 I=3R | 18:30 M=lamb_chops C=5 I=0.5R | 21:00 I=23L",
+      "D10 08:20 G=148 | 13:30 G=140 | 14:00 M=leftover_mac C=50 I=5R | 19:00 M=fried_chicken C=45 I=4.5R | 23:00 G=172 I=23L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Young T1 patient with clear high-fat-induced nocturnal hyperglycemia. Dual-wave bolus strategy definitive. Dietary education important adjunct at age 19.",
+      "recommendations": [
+        {
+          "action": "Implement mandatory extended dinner bolus (dual-wave: 40% upfront, 60% over 3 hours) for all high-fat dinners causing nocturnal hyperglycemia (165-178 at 22:00-23:00).",
+          "priority": "high",
+          "reason": "D4 steak/veggies G=132, D7 chicken kale G=120, D9 lamb chops G=128 prove low-fat dinners prevent spikes. Contrast D8 mac & cheese G=178, D6 alfredo G=175. At 78kg and age 19, dietary education essential alongside insulin strategy.",
+          "concrete_alternative": "If pens used, split dinner bolus: 60% mealtime, 40% 2 hours later. Standardize meal timing to reduce log variability."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 40,
+      "weight_kg": 67,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 06:30 G=158 | 07:00 M=toast C=20 I=2R (corr) | 12:30 G=118 | 13:00 M=wrap C=35 I=3.5R | 16:00 G=78 | M=banana C=20 | 17:30 G=62 | M=juice C=20 | 18:30 G=88 | 19:00 M=chicken_rice C=40 I=4R | 21:30 G=135 I=20L",
+      "D2 06:40 G=162 | 12:00 G=122 | 12:30 M=salad C=15 I=1.5R | 16:30 G=72 | M=crackers C=10 | 17:20 G=58 | M=gel C=15 | 18:40 G=82 | 19:10 M=pasta C=45 I=4.5R | 21:30 G=145 I=20L",
+      "D3 06:20 G=155 | 06:40 M=yogurt C=20 I=2R (corr) | 12:30 G=115 | 13:00 M=soup C=25 I=2.5R | 16:00 G=75 | M=apple C=15 | 17:40 G=60 | M=soda C=20 | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=20L",
+      "D4 06:50 G=165 | 07:10 M=bagel C=35 I=3.5R (corr) | 12:30 G=125 | 13:00 M=burger C=35 I=3.5R | 16:30 G=80 | M=granola_bar C=15 | 17:50 G=65 | M=glucose_tabs C=16 | 19:00 M=tacos C=40 I=4R | 21:30 I=20L",
+      "D5 06:30 G=160 | 12:00 G=120 | 12:30 M=wrap C=30 I=3R | 16:00 G=78 | M=juice C=15 | 17:30 G=62 | M=candy C=15 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=152 I=20L",
+      "D6 06:40 G=162 | 07:00 M=cereal C=30 I=3R (corr) | 12:30 G=122 | 13:00 M=rice_bowl C=45 I=4.5R | 16:30 G=78 | M=banana C=20 | 17:20 G=58 | M=juice C=20 | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=20L",
+      "D7 06:30 G=155 | 07:00 M=smoothie C=30 I=3R (corr) | 12:30 G=118 | 13:00 M=soup C=20 I=2R | 16:00 G=75 | M=crackers C=10 | 17:30 G=65 | M=gel C=15 | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=20L",
+      "D8 06:50 G=168 | 07:20 M=waffle C=30 I=3R (corr) | 12:30 G=128 | 13:00 M=salad C=15 I=1.5R | 16:30 G=80 | M=apple C=15 | 17:40 G=68 | M=glucose_tabs C=12 | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=20L",
+      "D9 06:30 G=158 | 12:00 G=118 | 12:30 M=wrap C=30 I=3R | 16:30 G=78 | M=granola_bar C=15 | 17:20 G=60 | M=soda C=20 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=155 I=20L",
+      "D10 06:40 G=162 | 07:00 M=toast_eggs C=20 I=2R (corr) | 12:30 G=120 | 13:00 M=soup C=25 I=2.5R | 16:00 G=78 | M=juice C=15 | 17:30 G=65 | M=glucose_tabs C=12 | 18:40 M=stirfry C=30 I=3R | 21:30 G=142 I=20L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Lean T1 patient with dual pattern: dawn phenomenon and exercise-induced hypoglycemia. Basal optimization and pre-exercise fueling essential. At 67kg, conservative titration critical.",
+      "recommendations": [
+        {
+          "action": "Increase long-acting insulin from 20L to 24L for dawn phenomenon (fasting 155-168) AND add mandatory 20g carb snack at 16:00 for exercise-induced hypoglycemia (58-68 at 17:20-17:50).",
+          "priority": "high",
+          "reason": "Fasting readings 155-168 with dawn phenomenon. Daily exercise-induced hypoglycemia (D2 G=58, D6 G=58). At 67kg, insulin-sensitive patient. Basal optimization may reduce morning correction needs. Pre-exercise snack essential safety measure.",
+          "concrete_alternative": "Split basal: 12L at 21:00, 12L at 09:00 for better coverage. Reduce lunch bolus by 1 unit for exercise window."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 32,
+      "weight_kg": 78,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=138 | 08:00 M=toast C=25 I=2.5R | 12:30 G=125 | 13:00 M=wrap C=35 I=3.5R | 17:30 G=65 | M=juice C=20 | 18:30 G=88 | 19:00 M=pizza C=60 I=6R | 22:00 G=170 I=23L",
+      "D2 07:20 G=135 | 12:00 G=122 | 12:30 M=salad C=15 I=1.5R | 17:20 G=60 | M=gel C=15 | 18:40 G=82 | 19:10 M=burger_fries C=55 I=5.5R | 22:00 G=168 I=23L",
+      "D3 07:40 G=140 | 08:10 M=oatmeal C=30 I=3R | 12:30 G=128 | 13:00 M=soup C=25 I=2.5R | 17:30 G=62 | M=candy C=15 | 18:30 M=steak_veggies C=10 I=1R | 21:30 G=138 I=23L",
+      "D4 07:30 G=132 | 12:30 G=130 | 13:00 M=burger C=35 I=3.5R | 17:40 G=58 | M=glucose_tabs C=16 | 19:00 M=alfredo_pasta C=55 I=5.5R | 23:00 G=178 I=23L",
+      "D5 07:50 G=142 | 12:30 G=132 | 13:00 M=wrap C=30 I=3R | 17:30 G=65 | M=crackers C=10 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=165 I=23L",
+      "D6 07:20 G=135 | 08:00 M=yogurt C=20 I=2R | 12:30 G=125 | 13:00 M=soup_crackers C=30 I=3R | 17:20 G=62 | M=juice C=15 | 18:40 M=fish_veggies C=15 I=1.5R | 21:30 G=142 I=23L",
+      "D7 07:30 G=138 | 12:30 G=130 | 13:00 M=rice_bowl C=45 I=4.5R | 17:30 G=60 | M=gel C=15 | 18:30 M=chicken_kale C=10 I=1R | 21:00 G=138 I=23L",
+      "D8 07:40 G=142 | 12:30 G=132 | 13:00 M=salad_nicoise C=20 I=2R | 17:40 G=68 | M=banana C=20 | 19:00 M=mac_cheese C=55 I=5.5R | 23:00 G=180 I=23L",
+      "D9 07:20 G=135 | 12:00 G=125 | 12:30 M=wrap C=30 I=3R | 17:20 G=62 | M=soda C=20 | 18:30 M=lamb_chops C=5 I=0.5R | 21:30 G=132 I=23L",
+      "D10 07:30 G=140 | 08:00 M=toast_eggs C=20 I=2R | 12:30 G=128 | 13:00 M=soup C=25 I=2.5R | 17:30 G=65 | M=glucose_tabs C=12 | 19:00 M=fried_chicken C=45 I=4.5R | 23:00 G=175 I=23L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Dual pattern at 78kg: post-lunch hypoglycemia and delayed high-fat dinner spikes. Both patterns consistent and correctable with systematic insulin adjustment.",
+      "recommendations": [
+        {
+          "action": "Add mandatory 20g carb snack at 16:00 for post-lunch hypoglycemia (58-68 at 17:20-17:40) AND implement extended dinner bolus for high-fat meals causing nocturnal hyperglycemia (165-180 at 22:00-23:00).",
+          "priority": "high",
+          "reason": "Daily hypoglycemia (D4 G=58, D7 G=60) combined with nocturnal spikes (D8 mac & cheese G=180, D4 alfredo G=178). Control meals (D3 steak G=138, D9 lamb G=132) prove low-fat dinners prevent spikes. At 78kg, dual pattern requires dual intervention.",
+          "concrete_alternative": "Reduce lunch bolus by 1-2 units AND use dual-wave for dinner: 40% upfront, 60% over 3 hours."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 27,
+      "weight_kg": 95,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=142 | 08:00 M=bagel C=45 I=4.5R | 10:00 G=230 | 12:30 G=132 | 13:00 M=wrap C=35 I=3.5R | 18:30 G=138 | 19:00 M=chicken_rice C=40 I=4R | 21:30 G=145 I=28L",
+      "D2 07:20 G=140 | 12:00 G=130 | 12:30 M=salad C=15 I=1.5R | 18:40 G=135 | 19:10 M=salmon_veggies C=15 I=1.5R | 21:00 I=28L",
+      "D3 07:40 G=145 | 08:10 M=cereal C=35 I=3.5R | 10:20 G=225 | 12:30 G=135 | 13:00 M=soup C=25 I=2.5R | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=28L",
+      "D4 07:30 G=138 | 12:30 G=128 | 13:00 M=burger C=35 I=3.5R | 19:00 M=tacos C=40 I=4R | 21:30 I=28L",
+      "D5 07:50 G=148 | 08:20 M=pancakes C=40 I=4R | 10:30 G=240 | 12:30 G=138 | 13:00 M=wrap C=30 I=3R | 18:30 M=pasta C=45 I=4.5R | 21:30 G=152 I=28L",
+      "D6 07:20 G=140 | 08:00 M=toast_eggs C=20 I=2R | 10:00 G=195 | 12:30 G=128 | 13:00 M=soup_crackers C=30 I=3R | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=28L",
+      "D7 07:30 G=142 | 12:30 G=132 | 13:00 M=rice_bowl C=45 I=4.5R | 19:00 M=chicken_kale C=10 I=1R | 21:00 I=28L",
+      "D8 07:40 G=148 | 08:10 M=waffle C=35 I=3.5R | 10:20 G=235 | 12:30 G=138 | 13:00 M=salad C=15 I=1.5R | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=28L",
+      "D9 07:20 G=140 | 12:00 G=130 | 12:30 M=wrap C=30 I=3R | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=158 I=28L",
+      "D10 07:30 G=145 | 08:00 M=oatmeal C=30 I=3R | 10:10 G=215 | 12:30 G=132 | 13:00 M=soup C=20 I=2R | 18:40 M=stirfry C=30 I=3R | 21:30 G=148 I=28L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Morning breakfast spike dominant issue at 95kg. Contrast with otherwise good afternoon/evening control. Breakfast bolus optimization primary intervention.",
+      "recommendations": [
+        {
+          "action": "Increase breakfast pre-bolus timing to 25 min and add 1-2 units for 10:00 spike (195-240 mg/dL).",
+          "priority": "high",
+          "reason": "Post-breakfast readings 195-240. D6 (toast/eggs 20g, 2R) best result (195). At 95kg, morning insulin resistance significant. Afternoon and evening control good, isolating problem to breakfast bolus timing/dose.",
+          "concrete_alternative": "Reduce breakfast carbohydrate to 15g to eliminate spike without increasing insulin. Extend dinner bolus for risotto D9 (G=158 at 22:00)."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 39,
+      "weight_kg": 111,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:00 G=145 | 07:20 M=toast C=25 I=3R | 09:30 G=155 | 12:00 G=135 | 12:20 M=wrap C=35 I=4R | 15:00 G=138 | 18:30 G=142 | 19:00 M=pizza C=65 I=6.5R | 22:00 G=178 I=33L | 01:00 G=192",
+      "D2 07:10 G=148 | 07:30 M=oatmeal C=30 I=3.5R | 09:40 G=160 | 12:10 G=140 | 12:30 M=salad C=15 I=1.5R | 15:20 G=135 | 18:40 G=145 | 19:10 M=burger_fries C=55 I=5.5R | 22:00 G=170 I=33L",
+      "D3 07:00 G=142 | 07:20 M=yogurt C=20 I=2.5R | 09:20 G=150 | 12:00 G=132 | 12:20 M=soup C=30 I=3R | 15:10 G=138 | 18:30 G=140 | 19:00 M=steak_veggies C=10 I=1R | 21:30 G=142 I=33L",
+      "D4 07:20 G=150 | 07:40 M=bagel C=40 I=4.5R | 10:00 G=170 | 12:10 G=142 | 12:30 M=burger C=35 I=3.5R | 15:30 G=142 | 18:50 G=148 | 19:20 M=alfredo_pasta C=60 I=6R | 23:00 G=185 I=33L",
+      "D5 06:50 G=140 | 07:10 M=toast_eggs C=20 I=2.5R | 09:10 G=148 | 12:00 G=138 | 12:20 M=wrap C=30 I=3R | 15:00 G=140 | 18:30 G=142 | 19:00 M=salmon_risotto C=55 I=5.5R | 22:30 G=172 I=33L",
+      "D6 07:10 G=148 | 07:30 M=cereal C=30 I=3.5R | 09:50 G=162 | 12:20 G=140 | 12:40 M=soup_crackers C=30 I=3R | 15:10 G=142 | 18:40 G=148 | 19:10 M=tacos C=40 I=4R | 21:30 G=148 I=33L",
+      "D7 07:00 G=142 | 07:20 M=smoothie C=35 I=4R | 09:30 G=165 | 12:00 G=138 | 12:20 M=chicken_soup C=20 I=2R | 15:10 G=135 | 18:30 G=140 | 19:00 M=lamb_chops C=5 I=0.5R | 21:20 G=138 I=33L",
+      "D8 07:15 G=150 | 07:35 M=waffle C=30 I=3.5R | 09:50 G=168 | 12:30 G=145 | 12:50 M=rice_bowl C=45 I=4.5R | 15:30 G=148 | 18:50 G=150 | 19:20 M=mac_cheese C=60 I=6R | 23:00 G=188 I=33L",
+      "D9 07:00 G=140 | 07:20 M=omelet C=5 I=1.5R | 09:20 G=142 | 12:00 G=130 | 12:20 M=salad C=15 I=1.5R | 15:10 G=135 | 18:30 G=138 | 19:00 M=chicken_veggies C=10 I=1R | 21:30 G=135 I=33L",
+      "D10 07:10 G=148 | 07:30 M=toast_avocado C=20 I=2.5R | 09:40 G=155 | 12:10 G=140 | 12:30 M=soup C=25 I=2.5R | 15:20 G=142 | 18:40 G=148 | 19:10 M=fried_chicken C=45 I=4.5R | 23:00 G=180 I=33L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Severe delayed high-fat spikes at 111kg. Clean log provides excellent data. Dual-wave bolus strategy definitive. Basal insulin may also need upward titration.",
+      "recommendations": [
+        {
+          "action": "Implement mandatory extended dinner bolus (dual-wave: 40% upfront, 60% over 3-4 hours) for all high-fat dinners causing nocturnal hyperglycemia (170-192 at 22:00-01:00).",
+          "priority": "high",
+          "reason": "D3 steak/veggies G=142, D7 lamb chops G=138, D9 chicken/veggies G=135 prove low-fat dinners prevent spikes. Contrast D8 mac & cheese G=188, D4 alfredo G=185, D1 pizza G=192. At 111kg, significant insulin resistance drives need for extended bolus.",
+          "concrete_alternative": "If pens used, split dinner bolus: 60% mealtime, 40% 2 hours later with phone alarm. Consider increasing basal from 33L to 36L for fasting optimization."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 42,
+      "weight_kg": 103,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=152 | 08:30 M=bagel_juice C=50 | 10:30 G=235 | 12:40 G=150 | 13:10 M=wrap C=35 | 18:30 G=155 | 19:00 M=chicken_rice C=45",
+      "D2 07:30 G=148 | 12:30 G=145 | 13:00 M=salad C=15 | 18:40 G=150 | 19:10 M=salmon_veggies C=20",
+      "D3 09:00 G=158 | 09:30 M=pancakes C=50 | 11:00 G=245 | 13:30 G=155 | 14:00 M=soup C=25 | 18:30 M=steak_asparagus C=10",
+      "D4 08:10 G=150 | 12:40 G=142 | 13:10 M=burger C=35 | 19:00 M=tacos C=40",
+      "D5 07:50 G=155 | 08:20 M=cereal C=40 | 10:20 G=230 | 12:30 G=150 | 13:00 M=wrap C=30 | 18:30 M=pasta C=50",
+      "D6 08:30 G=160 | 13:00 G=152 | 13:30 M=soup_crackers C=30 | 19:00 M=fish_veggies C=15",
+      "D7 07:20 G=148 | 07:50 M=toast_eggs C=20 | 10:00 G=200 | 12:30 G=140 | 13:00 M=rice_bowl C=50 | 18:30 M=chicken_breast C=10",
+      "D8 08:00 G=158 | 12:30 G=150 | 13:00 M=salad_nicoise C=20 | 19:00 M=lamb_chops C=5",
+      "D9 07:40 G=152 | 12:30 G=148 | 13:00 M=wrap C=30 | 18:30 M=salmon_risotto C=50",
+      "D10 08:20 G=162 | 13:30 G=155 | 14:00 M=soup C=20 | 19:00 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Severe morning breakfast spikes at 103kg with baseline hyperglycemia throughout day. Dietary modification and pharmacotherapy both indicated.",
+      "recommendations": [
+        {
+          "action": "Reduce breakfast carbohydrate to 20g for 10:00-11:00 spike (200-245). D7 (toast/eggs 20g) best result (200).",
+          "priority": "high",
+          "reason": "Post-breakfast readings 200-245 when breakfast carb exceeds 30g. D7 proves lower carb reduces spike. At 103kg, significant insulin resistance. Afternoon readings (140-155) also elevated suggesting need for metformin initiation/optimization.",
+          "concrete_alternative": "Add 20-min post-breakfast walk; at 103kg could reduce peak by 30-40 mg/dL. Initiate metformin 1000mg BID if not already prescribed."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 36,
+      "weight_kg": 104,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 06:30 G=165 | 06:50 M=toast C=25 I=3R (corr) | 12:00 G=135 | 12:30 M=wrap C=35 I=4R | 16:00 G=80 | M=banana C=20 | 17:30 G=62 | M=juice C=20 | 18:30 G=88 | 19:00 M=chicken_rice C=45 I=4.5R | 21:30 G=148 I=31L",
+      "D2 06:40 G=170 | 12:00 G=140 | 12:30 M=salad C=15 I=1.5R | 16:30 G=75 | M=crackers C=10 | 17:20 G=58 | M=gel C=15 | 18:40 G=85 | 19:10 M=pasta C=50 I=5R | 21:40 G=155 I=31L",
+      "D3 06:20 G=162 | 06:40 M=yogurt C=20 I=2.5R (corr) | 12:30 G=132 | 13:00 M=soup C=25 I=2.5R | 16:00 G=78 | M=apple C=15 | 17:40 G=60 | M=soda C=20 | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=31L",
+      "D4 06:50 G=172 | 07:10 M=bagel C=40 I=5R (corr) | 12:30 G=142 | 13:00 M=burger C=35 I=3.5R | 16:30 G=82 | M=granola_bar C=15 | 17:50 G=65 | M=glucose_tabs C=16 | 19:00 M=tacos C=40 I=4R | 21:30 I=31L",
+      "D5 06:30 G=168 | 12:00 G=138 | 12:30 M=wrap C=30 I=3R | 16:00 G=80 | M=juice C=15 | 17:30 G=62 | M=candy C=15 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=162 I=31L",
+      "D6 06:40 G=168 | 07:00 M=cereal C=30 I=4R (corr) | 12:30 G=140 | 13:00 M=rice_bowl C=45 I=4.5R | 16:30 G=78 | M=banana C=20 | 17:20 G=58 | M=juice C=20 | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=31L",
+      "D7 06:30 G=160 | 07:00 M=smoothie C=35 I=4R (corr) | 12:30 G=135 | 13:00 M=soup C=20 I=2R | 16:00 G=75 | M=crackers C=10 | 17:30 G=65 | M=gel C=15 | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=31L",
+      "D8 06:50 G=175 | 07:20 M=waffle C=30 I=4R (corr) | 12:30 G=145 | 13:00 M=salad C=15 I=1.5R | 16:30 G=82 | M=apple C=15 | 17:40 G=68 | M=glucose_tabs C=12 | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=31L",
+      "D9 06:30 G=165 | 12:00 G=135 | 12:30 M=wrap C=30 I=3R | 16:30 G=78 | M=granola_bar C=15 | 17:20 G=60 | M=soda C=20 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=165 I=31L",
+      "D10 06:40 G=170 | 07:00 M=toast_eggs C=20 I=3R (corr) | 12:30 G=138 | 13:00 M=soup C=25 I=2.5R | 16:00 G=78 | M=juice C=15 | 17:30 G=65 | M=glucose_tabs C=12 | 18:40 M=stirfry C=30 I=3R | 21:30 G=150 I=31L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Triple pattern at 104kg: dawn phenomenon, exercise-induced hypoglycemia, and delayed high-fat spikes. Basal optimization primary. Pre-exercise fueling and extended bolus for dinners essential.",
+      "recommendations": [
+        {
+          "action": "Increase long-acting insulin from 31L to 36L for dawn phenomenon (fasting 160-175) AND add mandatory 20g carb snack at 16:00 for exercise-induced hypoglycemia (58-68 at 17:20-17:50).",
+          "priority": "high",
+          "reason": "Fasting readings 160-175 with dawn phenomenon. Daily exercise-induced hypoglycemia (D2 G=58, D6 G=58). At 104kg, basal insulin insufficient. Pre-exercise snack essential safety measure.",
+          "concrete_alternative": "Split basal: 22L at 21:00, 14L at 09:00 for dual-coverage. Reduce lunch bolus by 2 units for exercise window. Extend dinner bolus for high-fat meals."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 65,
+      "weight_kg": 98,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=152 | 08:30 M=toast C=25 I=3R | 12:40 G=140 | 13:10 M=wrap C=35 I=4R | 18:30 G=145 | 19:00 M=pizza C=65 I=6.5R | 22:00 G=175 I=29L",
+      "D2 07:30 G=148 | 12:30 G=138 | 13:00 M=salad C=15 I=1.5R | 18:30 M=chicken_rice C=45 I=4.5R | 21:00 I=29L",
+      "D3 09:00 G=155 | 09:30 M=cereal C=35 I=4R | 13:30 G=145 | 14:00 M=soup C=25 I=2.5R | 19:30 M=burger_fries C=55 I=5.5R | 23:00 G=170 I=29L",
+      "D4 08:10 G=150 | 12:40 G=140 | 13:10 M=rice_bowl C=45 I=4.5R | 19:00 M=steak_veggies C=10 I=1R | 21:00 I=29L",
+      "D5 07:50 G=152 | 12:30 G=142 | 13:00 M=wrap C=30 I=3R | 18:40 M=salmon_risotto C=50 I=5R | 22:00 G=168 I=29L",
+      "D6 08:30 G=158 | 13:00 G=148 | 13:30 M=burger C=35 I=3.5R | 19:30 M=alfredo_pasta C=55 I=5.5R | 23:00 G=178 I=29L",
+      "D7 07:20 G=145 | 07:40 M=yogurt C=20 I=2.5R | 12:30 G=130 | 13:00 M=soup C=20 I=2R | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=29L",
+      "D8 08:00 G=152 | 12:30 G=142 | 13:00 M=salad_nicoise C=20 I=2R | 19:30 M=mac_cheese C=55 I=5.5R | 23:00 G=182 I=29L",
+      "D9 07:40 G=148 | 12:30 G=138 | 13:00 M=wrap C=30 I=3R | 18:30 M=lamb_chops C=5 I=0.5R | 21:00 I=29L",
+      "D10 08:20 G=158 | 13:30 G=148 | 14:00 M=leftover_mac C=50 I=5R | 19:00 M=fried_chicken C=45 I=4.5R | 23:00 G=175 I=29L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clear high-fat-induced nocturnal hyperglycemia at 98kg. Dual-wave bolus strategy definitive. At age 65, preventing nocturnal hyperglycemia reduces complication risk.",
+      "recommendations": [
+        {
+          "action": "Implement mandatory extended dinner bolus (dual-wave: 40% upfront, 60% over 3 hours) for all high-fat dinners causing nocturnal hyperglycemia (168-182 at 22:00-23:00).",
+          "priority": "high",
+          "reason": "D4 steak/veggies G=140, D7 chicken kale G=130, D9 lamb chops G=138 prove low-fat dinners prevent spikes. Contrast D8 mac & cheese G=182, D6 alfredo G=178. At 98kg and age 65, preventing nocturnal hyperglycemia important for cardiovascular risk reduction.",
+          "concrete_alternative": "If pens used, split dinner bolus: 60% mealtime, 40% 2 hours later. Standardize meal timing to reduce log variability."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 40,
+      "weight_kg": 60,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=132 | 08:30 M=toast C=20 | 13:00 G=122 | 13:30 M=soup C=25 | 15:30 G=118 | 18:30 G=125 | 19:00 M=chicken_veggies C=15",
+      "D2 07:30 G=130 | 12:30 G=120 | 13:00 M=salad C=15 | 15:00 G=115 | 18:40 G=122 | 19:10 M=salmon_rice C=35",
+      "D3 09:00 G=135 | 09:30 M=cereal C=30 | 13:30 G=125 | 14:00 M=wrap C=35 | 16:00 G=120 | 18:30 M=steak_veggies C=10",
+      "D4 08:10 G=128 | 12:40 G=118 | 13:10 M=rice_bowl C=45 | 15:30 G=122 | 19:00 M=tacos C=40",
+      "D5 07:50 G=132 | 12:30 G=125 | 13:00 M=wrap C=30 | 15:00 G=120 | 18:30 M=pasta C=45",
+      "D6 08:30 G=135 | 13:00 G=128 | 13:30 M=burger C=35 | 16:00 G=125 | 19:00 M=fish_veggies C=15",
+      "D7 07:20 G=128 | 07:40 M=yogurt C=20 | 12:30 G=118 | 13:00 M=soup C=20 | 15:00 G=115 | 18:30 M=chicken_kale C=10",
+      "D8 08:00 G=130 | 12:30 G=125 | 13:00 M=salad_nicoise C=20 | 15:30 G=120 | 18:50 M=lamb_chops C=5",
+      "D9 07:40 G=128 | 12:30 G=122 | 13:00 M=wrap C=30 | 15:10 G=118 | 18:30 M=salmon_risotto C=50",
+      "D10 08:20 G=135 | 13:30 G=128 | 14:00 M=soup C=20 | 16:00 G=122 | 18:40 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Excellent afternoon stability within target range in lean T2 patient. Current management highly effective. Continue current approach.",
+      "recommendations": [
+        {
+          "action": "Maintain current routine given genuine afternoon stability (115-125 mg/dL) within target range. No medication changes indicated.",
+          "priority": "low",
+          "reason": "Afternoon readings average 119 mg/dL with tight SD. At 60kg, lean patient with excellent insulin sensitivity. Stability reflects good meal timing and lifestyle despite messy log. Could be candidate for medication deprescribing if currently on pharmacotherapy.",
+          "concrete_alternative": "Continue current management. Standardize meal timing to reduce log variability. Monitor post-dinner after risotto D9."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 66,
+      "weight_kg": 96,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 06:30 G=168 | 06:50 M=toast C=25 I=3R (corr) | 09:00 G=155 | 12:30 G=140 | 13:00 M=wrap C=35 I=4R | 16:00 G=82 | M=banana C=20 | 17:30 G=65 | M=juice C=20 | 18:30 G=88 | 19:00 M=chicken_rice C=45 I=4.5R | 21:30 G=150 I=29L",
+      "D2 06:40 G=172 | 12:00 G=145 | 12:30 M=salad C=15 I=1.5R | 16:30 G=78 | M=crackers C=10 | 17:20 G=60 | M=gel C=15 | 18:40 G=85 | 19:10 M=pasta C=50 I=5R | 21:40 G=155 I=29L",
+      "D3 06:20 G=165 | 06:40 M=yogurt C=20 I=2.5R (corr) | 12:30 G=138 | 13:00 M=soup C=25 I=2.5R | 16:00 G=80 | M=apple C=15 | 17:40 G=62 | M=soda C=20 | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=29L",
+      "D4 06:50 G=175 | 07:10 M=bagel C=40 I=5R (corr) | 12:30 G=148 | 13:00 M=burger C=35 I=3.5R | 16:30 G=85 | M=granola_bar C=15 | 17:50 G=68 | M=glucose_tabs C=16 | 19:00 M=tacos C=40 I=4R | 21:30 I=29L",
+      "D5 06:30 G=170 | 12:00 G=142 | 12:30 M=wrap C=30 I=3R | 16:00 G=82 | M=juice C=15 | 17:30 G=65 | M=candy C=15 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=162 I=29L",
+      "D6 06:40 G=170 | 07:00 M=cereal C=30 I=4R (corr) | 12:30 G=145 | 13:00 M=rice_bowl C=45 I=4.5R | 16:30 G=80 | M=banana C=20 | 17:20 G=62 | M=juice C=20 | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=29L",
+      "D7 06:30 G=162 | 07:00 M=smoothie C=35 I=4R (corr) | 12:30 G=140 | 13:00 M=soup C=20 I=2R | 16:00 G=78 | M=crackers C=10 | 17:30 G=68 | M=gel C=15 | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=29L",
+      "D8 06:50 G=178 | 07:20 M=waffle C=30 I=4R (corr) | 12:30 G=150 | 13:00 M=salad C=15 I=1.5R | 16:30 G=82 | M=apple C=15 | 17:40 G=70 | M=glucose_tabs C=12 | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=29L",
+      "D9 06:30 G=168 | 12:00 G=142 | 12:30 M=wrap C=30 I=3R | 16:30 G=80 | M=granola_bar C=15 | 17:20 G=62 | M=soda C=20 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=165 I=29L",
+      "D10 06:40 G=172 | 07:00 M=toast_eggs C=20 I=3R (corr) | 12:30 G=142 | 13:00 M=soup C=25 I=2.5R | 16:00 G=80 | M=juice C=15 | 17:30 G=65 | M=glucose_tabs C=12 | 18:40 M=stirfry C=30 I=3R | 21:30 G=152 I=29L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Triple pattern at 96kg: dawn phenomenon, exercise-induced hypoglycemia, and delayed high-fat spikes. Basal optimization primary. Age 66 requires careful titration.",
+      "recommendations": [
+        {
+          "action": "Increase long-acting insulin from 29L to 34L for dawn phenomenon (fasting 162-178) AND add mandatory 20g carb snack at 16:00 for exercise-induced hypoglycemia (60-70 at 17:20-17:50).",
+          "priority": "high",
+          "reason": "Fasting readings 162-178. Daily exercise-induced hypoglycemia (D2 G=60, D3 G=62, D9 G=62). At 96kg and age 66, dual pattern requires dual intervention. Basal optimization may reduce morning correction needs.",
+          "concrete_alternative": "Split basal: 20L at 21:00, 14L at 09:00. Reduce lunch bolus by 2 units for exercise window. Extend dinner bolus for high-fat meals."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 35,
+      "weight_kg": 61,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 06:30 G=158 | 07:00 M=toast C=20 | 12:40 G=130 | 13:10 M=wrap C=35 | 17:00 G=65 | M=juice C=20 | 18:30 G=128 | 19:00 M=chicken_rice C=40",
+      "D2 08:00 G=162 | 08:30 M=cereal C=30 | 13:00 G=135 | 13:30 M=salad C=15 | 17:30 G=60 | M=soda C=20 | 18:40 G=125",
+      "D3 06:40 G=155 | 07:20 M=oatmeal C=25 | 12:30 G=128 | 13:00 M=soup C=25 | 17:20 G=62 | M=candy C=15 | 18:30 M=steak_veggies C=10",
+      "D4 07:10 G=160 | 12:30 G=135 | 13:00 M=burger C=35 | 17:40 G=58 | M=glucose_tabs C=15 | 19:00 M=tacos C=40",
+      "D5 06:20 G=152 | 07:00 M=yogurt C=20 | 12:30 G=125 | 13:00 M=wrap C=30 | 17:30 G=62 | M=crackers C=10 | 18:30 M=pasta C=45",
+      "D6 08:30 G=165 | 09:00 M=bagel C=40 | 13:30 G=140 | 14:00 M=soup_crackers C=30 | 17:20 G=58 | M=juice C=20 | 18:30 M=fish_veggies C=15",
+      "D7 06:50 G=155 | 07:30 M=toast_eggs C=20 | 12:30 G=128 | 13:00 M=rice_bowl C=45 | 17:30 G=65 | M=gel C=12 | 18:30 M=chicken_kale C=10",
+      "D8 07:30 G=160 | 12:30 G=135 | 13:00 M=salad C=15 | 17:40 G=60 | M=banana C=20 | 18:50 M=lamb_veggies C=5",
+      "D9 06:30 G=155 | 07:00 M=cereal C=30 | 13:00 G=132 | 13:30 M=wrap C=30 | 17:20 G=62 | M=soda C=20 | 18:30 M=salmon_risotto C=50",
+      "D10 08:10 G=165 | 12:40 G=140 | 13:10 M=soup C=20 | 17:10 G=58 | M=glucose_tabs C=15 | 18:40 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Dual pattern in lean T2 patient: dawn phenomenon and severe exercise-induced hypoglycemia. Pattern strongly suggests sulfonylurea mismatch. Medication review critical first step.",
+      "recommendations": [
+        {
+          "action": "Initiate metformin 500mg ER with evening meal for dawn phenomenon (fasting 152-165) AND schedule mandatory 20g carb snack at 16:00 for exercise-induced hypoglycemia (58-65 at 17:00-17:40).",
+          "priority": "high",
+          "reason": "Fasting readings 152-165. Daily hypoglycemia (D4 G=58, D6 G=58, D10 G=58). At 61kg, if on sulfonylurea, dose likely too high. Metformin safer alternative that won't cause hypoglycemia. Review medications urgently.",
+          "concrete_alternative": "If on sulfonylurea, discontinue and start metformin. Add 16:00 snack as immediate safety measure while medication transition occurs."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 71,
+      "weight_kg": 118,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 06:30 G=168 | 07:00 M=toast C=20 | 12:30 G=150 | 13:00 M=wrap C=35 | 17:00 G=70 | M=juice C=20 | 18:30 G=148 | 19:00 M=chicken_rice C=45",
+      "D2 06:40 G=172 | 12:00 G=152 | 12:30 M=salad C=15 | 17:30 G=65 | M=soda C=20 | 18:40 G=150 | 19:10 M=salmon_veggies C=20",
+      "D3 06:20 G=165 | 07:00 M=oatmeal C=30 | 12:30 G=155 | 13:00 M=soup C=25 | 17:20 G=62 | M=candy C=15 | 18:30 M=steak_asparagus C=10",
+      "D4 06:50 G=175 | 07:20 M=bagel C=45 | 12:30 G=158 | 13:00 M=burger C=35 | 17:40 G=68 | M=glucose_tabs C=16 | 19:00 M=tacos C=40",
+      "D5 06:30 G=170 | 12:00 G=150 | 12:30 M=wrap C=30 | 17:30 G=65 | M=crackers C=10 | 18:40 M=pasta C=50",
+      "D6 06:40 G=172 | 07:10 M=cereal C=35 | 12:30 G=155 | 13:00 M=rice_bowl C=45 | 17:20 G=62 | M=juice C=15 | 18:30 M=fish_veggies C=15",
+      "D7 06:20 G=162 | 12:00 G=148 | 12:30 M=soup C=20 | 17:30 G=60 | M=gel C=12 | 19:00 M=lamb_chops C=5",
+      "D8 06:50 G=178 | 07:20 M=waffle C=35 | 12:30 G=158 | 13:00 M=salad C=15 | 17:40 G=68 | M=banana C=20 | 18:40 M=chicken_kale C=10",
+      "D9 06:30 G=168 | 12:30 G=152 | 13:00 M=wrap C=30 | 17:20 G=65 | M=soda C=20 | 19:00 M=salmon_risotto C=50",
+      "D10 06:40 G=172 | 07:10 M=toast_eggs C=20 | 12:30 G=150 | 13:00 M=soup C=25 | 17:30 G=62 | M=juice C=15 | 18:30 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Triple pattern at 118kg: dawn phenomenon, exercise-induced hypoglycemia, and baseline hyperglycemia. Medication review and optimization essential. Basal insulin may be necessary.",
+      "recommendations": [
+        {
+          "action": "Initiate metformin 1000mg BID and consider adding basal insulin (12-15 units glargine at 21:00) for dawn phenomenon (fasting 162-178) AND schedule 20g carb snack at 16:00 for exercise-induced hypoglycemia (60-70 at 17:20-17:40).",
+          "priority": "high",
+          "reason": "Fasting readings 162-178 despite metformin candidate. At 118kg, significant insulin resistance likely requires basal insulin. Daily hypoglycemia (D7 G=60, D10 G=62) suggests possible sulfonylurea contributing. Medication review warranted.",
+          "concrete_alternative": "If basal insulin not acceptable, maximize metformin and add GLP-1 RA for weight loss and glycemic control. Review current medications for secretagogue contribution to hypoglycemia."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 73,
+      "weight_kg": 99,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=150 | 08:00 M=toast C=25 I=3R | 12:30 G=142 | 13:00 M=wrap C=35 I=4R | 15:00 G=140 | 18:30 G=148 | 19:00 M=pizza C=60 I=6R | 22:00 G=175 I=30L",
+      "D2 07:20 G=148 | 12:00 G=140 | 12:30 M=salad C=15 I=1.5R | 15:30 G=138 | 18:40 G=150 | 19:10 M=burger_fries C=55 I=5.5R | 22:00 G=170 I=30L",
+      "D3 07:40 G=152 | 08:10 M=oatmeal C=30 I=3.5R | 12:30 G=145 | 13:00 M=soup C=25 I=2.5R | 15:10 G=142 | 18:30 M=steak_veggies C=10 I=1R | 21:30 G=140 I=30L",
+      "D4 07:30 G=148 | 12:30 G=142 | 13:00 M=burger C=35 I=3.5R | 15:20 G=142 | 19:00 M=alfredo_pasta C=55 I=5.5R | 23:00 G=180 I=30L",
+      "D5 07:50 G=152 | 12:30 G=145 | 13:00 M=wrap C=30 I=3R | 15:00 G=140 | 18:30 M=salmon_risotto C=50 I=5R | 22:30 G=168 I=30L",
+      "D6 07:20 G=150 | 08:00 M=yogurt C=20 I=2.5R | 12:30 G=140 | 13:00 M=soup_crackers C=30 I=3R | 15:10 G=142 | 18:40 M=fish_veggies C=15 I=1.5R | 21:30 G=142 I=30L",
+      "D7 07:30 G=148 | 12:30 G=142 | 13:00 M=rice_bowl C=45 I=4.5R | 15:00 G=140 | 18:30 M=chicken_kale C=10 I=1R | 21:00 G=138 I=30L",
+      "D8 07:40 G=152 | 12:30 G=145 | 13:00 M=salad_nicoise C=20 I=2R | 15:30 G=142 | 19:00 M=mac_cheese C=55 I=5.5R | 23:00 G=182 I=30L",
+      "D9 07:20 G=148 | 12:00 G=140 | 12:30 M=wrap C=30 I=3R | 15:10 G=138 | 18:30 M=lamb_chops C=5 I=0.5R | 21:30 G=135 I=30L",
+      "D10 07:30 G=150 | 08:00 M=toast_eggs C=20 I=2.5R | 12:30 G=142 | 13:00 M=soup C=25 I=2.5R | 15:00 G=140 | 19:00 M=fried_chicken C=45 I=4.5R | 23:00 G=178 I=30L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Genuine afternoon stability undermined by delayed high-fat dinner spikes at 99kg. Dual-wave bolus strategy will optimize evening control while preserving excellent daytime stability.",
+      "recommendations": [
+        {
+          "action": "Implement mandatory extended dinner bolus (dual-wave: 40% upfront, 60% over 3 hours) for high-fat dinners causing nocturnal hyperglycemia (168-182 at 22:00-23:00). Afternoon stability (138-142) excellent clinical asset.",
+          "priority": "high",
+          "reason": "D3 steak/veggies G=140, D7 chicken kale G=138, D9 lamb chops G=135 prove low-fat dinners prevent spikes. Contrast D8 mac & cheese G=182, D4 alfredo G=180. Genuine afternoon stability preserved throughout. At 99kg and age 73, preventing nocturnal hyperglycemia important.",
+          "concrete_alternative": "If pens used, split dinner bolus: 60% mealtime, 40% 2 hours later with phone alarm. Maintain current afternoon routine."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 55,
+      "weight_kg": 97,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=148 | 08:00 M=toast C=25 I=3R | 12:30 G=135 | 13:00 M=wrap C=35 I=4R | 17:30 G=65 | M=juice C=20 | 18:30 G=88 | 19:00 M=pizza C=65 I=6.5R | 22:00 G=178 I=29L",
+      "D2 07:20 G=145 | 12:00 G=132 | 12:30 M=salad C=15 I=1.5R | 17:20 G=60 | M=gel C=15 | 18:40 G=85 | 19:10 M=burger_fries C=55 I=5.5R | 22:00 G=172 I=29L",
+      "D3 07:40 G=150 | 08:10 M=oatmeal C=30 I=3.5R | 12:30 G=138 | 13:00 M=soup C=25 I=2.5R | 17:30 G=62 | M=candy C=15 | 18:30 M=steak_veggies C=10 I=1R | 21:30 G=140 I=29L",
+      "D4 07:30 G=142 | 12:30 G=140 | 13:00 M=burger C=35 I=3.5R | 17:40 G=58 | M=glucose_tabs C=16 | 19:00 M=alfredo_pasta C=60 I=6R | 23:00 G=185 I=29L",
+      "D5 07:50 G=152 | 12:30 G=142 | 13:00 M=wrap C=30 I=3R | 17:30 G=65 | M=crackers C=10 | 18:30 M=salmon_risotto C=55 I=5.5R | 22:30 G=170 I=29L",
+      "D6 07:20 G=148 | 08:00 M=yogurt C=20 I=2.5R | 12:30 G=138 | 13:00 M=soup_crackers C=30 I=3R | 17:20 G=62 | M=juice C=15 | 18:40 M=fish_veggies C=15 I=1.5R | 21:30 G=142 I=29L",
+      "D7 07:30 G=150 | 12:30 G=140 | 13:00 M=rice_bowl C=45 I=4.5R | 17:30 G=60 | M=gel C=15 | 18:30 M=chicken_kale C=10 I=1R | 21:00 G=138 I=29L",
+      "D8 07:40 G=152 | 12:30 G=145 | 13:00 M=salad_nicoise C=20 I=2R | 17:40 G=68 | M=banana C=20 | 19:00 M=mac_cheese C=60 I=6R | 23:00 G=188 I=29L",
+      "D9 07:20 G=148 | 12:00 G=138 | 12:30 M=wrap C=30 I=3R | 17:20 G=62 | M=soda C=20 | 18:30 M=lamb_chops C=5 I=0.5R | 21:30 G=135 I=29L",
+      "D10 07:30 G=150 | 08:00 M=toast_eggs C=20 I=2.5R | 12:30 G=140 | 13:00 M=soup C=25 I=2.5R | 17:30 G=65 | M=glucose_tabs C=12 | 19:00 M=fried_chicken C=45 I=4.5R | 23:00 G=180 I=29L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Dual pattern at 97kg: post-lunch hypoglycemia and severe delayed high-fat dinner spikes. Both patterns demand immediate intervention. Extended bolus and pre-meal snack essential.",
+      "recommendations": [
+        {
+          "action": "Add mandatory 20g carb snack at 16:00 for post-lunch hypoglycemia (58-68 at 17:20-17:40) AND implement extended dinner bolus for high-fat meals causing nocturnal hyperglycemia (170-188 at 22:00-23:00).",
+          "priority": "high",
+          "reason": "Daily hypoglycemia (D4 G=58, D7 G=60) combined with severe nocturnal spikes (D8 mac & cheese G=188, D4 alfredo G=185). Control meals (D3 steak G=140, D9 lamb G=135) prove low-fat dinners prevent spikes. At 97kg, dual pattern requires dual intervention.",
+          "concrete_alternative": "Reduce lunch bolus by 2 units AND use dual-wave for dinner: 40% upfront, 60% over 3 hours."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 63,
+      "weight_kg": 66,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=138 | 08:30 M=toast C=20 | 13:00 G=62 | M=juice C=20 | 13:30 G=78 | 14:00 M=soup C=25 | 18:30 G=122 | 19:00 M=chicken_rice C=40",
+      "D2 07:30 G=135 | 12:30 G=58 | M=soda C=25 | 13:00 G=72 | 13:30 M=salad C=15 | 18:40 G=120 | 19:10 M=salmon_veggies C=15",
+      "D3 09:00 G=142 | 09:30 M=cereal C=30 | 13:30 G=65 | M=candy C=15 | 14:00 G=78 | 14:30 M=wrap C=35 | 18:30 M=steak_veggies C=10",
+      "D4 08:10 G=140 | 12:40 G=60 | M=glucose_tabs C=15 | 13:10 G=72 | 13:40 M=burger C=35 | 19:00 M=tacos C=40",
+      "D5 07:50 G=138 | 12:30 G=68 | M=crackers C=10 | 13:00 G=80 | 13:30 M=wrap C=30 | 18:30 M=pasta C=45",
+      "D6 08:30 G=145 | 13:00 G=62 | M=juice C=20 | 13:30 G=75 | 14:00 M=soup_crackers C=30 | 19:00 M=fish_veggies C=15",
+      "D7 07:20 G=135 | 07:50 M=yogurt C=20 | 12:30 G=58 | M=gel C=12 | 13:00 G=70 | 13:30 M=rice_bowl C=45 | 18:30 M=chicken_kale C=10",
+      "D8 08:00 G=140 | 12:30 G=65 | M=banana C=20 | 13:00 G=78 | 13:30 M=salad C=15 | 18:50 M=lamb_veggies C=5",
+      "D9 07:40 G=138 | 12:30 G=60 | M=soda C=20 | 13:00 G=72 | 13:30 M=wrap C=30 | 18:30 M=salmon_risotto C=50",
+      "D10 08:20 G=145 | 13:30 G=68 | M=juice C=15 | 14:00 G=80 | 14:30 M=soup C=20 | 18:40 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Severe post-lunch hypoglycemia in lean T2 patient. Pattern strongly suggests medication mismatch (likely sulfonylurea). Medication review and dietary adjustment essential.",
+      "recommendations": [
+        {
+          "action": "Add mandatory 15g carb snack at 11:00 and move lunch to 12:15 for post-lunch hypoglycemia (58-68 at 12:30-13:30). Review medications for sulfonylurea contribution.",
+          "priority": "high",
+          "reason": "All 10 days show hypoglycemia (D2 G=58, D7 G=58). At 66kg, if on sulfonylurea, dose likely too high for patient's weight and insulin sensitivity. Medication review critical first step.",
+          "concrete_alternative": "If on sulfonylurea, reduce dose by 50% or switch to metformin. Reduce breakfast carbohydrate to 10g to prevent exaggerated insulin response driving late-morning drop."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 27,
+      "weight_kg": 71,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:00 G=128 | 07:20 M=bagel C=40 I=4R | 09:30 G=220 | 12:00 G=115 | 12:20 M=wrap C=35 I=3.5R | 15:00 G=118 | 18:30 G=122 | 19:00 M=chicken_rice C=40 I=4R | 21:30 G=135 I=21L",
+      "D2 07:10 G=130 | 07:30 M=cereal C=35 I=3.5R | 09:40 G=215 | 12:10 G=118 | 12:30 M=salad C=15 I=1.5R | 15:20 G=115 | 18:40 G=120 | 19:10 M=salmon_veggies C=15 I=1.5R | 21:30 G=125 I=21L",
+      "D3 07:00 G=125 | 07:20 M=pancakes C=45 I=4.5R | 09:50 G=230 | 12:00 G=120 | 12:20 M=soup C=25 I=2.5R | 15:10 G=118 | 18:30 G=122 | 19:00 M=steak_veggies C=10 I=1R | 21:20 G=118 I=21L",
+      "D4 07:20 G=132 | 07:40 M=toast_eggs C=20 I=2R | 09:20 G=185 | 12:10 G=112 | 12:30 M=burger C=35 I=3.5R | 15:30 G=120 | 18:50 G=125 | 19:20 M=tacos C=40 I=4R | 21:30 G=135 I=21L",
+      "D5 06:50 G=122 | 07:10 M=oatmeal C=30 I=3R | 09:30 G=205 | 12:00 G=115 | 12:20 M=wrap C=30 I=3R | 15:00 G=118 | 18:30 G=122 | 19:00 M=pasta C=45 I=4.5R | 21:40 G=140 I=21L",
+      "D6 07:10 G=128 | 07:30 M=yogurt C=25 I=2.5R | 09:20 G=195 | 12:20 G=118 | 12:40 M=soup_crackers C=30 I=3R | 15:10 G=120 | 18:40 G=125 | 19:10 M=fish_veggies C=15 I=1.5R | 21:30 G=128 I=21L",
+      "D7 07:00 G=125 | 07:20 M=smoothie C=35 I=3.5R | 09:30 G=210 | 12:00 G=115 | 12:20 M=chicken_soup C=20 I=2R | 15:10 G=115 | 18:30 G=118 | 19:00 M=lamb_chops C=5 I=0.5R | 21:20 G=115 I=21L",
+      "D8 07:15 G=132 | 07:35 M=waffle C=30 I=3R | 09:50 G=210 | 12:30 G=122 | 12:50 M=rice_bowl C=45 I=4.5R | 15:30 G=125 | 18:50 G=128 | 19:20 M=pizza C=55 I=5.5R | 22:00 G=155 I=21L",
+      "D9 07:00 G=122 | 07:20 M=omelet C=5 I=1.5R | 09:20 G=168 | 12:00 G=108 | 12:20 M=salad C=15 I=1.5R | 15:10 G=112 | 18:30 G=115 | 19:00 M=chicken_veggies C=10 I=1R | 21:30 G=115 I=21L",
+      "D10 07:10 G=128 | 07:30 M=toast_avocado C=20 I=2R | 09:40 G=185 | 12:10 G=115 | 12:30 M=soup C=25 I=2.5R | 15:20 G=118 | 18:40 G=122 | 19:10 M=salmon_risotto C=50 I=5R | 22:00 G=148 I=21L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Morning breakfast spike dominant issue at 71kg. Excellent afternoon stability. Breakfast bolus optimization primary intervention. Clean log provides excellent data for fine-tuning.",
+      "recommendations": [
+        {
+          "action": "Increase breakfast pre-bolus timing to 25 min and add 1-2 units for 09:30 spike (168-230). D9 (omelet 5g, 1.5R) best result (168), D4 (toast/eggs 20g, 2R) second best (185).",
+          "priority": "high",
+          "reason": "Post-breakfast readings 168-230. D9 and D4 prove lower carb AND appropriate dosing improve control. Afternoon stability (108-125) excellent, proving insulin sensitivity adequate later in day. Problem isolated to breakfast bolus timing/dose.",
+          "concrete_alternative": "Reduce breakfast carbohydrate to 15g to eliminate spike without increasing insulin. Extend dinner bolus for pizza D8 (G=155) and risotto D10 (G=148)."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 74,
+      "weight_kg": 85,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 06:30 G=160 | 07:00 M=toast_eggs C=20 | 09:00 G=155 | 12:00 G=132 | 12:30 M=chicken_salad C=15 | 15:00 G=135 | 18:30 G=140 | 19:00 M=salmon_veggies C=20 | 21:30 G=148",
+      "D2 06:40 G=165 | 07:10 M=oatmeal C=25 | 09:20 G=160 | 12:10 G=135 | 12:30 M=turkey_wrap C=30 | 15:20 G=138 | 18:40 G=142 | 19:10 M=steak_asparagus C=10 | 21:30 G=145",
+      "D3 06:20 G=158 | 06:50 M=yogurt C=20 | 08:50 G=150 | 12:00 G=128 | 12:30 M=lentil_soup C=35 | 15:10 G=135 | 18:30 G=140 | 19:00 M=chicken_breast C=10 | 21:20 G=142",
+      "D4 06:50 G=168 | 07:20 M=bagel C=45 | 09:30 G=175 | 12:10 G=140 | 12:30 M=quinoa_bowl C=40 | 15:00 G=142 | 18:50 G=148 | 19:20 M=shrimp_stirfry C=25 | 22:00 G=155",
+      "D5 06:30 G=162 | 07:00 M=toast_avocado C=20 | 09:10 G=158 | 12:10 G=132 | 12:30 M=leftover_quinoa C=35 | 15:20 G=138 | 18:30 G=142 | 19:00 M=cod_veggies C=15 | 21:30 G=145",
+      "D6 06:40 G=165 | 07:10 M=omelet C=5 | 09:00 G=152 | 12:10 G=128 | 12:30 M=tuna_salad C=15 | 15:10 G=132 | 18:40 G=138 | 19:00 M=lamb_chops C=5 | 21:30 G=140",
+      "D7 06:30 G=158 | 07:00 M=granola C=30 | 09:10 G=162 | 12:00 G=135 | 12:30 M=chicken_soup C=25 | 15:00 G=138 | 18:30 G=142 | 19:00 M=tofu_bowl C=30 | 21:30 G=148",
+      "D8 06:50 G=170 | 07:20 M=waffle C=35 | 09:30 G=178 | 12:10 G=142 | 12:30 M=salad_nicoise C=20 | 15:20 G=142 | 18:50 G=148 | 19:20 M=pork_chops C=5 | 21:30 G=145",
+      "D9 06:30 G=160 | 07:00 M=pancake C=25 | 09:10 G=158 | 12:00 G=132 | 12:30 M=bean_burrito C=45 | 15:10 G=140 | 18:30 G=145 | 19:00 M=salmon_risotto C=50 | 22:00 G=158",
+      "D10 06:40 G=165 | 07:10 M=toast_eggs C=20 | 09:10 G=160 | 12:10 G=135 | 12:30 M=leftover_risotto C=40 | 15:00 G=140 | 18:40 G=145 | 19:00 M=chicken_kale C=15 | 21:30 G=148"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Dawn phenomenon dominant in elderly T2 patient. Metformin safest first-line agent. Clean log shows dietary modification (D6) enhances expected medication effect.",
+      "recommendations": [
+        {
+          "action": "Initiate metformin 500mg ER with evening meal for dawn phenomenon (fasting 158-170). D6 (omelet 5g) best 09:00 reading (152) proving lower breakfast carb improves post-prandial.",
+          "priority": "high",
+          "reason": "Fasting readings 158-170. Metformin first-line for dawn phenomenon. At 85kg and age 74, safest pharmacotherapy option. Post-dinner readings after risotto D9 (G=158 at 22:00) suggest modest delayed spike with high-fat meals.",
+          "concrete_alternative": "If metformin contraindicated, reduce breakfast carbohydrate to 15g and add 15-min post-breakfast walk. Monitor 22:00 glucose after high-fat dinners."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 66,
+      "weight_kg": 88,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=140 | 08:00 M=bagel C=45 I=4.5R | 10:00 G=230 | 12:30 G=132 | 13:00 M=wrap C=35 I=3.5R | 18:30 G=138 | 19:00 M=chicken_rice C=40 I=4R | 21:30 G=145 I=26L",
+      "D2 07:20 G=138 | 12:00 G=130 | 12:30 M=salad C=15 I=1.5R | 18:40 G=135 | 19:10 M=salmon_veggies C=15 I=1.5R | 21:00 I=26L",
+      "D3 07:40 G=142 | 08:10 M=cereal C=35 I=3.5R | 10:20 G=225 | 12:30 G=135 | 13:00 M=soup C=25 I=2.5R | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=26L",
+      "D4 07:30 G=138 | 12:30 G=128 | 13:00 M=burger C=35 I=3.5R | 19:00 M=tacos C=40 I=4R | 21:30 I=26L",
+      "D5 07:50 G=145 | 08:20 M=pancakes C=40 I=4R | 10:30 G=240 | 12:30 G=138 | 13:00 M=wrap C=30 I=3R | 18:30 M=pasta C=45 I=4.5R | 21:30 G=152 I=26L",
+      "D6 07:20 G=138 | 08:00 M=toast_eggs C=20 I=2R | 10:00 G=195 | 12:30 G=128 | 13:00 M=soup_crackers C=30 I=3R | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=26L",
+      "D7 07:30 G=140 | 12:30 M=rice_bowl C=45 I=4.5R | 19:00 M=chicken_kale C=10 I=1R | 21:00 I=26L",
+      "D8 07:40 G=145 | 08:10 M=waffle C=35 I=3.5R | 10:20 G=235 | 12:30 G=138 | 13:00 M=salad C=15 I=1.5R | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=26L",
+      "D9 07:20 G=138 | 12:00 G=130 | 12:30 M=wrap C=30 I=3R | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=158 I=26L",
+      "D10 07:30 G=142 | 08:00 M=oatmeal C=30 I=3R | 10:10 G=215 | 12:30 G=135 | 13:00 M=soup C=20 I=2R | 18:40 M=stirfry C=30 I=3R | 21:30 G=148 I=26L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Morning breakfast spike dominant issue at 88kg. Contrast with otherwise good control. Breakfast bolus optimization primary intervention.",
+      "recommendations": [
+        {
+          "action": "Increase breakfast pre-bolus timing to 25 min and add 1-2 units for 10:00 spike (195-240). D6 (toast/eggs 20g, 2R) best result (195).",
+          "priority": "high",
+          "reason": "Post-breakfast readings 195-240. D6 proves lower carb AND appropriate dosing improve control. At 88kg and age 66, morning insulin resistance significant. Afternoon and evening control good, isolating problem to breakfast bolus.",
+          "concrete_alternative": "Reduce breakfast carbohydrate to 15g to eliminate spike without increasing insulin. Extend dinner bolus for risotto D9 (G=158 at 22:00)."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 41,
+      "weight_kg": 99,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=145 | 08:00 M=toast C=25 I=3R | 12:30 G=135 | 13:00 M=wrap C=35 I=4R | 16:00 G=80 | M=banana C=20 | 17:30 G=62 | M=juice C=20 | 18:30 G=88 | 19:00 M=chicken_rice C=45 I=4.5R | 21:30 G=148 I=30L",
+      "D2 07:20 G=142 | 12:00 G=138 | 12:30 M=salad C=15 I=1.5R | 16:30 G=75 | M=crackers C=10 | 17:20 G=58 | M=gel C=15 | 18:40 G=85 | 19:10 M=pizza C=60 I=6R | 22:00 G=170 I=30L",
+      "D3 07:40 G=148 | 08:10 M=oatmeal C=30 I=3.5R | 12:30 G=140 | 13:00 M=soup C=25 I=2.5R | 16:00 G=78 | M=apple C=15 | 17:40 G=60 | M=soda C=20 | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=30L",
+      "D4 07:30 G=142 | 12:30 G=138 | 13:00 M=burger C=35 I=3.5R | 16:30 G=82 | M=granola_bar C=15 | 17:50 G=65 | M=glucose_tabs C=16 | 19:00 M=tacos C=40 I=4R | 21:30 I=30L",
+      "D5 07:50 G=150 | 12:30 G=142 | 13:00 M=wrap C=30 I=3R | 16:00 G=80 | M=juice C=15 | 17:30 G=62 | M=candy C=15 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=162 I=30L",
+      "D6 07:20 G=142 | 08:00 M=yogurt C=20 I=2.5R | 12:30 G=135 | 13:00 M=soup_crackers C=30 I=3R | 16:30 G=78 | M=banana C=20 | 17:20 G=58 | M=juice C=20 | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=30L",
+      "D7 07:30 G=145 | 12:30 G=140 | 13:00 M=rice_bowl C=45 I=4.5R | 16:30 G=80 | M=crackers C=10 | 17:40 G=65 | M=gel C=15 | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=30L",
+      "D8 07:40 G=148 | 12:30 M=salad_nicoise C=20 I=2R | 16:00 G=78 | M=apple C=15 | 17:30 G=68 | M=glucose_tabs C=12 | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=30L",
+      "D9 07:20 G=142 | 12:00 G=135 | 12:30 M=wrap C=30 I=3R | 16:30 G=80 | M=granola_bar C=15 | 17:20 G=60 | M=soda C=20 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=165 I=30L",
+      "D10 07:30 G=145 | 08:00 M=toast_eggs C=20 I=2.5R | 12:30 G=138 | 13:00 M=soup C=25 I=2.5R | 16:00 G=78 | M=juice C=15 | 17:30 G=65 | M=glucose_tabs C=12 | 18:40 M=stirfry C=30 I=3R | 21:30 G=150 I=30L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Dual pattern at 99kg: exercise-induced hypoglycemia and delayed high-fat dinner spikes. Pre-exercise fueling and extended dinner bolus essential.",
+      "recommendations": [
+        {
+          "action": "Add mandatory 20g carb snack at 16:00 for exercise-induced hypoglycemia (58-68 at 17:20-17:50) AND extend dinner bolus for high-fat meals causing nocturnal hyperglycemia (162-170 at 22:00).",
+          "priority": "high",
+          "reason": "Daily hypoglycemia (D2 G=58, D6 G=58, D9 G=60). Delayed spikes after high-fat dinners (D2 pizza G=170, D5 risotto G=162). Control meals (D3 steak, D8 lamb) show good control. At 99kg, dual pattern requires dual intervention.",
+          "concrete_alternative": "Reduce lunch bolus by 2 units AND use dual-wave for dinner: 40% upfront, 60% over 3 hours."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 24,
+      "weight_kg": 66,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=130 | 08:00 M=toast C=20 | 12:30 G=120 | 13:00 M=soup_salad C=20 | 18:30 G=125 | 19:00 M=pizza C=55 | 23:00 G=168",
+      "D2 07:20 G=128 | 12:00 G=118 | 12:30 M=wrap C=30 | 18:40 G=122 | 19:10 M=burger_fries C=55 | 23:00 G=162",
+      "D3 07:40 G=132 | 08:10 M=oatmeal C=25 | 12:30 G=125 | 13:00 M=chicken_salad C=15 | 18:30 M=steak_veggies C=10 | 21:30 G=132",
+      "D4 07:30 G=125 | 12:30 G=118 | 13:00 M=tuna_wrap C=30 | 19:00 M=alfredo_pasta C=55 | 23:00 G=172",
+      "D5 07:50 G=135 | 12:30 G=128 | 13:00 M=rice_bowl C=35 | 18:30 M=salmon_risotto C=50 | 22:30 G=160",
+      "D6 07:20 G=128 | 12:00 G=118 | 12:30 M=salad C=15 | 18:40 M=fish_veggies C=15 | 21:30 G=128",
+      "D7 07:30 G=130 | 08:00 M=yogurt C=20 | 12:30 G=122 | 13:00 M=soup C=20 | 18:30 M=lamb_chops C=5 | 21:30 G=130",
+      "D8 07:40 G=135 | 12:30 G=130 | 13:00 M=burrito C=40 | 19:00 M=mac_cheese C=55 | 23:00 G=175",
+      "D9 07:20 G=128 | 12:00 G=120 | 12:30 M=wrap C=30 | 18:30 M=chicken_wings C=10 | 21:30 G=128",
+      "D10 07:30 G=132 | 08:00 M=toast_eggs C=20 | 12:30 G=125 | 13:00 M=leftover_mac C=45 | 19:00 M=shrimp_pasta C=45 | 23:00 G=170"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clear high-fat-induced nocturnal hyperglycemia in young lean T2 patient. Dietary modification definitive treatment. No medication changes indicated.",
+      "recommendations": [
+        {
+          "action": "Eliminate high-fat dinners (pizza, alfredo, mac & cheese, burger/fries, risotto) causing nocturnal hyperglycemia (160-175 at 23:00).",
+          "priority": "high",
+          "reason": "D3 (steak/veggies G=132), D6 (fish/veggies G=128), D7 (lamb chops G=130), D9 (chicken wings G=128) prove low-fat dinners prevent spikes. Contrast D8 mac & cheese G=175, D4 alfredo G=172. At 66kg, lean patient; dietary modification definitive.",
+          "concrete_alternative": "If high-fat meals unavoidable, add 20-min post-dinner walk. At 66kg and age 24, dietary education important adjunct."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 39,
+      "weight_kg": 87,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=140 | 08:30 M=toast C=25 | 12:40 G=62 | M=juice C=20 | 13:10 G=78 | 13:30 M=wrap C=35 | 15:00 G=122 | 18:30 G=135 | 19:00 M=chicken_rice C=40",
+      "D2 07:30 G=138 | 12:30 G=58 | M=soda C=25 | 13:00 G=72 | 13:30 M=salad C=15 | 15:30 G=118 | 18:40 G=132 | 19:10 M=salmon_veggies C=15",
+      "D3 09:00 G=145 | 09:30 M=cereal C=30 | 13:30 G=65 | M=candy C=15 | 14:00 G=78 | 14:30 M=soup C=25 | 16:00 G=125 | 18:30 M=steak_veggies C=10",
+      "D4 08:10 G=142 | 12:30 G=60 | M=glucose_tabs C=15 | 13:00 G=72 | 13:30 M=burger C=35 | 15:20 G=128 | 19:00 M=tacos C=40",
+      "D5 07:50 G=140 | 12:30 G=68 | M=crackers C=10 | 13:00 G=80 | 13:30 M=wrap C=30 | 15:00 G=125 | 18:30 M=pasta C=45",
+      "D6 08:30 G=148 | 13:00 G=65 | M=juice C=20 | 13:30 G=78 | 14:00 M=soup_crackers C=30 | 16:00 G=128 | 19:00 M=fish_veggies C=15",
+      "D7 07:20 G=135 | 07:50 M=yogurt C=20 | 12:30 G=62 | M=gel C=12 | 13:00 G=75 | 13:30 M=rice_bowl C=45 | 15:00 G=130 | 18:30 M=chicken_kale C=10",
+      "D8 08:00 G=142 | 12:30 G=70 | M=banana C=20 | 13:00 G=82 | 13:30 M=salad C=15 | 15:30 G=122 | 18:50 M=lamb_veggies C=5",
+      "D9 07:40 G=138 | 12:30 G=60 | M=soda C=20 | 13:00 G=72 | 13:30 M=wrap C=30 | 15:10 G=125 | 18:30 M=salmon_risotto C=50",
+      "D10 08:20 G=148 | 13:30 G=68 | M=juice C=15 | 14:00 G=80 | 14:30 M=soup C=20 | 16:00 G=128 | 18:40 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Severe post-lunch hypoglycemia with good afternoon stability at 87kg. Pattern suggests medication mismatch. Medication review critical first step.",
+      "recommendations": [
+        {
+          "action": "Add mandatory 15g carb snack at 11:00 for post-lunch hypoglycemia (58-70 at 12:30-13:30). Review medications for sulfonylurea contribution. Afternoon stability (118-130) good.",
+          "priority": "high",
+          "reason": "All 10 days show hypoglycemia (D2 G=58, D4 G=60, D9 G=60). Afternoon readings post-treatment stable (118-130). At 87kg, if on sulfonylurea, dose likely too high. Medication review warranted.",
+          "concrete_alternative": "If on sulfonylurea, reduce dose or switch to metformin. Reduce breakfast carbohydrate to 10g to prevent exaggerated insulin response."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 63,
+      "weight_kg": 98,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 06:30 G=168 | 06:50 M=toast C=25 I=3R (corr) | 09:00 G=155 | 12:30 G=145 | 13:00 M=wrap C=35 I=4R | 18:30 G=150 | 19:00 M=chicken_rice C=45 I=4.5R | 21:30 G=155 I=29L",
+      "D2 06:40 G=172 | 12:00 G=148 | 12:30 M=salad C=15 I=1.5R | 18:40 G=152 | 19:10 M=salmon_veggies C=15 I=1.5R | 21:00 I=29L",
+      "D3 06:20 G=165 | 06:40 M=yogurt C=20 I=2.5R (corr) | 12:30 G=142 | 13:00 M=soup C=25 I=2.5R | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=29L",
+      "D4 06:50 G=175 | 07:10 M=bagel C=40 I=5R (corr) | 12:30 G=152 | 13:00 M=burger C=35 I=3.5R | 19:00 M=tacos C=40 I=4R | 21:30 I=29L",
+      "D5 06:30 G=170 | 12:00 G=148 | 12:30 M=wrap C=30 I=3R | 18:30 M=pasta C=50 I=5R | 21:30 G=158 I=29L",
+      "D6 06:40 G=170 | 07:00 M=cereal C=30 I=4R (corr) | 12:30 G=150 | 13:00 M=rice_bowl C=45 I=4.5R | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=29L",
+      "D7 06:30 G=162 | 07:00 M=smoothie C=35 I=4R (corr) | 12:30 G=145 | 13:00 M=soup C=20 I=2R | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=29L",
+      "D8 06:50 G=178 | 07:20 M=waffle C=30 I=4R (corr) | 12:30 G=155 | 13:00 M=salad C=15 I=1.5R | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=29L",
+      "D9 06:30 G=168 | 12:00 G=145 | 12:30 M=wrap C=30 I=3R | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=165 I=29L",
+      "D10 06:40 G=172 | 07:00 M=toast_eggs C=20 I=3R (corr) | 12:30 G=148 | 13:00 M=soup C=25 I=2.5R | 18:40 M=stirfry C=30 I=3R | 21:30 G=155 I=29L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Dawn phenomenon dominant at 98kg. Basal insulin optimization primary intervention. Overall hyperglycemic trend suggests need for comprehensive dose adjustment.",
+      "recommendations": [
+        {
+          "action": "Increase long-acting insulin from 29L to 34L for dawn phenomenon (fasting 162-178).",
+          "priority": "high",
+          "reason": "Fasting readings 162-178. Morning corrections partially effective (09:00 readings 155-165). At 98kg, current 29L (0.3 units/kg) insufficient. Afternoon readings (142-155) also elevated, suggesting overall basal inadequacy.",
+          "concrete_alternative": "Split basal: 20L at 21:00, 14L at 09:00 for dual-coverage. Extend dinner bolus for high-fat meals (risotto D9 G=165, pasta D5 G=158)."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 54,
+      "weight_kg": 98,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 06:30 G=165 | 07:00 M=toast C=25 I=3R (corr) | 12:40 G=140 | 13:10 M=wrap C=35 I=4R | 17:00 G=68 | M=juice C=20 | 18:30 G=88 | 19:00 M=chicken_rice C=45 I=4.5R | 21:30 G=150 I=29L",
+      "D2 08:00 G=170 | 08:30 M=cereal C=30 I=3.5R (corr) | 13:00 G=145 | 13:30 M=salad C=15 I=1.5R | 17:30 G=62 | M=gel C=15 | 18:40 G=85 | 19:10 M=pizza C=60 I=6R | 22:00 G=172 I=29L",
+      "D3 06:40 G=162 | 07:20 M=oatmeal C=25 I=3R (corr) | 12:30 G=138 | 13:00 M=soup C=25 I=2.5R | 17:20 G=65 | M=candy C=15 | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=29L",
+      "D4 07:10 G=168 | 12:30 G=142 | 13:00 M=burger C=35 I=3.5R | 17:40 G=60 | M=glucose_tabs C=16 | 19:00 M=tacos C=40 I=4R | 21:30 I=29L",
+      "D5 06:20 G=160 | 07:00 M=yogurt C=20 I=2.5R (corr) | 12:30 G=135 | 13:00 M=wrap C=30 I=3R | 17:30 G=62 | M=crackers C=10 | 18:30 M=pasta C=50 I=5R | 21:30 G=158 I=29L",
+      "D6 08:30 G=172 | 09:00 M=bagel C=40 I=4.5R (corr) | 13:30 G=148 | 14:00 M=soup_crackers C=30 I=3R | 17:30 G=68 | M=juice C=15 | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=29L",
+      "D7 06:50 G=162 | 07:30 M=toast_eggs C=20 I=2.5R (corr) | 12:30 G=135 | 13:00 M=rice_bowl C=45 I=4.5R | 17:20 G=65 | M=gel C=15 | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=29L",
+      "D8 07:30 G=168 | 12:30 G=142 | 13:00 M=salad C=15 I=1.5R | 17:30 G=60 | M=soda C=20 | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=29L",
+      "D9 06:30 G=160 | 07:00 M=waffle C=30 I=3.5R (corr) | 13:00 G=140 | 13:30 M=wrap C=30 I=3R | 17:20 G=62 | M=glucose_tabs C=15 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=165 I=29L",
+      "D10 08:10 G=172 | 12:40 G=145 | 13:10 M=soup C=20 I=2R | 17:30 G=65 | M=juice C=15 | 18:40 M=stirfry C=30 I=3R | 21:30 G=152 I=29L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Triple pattern at 98kg: dawn phenomenon, exercise-induced hypoglycemia, and delayed high-fat spikes. Basal optimization primary. Pre-exercise fueling essential safety measure.",
+      "recommendations": [
+        {
+          "action": "Increase long-acting insulin from 29L to 34L for dawn phenomenon (fasting 160-172) AND add mandatory 20g carb snack at 16:00 for exercise-induced hypoglycemia (60-68 at 17:00-17:40).",
+          "priority": "high",
+          "reason": "Fasting readings 160-172. Daily hypoglycemia (D4 G=60, D8 G=60, D9 G=62). At 98kg, basal insulin insufficient. Pre-exercise snack essential safety measure. Dual pattern requires dual intervention.",
+          "concrete_alternative": "Split basal: 20L at 21:00, 14L at 09:00. Reduce lunch bolus by 2 units for exercise window. Extend dinner bolus for high-fat meals (pizza D2 G=172, risotto D9 G=165)."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 26,
+      "weight_kg": 117,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=148 | 08:00 M=toast C=25 | 12:30 G=138 | 13:00 M=wrap C=35 | 15:00 G=140 | 17:00 G=68 | M=juice C=20 | 18:30 G=142 | 19:00 M=chicken_rice C=40",
+      "D2 07:20 G=145 | 12:00 G=135 | 12:30 M=salad C=15 | 15:30 G=138 | 17:30 G=62 | M=soda C=20 | 18:40 G=145 | 19:10 M=salmon_veggies C=15",
+      "D3 07:40 G=150 | 08:10 M=oatmeal C=30 | 12:30 G=142 | 13:00 M=soup C=25 | 15:10 G=140 | 17:20 G=65 | M=candy C=15 | 18:30 M=steak_veggies C=10",
+      "D4 07:30 G=142 | 12:30 G=135 | 13:00 M=burger C=35 | 15:20 G=140 | 17:40 G=60 | M=glucose_tabs C=15 | 19:00 M=tacos C=40",
+      "D5 07:50 G=152 | 12:30 G=145 | 13:00 M=wrap C=30 | 15:00 G=142 | 17:30 G=65 | M=crackers C=10 | 18:30 M=pasta C=45",
+      "D6 07:20 G=148 | 08:00 M=yogurt C=20 | 12:30 G=140 | 13:00 M=soup_crackers C=30 | 15:10 G=142 | 17:20 G=62 | M=juice C=15 | 18:40 M=fish_veggies C=15",
+      "D7 07:30 G=150 | 12:30 G=142 | 13:00 M=rice_bowl C=45 | 15:00 G=142 | 17:30 G=60 | M=gel C=12 | 18:30 M=chicken_kale C=10",
+      "D8 07:40 G=148 | 12:30 M=salad C=15 | 15:30 G=138 | 17:20 G=58 | M=soda C=20 | 18:50 M=lamb_veggies C=5",
+      "D9 07:20 G=145 | 12:00 G=138 | 12:30 M=wrap C=30 | 15:10 G=140 | 17:30 G=62 | M=banana C=20 | 18:30 M=salmon_risotto C=50",
+      "D10 07:30 G=150 | 08:00 M=toast_eggs C=20 | 12:30 G=140 | 13:00 M=soup C=20 | 15:00 G=138 | 17:20 G=65 | M=juice C=15 | 18:40 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Exercise-induced hypoglycemia at 117kg with baseline hyperglycemia. Pre-exercise snack immediate intervention. Metformin initiation and medication review warranted.",
+      "recommendations": [
+        {
+          "action": "Schedule mandatory 20g carb snack at 16:00 for exercise-induced hypoglycemia (58-68 at 17:00-17:40). Consider metformin initiation for baseline hyperglycemia (fasting 142-152) at 117kg.",
+          "priority": "high",
+          "reason": "All 10 days show hypoglycemia (D8 G=58, D4 G=60, D7 G=60). Afternoon readings (138-142) stable but elevated. At 117kg, significant insulin resistance. Metformin would improve insulin sensitivity without increasing hypoglycemia risk.",
+          "concrete_alternative": "If on sulfonylurea, review dose as possible contributor to hypoglycemia. Add 16:00 snack as immediate safety measure. Reduce lunch carbohydrate by 15g."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 44,
+      "weight_kg": 78,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=140 | 08:30 M=toast C=20 | 13:00 G=130 | 13:30 M=soup C=25 | 15:30 G=128 | 17:00 G=65 | M=juice C=20 | 18:30 G=132 | 19:00 M=chicken_rice C=40",
+      "D2 07:30 G=138 | 12:30 G=128 | 13:00 M=salad C=15 | 15:00 G=125 | 17:30 G=60 | M=soda C=20 | 18:40 G=135",
+      "D3 09:00 G=142 | 09:30 M=cereal C=30 | 13:30 G=135 | 14:00 M=wrap C=35 | 16:00 G=130 | 17:20 G=62 | M=candy C=15 | 18:30 M=steak_veggies C=10",
+      "D4 08:10 G=138 | 12:40 G=128 | 13:10 M=burger C=35 | 15:30 G=132 | 17:40 G=58 | M=glucose_tabs C=15 | 19:00 M=tacos C=40",
+      "D5 07:50 G=142 | 12:30 G=132 | 13:00 M=wrap C=30 | 15:00 G=130 | 17:30 G=65 | M=crackers C=10 | 18:30 M=pasta C=45",
+      "D6 08:30 G=145 | 13:00 G=135 | 13:30 M=soup_crackers C=30 | 16:00 G=132 | 17:10 G=62 | M=juice C=15 | 18:30 M=fish_veggies C=15",
+      "D7 07:20 G=135 | 07:50 M=yogurt C=20 | 12:30 G=125 | 13:00 M=rice_bowl C=45 | 15:00 G=130 | 17:20 G=65 | M=gel C=12 | 18:30 M=chicken_kale C=10",
+      "D8 08:00 G=140 | 12:30 M=salad_nicoise C=20 | 15:30 G=128 | 17:30 G=60 | M=banana C=20 | 18:50 M=lamb_veggies C=5",
+      "D9 07:40 G=138 | 12:30 G=130 | 13:00 M=wrap C=30 | 15:10 G=128 | 17:20 G=62 | M=soda C=20 | 18:30 M=salmon_risotto C=50",
+      "D10 08:20 G=145 | 13:30 G=135 | 14:00 M=soup C=20 | 16:00 G=130 | 17:10 G=58 | M=glucose_tabs C=15 | 18:40 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Genuine afternoon stability undermined by exercise-induced hypoglycemia at 78kg. Simple pre-exercise snack will resolve lows. Medication review if on secretagogue.",
+      "recommendations": [
+        {
+          "action": "Schedule mandatory 20g carb snack at 16:00 for exercise-induced hypoglycemia (58-65 at 17:00-17:40). Afternoon stability (125-132) genuine clinical asset to preserve.",
+          "priority": "high",
+          "reason": "All 10 days show hypoglycemia (D4 G=58, D10 G=58). Afternoon readings average 129 mg/dL with tight SD. Stability reflects good meal timing. Pre-exercise snack will resolve lows without disrupting stable afternoon control.",
+          "concrete_alternative": "If on sulfonylurea, review dose as possible contributor to hypoglycemia. Reduce lunch carbohydrate by 10g to lower insulin response."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 67,
+      "weight_kg": 96,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=148 | 08:00 M=toast C=25 I=3R | 12:30 G=135 | 13:00 M=wrap C=35 I=4R | 15:00 G=132 | 18:30 G=140 | 19:00 M=chicken_rice C=45 I=4.5R | 21:30 G=148 I=29L",
+      "D2 07:20 G=145 | 12:00 G=138 | 12:30 M=salad C=15 I=1.5R | 15:30 G=130 | 18:40 G=142 | 19:10 M=salmon_veggies C=15 I=1.5R | 21:00 I=29L",
+      "D3 07:40 G=150 | 08:10 M=oatmeal C=30 I=3.5R | 12:30 G=140 | 13:00 M=soup C=25 I=2.5R | 15:10 G=135 | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=29L",
+      "D4 07:30 G=142 | 12:30 G=135 | 13:00 M=burger C=35 I=3.5R | 15:20 G=138 | 19:00 M=tacos C=40 I=4R | 21:30 I=29L",
+      "D5 07:50 G=152 | 12:30 G=142 | 13:00 M=wrap C=30 I=3R | 15:00 G=138 | 18:30 M=pasta C=45 I=4.5R | 21:30 G=155 I=29L",
+      "D6 07:20 G=148 | 08:00 M=yogurt C=20 I=2.5R | 12:30 G=135 | 13:00 M=soup_crackers C=30 I=3R | 15:10 G=132 | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=29L",
+      "D7 07:30 G=148 | 12:30 G=140 | 13:00 M=rice_bowl C=45 I=4.5R | 15:00 G=138 | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=29L",
+      "D8 07:40 G=150 | 12:30 M=salad_nicoise C=20 I=2R | 15:30 G=135 | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=29L",
+      "D9 07:20 G=145 | 12:00 G=138 | 12:30 M=wrap C=30 I=3R | 15:10 G=135 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=162 I=29L",
+      "D10 07:30 G=148 | 08:00 M=toast_eggs C=20 I=2.5R | 12:30 G=138 | 13:00 M=soup C=20 I=2R | 15:10 G=135 | 18:40 M=stirfry C=30 I=3R | 21:30 G=150 I=29L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Genuine afternoon stability at 96kg. Only variance from high-fat dinners. Dual-wave dinner bolus will complete optimization. Current control good for age 67.",
+      "recommendations": [
+        {
+          "action": "Maintain current basal-bolus regimen given genuine afternoon stability (130-138 mg/dL). Extend dinner bolus for high-fat meals (risotto D9 G=162, pasta D5 G=155) using dual-wave.",
+          "priority": "medium",
+          "reason": "Afternoon readings average 134 mg/dL with tight SD. Stability reflects good insulin dosing. Delayed high-fat spikes (D9 G=162, D5 G=155) are modest but optimizable. At 96kg and age 67, current control acceptable with minor dinner optimization.",
+          "concrete_alternative": "Check glucose at 22:00 after high-fat dinners and administer 2-unit correction if >150. Consider increasing basal from 29L to 30L for overall improvement."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 69,
+      "weight_kg": 92,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=148 | 08:00 M=toast C=25 I=3R | 12:30 G=138 | 13:00 M=wrap C=35 I=4R | 15:00 G=135 | 18:30 G=142 | 19:00 M=chicken_rice C=45 I=4.5R | 21:30 G=148 I=28L",
+      "D2 07:20 G=145 | 12:00 G=140 | 12:30 M=salad C=15 I=1.5R | 15:30 G=132 | 18:40 G=145 | 19:10 M=salmon_veggies C=15 I=1.5R | 21:00 I=28L",
+      "D3 07:40 G=150 | 08:10 M=oatmeal C=30 I=3.5R | 12:30 G=142 | 13:00 M=soup C=25 I=2.5R | 15:10 G=138 | 18:30 M=steak_veggies C=10 I=1R | 21:00 I=28L",
+      "D4 07:30 G=145 | 12:30 G=138 | 13:00 M=burger C=35 I=3.5R | 15:20 G=140 | 19:00 M=tacos C=40 I=4R | 21:30 I=28L",
+      "D5 07:50 G=152 | 12:30 G=145 | 13:00 M=wrap C=30 I=3R | 15:00 G=140 | 18:30 M=pasta C=45 I=4.5R | 21:30 G=155 I=28L",
+      "D6 07:20 G=148 | 08:00 M=yogurt C=20 I=2.5R | 12:30 G=138 | 13:00 M=soup_crackers C=30 I=3R | 15:10 G=135 | 18:40 M=fish_veggies C=15 I=1.5R | 21:00 I=28L",
+      "D7 07:30 G=148 | 12:30 M=rice_bowl C=45 I=4.5R | 15:00 G=140 | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=28L",
+      "D8 07:40 G=150 | 12:30 M=salad_nicoise C=20 I=2R | 15:30 G=138 | 18:50 M=lamb_chops C=5 I=0.5R | 21:00 I=28L",
+      "D9 07:20 G=148 | 12:00 G=140 | 12:30 M=wrap C=30 I=3R | 15:10 G=138 | 18:30 M=salmon_risotto C=50 I=5R | 22:00 G=162 I=28L",
+      "D10 07:30 G=148 | 08:00 M=toast_eggs C=20 I=2.5R | 12:30 G=140 | 13:00 M=soup C=20 I=2R | 15:10 G=135 | 18:40 M=stirfry C=30 I=3R | 21:30 G=150 I=28L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Genuine afternoon stability at 92kg. Only variance from high-fat dinners. Dual-wave dinner bolus will complete optimization. Current control appropriate for age 69.",
+      "recommendations": [
+        {
+          "action": "Maintain current regimen given genuine afternoon stability (132-140 mg/dL). Extend dinner bolus for high-fat meals (risotto D9 G=162, pasta D5 G=155) using dual-wave.",
+          "priority": "medium",
+          "reason": "Afternoon readings average 137 mg/dL with tight SD. Stability reflects good insulin dosing. Delayed high-fat spikes modest but optimizable. At 92kg and age 69, current control acceptable with minor dinner optimization.",
+          "concrete_alternative": "Check glucose at 22:00 after high-fat dinners and administer 2-unit correction if >150. Consider increasing basal from 28L to 30L for overall improvement."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 73,
+      "weight_kg": 84,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=145 | 08:00 M=bagel_juice C=50 | 10:00 G=225 | 12:30 G=140 | 13:00 M=wrap C=35 | 15:00 G=142 | 17:00 G=68 | M=juice C=20 | 18:30 G=138 | 19:00 M=chicken_rice C=45",
+      "D2 07:20 G=142 | 12:00 G=138 | 12:30 M=salad C=15 | 15:30 G=135 | 17:30 G=62 | M=soda C=20 | 18:40 G=142 | 19:10 M=salmon_veggies C=15",
+      "D3 07:40 G=148 | 08:10 M=pancakes C=45 | 10:20 G=235 | 12:30 G=145 | 13:00 M=soup C=25 | 15:10 G=142 | 17:20 G=65 | M=candy C=15 | 18:30 M=steak_asparagus C=10",
+      "D4 07:30 G=140 | 12:30 M=burger C=35 | 15:20 G=140 | 17:40 G=60 | M=glucose_tabs C=15 | 19:00 M=tacos C=40",
+      "D5 07:50 G=150 | 08:20 M=cereal C=35 | 10:10 G=220 | 12:30 G=145 | 13:00 M=wrap C=30 | 15:00 G=142 | 17:30 G=62 | M=crackers C=10 | 18:30 M=pasta C=45",
+      "D6 07:20 G=145 | 08:00 M=toast_eggs C=20 | 10:00 G=198 | 12:30 G=138 | 13:00 M=soup_crackers C=30 | 15:10 G=140 | 17:20 G=65 | M=juice C=15 | 18:40 M=fish_veggies C=15",
+      "D7 07:30 G=148 | 12:30 M=rice_bowl C=45 | 15:00 G=142 | 17:30 G=60 | M=gel C=12 | 18:30 M=chicken_kale C=10",
+      "D8 07:40 G=150 | 08:10 M=waffle C=35 | 10:20 G=230 | 12:30 G=145 | 13:00 M=salad C=15 | 15:30 G=142 | 17:20 G=58 | M=soda C=20 | 18:50 M=lamb_chops C=5",
+      "D9 07:20 G=145 | 12:00 G=140 | 12:30 M=wrap C=30 | 15:10 G=138 | 17:30 G=62 | M=banana C=20 | 18:30 M=salmon_risotto C=50",
+      "D10 07:30 G=148 | 08:00 M=oatmeal C=30 | 10:10 G=215 | 12:30 G=142 | 13:00 M=soup C=20 | 15:00 G=140 | 17:20 G=65 | M=juice C=15 | 18:40 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Dual pattern in elderly T2 patient: morning breakfast spikes and exercise-induced hypoglycemia. Dietary modification and pre-exercise snack essential. Medication review warranted.",
+      "recommendations": [
+        {
+          "action": "Reduce breakfast carbohydrate to 20g for 10:00 spike (198-235). D6 (toast/eggs 20g) best result (198). Schedule mandatory 20g carb snack at 16:00 for exercise-induced hypoglycemia (58-68 at 17:00-17:40).",
+          "priority": "high",
+          "reason": "Post-breakfast readings 198-235 when breakfast carb exceeds 30g. Daily hypoglycemia (D8 G=58, D4 G=60, D7 G=60). Dual pattern at 84kg and age 73 requires dual intervention. Afternoon readings (135-142) stable but mildly elevated.",
+          "concrete_alternative": "Add 15-min post-breakfast walk. Review medications for sulfonylurea contribution to hypoglycemia. Consider metformin if not already prescribed."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 27,
+      "weight_kg": 85,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=142 | 08:30 M=toast C=25 I=3R | 12:40 G=132 | 13:10 M=wrap C=35 I=3.5R | 15:00 G=130 | 18:30 G=138 | 19:00 M=pizza C=65 I=6.5R | 22:00 G=172 I=25L",
+      "D2 07:30 G=140 | 12:30 G=130 | 13:00 M=salad C=15 I=1.5R | 15:30 G=128 | 18:30 M=chicken_rice C=40 I=4R | 21:00 I=25L",
+      "D3 09:00 G=148 | 09:30 M=cereal C=35 I=4R | 13:30 G=138 | 14:00 M=soup C=25 I=2.5R | 16:00 G=135 | 19:30 M=burger_fries C=55 I=5.5R | 23:00 G=168 I=25L",
+      "D4 08:10 G=145 | 12:40 G=135 | 13:10 M=rice_bowl C=45 I=4.5R | 15:30 G=138 | 19:00 M=steak_veggies C=10 I=1R | 21:00 I=25L",
+      "D5 07:50 G=142 | 12:30 G=135 | 13:00 M=wrap C=30 I=3R | 15:00 G=132 | 18:40 M=salmon_risotto C=50 I=5R | 22:00 G=165 I=25L",
+      "D6 08:30 G=150 | 13:00 G=140 | 13:30 M=burger C=35 I=3.5R | 16:00 G=138 | 19:30 M=alfredo_pasta C=55 I=5.5R | 23:00 G=175 I=25L",
+      "D7 07:20 G=138 | 07:40 M=yogurt C=20 I=2R | 12:30 G=125 | 13:00 M=soup C=20 I=2R | 15:00 G=122 | 18:30 M=chicken_kale C=10 I=1R | 21:00 I=25L",
+      "D8 08:00 G=145 | 12:30 M=salad_nicoise C=20 I=2R | 15:30 G=135 | 19:30 M=mac_cheese C=55 I=5.5R | 23:00 G=178 I=25L",
+      "D9 07:40 G=140 | 12:30 G=130 | 13:00 M=wrap C=30 I=3R | 15:10 G=128 | 18:30 M=lamb_chops C=5 I=0.5R | 21:00 I=25L",
+      "D10 08:20 G=148 | 13:30 G=140 | 14:00 M=leftover_mac C=50 I=5R | 16:00 G=138 | 19:00 M=fried_chicken C=45 I=4.5R | 23:00 G=172 I=25L"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Clear high-fat-induced nocturnal hyperglycemia with genuine afternoon stability at 85kg. Dual-wave dinner bolus will optimize evening control while preserving excellent daytime stability.",
+      "recommendations": [
+        {
+          "action": "Implement mandatory extended dinner bolus (dual-wave: 40% upfront, 60% over 3 hours) for high-fat dinners causing nocturnal hyperglycemia (165-178 at 22:00-23:00). Afternoon stability (122-138) is clinical asset.",
+          "priority": "high",
+          "reason": "D4 steak/veggies G=138, D7 chicken kale G=122, D9 lamb chops G=128 prove low-fat dinners prevent spikes. Contrast D8 mac & cheese G=178, D6 alfredo G=175. Genuine afternoon stability preserved throughout. At 85kg, dual-wave definitive.",
+          "concrete_alternative": "If pens used, split dinner bolus: 60% mealtime, 40% 2 hours later with phone alarm. Standardize meal timing to reduce log variability."
+        }
+      ]
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 71,
+      "weight_kg": 83,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=142 | 08:30 M=toast C=20 | 13:00 G=62 | M=juice C=20 | 13:30 G=78 | 14:00 M=soup C=25 | 18:30 G=130 | 19:00 M=chicken_rice C=40",
+      "D2 07:30 G=140 | 12:30 G=58 | M=soda C=25 | 13:00 G=72 | 13:30 M=salad C=15 | 18:40 G=128 | 19:10 M=salmon_veggies C=15",
+      "D3 09:00 G=148 | 09:30 M=cereal C=30 | 13:30 G=65 | M=candy C=15 | 14:00 G=78 | 14:30 M=wrap C=35 | 18:30 M=steak_veggies C=10",
+      "D4 08:10 G=145 | 12:40 G=60 | M=glucose_tabs C=15 | 13:10 G=72 | 13:40 M=burger C=35 | 19:00 M=tacos C=40",
+      "D5 07:50 G=140 | 12:30 G=68 | M=crackers C=10 | 13:00 G=80 | 13:30 M=wrap C=30 | 18:30 M=pasta C=45",
+      "D6 08:30 G=148 | 13:00 G=62 | M=juice C=20 | 13:30 G=75 | 14:00 M=soup_crackers C=30 | 19:00 M=fish_veggies C=15",
+      "D7 07:20 G=138 | 07:50 M=yogurt C=20 | 12:30 G=58 | M=gel C=12 | 13:00 G=70 | 13:30 M=rice_bowl C=45 | 18:30 M=chicken_kale C=10",
+      "D8 08:00 G=142 | 12:30 G=65 | M=banana C=20 | 13:00 G=78 | 13:30 M=salad C=15 | 18:50 M=lamb_veggies C=5",
+      "D9 07:40 G=140 | 12:30 G=60 | M=soda C=20 | 13:00 G=72 | 13:30 M=wrap C=30 | 18:30 M=salmon_risotto C=50",
+      "D10 08:20 G=148 | 13:30 G=68 | M=juice C=15 | 14:00 G=80 | 14:30 M=soup C=20 | 18:40 M=stirfry C=30"
+    ],
+    "analysis": {
+      "feature": "RECOMMENDATIONS",
+      "message": "Severe post-lunch hypoglycemia in elderly T2 patient. Pattern strongly suggests medication mismatch (likely sulfonylurea). Medication review critical safety priority at age 71.",
+      "recommendations": [
+        {
+          "action": "Add mandatory 15g carb snack at 11:00 for post-lunch hypoglycemia (58-68 at 12:30-13:30). Review medications urgently for sulfonylurea contribution.",
+          "priority": "high",
+          "reason": "All 10 days show hypoglycemia (D2 G=58, D7 G=58). At 83kg and age 71, if on sulfonylurea, dose likely too high for patient's age and weight. Medication review critical first step. Pattern strongly suggests drug-induced hyperinsulinemia.",
+          "concrete_alternative": "If on sulfonylurea, reduce dose by 50% or switch to metformin. Reduce breakfast carbohydrate to 10g to prevent exaggerated insulin response driving late-morning drop."
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,1764 @@
+[
+  {
+    "basic_info": {
+      "sex": null,
+      "age": null,
+      "weight_kg": null,
+      "diabetes_type": null
+    },
+    "daily_logs": [
+      "D1 08:20 G=142 | 08:35 M=omelet C=5 I=5R | 13:10 G=118 | 13:15 M=salad C=10 I=8R | 19:00 G=135 | 19:10 M=chicken C=8 I=7R | 22:00 G=128 I=22L",
+      "D2 08:15 G=155 | 08:30 M=cereal C=20 I=7R | 12:50 G=125 | 13:00 M=sandwich C=15 I=9R | 19:30 G=130 | 19:40 M=fish C=5 I=5R | 22:10 G=120 I=22L",
+      "D3 09:00 G=160 | 09:10 M=pancake C=25 I=8R | 14:00 G=110 | 14:10 M=wrap C=12 I=8R | 20:00 G=138 | 20:10 M=steak C=5 I=5R | 22:30 G=125 I=22L",
+      "D4 08:30 G=148 | 08:40 M=toast C=18 I=7R | 12:40 G=115 | --- GAP --- | 18:50 G=140 | 19:00 M=pasta C=20 I=10R | 22:00 G=130 I=22L",
+      "D5 08:10 G=150 | 08:25 M=bagel C=22 I=8R | 13:20 G=108 | 13:30 M=soup C=8 I=6R | 19:15 G=132 | 19:20 M=pork C=6 I=6R | 22:15 G=122 I=22L",
+      "D6 08:50 G=145 | 09:00 M=oatmeal C=15 I=7R | 13:00 G=120 | 13:10 M=burger C=10 I=7R | 19:40 G=128 | 19:50 M=salmon C=4 I=4R | 22:20 G=118 I=22L",
+      "D7 08:05 G=152 | 08:20 M=waffle C=22 I=8R | --- GAP --- | 19:00 G=136 | 19:10 M=chicken C=7 I=6R | 22:00 G=126 I=22L",
+      "D8 08:40 G=158 | 08:50 M=muffin C=18 I=7R | 13:15 G=112 | 13:25 M=salad C=10 I=8R | 19:30 G=130 | 19:40 M=beef C=5 I=5R | 22:10 G=124 I=22L",
+      "D9 08:20 G=140 | 08:35 M=omelet C=5 I=5R | 13:05 G=118 | 13:15 M=sandwich C=15 I=9R | 18:50 G=142 | 19:00 M=pasta C=18 I=9R | 22:00 G=132 I=22L",
+      "D10 08:55 G=162 | 09:05 M=cereal C=20 I=8R | 12:45 G=122 | 12:55 M=wrap C=12 I=8R | 19:20 G=135 | 19:30 M=fish C=5 I=5R | 22:30 G=128 I=22L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Morning Breakfast Spike",
+          "evidence": "D1: G=142 to G=155+ post-breakfast; D2: G=155; D3: G=160 after pancake; D5: G=150; D7: G=152; D9: G=140; D10: G=162. Consistent fasting/pre-breakfast readings above 140 mg/dL with peaks up to 160+ despite 5-8R boluses for 5-25g carbs.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "Patient exhibits a persistent morning hyperglycemic pattern with fasting and post-breakfast glucose consistently elevated (140-162 mg/dL). Current rapid-acting breakfast insulin (5-8R) appears insufficient to cover the observed carbohydrate intake (5-25g), suggesting either insulin resistance in the morning or inadequate insulin-to-carbohydrate ratio. Consider increasing morning rapid-acting insulin or adjusting the long-acting basal dose (currently 22L) to better control fasting glucose. Review carb counting accuracy for breakfast meals."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": null,
+      "age": null,
+      "weight_kg": null,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:00 G=142 | 07:15 M=toast C=15 I=0.5R | 12:30 G=125 | 12:40 M=salad C=10 | 18:45 G=118 | 19:00 M=chicken C=8 | 22:00 G=130",
+      "D2 07:10 G=148 | 07:20 M=cereal C=20 | 13:00 G=120 | 13:10 M=soup C=12 | 19:00 G=115 | 19:15 M=fish C=5 | 22:30 G=125",
+      "D3 06:50 G=140 | 07:00 M=oatmeal C=18 | 12:15 G=118 | 12:25 M=wrap C=15 | 18:30 G=122 | 18:45 M=steak C=6 | 21:45 G=135",
+      "D4 07:05 G=145 | 07:20 M=bagel C=22 | 13:30 G=122 | 13:40 M=sandwich C=18 | 19:15 G=110 | 19:30 M=pasta C=20 | 22:15 G=128",
+      "D5 07:00 G=138 | 07:15 M=eggs C=3 | 12:45 G=115 | 12:55 M=salad C=8 | 18:50 G=120 | 19:00 M=salmon C=4 | 22:00 G=122",
+      "D6 06:55 G=150 | 07:10 M=pancake C=25 | 13:00 G=128 | 13:10 M=burger C=12 | 19:20 G=112 | 19:35 M=chicken C=7 | 22:10 G=132",
+      "D7 07:15 G=144 | 07:25 M=toast C=15 | 12:30 G=118 | 12:40 M=soup C=10 | 18:40 G=124 | 18:55 M=pork C=5 | 22:20 G=130",
+      "D8 07:00 G=139 | 07:15 M=muffin C=18 | 13:15 G=122 | 13:25 M=salad C=10 | 19:05 G=116 | 19:20 M=beef C=6 | 22:00 G=126",
+      "D9 07:10 G=147 | 07:20 M=cereal C=20 | 12:50 G=125 | 13:00 M=wrap C=15 | 18:55 G=118 | 19:10 M=fish C=5 | 22:30 G=134",
+      "D10 06:45 G=141 | 07:00 M=oatmeal C=18 | 12:20 G=120 | 12:30 M=sandwich C=18 | 19:10 G=114 | 19:25 M=chicken C=8 | 21:50 G=128"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Dawn Phenomenon",
+          "evidence": "D1 fasting 142; D2 148; D3 140; D4 145; D5 138; D6 150; D7 144; D8 139; D9 147; D10 141. All fasting readings (06:45-07:15) remain consistently elevated between 138-150 mg/dL despite post-dinner readings dropping to 110-124 mg/dL, indicating an overnight glucose rise.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "Classic dawn phenomenon pattern observed with consistent fasting hyperglycemia (138-150 mg/dL) despite adequate post-dinner control (110-124 mg/dL). Overnight glucose rise suggests early morning hormonal surges (cortisol, growth hormone) causing hepatic glucose output. As a T2 patient on minimal insulin (0.5R), consider adding or adjusting metformin dose, incorporating a bedtime snack with protein, or discussing basal insulin initiation with provider if pattern persists."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": null,
+      "age": 59,
+      "weight_kg": null,
+      "diabetes_type": null
+    },
+    "daily_logs": [
+      "D1 08:00 G=105 | 08:15 M=toast C=15 I=5R | 12:30 G=58 | 12:45 M=sandwich C=20 I=4R | 19:00 G=125 | 19:15 M=chicken C=6 I=5R | 22:00 G=110 I=18L",
+      "D2 08:10 G=112 | 08:20 M=cereal C=18 I=6R | 13:00 G=62 | 13:10 M=salad C=10 I=3R | 18:45 G=118 | 19:00 M=fish C=5 I=4R | 22:30 G=105 I=18L",
+      "D3 07:50 G=108 | --- GAP --- | 12:40 G=55 | 12:50 M=wrap C=15 I=4R | 19:30 G=130 | 19:40 M=steak C=6 I=5R | 22:15 G=115 I=18L",
+      "D4 08:20 G=118 | 08:30 M=bagel C=22 I=7R | 13:15 G=60 | 13:25 M=soup C=8 I=2R | 19:10 G=122 | 19:20 M=pasta C=18 I=7R | 22:00 G=108 I=18L",
+      "D5 08:05 G=100 | 08:15 M=oatmeal C=15 I=5R | 12:50 G=52 | --- GAP --- | 18:50 G=115 | 19:00 M=salmon C=4 I=4R | 22:10 G=102 I=18L",
+      "D6 08:15 G=110 | 08:30 M=muffin C=18 I=6R | 13:05 G=58 | 13:15 M=sandwich C=20 I=4R | 19:25 G=128 | 19:35 M=chicken C=7 I=5R | 22:20 G=112 I=18L",
+      "D7 07:45 G=102 | 08:00 M=eggs C=3 I=3R | 12:30 G=55 | 12:40 M=burger C=12 I=3R | 18:40 G=120 | 18:55 M=pork C=5 I=4R | 21:50 G=108 I=18L",
+      "D8 08:10 G=115 | 08:20 M=cereal C=20 I=7R | --- GAP --- | 19:00 G=124 | 19:15 M=fish C=5 I=5R | 22:00 G=110 I=18L",
+      "D9 08:00 G=106 | 08:15 M=toast C=15 I=5R | 13:20 G=60 | 13:30 M=salad C=10 I=3R | 19:20 G=118 | 19:30 M=beef C=6 I=5R | 22:30 G=105 I=18L",
+      "D10 08:25 G=120 | 08:35 M=pancake C=22 I=7R | 12:55 G=58 | 13:05 M=wrap C=15 I=4R | 18:55 G=126 | 19:05 M=chicken C=7 I=5R | 22:15 G=112 I=18L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 58 mg/dL; D2 62; D3 55; D4 60; D5 52; D6 58; D7 55; D9 60; D10 58. Consistently low glucose 12:30-13:20 despite moderate lunch insulin (2-4R) and carb intake (8-20g). D5 reached 52 with meal delay noted.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "Recurrent post-lunch hypoglycemia (52-62 mg/dL) observed across 9 of 10 days. Lunchtime insulin-to-carb ratios appear too aggressive given the consistent drops from pre-lunch (100-120) to post-lunch nadirs. Morning insulin may also be peaking during this window. Recommend reducing lunch rapid-acting insulin by 1-2 units or adjusting ICR from current ~1:3-4 to 1:5-6. Consider a small mid-morning snack on days with physical activity. Monitor for symptom awareness given patient age (59)."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": null,
+      "age": null,
+      "weight_kg": null,
+      "diabetes_type": null
+    },
+    "daily_logs": [
+      "D1 08:00 G=115 | 08:15 M=toast C=15 I=6R | 12:30 G=108 | 12:40 M=sandwich C=18 I=8R | 19:00 G=125 | 19:10 M=pizza C=30 I=10R | 23:00 G=188 I=24L",
+      "D2 08:10 G=120 | 08:20 M=cereal C=18 I=7R | 13:00 G=112 | 13:10 M=salad C=10 I=5R | 18:45 G=118 | 19:00 M=burger C=28 I=10R | 23:15 G=195 I=24L",
+      "D3 07:50 G=110 | 08:00 M=oatmeal C=15 I=6R | 12:20 G=105 | 12:30 M=wrap C=15 I=7R | 19:30 G=130 | 19:40 M=fried_chicken C=22 I=9R | 23:30 G=180 I=24L",
+      "D4 08:30 G=122 | 08:40 M=bagel C=22 I=8R | 13:15 G=115 | --- GAP --- | 19:15 G=120 | 19:25 M=steak C=35 I=12R | 23:00 G=210 I=24L",
+      "D5 08:05 G=108 | 08:15 M=eggs C=3 I=4R | 12:45 G=100 | 12:55 M=soup C=8 I=5R | 18:50 G=128 | 19:00 M=lasagna C=32 I=11R | 23:20 G=192 I=24L",
+      "D6 08:15 G=118 | 08:30 M=muffin C=18 I=7R | 13:05 G=110 | 13:15 M=sandwich C=20 I=8R | 19:20 G=122 | 19:30 M=fish_and_chips C=30 I=10R | 22:45 G=185 I=24L",
+      "D7 07:45 G=112 | 08:00 M=pancake C=25 I=9R | 12:35 G=108 | 12:45 M=burger C=15 I=7R | 18:40 G=115 | 18:55 M=curry C=28 I=10R | 23:10 G=200 I=24L",
+      "D8 08:20 G=125 | 08:35 M=cereal C=20 I=8R | 13:10 G=118 | 13:20 M=salad C=10 I=5R | 19:05 G=124 | 19:15 M=kebab C=30 I=11R | 23:25 G=195 I=24L",
+      "D9 08:00 G=114 | 08:15 M=toast C=15 I=6R | 12:50 G=106 | 13:00 M=wrap C=15 I=7R | 19:10 G=130 | 19:20 M=chinese C=35 I=12R | 23:00 G=215 I=24L",
+      "D10 08:10 G=119 | 08:25 M=waffle C=22 I=8R | 12:30 G=112 | --- GAP --- | 19:00 G=118 | 19:15 M=pizza C=30 I=10R | 23:30 G=190 I=24L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 dinner pizza C=30 I=10R -> 23:00 G=188; D2 burger C=28 I=10R -> G=195; D4 steak C=35 I=12R -> G=210; D5 lasagna C=32 I=11R -> G=192; D7 curry C=28 I=10R -> G=200; D9 chinese C=35 I=12R -> G=215. High-fat evening meals cause glucose spikes 3-5 hours post-prandial, with bedtime readings 180-215 despite appropriate dinner boluses.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "Consistent delayed hyperglycemia following high-fat evening meals (pizza, fried foods, creamy curries, lasagna). Despite adequate rapid-acting insulin coverage at mealtime (10-12R for 28-35g carbs), glucose rises 3-5 hours later to 180-215 mg/dL. High fat content delays gastric emptying and induces transient insulin resistance. Consider dual-wave or extended bolus delivery if using pump, or splitting dinner insulin (70% pre-meal, 30% 2 hours post). Alternatively, reduce dietary fat at dinner or switch to lower-fat protein sources."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": null,
+      "age": null,
+      "weight_kg": null,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=108 | 08:15 M=toast C=15 I=6R | 12:30 G=62 | 12:45 M=sandwich C=18 I=5R | 19:00 G=120 | 19:15 M=chicken C=6 I=5R | 22:00 G=108 I=20L",
+      "D2 08:10 G=112 | 08:20 M=cereal C=18 I=7R | 13:00 G=58 | 13:10 M=salad C=10 I=3R | 18:45 G=115 | 19:00 M=fish C=5 I=5R | 22:30 G=105 I=20L",
+      "D3 07:50 G=100 | 08:00 M=oatmeal C=15 I=6R | 12:40 G=55 | 12:50 M=wrap C=15 I=4R | 19:30 G=125 | 19:40 M=steak C=6 I=5R | 22:15 G=112 I=20L",
+      "D4 08:20 G=115 | 08:30 M=bagel C=22 I=8R | 13:15 G=60 | --- GAP --- | 19:10 G=118 | 19:20 M=pasta C=20 I=8R | 22:00 G=110 I=20L",
+      "D5 08:05 G=105 | 08:15 M=eggs C=3 I=4R | 12:50 G=52 | 12:55 M=soup C=8 I=2R | 18:50 G=112 | 19:00 M=salmon C=4 I=4R | 22:10 G=102 I=20L",
+      "D6 08:15 G=118 | 08:30 M=muffin C=18 I=7R | 13:05 G=58 | 13:15 M=sandwich C=20 I=5R | 19:25 G=128 | 19:35 M=chicken C=7 I=6R | 22:20 G=115 I=20L",
+      "D7 07:45 G=102 | 08:00 M=pancake C=22 I=8R | 12:30 G=55 | 12:40 M=burger C=12 I=3R | 18:40 G=118 | 18:55 M=pork C=5 I=5R | 21:50 G=108 I=20L",
+      "D8 08:10 G=110 | 08:20 M=cereal C=20 I=7R | --- GAP --- | 19:00 G=122 | 19:15 M=fish C=5 I=5R | 22:00 G=110 I=20L",
+      "D9 08:00 G=106 | 08:15 M=toast C=15 I=6R | 13:20 G=60 | 13:30 M=salad C=10 I=3R | 19:20 G=115 | 19:30 M=beef C=6 I=5R | 22:30 G=105 I=20L",
+      "D10 08:25 G=120 | 08:35 M=waffle C=22 I=8R | 12:55 G=58 | 13:05 M=wrap C=15 I=4R | 18:55 G=125 | 19:05 M=chicken C=7 I=6R | 22:15 G=112 I=20L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62 mg/dL; D2 58; D3 55; D4 60; D5 52; D6 58; D7 55; D9 60; D10 58. Recurrent hypoglycemia at 12:30-13:20 window despite lunch boluses of only 2-5R for 8-20g carbs. Pre-lunch readings 100-120 dropping to 52-62.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "Persistent post-lunch hypoglycemia (nadir 52-62 mg/dL) in a T1 patient on 20L basal. Morning rapid-acting insulin (4-8R) may have a prolonged tail effect overlapping with lunchtime. Current lunch insulin-to-carb ratio appears too aggressive. Recommend reducing lunch bolus by 1-2 units or adjusting ICR. Consider splitting lunch into two smaller meals or adding a mid-morning snack of 10-15g carbs. Verify basal dose adequacy with fasting glucose checks."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": null,
+      "age": null,
+      "weight_kg": null,
+      "diabetes_type": null
+    },
+    "daily_logs": [
+      "D1 07:00 G=125 | 07:15 M=toast C=15 I=6R | 12:30 G=108 | 12:40 M=sandwich C=18 I=8R | 17:00 G=65 Ex=run | 18:45 G=115 | 19:00 M=pizza C=30 I=12R | 23:00 G=195 I=22L",
+      "D2 08:10 G=118 | 08:20 M=cereal C=18 I=7R | 13:00 G=112 | 13:10 M=salad C=10 I=5R | 16:30 G=58 Ex=gym | 19:00 G=110 | 19:15 M=burger C=28 I=11R | 23:15 G=200 I=22L",
+      "D3 07:50 G=130 | 08:00 M=oatmeal C=15 I=6R | 12:20 G=105 | 12:30 M=wrap C=15 I=7R | --- GAP --- | 19:30 G=125 | 19:40 M=fried_chicken C=22 I=9R | 23:30 G=185 I=22L",
+      "D4 08:00 G=120 | 08:15 M=bagel C=22 I=8R | 13:15 G=115 | 13:25 M=soup C=8 I=4R | 17:30 G=62 Ex=walk | 18:50 G=108 | 19:00 M=steak C=35 I=13R | 23:00 G=220 I=22L",
+      "D5 08:05 G=115 | 08:15 M=eggs C=3 I=4R | 12:45 G=100 | 12:55 M=salad C=8 I=4R | --- GAP --- | 19:15 G=120 | 19:25 M=lasagna C=32 I=12R | 23:20 G=210 I=22L",
+      "D6 08:15 G=122 | 08:30 M=muffin C=18 I=7R | 13:05 G=110 | --- GAP --- | 16:45 G=55 Ex=cycle | 19:20 G=105 | 19:30 M=fish_and_chips C=30 I=11R | 22:45 G=190 I=22L",
+      "D7 07:45 G=128 | 08:00 M=pancake C=25 I=9R | 12:35 G=108 | 12:45 M=burger C=15 I=7R | 17:15 G=68 Ex=jog | 18:40 G=112 | 18:55 M=curry C=28 I=10R | 23:10 G=205 I=22L",
+      "D8 08:20 G=118 | 08:35 M=cereal C=20 I=8R | 13:10 G=118 | 13:20 M=salad C=10 I=5R | --- GAP --- | 19:05 G=118 | 19:15 M=kebab C=30 I=11R | 23:25 G=198 I=22L",
+      "D9 08:00 G=125 | 08:15 M=toast C=15 I=6R | 12:50 G=106 | 13:00 M=wrap C=15 I=7R | 17:00 G=60 Ex=gym | 19:10 G=108 | 19:20 M=chinese C=35 I=13R | 23:00 G=225 I=22L",
+      "D10 08:10 G=120 | 08:25 M=waffle C=22 I=8R | 12:30 G=112 | 12:40 M=sandwich C=18 I=8R | 16:30 G=55 Ex=run | 18:50 G=115 | 19:00 M=chicken C=7 I=6R | 22:00 G=130 I=22L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=65 after run; D2 16:30 G=58 after gym; D4 17:30 G=62 after walk; D6 16:45 G=55 after cycle; D7 17:15 G=68 after jog; D9 17:00 G=60 after gym; D10 16:30 G=55 after run. Afternoon exercise consistently drops glucose to 55-68 mg/dL.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 pizza -> G=195 at 23:00; D2 burger -> G=200; D4 steak -> G=220; D5 lasagna -> G=210; D7 curry -> G=205; D9 chinese -> G=225. High-fat dinners cause bedtime hyperglycemia 3-5 hours post-meal.",
+          "confidence": 0.92,
+          "trend": "stable"
+        }
+      ],
+      "message": "Dual pattern identified: (1) Afternoon exercise (16:30-17:30) reliably induces hypoglycemia (55-68 mg/dL) despite no short-acting insulin on board from lunch. Recommend pre-exercise snack of 15-20g carbs or reducing lunch insulin. (2) High-fat evening meals cause delayed hyperglycemia (185-225 at bedtime) despite adequate dinner boluses. Dual-wave/extended bolus or dietary fat reduction advised. The exercise-induced evening sensitivity may partially mask the full extent of fat-induced spikes on active days."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 70,
+      "weight_kg": 103,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=165 | 08:00 M=toast C=15 | 12:00 G=62 | 12:30 M=soup C=10 | 18:00 G=145 | 18:30 M=chicken C=5 | 22:00 G=155",
+      "D2 --- GAP --- | 09:00 M=cereal C=20 | 13:00 G=58 | 13:15 M=sandwich C=18 | 19:00 G=140 | 19:30 M=fish C=5 | 21:30 G=160",
+      "D3 06:45 G=170 | 07:00 M=oatmeal C=18 | 11:45 G=55 | 12:15 M=salad C=8 | --- GAP --- | 20:00 M=steak C=6 | 23:00 G=150",
+      "D4 08:10 G=158 | 08:30 M=bagel C=22 | 13:30 G=65 | 14:00 M=wrap C=15 | 18:30 G=148 | 19:00 M=pasta C=20 | 22:15 G=162",
+      "D5 07:00 G=162 | 07:20 M=eggs C=3 | 12:30 G=60 | 13:00 M=burger C=12 | 17:45 G=152 | 18:15 M=salmon C=4 | 21:00 G=158",
+      "D6 09:15 G=175 | 09:30 M=pancake C=25 | --- GAP --- | 14:00 M=soup C=10 | 19:15 G=155 | 19:45 M=chicken C=7 | 22:30 G=165",
+      "D7 06:50 G=168 | 07:10 M=toast C=15 | 12:15 G=58 | 12:45 M=salad C=8 | 18:00 G=150 | 18:30 M=pork C=5 | 21:45 G=160",
+      "D8 08:00 G=160 | 08:20 M=muffin C=18 | 13:10 G=63 | 13:40 M=sandwich C=18 | 19:30 G=142 | 20:00 M=beef C=6 | 22:00 G=152",
+      "D9 07:15 G=172 | 07:30 M=cereal C=20 | 12:45 G=60 | 13:15 M=wrap C=15 | 18:15 G=155 | 18:45 M=fish C=5 | 21:30 G=165",
+      "D10 --- GAP --- | 09:00 M=waffle C=22 | 13:20 G=62 | 13:50 M=salad C=10 | 19:00 G=148 | 19:30 M=chicken C=8 | 22:15 G=158"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Dawn Phenomenon",
+          "evidence": "D1 fasting 165; D3 170; D4 158; D5 162; D6 175; D7 168; D8 160; D9 172. Morning fasting readings consistently elevated 158-175 mg/dL, with overnight glucose remaining high through morning.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62; D2 58; D3 55; D4 65; D5 60; D7 58; D8 63; D9 60; D10 62. Recurrent lunchtime hypoglycemia (55-65 mg/dL) around 12:00-13:30 despite minimal or no recorded insulin use.",
+          "confidence": 0.9,
+          "trend": "stable"
+        }
+      ],
+      "message": "Elderly T2 patient (70F, 103kg) with dual pattern: severe dawn phenomenon (fasting 158-175 mg/dL) and paradoxical post-lunch hypoglycemia (55-65 mg/dL) without insulin therapy. Morning hyperglycemia may trigger reactive hyperinsulinemia by midday, causing hypoglycemic dips. Messy logging with gaps complicates assessment. Recommend metformin titration or basal insulin consideration for dawn control, structured midday snack to prevent hypos, and comprehensive diabetes education on consistent meal timing."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 74,
+      "weight_kg": 119,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:00 G=158 | 07:15 M=toast C=15 I=6R | 12:30 G=118 | 12:40 M=sandwich C=18 I=8R | 19:00 G=125 | 19:10 M=pizza C=30 I=12R | 23:00 G=195 I=26L",
+      "D2 08:10 G=162 | 08:20 M=cereal C=18 I=7R | 13:00 G=122 | 13:10 M=salad C=10 I=5R | 18:45 G=118 | 19:00 M=burger C=28 I=11R | 23:15 G=200 I=26L",
+      "D3 06:50 G=155 | 07:00 M=oatmeal C=15 I=6R | --- GAP --- | 19:30 G=130 | 19:40 M=fried_chicken C=22 I=9R | 23:30 G=185 I=26L",
+      "D4 08:00 G=160 | 08:15 M=bagel C=22 I=8R | 13:15 G=115 | 13:25 M=soup C=8 I=4R | 19:15 G=120 | 19:25 M=steak C=35 I=13R | 23:00 G=215 I=26L",
+      "D5 08:05 G=148 | 08:15 M=eggs C=3 I=4R | 12:45 G=110 | 12:55 M=salad C=8 I=4R | 18:50 G=128 | 19:00 M=lasagna C=32 I=12R | 23:20 G=205 I=26L",
+      "D6 07:15 G=165 | 07:30 M=muffin C=18 I=7R | 13:05 G=120 | 13:15 M=sandwich C=20 I=8R | 19:20 G=122 | 19:30 M=fish_and_chips C=30 I=11R | 22:45 G=190 I=26L",
+      "D7 07:45 G=152 | 08:00 M=pancake C=25 I=9R | 12:35 G=118 | 12:45 M=burger C=15 I=7R | 18:40 G=125 | 18:55 M=curry C=28 I=10R | 23:10 G=210 I=26L",
+      "D8 08:20 G=168 | 08:35 M=cereal C=20 I=8R | 13:10 G=125 | 13:20 M=salad C=10 I=5R | 19:05 G=118 | 19:15 M=kebab C=30 I=11R | 23:25 G=198 I=26L",
+      "D9 08:00 G=155 | 08:15 M=toast C=15 I=6R | 12:50 G=116 | 13:00 M=wrap C=15 I=7R | 19:10 G=130 | 19:20 M=chinese C=35 I=13R | 23:00 G=220 I=26L",
+      "D10 08:10 G=159 | --- GAP --- | 12:30 G=112 | 12:40 M=sandwich C=18 I=8R | 18:55 G=122 | 19:05 M=chicken C=7 I=6R | 22:00 G=135 I=26L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Dawn Phenomenon",
+          "evidence": "D1 fasting 158; D2 162; D3 155; D4 160; D5 148; D6 165; D7 152; D8 168; D9 155; D10 159. All morning readings elevated 148-168 mg/dL, indicating overnight hyperglycemia despite basal insulin 26L.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 pizza -> 23:00 G=195; D2 burger -> G=200; D4 steak -> G=215; D5 lasagna -> G=205; D7 curry -> G=210; D9 chinese -> G=220. High-fat dinners cause 3-5 hour delayed hyperglycemia 185-220 mg/dL.",
+          "confidence": 0.92,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (74F, 119kg) with dual pattern: dawn phenomenon (fasting 148-168) despite 26L basal insulin, and delayed postprandial hyperglycemia after high-fat dinners (185-220). Consider increasing basal insulin to 28-30L to address dawn hyperglycemia. For high-fat evening meals, implement dual-wave/extended bolus strategy or switch to lower-fat dinner options. Current rapid-acting ratios appear adequate for daytime control but fail to cover delayed fat-induced glucose rise."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 49,
+      "weight_kg": 114,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=118 | 08:15 M=toast C=15 | 12:30 G=62 | 12:45 M=sandwich C=18 | 19:00 G=125 | 19:15 M=chicken C=6 | 22:00 G=120",
+      "D2 08:10 G=122 | 08:20 M=cereal C=20 | 13:00 G=58 | 13:10 M=salad C=10 | 18:45 G=118 | --- GAP --- | 22:30 G=115",
+      "D3 07:50 G=115 | 08:00 M=oatmeal C=18 | 12:40 G=55 | 12:50 M=wrap C=15 | 19:30 G=130 | 19:40 M=steak C=6 | 22:15 G=125",
+      "D4 08:20 G=120 | --- GAP --- | 13:15 G=60 | 13:25 M=soup C=8 | 19:10 G=122 | 19:20 M=pasta C=20 | 22:00 G=118",
+      "D5 08:05 G=112 | 08:15 M=eggs C=3 | 12:50 G=52 | 12:55 M=salad C=8 | 18:50 G=115 | 19:00 M=salmon C=4 | 22:10 G=110",
+      "D6 08:15 G=125 | 08:30 M=muffin C=18 | 13:05 G=58 | 13:15 M=sandwich C=20 | 19:25 G=128 | 19:35 M=chicken C=7 | 22:20 G=122",
+      "D7 07:45 G=118 | 08:00 M=pancake C=22 | 12:30 G=55 | 12:40 M=burger C=12 | 18:40 G=118 | 18:55 M=pork C=5 | 21:50 G=115",
+      "D8 08:10 G=122 | 08:20 M=cereal C=20 | --- GAP --- | 19:00 G=124 | 19:15 M=fish C=5 | 22:00 G=120",
+      "D9 08:00 G=116 | 08:15 M=toast C=15 | 13:20 G=60 | 13:30 M=salad C=10 | 19:20 G=118 | 19:30 M=beef C=6 | 22:30 G=115",
+      "D10 08:25 G=128 | 08:35 M=waffle C=22 | 12:55 G=58 | 13:05 M=wrap C=15 | 18:55 G=125 | 19:05 M=chicken C=7 | 22:15 G=122"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62 mg/dL; D2 58; D3 55; D4 60; D5 52; D6 58; D7 55; D9 60; D10 58. Consistent hypoglycemia at 12:30-13:20 despite no recorded insulin use. Pre-lunch values 112-125 dropping to 52-62.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (49M, 114kg) with recurrent post-lunch hypoglycemia (52-62 mg/dL) without insulin therapy. Pattern suggests reactive hypoglycemia where morning carbohydrate intake (15-22g breakfast) triggers endogenous insulin surge causing mid-day drops. Consider dietary modification: lower glycemic index breakfast, protein inclusion, or mid-morning snack. Evaluate for possible sulfonylurea use if prescribed. Refer for diabetes education on meal composition and timing to prevent these recurrent hypoglycemic events."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 63,
+      "weight_kg": 91,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=112 | 08:15 M=toast C=15 I=5R | 12:30 G=108 | 12:40 M=sandwich C=18 I=8R | 17:00 G=62 Ex=run | 18:30 G=105 | 19:00 M=chicken C=6 I=5R | 22:00 G=108 I=20L",
+      "D2 08:10 G=118 | 08:20 M=cereal C=18 I=7R | 13:00 G=112 | 13:10 M=salad C=10 I=5R | 16:30 G=55 Ex=gym | 18:45 G=100 | 19:15 M=fish C=5 I=4R | 22:30 G=105 I=20L",
+      "D3 07:50 G=105 | 08:00 M=oatmeal C=15 I=6R | --- GAP --- | 17:30 G=58 Ex=cycle | 19:00 G=115 | 19:40 M=steak C=6 I=5R | 22:15 G=110 I=20L",
+      "D4 08:20 G=120 | 08:30 M=bagel C=22 I=8R | 13:15 G=115 | 13:25 M=soup C=8 I=4R | 17:15 G=60 Ex=walk | 19:10 G=108 | 19:20 M=pasta C=18 I=8R | 22:00 G=115 I=20L",
+      "D5 08:05 G=108 | 08:15 M=eggs C=3 I=4R | 12:45 G=105 | 12:55 M=salad C=8 I=4R | --- GAP --- | 18:50 G=112 | 19:00 M=salmon C=4 I=4R | 22:10 G=102 I=20L",
+      "D6 08:15 G=115 | 08:30 M=muffin C=18 I=7R | 13:05 G=110 | 13:15 M=sandwich C=20 I=8R | 16:45 G=52 Ex=jog | 19:25 G=105 | 19:35 M=chicken C=7 I=5R | 22:20 G=108 I=20L",
+      "D7 07:45 G=102 | 08:00 M=pancake C=22 I=8R | 12:35 G=108 | 12:45 M=burger C=15 I=7R | 17:00 G=58 Ex=run | 18:40 G=110 | 18:55 M=pork C=5 I=5R | 21:50 G=105 I=20L",
+      "D8 08:10 G=118 | 08:20 M=cereal C=20 I=7R | 13:10 G=118 | --- GAP --- | 17:20 G=62 Ex=swim | 19:05 G=112 | 19:15 M=fish C=5 I=5R | 22:00 G=110 I=20L",
+      "D9 08:00 G=110 | 08:15 M=toast C=15 I=6R | 12:50 G=106 | 13:00 M=wrap C=15 I=7R | 16:30 G=55 Ex=gym | 19:10 G=108 | 19:20 M=beef C=6 I=5R | 22:30 G=105 I=20L",
+      "D10 08:25 G=122 | 08:35 M=waffle C=22 I=8R | 12:30 G=112 | 12:40 M=sandwich C=18 I=8R | 17:10 G=60 Ex=run | 18:55 G=118 | 19:05 M=chicken C=7 I=5R | 22:15 G=112 I=20L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=62 after run; D2 16:30 G=55 after gym; D3 17:30 G=58 after cycle; D4 17:15 G=60 after walk; D6 16:45 G=52 after jog; D7 17:00 G=58; D8 17:20 G=62; D9 16:30 G=55; D10 17:10 G=60. Afternoon exercise consistently causes hypoglycemia (52-62 mg/dL).",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (63M, 91kg) on 20L basal with consistent exercise-induced hypoglycemia during afternoon activity (16:30-17:30). Glucose drops from 105-118 to 52-62 mg/dL across all recorded exercise sessions. Recommend pre-exercise carbohydrate intake (15-20g) 15-30 minutes before activity, or reducing lunch insulin by 1-2 units on exercise days. Consider temporary basal rate reduction if using pump. Evening recovery appears adequate with dinner insulin bringing glucose to target range."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 18,
+      "weight_kg": 107,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=118 | 08:15 M=toast C=15 | 12:30 G=58 | 12:45 M=sandwich C=18 | 17:00 G=62 Ex=run | 19:00 M=chicken C=6 | 22:00 G=125",
+      "D2 08:10 G=122 | 08:20 M=cereal C=20 | 13:00 G=62 | 13:10 M=salad C=10 | 16:30 G=55 Ex=gym | --- GAP --- | 22:30 G=120",
+      "D3 07:50 G=115 | --- GAP --- | 12:40 G=55 | 12:50 M=wrap C=15 | 17:30 G=58 Ex=cycle | 19:30 M=steak C=6 | 22:15 G=118",
+      "D4 08:20 G=120 | 08:30 M=bagel C=22 | 13:15 G=60 | 13:25 M=soup C=8 | 17:15 G=60 Ex=walk | 19:10 M=pasta C=20 | 22:00 G=130",
+      "D5 08:05 G=112 | 08:15 M=eggs C=3 | 12:50 G=52 | 12:55 M=salad C=8 | --- GAP --- | 18:50 M=salmon C=4 | 22:10 G=115",
+      "D6 08:15 G=125 | 08:30 M=muffin C=18 | 13:05 G=58 | 13:15 M=sandwich C=20 | 16:45 G=52 Ex=jog | 19:25 M=chicken C=7 | 22:20 G=128",
+      "D7 07:45 G=118 | 08:00 M=pancake C=22 | 12:30 G=55 | 12:40 M=burger C=12 | 17:00 G=58 Ex=run | 18:40 M=pork C=5 | 21:50 G=122",
+      "D8 08:10 G=122 | 08:20 M=cereal C=20 | --- GAP --- | 17:20 G=62 Ex=swim | 19:00 M=fish C=5 | 22:00 G=118",
+      "D9 08:00 G=116 | 08:15 M=toast C=15 | 13:20 G=60 | 13:30 M=salad C=10 | 16:30 G=55 Ex=gym | 19:20 M=beef C=6 | 22:30 G=125",
+      "D10 08:25 G=128 | 08:35 M=waffle C=22 | 12:55 G=58 | 13:05 M=wrap C=15 | 17:10 G=60 Ex=run | 18:55 M=chicken C=7 | 22:15 G=130"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 58 mg/dL; D2 62; D3 55; D4 60; D5 52; D6 58; D7 55; D9 60; D10 58. Recurrent lunchtime hypoglycemia 52-62 mg/dL without insulin therapy.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=62 after run; D2 16:30 G=55 after gym; D3 17:30 G=58; D4 17:15 G=60; D6 16:45 G=52; D7 17:00 G=58; D8 17:20 G=62; D9 16:30 G=55; D10 17:10 G=60. Afternoon exercise adds to hypoglycemic burden with drops to 52-62.",
+          "confidence": 0.92,
+          "trend": "stable"
+        }
+      ],
+      "message": "Young T2 patient (18M, 107kg) with dual hypoglycemic pattern: post-lunch reactive hypoglycemia (52-62 mg/dL) compounded by exercise-induced drops (52-62 mg/dL) in the afternoon. Both patterns occur without exogenous insulin, suggesting endogenous hyperinsulinemia or exaggerated incretin response. Recommend dietary changes: lower glycemic index breakfast, protein with lunch, and mandatory pre-exercise snack (15-20g carbs). Evaluate for non-alcoholic fatty liver disease and insulin resistance given obesity (BMI ~33)."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 40,
+      "weight_kg": 72,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=108 | 08:15 M=toast C=15 I=5R | 12:30 G=62 | 12:45 M=sandwich C=18 I=4R | 19:00 G=120 | 19:15 M=chicken C=6 I=5R | 22:00 G=108 I=18L",
+      "D2 08:10 G=112 | 08:20 M=cereal C=18 I=6R | 13:00 G=58 | 13:10 M=salad C=10 I=3R | 18:45 G=115 | 19:00 M=fish C=5 I=4R | 22:30 G=105 I=18L",
+      "D3 07:50 G=100 | 08:00 M=oatmeal C=15 I=5R | 12:40 G=55 | 12:50 M=wrap C=15 I=4R | 19:30 G=125 | 19:40 M=steak C=6 I=5R | 22:15 G=112 I=18L",
+      "D4 08:20 G=115 | --- GAP --- | 13:15 G=60 | 13:25 M=soup C=8 I=3R | 19:10 G=118 | 19:20 M=pasta C=18 I=7R | 22:00 G=110 I=18L",
+      "D5 08:05 G=105 | 08:15 M=eggs C=3 I=3R | 12:50 G=52 | 12:55 M=salad C=8 I=2R | 18:50 G=112 | 19:00 M=salmon C=4 I=4R | 22:10 G=102 I=18L",
+      "D6 08:15 G=118 | 08:30 M=muffin C=18 I=6R | 13:05 G=58 | 13:15 M=sandwich C=20 I=5R | 19:25 G=128 | 19:35 M=chicken C=7 I=6R | 22:20 G=115 I=18L",
+      "D7 07:45 G=102 | 08:00 M=pancake C=22 I=7R | 12:30 G=55 | 12:40 M=burger C=12 I=3R | 18:40 G=118 | 18:55 M=pork C=5 I=5R | 21:50 G=108 I=18L",
+      "D8 08:10 G=110 | 08:20 M=cereal C=20 I=7R | 13:10 G=60 | --- GAP --- | 19:00 G=122 | 19:15 M=fish C=5 I=5R | 22:00 G=110 I=18L",
+      "D9 08:00 G=106 | 08:15 M=toast C=15 I=5R | 13:20 G=58 | 13:30 M=salad C=10 I=3R | 19:20 G=115 | 19:30 M=beef C=6 I=5R | 22:30 G=105 I=18L",
+      "D10 08:25 G=120 | 08:35 M=waffle C=22 I=7R | 12:55 G=62 | 13:05 M=wrap C=15 I=4R | 18:55 G=125 | 19:05 M=chicken C=7 I=6R | 22:15 G=112 I=18L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62 mg/dL; D2 58; D3 55; D4 60; D5 52; D6 58; D7 55; D8 60; D9 58; D10 62. Consistent hypoglycemia 12:30-13:20 with lunch boluses of only 2-5R for 8-20g carbs. Pre-lunch 100-120 dropping to 52-62.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (40F, 72kg) on 18L basal with recurrent post-lunch hypoglycemia. Lunch insulin-to-carb ratio appears too aggressive (currently ~1:3-4) causing drops from 100-120 to 52-62 mg/dL. Morning rapid-acting insulin may have overlapping peak action. Recommend reducing lunch bolus by 1-2 units (target ICR 1:5-6) and considering mid-morning snack of 10-15g carbohydrates. Verify basal insulin adequacy with overnight fasting checks."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 51,
+      "weight_kg": 59,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=165 | 08:00 M=toast C=15 | --- GAP --- | 13:00 M=soup C=10 | 18:30 G=148 | 19:00 M=chicken C=6 | 22:00 G=155",
+      "D2 09:00 G=158 | 09:15 M=cereal C=20 | 12:30 G=130 | 13:00 M=sandwich C=18 | --- GAP --- | 20:00 M=fish C=5 | 21:30 G=160",
+      "D3 06:45 G=170 | 07:00 M=oatmeal C=18 | 11:45 G=142 | 12:15 M=salad C=8 | 18:00 G=152 | 18:30 M=steak C=6 | 23:00 G=162",
+      "D4 08:10 G=160 | 08:30 M=bagel C=22 | 13:30 G=138 | 14:00 M=wrap C=15 | 19:30 G=155 | 20:00 M=pasta C=20 | 22:15 G=168",
+      "D5 07:00 G=168 | 07:20 M=eggs C=3 | 12:30 G=135 | 13:00 M=burger C=12 | 17:45 G=162 | 18:15 M=salmon C=4 | 21:00 G=158",
+      "D6 09:15 G=175 | 09:30 M=pancake C=25 | --- GAP --- | 14:00 M=soup C=10 | 19:15 G=155 | 19:45 M=chicken C=7 | 22:30 G=165",
+      "D7 06:50 G=162 | 07:10 M=toast C=15 | 12:15 G=132 | 12:45 M=salad C=8 | 18:00 G=148 | 18:30 M=pork C=5 | 21:45 G=158",
+      "D8 08:00 G=172 | 08:20 M=muffin C=18 | 13:10 G=140 | 13:40 M=sandwich C=18 | 19:30 G=160 | 20:00 M=beef C=6 | 22:00 G=168",
+      "D9 07:15 G=165 | 07:30 M=cereal C=20 | 12:45 G=135 | 13:15 M=wrap C=15 | 18:15 G=155 | 18:45 M=fish C=5 | 21:30 G=162",
+      "D10 08:30 G=158 | 09:00 M=waffle C=22 | 13:20 G=138 | 13:50 M=salad C=10 | 19:00 G=150 | 19:30 M=chicken C=8 | 22:15 G=160"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Morning Breakfast Spike",
+          "evidence": "D1 07:30 G=165 post-breakfast; D3 06:45 G=170 -> 11:45 G=142; D4 08:10 G=160; D5 07:00 G=168; D6 09:15 G=175; D8 08:00 G=172; D9 07:15 G=165. Elevated morning readings 158-175 throughout the morning window.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Dawn Phenomenon",
+          "evidence": "D1 fasting 165; D3 170; D4 160; D5 168; D6 175; D7 162; D8 172; D9 165. All morning fasting readings exceed 158, indicating overnight glucose elevation.",
+          "confidence": 0.92,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (51M, 59kg) with combined dawn phenomenon and breakfast hyperglycemia. Fasting glucose 158-175 indicates overnight hepatic glucose output, exacerbated by carbohydrate-rich breakfasts (cereal, pancake, bagel) driving sustained morning hyperglycemia. Underweight status (BMI ~19) may indicate sarcopenia or inadequate beta-cell function. Consider metformin optimization, low glycemic index breakfast options, and possible basal insulin initiation. Evaluate for LADA given atypical T2 presentation with low BMI."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 59,
+      "weight_kg": 115,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=115 | 08:15 M=toast C=15 I=6R | 12:30 G=108 | 12:40 M=sandwich C=18 I=8R | 19:00 G=125 | 19:10 M=pizza C=30 I=12R | 23:00 G=195 I=26L",
+      "D2 08:10 G=120 | 08:20 M=cereal C=18 I=7R | 13:00 G=112 | 13:10 M=salad C=10 I=5R | 18:45 G=118 | 19:00 M=burger C=28 I=11R | 23:15 G=200 I=26L",
+      "D3 07:50 G=110 | 08:00 M=oatmeal C=15 I=6R | 12:20 G=105 | 12:30 M=wrap C=15 I=7R | 19:30 G=130 | 19:40 M=fried_chicken C=22 I=9R | 23:30 G=185 I=26L",
+      "D4 08:30 G=122 | 08:40 M=bagel C=22 I=8R | 13:15 G=115 | 13:25 M=soup C=8 I=4R | 19:15 G=120 | 19:25 M=steak C=35 I=13R | 23:00 G=215 I=26L",
+      "D5 08:05 G=108 | 08:15 M=eggs C=3 I=4R | 12:45 G=100 | 12:55 M=salad C=8 I=4R | 18:50 G=128 | 19:00 M=lasagna C=32 I=12R | 23:20 G=210 I=26L",
+      "D6 08:15 G=118 | 08:30 M=muffin C=18 I=7R | 13:05 G=110 | 13:15 M=sandwich C=20 I=8R | 19:20 G=122 | 19:30 M=fish_and_chips C=30 I=11R | 22:45 G=190 I=26L",
+      "D7 07:45 G=112 | 08:00 M=pancake C=25 I=9R | 12:35 G=108 | 12:45 M=burger C=15 I=7R | 18:40 G=115 | 18:55 M=curry C=28 I=10R | 23:10 G=205 I=26L",
+      "D8 08:20 G=125 | 08:35 M=cereal C=20 I=8R | 13:10 G=118 | 13:20 M=salad C=10 I=5R | 19:05 G=124 | 19:15 M=kebab C=30 I=11R | 23:25 G=198 I=26L",
+      "D9 08:00 G=114 | 08:15 M=toast C=15 I=6R | 12:50 G=106 | 13:00 M=wrap C=15 I=7R | 19:10 G=130 | 19:20 M=chinese C=35 I=13R | 23:00 G=222 I=26L",
+      "D10 08:10 G=119 | 08:25 M=waffle C=22 I=8R | 12:30 G=112 | 12:40 M=sandwich C=18 I=8R | 18:55 G=122 | 19:05 M=chicken C=7 I=6R | 22:00 G=135 I=26L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 pizza -> 23:00 G=195; D2 burger -> G=200; D4 steak -> G=215; D5 lasagna -> G=210; D7 curry -> G=205; D9 chinese -> G=222. High-fat dinners consistently produce delayed hyperglycemia 185-222 mg/dL at 3-5 hours post-meal despite appropriate dinner insulin.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (59F, 115kg) with clean log quality shows consistent delayed postprandial hyperglycemia following high-fat evening meals. Despite adequate rapid-acting insulin at dinner (9-13R for 22-35g carbs), glucose rises to 185-222 mg/dL by 23:00. This pattern is absent on D10 with lower-fat chicken dinner (G=135 at 22:00). Recommend extended/double-wave bolus for high-fat meals (60% upfront, 40% over 2-3 hours) or switch to lower-fat dinner options. Basal insulin (26L) appears adequate for daytime control."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 44,
+      "weight_kg": 76,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=112 | 08:15 M=toast C=15 I=5R | 12:30 G=108 | 12:40 M=sandwich C=18 I=8R | 17:00 G=62 Ex=run | 19:00 G=115 | 19:10 M=pizza C=30 I=11R | 23:00 G=195 I=20L",
+      "D2 08:10 G=118 | 08:20 M=cereal C=18 I=7R | 13:00 G=112 | 13:10 M=salad C=10 I=5R | 16:30 G=55 Ex=gym | 18:45 G=108 | 19:00 M=burger C=28 I=10R | 23:15 G=200 I=20L",
+      "D3 07:50 G=105 | 08:00 M=oatmeal C=15 I=6R | 12:20 G=105 | --- GAP --- | 17:30 G=58 Ex=cycle | 19:30 M=fried_chicken C=22 I=9R | 23:30 G=185 I=20L",
+      "D4 08:20 G=120 | 08:30 M=bagel C=22 I=8R | 13:15 G=115 | 13:25 M=soup C=8 I=4R | --- GAP --- | 19:10 M=steak C=35 I=12R | 23:00 G=215 I=20L",
+      "D5 08:05 G=108 | 08:15 M=eggs C=3 I=4R | 12:45 G=100 | 12:55 M=salad C=8 I=4R | 17:00 G=60 Ex=walk | 18:50 M=lasagna C=32 I=11R | 23:20 G=210 I=20L",
+      "D6 08:15 G=115 | 08:30 M=muffin C=18 I=7R | 13:05 G=110 | 13:15 M=sandwich C=20 I=8R | 16:45 G=52 Ex=jog | 19:20 G=118 | 19:30 M=fish_and_chips C=30 I=11R | 22:45 G=190 I=20L",
+      "D7 07:45 G=102 | 08:00 M=pancake C=22 I=8R | 12:35 G=108 | 12:45 M=burger C=15 I=7R | 17:15 G=58 Ex=jog | 18:40 M=curry C=28 I=10R | 23:10 G=205 I=20L",
+      "D8 08:10 G=118 | --- GAP --- | 13:10 G=118 | 13:20 M=salad C=10 I=5R | 17:20 G=62 Ex=swim | 19:05 M=kebab C=30 I=11R | 23:25 G=198 I=20L",
+      "D9 08:00 G=110 | 08:15 M=toast C=15 I=6R | 12:50 G=106 | 13:00 M=wrap C=15 I=7R | 16:30 G=55 Ex=gym | 19:10 M=chinese C=35 I=12R | 23:00 G=222 I=20L",
+      "D10 08:25 G=122 | 08:35 M=waffle C=22 I=8R | 12:30 G=112 | 12:40 M=sandwich C=18 I=8R | 17:10 G=60 Ex=run | 18:55 G=115 | 19:05 M=chicken C=7 I=6R | 22:00 G=130 I=20L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 pizza -> G=195; D2 burger -> G=200; D4 steak -> G=215; D5 lasagna -> G=210; D7 curry -> G=205; D9 chinese -> G=222. High-fat dinners cause 3-5 hour delayed hyperglycemia 185-222 mg/dL.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=62; D2 16:30 G=55; D3 17:30 G=58; D5 17:00 G=60; D6 16:45 G=52; D7 17:15 G=58; D8 17:20 G=62; D9 16:30 G=55; D10 17:10 G=60. Afternoon exercise consistently drops glucose to 52-62 mg/dL.",
+          "confidence": 0.92,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (44F, 76kg) with dual pattern: afternoon exercise-induced hypoglycemia (52-62 mg/dL) and delayed evening hyperglycemia from high-fat meals (185-222 mg/dL). Exercise enhances insulin sensitivity, potentially worsening the fat-induced spike by increasing carbohydrate absorption variability. Recommend: (1) pre-exercise snack 15-20g carbs, (2) extended bolus for high-fat dinners (60:40 split over 2-3 hours), (3) reducing lunch insulin on exercise days to prevent stacking effect. D10 demonstrates that lower-fat dinner (chicken, G=130) resolves delayed spike."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 72,
+      "weight_kg": 74,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=108 | 08:15 M=toast C=15 I=5R | 12:30 G=58 | 12:45 M=sandwich C=18 I=4R | 19:00 G=120 | 19:10 M=pizza C=30 I=12R | 23:00 G=195 I=20L",
+      "D2 08:10 G=112 | 08:20 M=cereal C=18 I=6R | 13:00 G=62 | 13:10 M=salad C=10 I=3R | 18:45 G=115 | 19:00 M=burger C=28 I=11R | 23:15 G=200 I=20L",
+      "D3 07:50 G=100 | 08:00 M=oatmeal C=15 I=5R | 12:40 G=55 | 12:50 M=wrap C=15 I=4R | 19:30 G=125 | 19:40 M=fried_chicken C=22 I=9R | 23:30 G=185 I=20L",
+      "D4 08:20 G=115 | 08:30 M=bagel C=22 I=8R | --- GAP --- | 19:15 G=120 | 19:25 M=steak C=35 I=13R | 23:00 G=215 I=20L",
+      "D5 08:05 G=105 | 08:15 M=eggs C=3 I=4R | 12:50 G=52 | 12:55 M=salad C=8 I=2R | 18:50 G=112 | 19:00 M=lasagna C=32 I=12R | 23:20 G=210 I=20L",
+      "D6 08:15 G=118 | 08:30 M=muffin C=18 I=6R | 13:05 G=58 | 13:15 M=sandwich C=20 I=5R | 19:25 G=128 | 19:35 M=fish_and_chips C=30 I=11R | 22:45 G=190 I=20L",
+      "D7 07:45 G=102 | 08:00 M=pancake C=22 I=7R | 12:30 G=55 | 12:40 M=burger C=15 I=4R | 18:40 G=118 | 18:55 M=curry C=28 I=10R | 23:10 G=205 I=20L",
+      "D8 08:10 G=110 | 08:20 M=cereal C=20 I=7R | 13:10 G=60 | 13:20 M=salad C=10 I=3R | 19:05 G=124 | 19:15 M=kebab C=30 I=11R | 23:25 G=198 I=20L",
+      "D9 08:00 G=106 | 08:15 M=toast C=15 I=5R | 13:20 G=58 | 13:30 M=salad C=10 I=3R | 19:20 G=115 | --- GAP --- | 23:00 G=222 I=20L",
+      "D10 08:25 G=120 | 08:35 M=waffle C=22 I=7R | 12:55 G=62 | 13:05 M=wrap C=15 I=4R | 18:55 G=122 | 19:05 M=chicken C=7 I=6R | 22:00 G=135 I=20L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 58; D2 62; D3 55; D5 52; D6 58; D7 55; D8 60; D9 58; D10 62. Recurrent hypoglycemia 52-62 mg/dL post-lunch despite low insulin doses 2-5R for 8-20g carbs.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 pizza -> G=195; D2 burger -> G=200; D4 steak -> G=215; D5 lasagna -> G=210; D7 curry -> G=205; D9 chinese -> G=222. High-fat dinners cause delayed hyperglycemia 185-222.",
+          "confidence": 0.9,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (72M, 74kg) with dual pattern: post-lunch hypoglycemia (52-62 mg/dL) and delayed evening hyperglycemia from high-fat meals (185-222). Lunch insulin-to-carb ratio too aggressive; morning insulin may overlap. High-fat dinners cause 3-5 hour delayed spikes. Recommend: (1) reduce lunch bolus by 1-2 units, (2) add mid-morning snack, (3) use extended bolus for high-fat dinners (60:40 split), (4) consider slightly reducing basal (20L) to prevent daytime hypoglycemia risk. D10 demonstrates improved evening control with lower-fat meal."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 46,
+      "weight_kg": 117,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=118 | 08:15 M=toast C=15 | 12:30 G=62 | 12:45 M=sandwich C=18 | 19:00 G=125 | 19:15 M=chicken C=6 | 22:00 G=120",
+      "D2 08:10 G=122 | 08:20 M=cereal C=20 | 13:00 G=58 | 13:10 M=salad C=10 | 18:45 G=118 | --- GAP --- | 22:30 G=115",
+      "D3 07:50 G=115 | 08:00 M=oatmeal C=18 | 12:40 G=55 | 12:50 M=wrap C=15 | 19:30 G=130 | 19:40 M=steak C=6 | 22:15 G=125",
+      "D4 08:20 G=120 | --- GAP --- | 13:15 G=60 | 13:25 M=soup C=8 | 19:10 G=122 | 19:20 M=pasta C=20 | 22:00 G=118",
+      "D5 08:05 G=112 | 08:15 M=eggs C=3 | 12:50 G=52 | 12:55 M=salad C=8 | 18:50 G=115 | 19:00 M=salmon C=4 | 22:10 G=110",
+      "D6 08:15 G=125 | 08:30 M=muffin C=18 | 13:05 G=58 | 13:15 M=sandwich C=20 | 19:25 G=128 | 19:35 M=chicken C=7 | 22:20 G=122",
+      "D7 07:45 G=118 | 08:00 M=pancake C=22 | 12:30 G=55 | 12:40 M=burger C=12 | 18:40 G=118 | 18:55 M=pork C=5 | 21:50 G=115",
+      "D8 08:10 G=122 | 08:20 M=cereal C=20 | --- GAP --- | 19:00 G=124 | 19:15 M=fish C=5 | 22:00 G=120",
+      "D9 08:00 G=116 | 08:15 M=toast C=15 | 13:20 G=60 | 13:30 M=salad C=10 | 19:20 G=118 | 19:30 M=beef C=6 | 22:30 G=115",
+      "D10 08:25 G=128 | 08:35 M=waffle C=22 | 12:55 G=58 | 13:05 M=wrap C=15 | 18:55 G=125 | 19:05 M=chicken C=7 | 22:15 G=122"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62; D2 58; D3 55; D4 60; D5 52; D6 58; D7 55; D9 60; D10 58. Recurrent hypoglycemia 52-62 mg/dL 12:30-13:20 without insulin therapy.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (46F, 117kg) with recurrent post-lunch hypoglycemia (52-62 mg/dL) in the absence of insulin therapy. Pattern consistent with reactive hypoglycemia from exaggerated endogenous insulin response to morning carbohydrate intake. Obesity (BMI ~42) with likely insulin resistance driving compensatory hyperinsulinemia. Recommend: low glycemic index breakfast, inclusion of protein/fat with morning meal, scheduled mid-morning snack (10-15g carbs), and evaluation of current diabetes medications (particularly sulfonylureas or meglitinides if prescribed)."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 59,
+      "weight_kg": 112,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=110 | 08:15 M=toast C=15 I=6R | 12:30 G=108 | 12:40 M=sandwich C=18 I=8R | 17:00 G=62 Ex=run | 18:30 G=105 | 19:00 M=chicken C=6 I=5R | 22:00 G=108 I=24L",
+      "D2 08:10 G=115 | 08:20 M=cereal C=18 I=7R | 13:00 G=112 | 13:10 M=salad C=10 I=5R | 16:30 G=55 Ex=gym | 18:45 G=100 | 19:15 M=fish C=5 I=4R | 22:30 G=105 I=24L",
+      "D3 07:50 G=108 | 08:00 M=oatmeal C=15 I=6R | 12:20 G=105 | 12:30 M=wrap C=15 I=7R | 17:30 G=58 Ex=cycle | 19:30 G=115 | 19:40 M=steak C=6 I=5R | 22:15 G=110 I=24L",
+      "D4 08:20 G=118 | 08:30 M=bagel C=22 I=8R | 13:15 G=115 | 13:25 M=soup C=8 I=4R | 17:15 G=60 Ex=walk | 19:10 G=108 | 19:20 M=pasta C=18 I=8R | 22:00 G=115 I=24L",
+      "D5 08:05 G=105 | 08:15 M=eggs C=3 I=4R | 12:45 G=100 | 12:55 M=salad C=8 I=4R | 17:00 G=58 Ex=run | 18:50 G=112 | 19:00 M=salmon C=4 I=4R | 22:10 G=102 I=24L",
+      "D6 08:15 G=112 | 08:30 M=muffin C=18 I=7R | 13:05 G=110 | 13:15 M=sandwich C=20 I=8R | 16:45 G=52 Ex=jog | 19:25 G=105 | 19:35 M=chicken C=7 I=5R | 22:20 G=108 I=24L",
+      "D7 07:45 G=102 | 08:00 M=pancake C=22 I=8R | 12:35 G=108 | 12:45 M=burger C=15 I=7R | 17:10 G=58 Ex=jog | 18:40 G=110 | 18:55 M=pork C=5 I=5R | 21:50 G=105 I=24L",
+      "D8 08:10 G=115 | 08:20 M=cereal C=20 I=7R | 13:10 G=118 | 13:20 M=salad C=10 I=5R | 17:20 G=62 Ex=swim | 19:05 G=112 | 19:15 M=fish C=5 I=5R | 22:00 G=110 I=24L",
+      "D9 08:00 G=108 | 08:15 M=toast C=15 I=6R | 12:50 G=106 | 13:00 M=wrap C=15 I=7R | 16:30 G=55 Ex=gym | 19:10 G=108 | 19:20 M=beef C=6 I=5R | 22:30 G=105 I=24L",
+      "D10 08:25 G=120 | 08:35 M=waffle C=22 I=8R | 12:30 G=112 | 12:40 M=sandwich C=18 I=8R | 17:05 G=60 Ex=run | 18:55 G=118 | 19:05 M=chicken C=7 I=5R | 22:15 G=112 I=24L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=62; D2 16:30 G=55; D3 17:30 G=58; D4 17:15 G=60; D5 17:00 G=58; D6 16:45 G=52; D7 17:10 G=58; D8 17:20 G=62; D9 16:30 G=55; D10 17:05 G=60. Consistent afternoon exercise-induced hypoglycemia 52-62 mg/dL across all 10 days.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (59M, 112kg) with clean log demonstrates predictable exercise-induced hypoglycemia (52-62 mg/dL) during afternoon activity (16:30-17:30). Despite appropriate daytime insulin dosing (4-8R), exercise enhances insulin sensitivity causing drops. Basal insulin (24L) and meal boluses otherwise maintain good control (pre-exercise 100-118, post-dinner 102-118). Recommend: pre-exercise carbohydrate intake 15-20g 15-30 minutes before activity, or reducing lunch insulin by 1-2 units on planned exercise days. Evening recovery is adequate without post-exercise hyperglycemia."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 60,
+      "weight_kg": 111,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=158 | 08:00 M=toast C=15 | 12:00 G=62 | 12:30 M=soup C=10 | 18:00 G=142 | 18:30 M=chicken C=6 | 22:00 G=155",
+      "D2 09:00 G=165 | 09:15 M=cereal C=20 | --- GAP --- | 14:00 M=sandwich C=18 | 19:00 G=148 | 19:30 M=fish C=5 | 21:30 G=160",
+      "D3 06:45 G=170 | 07:00 M=oatmeal C=18 | 11:45 G=58 | 12:15 M=salad C=8 | --- GAP --- | 20:00 M=steak C=6 | 23:00 G=162",
+      "D4 08:10 G=160 | 08:30 M=bagel C=22 | 13:30 G=65 | 14:00 M=wrap C=15 | 18:30 G=145 | 19:00 M=pasta C=20 | 22:15 G=168",
+      "D5 07:00 G=162 | 07:20 M=eggs C=3 | 12:30 G=60 | 13:00 M=burger C=12 | 17:45 G=152 | 18:15 M=salmon C=4 | 21:00 G=158",
+      "D6 09:15 G=175 | 09:30 M=pancake C=25 | --- GAP --- | 14:00 M=soup C=10 | 19:15 G=155 | 19:45 M=chicken C=7 | 22:30 G=165",
+      "D7 06:50 G=168 | 07:10 M=toast C=15 | 12:15 G=58 | 12:45 M=salad C=8 | 18:00 G=150 | 18:30 M=pork C=5 | 21:45 G=160",
+      "D8 08:00 G=160 | 08:20 M=muffin C=18 | 13:10 G=63 | 13:40 M=sandwich C=18 | 19:30 G=155 | 20:00 M=beef C=6 | 22:00 G=158",
+      "D9 07:15 G=172 | 07:30 M=cereal C=20 | 12:45 G=60 | 13:15 M=wrap C=15 | 18:15 G=152 | 18:45 M=fish C=5 | 21:30 G=162",
+      "D10 08:30 G=158 | --- GAP --- | 13:20 G=62 | 13:50 M=salad C=10 | 19:00 G=148 | 19:30 M=chicken C=8 | 22:15 G=160"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62; D3 58; D4 65; D5 60; D7 58; D8 63; D9 60; D10 62. Lunchtime hypoglycemia 58-65 mg/dL despite no insulin use.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Dawn Phenomenon",
+          "evidence": "D1 158; D2 165; D3 170; D4 160; D5 162; D6 175; D7 168; D8 160; D9 172; D10 158. Fasting glucose consistently elevated 158-175 mg/dL.",
+          "confidence": 0.92,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (60M, 111kg) with dual pattern: dawn phenomenon (fasting 158-175 mg/dL) and reactive post-lunch hypoglycemia (58-65 mg/dL). Morning hyperglycemia triggers compensatory endogenous insulin release causing midday drops. Messy logging with frequent gaps. Recommend: metformin optimization or bedtime basal insulin for dawn control, consistent breakfast timing with protein inclusion, scheduled mid-morning snack to prevent reactive hypoglycemia, and regular glucose monitoring to fill data gaps."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 24,
+      "weight_kg": 104,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=115 | 08:15 M=toast C=15 | 12:30 G=108 | 12:40 M=sandwich C=18 | 19:00 G=125 | 19:10 M=pizza C=30 | 23:00 G=185",
+      "D2 08:10 G=118 | 08:20 M=cereal C=20 | 13:00 G=112 | --- GAP --- | 18:45 G=120 | 19:00 M=burger C=28 | 23:15 G=190",
+      "D3 07:50 G=110 | 08:00 M=oatmeal C=18 | 12:40 G=105 | 12:50 M=wrap C=15 | 19:30 G=130 | 19:40 M=fried_chicken C=22 | 23:30 G=175",
+      "D4 08:30 G=122 | 08:40 M=bagel C=22 | 13:15 G=115 | 13:25 M=soup C=8 | 19:15 G=118 | 19:25 M=steak C=35 | 23:00 G=205",
+      "D5 08:05 G=108 | 08:15 M=eggs C=3 | 12:45 G=100 | 12:55 M=salad C=8 | 18:50 G=122 | 19:00 M=lasagna C=32 | 23:20 G=200",
+      "D6 08:15 G=120 | 08:30 M=muffin C=18 | 13:05 G=110 | 13:15 M=sandwich C=20 | 19:20 G=125 | 19:30 M=fish_and_chips C=30 | 22:45 G=180",
+      "D7 07:45 G=112 | 08:00 M=pancake C=22 | 12:35 G=108 | 12:45 M=burger C=15 | 18:40 G=118 | 18:55 M=curry C=28 | 23:10 G=195",
+      "D8 08:20 G=125 | --- GAP --- | 13:10 G=118 | 13:20 M=salad C=10 | 19:05 G=122 | 19:15 M=kebab C=30 | 23:25 G=188",
+      "D9 08:00 G=114 | 08:15 M=toast C=15 | 12:50 G=106 | 13:00 M=wrap C=15 | 19:10 G=128 | 19:20 M=chinese C=35 | 23:00 G=212",
+      "D10 08:10 G=119 | 08:25 M=waffle C=22 | 12:30 G=112 | 12:40 M=sandwich C=18 | 18:55 G=122 | 19:05 M=chicken C=7 | 22:00 G=130"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 pizza -> 23:00 G=185; D2 burger -> G=190; D4 steak -> G=205; D5 lasagna -> G=200; D7 curry -> G=195; D9 chinese -> G=212. High-fat dinners cause delayed hyperglycemia 175-212 mg/dL at 3-5 hours post-meal.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "Young T2 patient (24F, 104kg) with delayed postprandial hyperglycemia following high-fat evening meals. Despite no insulin therapy, high-fat dinners (pizza, fried foods, creamy dishes) consistently elevate glucose to 175-212 mg/dL by 23:00. Lower-fat dinner (D10 chicken, G=130) demonstrates the fat-dependent nature of these spikes. Obesity (BMI ~36) compounds insulin resistance. Recommend: dietary education on fat content, lower-fat dinner alternatives, post-dinner walk to improve glucose disposal, and consideration of GLP-1 receptor agonist for weight and postprandial control."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 52,
+      "weight_kg": 88,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=115 | 08:15 M=toast C=15 | 12:30 G=108 | 12:40 M=sandwich C=18 | 17:00 G=62 Ex=run | 19:00 G=112 | 19:15 M=chicken C=6 | 22:00 G=120",
+      "D2 08:10 G=118 | 08:20 M=cereal C=20 | 13:00 G=65 Ex=walk | 13:30 M=salad C=10 | 18:45 G=115 | 19:00 M=fish C=5 | 22:30 G=115",
+      "D3 07:50 G=112 | --- GAP --- | 12:40 G=55 | 12:50 M=wrap C=15 | 17:30 G=58 Ex=cycle | 19:30 M=steak C=6 | 22:15 G=118",
+      "D4 08:20 G=120 | 08:30 M=bagel C=22 | 13:15 G=110 | 13:25 M=soup C=8 | 17:15 G=60 Ex=walk | 19:10 M=pasta C=20 | 22:00 G=125",
+      "D5 08:05 G=108 | 08:15 M=eggs C=3 | 12:50 G=52 | 12:55 M=salad C=8 | --- GAP --- | 18:50 M=salmon C=4 | 22:10 G=112",
+      "D6 08:15 G=122 | 08:30 M=muffin C=18 | 13:05 G=58 | 13:15 M=sandwich C=20 | 16:45 G=52 Ex=jog | 19:25 M=chicken C=7 | 22:20 G=128",
+      "D7 07:45 G=118 | 08:00 M=pancake C=22 | 12:30 G=55 | 12:40 M=burger C=12 | 17:00 G=58 Ex=run | 18:40 M=pork C=5 | 21:50 G=115",
+      "D8 08:10 G=115 | 08:20 M=cereal C=20 | --- GAP --- | 17:20 G=62 Ex=swim | 19:00 M=fish C=5 | 22:00 G=118",
+      "D9 08:00 G=116 | 08:15 M=toast C=15 | 13:20 G=60 | 13:30 M=salad C=10 | 16:30 G=55 Ex=gym | 19:20 M=beef C=6 | 22:30 G=122",
+      "D10 08:25 G=125 | 08:35 M=waffle C=22 | 12:55 G=58 | 13:05 M=wrap C=15 | 17:10 G=60 Ex=run | 18:55 M=chicken C=7 | 22:15 G=125"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=62; D2 13:00 G=65 after walk; D3 17:30 G=58; D4 17:15 G=60; D6 16:45 G=52; D7 17:00 G=58; D8 17:20 G=62; D9 16:30 G=55; D10 17:10 G=60. Exercise consistently causes hypoglycemia 52-65 mg/dL.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D2 65; D3 55; D5 52; D6 58; D7 55; D9 60; D10 58. Lunchtime hypoglycemia overlaps with exercise pattern, occurring 12:30-13:20.",
+          "confidence": 0.88,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (52F, 88kg) with overlapping hypoglycemic patterns: post-lunch hypoglycemia (52-65 mg/dL) and exercise-induced drops (52-62 mg/dL). Both occur without insulin therapy, suggesting reactive hypoglycemia from endogenous hyperinsulinemia compounded by exercise-enhanced glucose uptake. Recommend: pre-exercise carbohydrate snack (15-20g), structured mid-morning snack to prevent lunchtime lows, lower glycemic index breakfast, and evaluation for possible sulfonylurea use. Consider GLP-1 RA which has lower hypoglycemia risk if additional glucose-lowering needed."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 56,
+      "weight_kg": 107,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=118 | 08:15 M=toast C=15 | 12:30 G=62 | 12:45 M=sandwich C=18 | 19:00 G=125 | 19:15 M=chicken C=6 | 22:00 G=120",
+      "D2 08:10 G=122 | 08:20 M=cereal C=20 | 13:00 G=58 | 13:10 M=salad C=10 | 18:45 G=118 | --- GAP --- | 22:30 G=115",
+      "D3 07:50 G=115 | 08:00 M=oatmeal C=18 | 12:40 G=55 | 12:50 M=wrap C=15 | 19:30 G=130 | 19:40 M=steak C=6 | 22:15 G=125",
+      "D4 08:20 G=120 | --- GAP --- | 13:15 G=60 | 13:25 M=soup C=8 | 19:10 G=122 | 19:20 M=pasta C=20 | 22:00 G=118",
+      "D5 08:05 G=112 | 08:15 M=eggs C=3 | 12:50 G=52 | 12:55 M=salad C=8 | 18:50 G=115 | 19:00 M=salmon C=4 | 22:10 G=110",
+      "D6 08:15 G=125 | 08:30 M=muffin C=18 | 13:05 G=58 | 13:15 M=sandwich C=20 | 19:25 G=128 | 19:35 M=chicken C=7 | 22:20 G=122",
+      "D7 07:45 G=118 | 08:00 M=pancake C=22 | 12:30 G=55 | 12:40 M=burger C=12 | 18:40 G=118 | 18:55 M=pork C=5 | 21:50 G=115",
+      "D8 08:10 G=122 | 08:20 M=cereal C=20 | --- GAP --- | 19:00 G=124 | 19:15 M=fish C=5 | 22:00 G=120",
+      "D9 08:00 G=116 | 08:15 M=toast C=15 | 13:20 G=60 | 13:30 M=salad C=10 | 19:20 G=118 | 19:30 M=beef C=6 | 22:30 G=115",
+      "D10 08:25 G=128 | 08:35 M=waffle C=22 | 12:55 G=58 | 13:05 M=wrap C=15 | 18:55 G=125 | 19:05 M=chicken C=7 | 22:15 G=122"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62; D2 58; D3 55; D4 60; D5 52; D6 58; D7 55; D9 60; D10 58. Recurrent hypoglycemia 52-62 mg/dL 12:30-13:20 without insulin therapy.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (56M, 107kg) with recurrent post-lunch hypoglycemia (52-62 mg/dL) in the absence of insulin. Pattern consistent with reactive hypoglycemia following morning carbohydrate intake. Obesity (BMI ~33) with insulin resistance drives compensatory hyperinsulinemia, with exaggerated insulin response causing mid-day drops. Recommend: lower glycemic index breakfast with protein, scheduled mid-morning snack (15g carbs), and medication review—if on sulfonylurea, consider dose reduction or switch to alternative agent with lower hypoglycemia risk (e.g., SGLT2i, GLP-1 RA)."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 26,
+      "weight_kg": 71,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=105 | 08:15 M=toast C=15 | 12:30 G=100 | 12:40 M=sandwich C=18 | 15:00 G=102 | 19:00 M=chicken C=6 | 22:00 G=108",
+      "D2 08:10 G=108 | 08:20 M=cereal C=20 | 13:00 G=105 | 13:10 M=salad C=10 | --- GAP --- | 18:45 M=fish C=5 | 22:30 G=105",
+      "D3 07:50 G=102 | 08:00 M=oatmeal C=18 | 12:40 G=98 | 12:50 M=wrap C=15 | 15:30 G=100 | 19:30 M=steak C=6 | 22:15 G=110",
+      "D4 08:20 G=110 | 08:30 M=bagel C=22 | 13:15 G=108 | 13:25 M=soup C=8 | 16:00 G=105 | 19:10 M=pasta C=20 | 22:00 G=115",
+      "D5 08:05 G=100 | 08:15 M=eggs C=3 | 12:45 G=95 | 12:55 M=salad C=8 | 15:00 G=98 | 18:50 M=salmon C=4 | 22:10 G=102",
+      "D6 08:15 G=112 | 08:30 M=muffin C=18 | 13:05 G=108 | 13:15 M=sandwich C=20 | --- GAP --- | 19:25 M=chicken C=7 | 22:20 G=108",
+      "D7 07:45 G=98 | 08:00 M=pancake C=22 | 12:35 G=102 | 12:45 M=burger C=15 | 16:00 G=100 | 18:40 M=pork C=5 | 21:50 G=105",
+      "D8 08:10 G=108 | 08:20 M=cereal C=20 | 13:10 G=105 | 13:20 M=salad C=10 | 15:30 G=102 | 19:00 M=fish C=5 | 22:00 G=108",
+      "D9 08:00 G=105 | 08:15 M=toast C=15 | 12:50 G=100 | 13:00 M=wrap C=15 | 15:00 G=98 | 19:20 M=beef C=6 | 22:30 G=110",
+      "D10 08:25 G=115 | 08:35 M=waffle C=22 | 12:30 G=108 | 12:40 M=sandwich C=18 | 16:00 G=105 | 18:55 M=chicken C=7 | 22:15 G=112"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Afternoon Stable",
+          "evidence": "D1 15:00 G=102; D3 15:30 G=100; D4 16:00 G=105; D5 15:00 G=98; D7 16:00 G=100; D8 15:30 G=102; D9 15:00 G=98; D10 16:00 G=105. Afternoon readings consistently 98-105 mg/dL, demonstrating remarkable glycemic stability 15:00-16:00.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (26M, 71kg) demonstrates excellent afternoon glycemic stability (98-105 mg/dL) with overall well-controlled glucose throughout the day (fasting 98-115, postprandial 95-115). No hypoglycemic or hyperglycemic excursions observed. Current management (likely lifestyle and/or oral agents) is effective. Pattern suggests adequate beta-cell function and insulin sensitivity. Continue current regimen with routine monitoring. This 'afternoon stable' pattern is an ideal control target for T2 diabetes management."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 19,
+      "weight_kg": 62,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=125 | 08:15 M=toast C=15 | 12:30 G=62 | 12:45 M=sandwich C=18 | 19:00 G=130 | 19:15 M=chicken C=6 | 22:00 G=120",
+      "D2 08:10 G=130 | 08:20 M=cereal C=20 | 13:00 G=58 | 13:10 M=salad C=10 | 18:45 G=125 | --- GAP --- | 22:30 G=122",
+      "D3 07:50 G=122 | 08:00 M=oatmeal C=18 | 12:40 G=55 | 12:50 M=wrap C=15 | 19:30 G=135 | 19:40 M=steak C=6 | 22:15 G=128",
+      "D4 08:20 G=128 | --- GAP --- | 13:15 G=60 | 13:25 M=soup C=8 | 19:10 G=128 | 19:20 M=pasta C=20 | 22:00 G=125",
+      "D5 08:05 G=118 | 08:15 M=eggs C=3 | 12:50 G=52 | 12:55 M=salad C=8 | 18:50 G=122 | 19:00 M=salmon C=4 | 22:10 G=115",
+      "D6 08:15 G=132 | 08:30 M=muffin C=18 | 13:05 G=58 | 13:15 M=sandwich C=20 | 19:25 G=132 | 19:35 M=chicken C=7 | 22:20 G=125",
+      "D7 07:45 G=120 | 08:00 M=pancake C=22 | 12:30 G=55 | 12:40 M=burger C=12 | 18:40 G=125 | 18:55 M=pork C=5 | 21:50 G=118",
+      "D8 08:10 G=128 | 08:20 M=cereal C=20 | --- GAP --- | 19:00 G=130 | 19:15 M=fish C=5 | 22:00 G=122",
+      "D9 08:00 G=124 | 08:15 M=toast C=15 | 13:20 G=60 | 13:30 M=salad C=10 | 19:20 G=125 | 19:30 M=beef C=6 | 22:30 G=120",
+      "D10 08:25 G=135 | 08:35 M=waffle C=22 | 12:55 G=58 | 13:05 M=wrap C=15 | 18:55 G=130 | 19:05 M=chicken C=7 | 22:15 G=128"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62; D2 58; D3 55; D4 60; D5 52; D6 58; D7 55; D9 60; D10 58. Recurrent hypoglycemia 52-62 mg/dL post-lunch without insulin.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Morning Breakfast Spike",
+          "evidence": "D1 125; D2 130; D3 122; D4 128; D6 132; D8 128; D10 135. Morning readings 118-135 indicate post-breakfast elevation despite reactive hypoglycemia later.",
+          "confidence": 0.88,
+          "trend": "stable"
+        }
+      ],
+      "message": "Young T2 patient (19M, 62kg) with dual pattern: morning postprandial hyperglycemia (118-135 mg/dL) followed by post-lunch reactive hypoglycemia (52-62 mg/dL). The morning carbohydrate load triggers an exaggerated insulin response, leading to mid-day hypoglycemic trough. Lean body weight (BMI ~22) suggests possible LADA or early beta-cell dysfunction with dysregulated insulin secretion. Recommend: lower glycemic index breakfast, protein inclusion, mid-morning snack (15g carbs), and diabetes antibody testing (GAD, IA-2) to rule out evolving T1."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 48,
+      "weight_kg": 90,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:20 G=148 | 08:35 M=omelet C=5 I=5R | 13:10 G=118 | 13:15 M=salad C=10 I=8R | 19:00 G=135 | 19:10 M=chicken C=8 I=7R | 22:00 G=128 I=22L",
+      "D2 08:15 G=155 | 08:30 M=cereal C=20 I=8R | 12:50 G=125 | 13:00 M=sandwich C=15 I=9R | 19:30 G=130 | 19:40 M=fish C=5 I=5R | 22:10 G=120 I=22L",
+      "D3 09:00 G=162 | 09:10 M=pancake C=25 I=9R | 14:00 G=110 | 14:10 M=wrap C=12 I=8R | 20:00 G=138 | 20:10 M=steak C=5 I=5R | 22:30 G=125 I=22L",
+      "D4 08:30 G=145 | 08:40 M=toast C=18 I=7R | 12:40 G=115 | --- GAP --- | 18:50 G=140 | 19:00 M=pasta C=20 I=10R | 22:00 G=130 I=22L",
+      "D5 08:10 G=152 | 08:25 M=bagel C=22 I=8R | 13:20 G=108 | 13:30 M=soup C=8 I=6R | 19:15 G=132 | 19:20 M=pork C=6 I=6R | 22:15 G=122 I=22L",
+      "D6 08:50 G=158 | 09:00 M=oatmeal C=15 I=7R | 13:00 G=120 | 13:10 M=burger C=10 I=7R | 19:40 G=128 | 19:50 M=salmon C=4 I=4R | 22:20 G=118 I=22L",
+      "D7 08:05 G=150 | 08:20 M=waffle C=22 I=8R | --- GAP --- | 19:00 G=136 | 19:10 M=chicken C=7 I=6R | 22:00 G=126 I=22L",
+      "D8 08:40 G=160 | 08:50 M=muffin C=18 I=7R | 13:15 G=112 | 13:25 M=salad C=10 I=8R | 19:30 G=130 | 19:40 M=beef C=5 I=5R | 22:10 G=124 I=22L",
+      "D9 08:20 G=142 | 08:35 M=omelet C=5 I=5R | 13:05 G=118 | 13:15 M=sandwich C=15 I=9R | 18:50 G=142 | 19:00 M=pasta C=18 I=9R | 22:00 G=132 I=22L",
+      "D10 08:55 G=165 | 09:05 M=cereal C=20 I=8R | 12:45 G=122 | 12:55 M=wrap C=12 I=8R | 19:20 G=135 | 19:30 M=fish C=5 I=5R | 22:30 G=128 I=22L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Morning Breakfast Spike",
+          "evidence": "D1 G=148 post-breakfast; D2 G=155; D3 G=162 after pancake; D5 G=152; D6 G=158; D7 G=150; D8 G=160; D9 G=142; D10 G=165. Fasting/pre-breakfast readings consistently 142-165 mg/dL with morning peaks despite 5-9R boluses.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (48M, 90kg) on 22L basal with persistent morning hyperglycemia (142-165 mg/dL). Current breakfast insulin-to-carb ratio (~1:2.5-3) appears insufficient for morning insulin resistance. Fasting hyperglycemia suggests basal insulin may need upward titration (consider 24L). Recommend: increase breakfast rapid-acting insulin by 1-2 units, consider pre-bolusing 15-20 minutes before breakfast, and evaluate bedtime basal dose. Morning cortisol surge likely contributes to insulin resistance requiring more aggressive breakfast coverage."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 50,
+      "weight_kg": 66,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 09:00 G=112 | 09:15 M=toast C=15 I=5R | 13:30 G=58 | 14:00 M=soup C=10 I=2R | 20:00 G=125 | 20:30 M=chicken C=6 I=5R | 23:00 G=108 I=18L",
+      "D2 08:30 G=108 | 09:00 M=cereal C=18 | 14:00 G=62 | 14:10 M=sandwich C=18 I=4R | 19:00 G=118 | --- GAP --- | 22:30 G=105 I=18L",
+      "D3 10:00 G=105 | 10:15 M=oatmeal C=15 I=6R | 13:00 G=55 | 13:15 M=salad C=8 I=2R | 18:30 G=122 | 19:00 M=steak C=6 I=5R | 21:45 G=110 I=18L",
+      "D4 08:00 G=118 | 08:10 M=bagel C=22 I=8R | 12:30 G=60 | --- GAP --- | 20:00 G=128 | 20:15 M=pasta C=20 I=8R | 22:00 G=115 I=18L",
+      "D5 09:15 G=100 | 09:30 M=eggs C=3 I=4R | 14:30 G=52 | 15:00 M=burger C=12 I=3R | 19:30 G=115 | 20:00 M=salmon C=4 I=4R | 22:15 G=102 I=18L",
+      "D6 07:45 G=120 | 08:00 M=muffin C=18 I=7R | 13:30 G=58 | 13:45 M=wrap C=15 I=4R | 18:00 G=130 | 18:15 M=chicken C=7 I=6R | 22:00 G=112 I=18L",
+      "D7 10:30 G=108 | --- GAP --- | 14:00 G=55 | 14:30 M=sandwich C=18 I=4R | 20:00 G=118 | 20:30 M=pork C=5 I=5R | 23:15 G=108 I=18L",
+      "D8 08:15 G=115 | 08:30 M=cereal C=20 I=7R | 13:00 G=60 | 13:15 M=salad C=10 I=3R | 19:00 G=122 | 19:30 M=fish C=5 I=5R | 21:50 G=110 I=18L",
+      "D9 09:30 G=110 | 09:45 M=toast C=15 I=5R | 14:15 G=58 | 14:30 M=salad C=10 I=3R | 18:30 G=125 | 19:00 M=beef C=6 I=5R | 22:30 G=105 I=18L",
+      "D10 08:45 G=122 | 09:00 M=waffle C=22 I=8R | 13:30 G=62 | 13:45 M=wrap C=15 I=4R | 19:30 G=128 | 19:45 M=chicken C=7 I=6R | 22:00 G=112 I=18L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 13:30 G=58; D2 14:00 G=62; D3 13:00 G=55; D4 12:30 G=60; D5 14:30 G=52; D6 13:30 G=58; D7 14:00 G=55; D8 13:00 G=60; D9 14:15 G=58; D10 13:30 G=62. Consistent hypoglycemia 52-62 mg/dL in the 12:30-14:30 window despite small lunch boluses 2-4R.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (50M, 66kg) with irregular meal timing and recurrent post-lunch hypoglycemia (52-62 mg/dL). Late breakfasts (08:00-10:30) and delayed lunches (12:30-14:30) create insulin stacking where morning rapid-acting insulin peak overlaps with lunch bolus. Messy logging with multiple gaps. Recommend: structured meal schedule (breakfast by 08:00, lunch 12:00-12:30), reduce lunch insulin by 1-2 units, add mid-morning snack if breakfast is delayed, and reduce basal to 16L given low body weight and hypoglycemia tendency."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 38,
+      "weight_kg": 66,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=110 | 08:15 M=toast C=15 I=5R | 12:30 G=105 | 12:40 M=sandwich C=18 I=7R | 17:00 G=58 Ex=run | 19:00 G=115 | 19:10 M=pizza C=30 I=11R | 23:00 G=190 I=20L",
+      "D2 08:10 G=115 | 08:20 M=cereal C=18 I=6R | 13:00 G=108 | 13:10 M=salad C=10 I=5R | 16:30 G=55 Ex=gym | 18:45 G=108 | 19:00 M=burger C=28 I=10R | 23:15 G=195 I=20L",
+      "D3 07:50 G=108 | 08:00 M=oatmeal C=15 I=6R | 12:20 G=102 | 12:30 M=wrap C=15 I=6R | 17:30 G=60 Ex=cycle | 19:30 M=fried_chicken C=22 I=8R | 23:30 G=180 I=20L",
+      "D4 08:20 G=118 | 08:30 M=bagel C=22 I=8R | 13:15 G=112 | 13:25 M=soup C=8 I=4R | --- GAP --- | 19:10 M=steak C=35 I=12R | 23:00 G=210 I=20L",
+      "D5 08:05 G=105 | 08:15 M=eggs C=3 I=3R | 12:45 G=100 | 12:55 M=salad C=8 I=3R | 17:00 G=58 Ex=walk | 18:50 M=lasagna C=32 I=11R | 23:20 G=205 I=20L",
+      "D6 08:15 G=112 | 08:30 M=muffin C=18 I=7R | 13:05 G=108 | 13:15 M=sandwich C=20 I=8R | 16:45 G=52 Ex=jog | 19:20 M=fish_and_chips C=30 I=10R | 22:45 G=185 I=20L",
+      "D7 07:45 G=102 | 08:00 M=pancake C=22 I=8R | 12:35 G=105 | 12:45 M=burger C=15 I=7R | 17:15 G=58 Ex=jog | 18:40 M=curry C=28 I=10R | 23:10 G=200 I=20L",
+      "D8 08:10 G=115 | 08:20 M=cereal C=20 I=7R | 13:10 G=112 | 13:20 M=salad C=10 I=5R | 17:20 G=60 Ex=swim | 19:05 M=kebab C=30 I=11R | 23:25 G=195 I=20L",
+      "D9 08:00 G=108 | 08:15 M=toast C=15 I=5R | 12:50 G=105 | 13:00 M=wrap C=15 I=6R | 16:30 G=55 Ex=gym | 19:10 M=chinese C=35 I=12R | 23:00 G=218 I=20L",
+      "D10 08:25 G=120 | 08:35 M=waffle C=22 I=8R | 12:30 G=110 | 12:40 M=sandwich C=18 I=7R | 17:10 G=60 Ex=run | 18:55 G=115 | 19:05 M=chicken C=7 I=5R | 22:00 G=128 I=20L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 pizza -> G=190; D2 burger -> G=195; D4 steak -> G=210; D5 lasagna -> G=205; D7 curry -> G=200; D9 chinese -> G=218. High-fat dinners cause delayed hyperglycemia 180-218 mg/dL at 22:45-23:30.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=58; D2 16:30 G=55; D3 17:30 G=60; D5 17:00 G=58; D6 16:45 G=52; D7 17:15 G=58; D8 17:20 G=60; D9 16:30 G=55; D10 17:10 G=60. Afternoon exercise consistently drops glucose to 52-60 mg/dL.",
+          "confidence": 0.92,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (38M, 66kg) with clean log demonstrating dual pattern: afternoon exercise-induced hypoglycemia (52-60 mg/dL) and delayed evening hyperglycemia from high-fat meals (180-218 mg/dL). Lean body weight (BMI ~22) with good daytime control. Recommend: pre-exercise snack 15-20g carbs, extend dinner bolus for high-fat meals (60:40 split over 2-3 hours), and consider reducing lunch insulin on exercise days. D10 confirms that lower-fat dinner (chicken, G=128) resolves evening spike. Basal insulin (20L) appears appropriate."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 25,
+      "weight_kg": 108,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:30 G=118 | 09:00 M=toast C=15 | 13:00 G=62 | 13:30 M=soup C=10 | 19:00 G=130 | 19:30 M=chicken C=6 | 22:00 G=125",
+      "D2 --- GAP --- | 10:00 M=cereal C=20 | 14:00 G=58 | 14:30 M=sandwich C=18 | 20:00 G=128 | --- GAP --- | 23:00 G=120",
+      "D3 07:45 G=122 | 08:00 M=oatmeal C=18 | 12:30 G=55 | 13:00 M=salad C=8 | 18:30 G=135 | 19:00 M=steak C=6 | 22:15 G=130",
+      "D4 09:15 G=115 | 09:30 M=bagel C=22 | 13:45 G=60 | 14:15 M=wrap C=15 | 20:15 G=125 | 20:45 M=pasta C=20 | 22:30 G=128",
+      "D5 08:00 G=110 | 08:15 M=eggs C=3 | 13:30 G=52 | 14:00 M=burger C=12 | 18:00 G=122 | 18:30 M=salmon C=4 | 21:45 G=118",
+      "D6 10:15 G=125 | 10:30 M=muffin C=18 | 14:30 G=58 | 15:00 M=soup C=10 | 19:45 G=132 | 20:15 M=chicken C=7 | 22:30 G=128",
+      "D7 08:45 G=118 | 09:00 M=toast C=15 | 13:15 G=55 | 13:45 M=salad C=8 | 19:00 G=130 | 19:30 M=pork C=5 | 22:00 G=125",
+      "D8 --- GAP --- | 09:30 M=cereal C=20 | 14:15 G=60 | 14:45 M=sandwich C=18 | 20:30 G=128 | 21:00 M=fish C=5 | 22:45 G=122",
+      "D9 08:15 G=120 | 08:30 M=pancake C=22 | 13:00 G=58 | 13:30 M=wrap C=15 | 18:45 G=135 | 19:15 M=beef C=6 | 22:30 G=130",
+      "D10 09:30 G=122 | 10:00 M=waffle C=22 | 14:00 G=62 | 14:30 M=salad C=10 | 19:30 G=128 | 20:00 M=chicken C=8 | 22:15 G=125"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62; D2 58; D3 55; D4 60; D5 52; D6 58; D7 55; D8 60; D9 58; D10 62. Consistent hypoglycemia 52-62 mg/dL in the 12:30-14:30 window without insulin therapy. Irregular meal timing and logging gaps noted.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "Young T2 patient (25F, 108kg) with recurrent post-lunch hypoglycemia (52-62 mg/dL) without insulin therapy. Messy logging with irregular meal timing (breakfast 07:45-10:15, lunch 12:30-14:30). Obesity (BMI ~37) with likely reactive hypoglycemia from exaggerated endogenous insulin response to carbohydrate intake. Recommend: structured meal schedule, lower glycemic index breakfast with protein, scheduled mid-morning snack, and evaluation for sulfonylurea use or hyperinsulinemia. Consider GLP-1 RA for weight management and glucose stabilization."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 33,
+      "weight_kg": 114,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=162 | 08:00 M=toast C=15 I=6R | 12:00 G=118 | 12:30 M=soup C=10 I=5R | 18:00 G=130 | 18:30 M=pizza C=30 I=12R | 23:00 G=198 I=26L",
+      "D2 --- GAP --- | 09:00 M=cereal C=20 I=8R | 13:30 G=122 | 14:00 M=sandwich C=18 I=8R | 19:15 G=128 | 19:30 M=burger C=28 I=11R | 22:30 G=195 I=26L",
+      "D3 06:45 G=168 | 07:00 M=oatmeal C=18 I=7R | 12:15 G=115 | --- GAP --- | 20:00 G=135 | 20:15 M=fried_chicken C=22 I=9R | 23:15 G=185 I=26L",
+      "D4 08:30 G=158 | 08:45 M=bagel C=22 I=8R | 13:45 G=125 | 14:00 M=wrap C=15 I=7R | 19:30 G=125 | 19:45 M=steak C=35 I=13R | 23:30 G=215 I=26L",
+      "D5 07:15 G=165 | 07:30 M=eggs C=3 I=4R | 13:00 G=110 | 13:30 M=burger C=12 I=6R | 18:45 G=132 | 19:00 M=lasagna C=32 I=12R | 22:45 G=208 I=26L",
+      "D6 09:00 G=172 | 09:15 M=pancake C=25 I=9R | --- GAP --- | 14:30 M=soup C=10 I=5R | 20:15 G=130 | 20:30 M=fish_and_chips C=30 I=11R | 23:00 G=190 I=26L",
+      "D7 06:50 G=160 | 07:10 M=toast C=15 I=6R | 12:30 G=118 | 12:45 M=salad C=8 I=4R | 18:15 G=128 | 18:30 M=curry C=28 I=10R | 23:30 G=205 I=26L",
+      "D8 08:15 G=170 | 08:30 M=muffin C=18 I=7R | 13:45 G=122 | 14:00 M=sandwich C=18 I=8R | 20:00 G=125 | 20:15 M=kebab C=30 I=11R | 22:45 G=195 I=26L",
+      "D9 07:30 G=165 | --- GAP --- | 12:45 G=115 | 13:00 M=wrap C=15 I=7R | 18:30 G=132 | 18:45 M=chinese C=35 I=13R | 23:00 G=220 I=26L",
+      "D10 09:15 G=158 | 09:30 M=waffle C=22 I=8R | 14:15 G=120 | 14:30 M=salad C=10 I=5R | 19:00 G=125 | 19:15 M=chicken C=8 I=6R | 22:15 G=132 I=26L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Dawn Phenomenon",
+          "evidence": "D1 162; D3 168; D4 158; D5 165; D6 172; D7 160; D8 170; D9 165; D10 158. Fasting glucose consistently elevated 158-172 mg/dL despite basal insulin 26L.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 pizza -> 23:00 G=198; D2 burger -> G=195; D4 steak -> G=215; D5 lasagna -> G=208; D7 curry -> G=205; D9 chinese -> G=220. High-fat dinners cause delayed hyperglycemia 185-220 mg/dL.",
+          "confidence": 0.92,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (33F, 114kg) with dual pattern: dawn phenomenon (fasting 158-172) and delayed evening hyperglycemia from high-fat meals (185-220). Messy logging with irregular timing complicates analysis. Basal insulin 26L appears insufficient for overnight control; consider increasing to 28-30L. For high-fat dinners, implement extended/double-wave bolus (60:40 over 2-3 hours). Obesity (BMI ~39) contributes to insulin resistance. D10 with lower-fat chicken dinner shows improved bedtime control (G=132). Recommend consistent meal timing and logging."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 70,
+      "weight_kg": 97,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=115 | 08:15 M=toast C=15 | 12:30 G=108 | 12:40 M=sandwich C=18 | 17:00 G=62 Ex=walk | 19:00 G=118 | 19:10 M=pizza C=30 | 23:00 G=185",
+      "D2 08:10 G=118 | 08:20 M=cereal C=20 | 13:00 G=112 | 13:10 M=salad C=10 | 16:30 G=55 Ex=gym | 18:45 G=115 | 19:00 M=burger C=28 | 23:15 G=190",
+      "D3 07:50 G=110 | --- GAP --- | 12:40 G=105 | 12:50 M=wrap C=15 | 17:30 G=58 Ex=cycle | 19:30 M=fried_chicken C=22 | 23:30 G=178",
+      "D4 08:20 G=120 | 08:30 M=bagel C=22 | 13:15 G=115 | 13:25 M=soup C=8 | 17:15 G=60 Ex=walk | 19:10 M=steak C=35 | 23:00 G=205",
+      "D5 08:05 G=108 | 08:15 M=eggs C=3 | 12:45 G=100 | 12:55 M=salad C=8 | --- GAP --- | 18:50 M=lasagna C=32 | 23:20 G=200",
+      "D6 08:15 G=122 | 08:30 M=muffin C=18 | 13:05 G=110 | 13:15 M=sandwich C=20 | 16:45 G=52 Ex=jog | 19:20 M=fish_and_chips C=30 | 22:45 G=180",
+      "D7 07:45 G=112 | 08:00 M=pancake C=22 | 12:35 G=108 | 12:45 M=burger C=15 | 17:00 G=58 Ex=run | 18:40 M=curry C=28 | 23:10 G=195",
+      "D8 08:10 G=118 | 08:20 M=cereal C=20 | 13:10 G=118 | --- GAP --- | 17:20 G=62 Ex=swim | 19:05 M=kebab C=30 | 23:25 G=188",
+      "D9 08:00 G=114 | 08:15 M=toast C=15 | 12:50 G=106 | 13:00 M=wrap C=15 | 16:30 G=55 Ex=gym | 19:10 M=chinese C=35 | 23:00 G=212",
+      "D10 08:25 G=125 | 08:35 M=waffle C=22 | 12:30 G=112 | 12:40 M=sandwich C=18 | 17:10 G=60 Ex=run | 18:55 M=chicken C=7 | 22:00 G=128"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 pizza -> 23:00 G=185; D2 burger -> G=190; D4 steak -> G=205; D5 lasagna -> G=200; D7 curry -> G=195; D9 chinese -> G=212. High-fat dinners cause delayed hyperglycemia 178-212 mg/dL.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=62; D2 16:30 G=55; D3 17:30 G=58; D4 17:15 G=60; D6 16:45 G=52; D7 17:00 G=58; D8 17:20 G=62; D9 16:30 G=55; D10 17:10 G=60. Afternoon exercise consistently causes hypoglycemia 52-62 mg/dL.",
+          "confidence": 0.9,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (70F, 97kg) with dual pattern: exercise-induced hypoglycemia (52-62 mg/dL) and delayed evening hyperglycemia from high-fat meals (178-212 mg/dL). Both occur without insulin therapy. Reactive hypoglycemia from exercise is compounded by high-fat meal-induced insulin resistance later. Recommend: pre-exercise carbohydrate snack (15-20g), lower-fat dinner alternatives, post-dinner walk to improve glucose disposal. Consider medication review—if on sulfonylurea, may need adjustment. D10 demonstrates improved evening control with lower-fat chicken dinner (G=128)."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 21,
+      "weight_kg": 101,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=112 | 08:15 M=toast C=15 | 12:30 G=108 | 12:40 M=sandwich C=18 | 19:00 G=125 | 19:10 M=pizza C=30 | 23:00 G=185",
+      "D2 08:10 G=115 | 08:20 M=cereal C=20 | 13:00 G=62 | 13:10 M=salad C=10 | 18:45 G=118 | 19:00 M=burger C=28 | 23:15 G=192",
+      "D3 07:50 G=108 | 08:00 M=oatmeal C=18 | 12:40 G=55 | 12:50 M=wrap C=15 | 19:30 G=130 | 19:40 M=fried_chicken C=22 | 23:30 G=178",
+      "D4 08:20 G=118 | 08:30 M=bagel C=22 | 13:15 G=115 | --- GAP --- | 19:10 M=steak C=35 | 23:00 G=208",
+      "D5 08:05 G=105 | 08:15 M=eggs C=3 | 12:50 G=52 | 12:55 M=salad C=8 | 18:50 M=lasagna C=32 | 23:20 G=202",
+      "D6 08:15 G=120 | 08:30 M=muffin C=18 | 13:05 G=58 | 13:15 M=sandwich C=20 | 19:20 M=fish_and_chips C=30 | 22:45 G=180",
+      "D7 07:45 G=110 | 08:00 M=pancake C=22 | 12:30 G=55 | 12:40 M=burger C=12 | 18:40 M=curry C=28 | 23:10 G=198",
+      "D8 08:10 G=122 | 08:20 M=cereal C=20 | 13:10 G=60 | 13:20 M=salad C=10 | 19:05 M=kebab C=30 | 23:25 G=190",
+      "D9 08:00 G=114 | 08:15 M=toast C=15 | 13:20 G=58 | 13:30 M=salad C=10 | 19:10 M=chinese C=35 | 23:00 G=215",
+      "D10 08:25 G=125 | 08:35 M=waffle C=22 | 12:55 G=62 | 13:05 M=wrap C=15 | 18:55 M=chicken C=7 | 22:00 G=128"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 pizza -> 23:00 G=185; D2 burger -> G=192; D4 steak -> G=208; D5 lasagna -> G=202; D7 curry -> G=198; D9 chinese -> G=215. High-fat dinners cause delayed hyperglycemia 178-215 mg/dL.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D2 62; D3 55; D5 52; D6 58; D7 55; D8 60; D9 58; D10 62. Lunchtime hypoglycemia 52-62 mg/dL without insulin therapy, overlapping with high-fat meal pattern days.",
+          "confidence": 0.88,
+          "trend": "stable"
+        }
+      ],
+      "message": "Young T2 patient (21M, 101kg) with dual pattern: post-lunch reactive hypoglycemia (52-62 mg/dL) and delayed evening hyperglycemia from high-fat meals (178-215 mg/dL). Obesity (BMI ~33) with likely hyperinsulinemia causing midday drops, while high-fat dinners overwhelm compensatory mechanisms. Recommend: structured lower-GI breakfast with protein, mid-morning snack, lower-fat dinner alternatives, and post-dinner physical activity. D10 demonstrates that lower-fat chicken dinner resolves evening spike (G=128). Consider GLP-1 RA for weight and postprandial control."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 63,
+      "weight_kg": 95,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=108 | 08:15 M=toast C=15 | 12:30 G=105 | 12:40 M=sandwich C=18 | 17:00 G=58 Ex=run | 19:00 G=112 | 19:10 M=pizza C=30 | 23:00 G=188",
+      "D2 08:10 G=112 | 08:20 M=cereal C=20 | 13:00 G=108 | 13:10 M=salad C=10 | 16:30 G=52 Ex=gym | 18:45 G=108 | 19:00 M=burger C=28 | 23:15 G=195",
+      "D3 07:50 G=105 | 08:00 M=oatmeal C=18 | 12:20 G=102 | 12:30 M=wrap C=15 | 17:30 G=55 Ex=cycle | 19:30 M=fried_chicken C=22 | 23:30 G=180",
+      "D4 08:20 G=115 | 08:30 M=bagel C=22 | 13:15 G=112 | 13:25 M=soup C=8 | 17:15 G=58 Ex=walk | 19:10 M=steak C=35 | 23:00 G=210",
+      "D5 08:05 G=102 | 08:15 M=eggs C=3 | 12:45 G=98 | 12:55 M=salad C=8 | 17:00 G=55 Ex=run | 18:50 M=lasagna C=32 | 23:20 G=205",
+      "D6 08:15 G=118 | 08:30 M=muffin C=18 | 13:05 G=108 | 13:15 M=sandwich C=20 | 16:45 G=50 Ex=jog | 19:20 M=fish_and_chips C=30 | 22:45 G=182",
+      "D7 07:45 G=100 | 08:00 M=pancake C=22 | 12:35 G=105 | 12:45 M=burger C=15 | 17:10 G=58 Ex=jog | 18:40 M=curry C=28 | 23:10 G=198",
+      "D8 08:10 G=112 | 08:20 M=cereal C=20 | 13:10 G=110 | 13:20 M=salad C=10 | 17:20 G=60 Ex=swim | 19:05 M=kebab C=30 | 23:25 G=192",
+      "D9 08:00 G=108 | 08:15 M=toast C=15 | 12:50 G=105 | 13:00 M=wrap C=15 | 16:30 G=52 Ex=gym | 19:10 M=chinese C=35 | 23:00 G=215",
+      "D10 08:25 G=120 | 08:35 M=waffle C=22 | 12:30 G=110 | 12:40 M=sandwich C=18 | 17:05 G=58 Ex=run | 18:55 M=chicken C=7 | 22:00 G=125"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=58; D2 16:30 G=52; D3 17:30 G=55; D4 17:15 G=58; D5 17:00 G=55; D6 16:45 G=50; D7 17:10 G=58; D8 17:20 G=60; D9 16:30 G=52; D10 17:05 G=58. Afternoon exercise consistently causes hypoglycemia 50-60 mg/dL.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 pizza -> G=188; D2 burger -> G=195; D4 steak -> G=210; D5 lasagna -> G=205; D7 curry -> G=198; D9 chinese -> G=215. High-fat dinners cause delayed hyperglycemia 180-215 mg/dL.",
+          "confidence": 0.92,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (63M, 95kg) with clean log demonstrating dual pattern: exercise-induced hypoglycemia (50-60 mg/dL) and delayed evening hyperglycemia from high-fat meals (180-215 mg/dL). No insulin therapy recorded. Recommend: mandatory pre-exercise carbohydrate snack (15-20g), lower-fat dinner alternatives or post-dinner walk, and medication review for possible sulfonylurea use contributing to exercise hypos. D10 confirms improved evening control with chicken dinner (G=125). Consider SGLT2i or GLP-1 RA for overall glucose management if not already prescribed."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 28,
+      "weight_kg": 56,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=112 | 08:15 M=toast C=15 | 12:30 G=108 | 12:40 M=sandwich C=18 | 17:00 G=58 Ex=run | 19:00 G=115 | 19:15 M=chicken C=6 | 22:00 G=118",
+      "D2 08:10 G=115 | 08:20 M=cereal C=20 | 13:00 G=65 Ex=walk | 13:30 M=salad C=10 | 18:45 G=112 | 19:00 M=fish C=5 | 22:30 G=115",
+      "D3 07:50 G=108 | 08:00 M=oatmeal C=18 | 12:40 G=55 | 12:50 M=wrap C=15 | 17:30 G=55 Ex=cycle | 19:30 M=steak C=6 | 22:15 G=120",
+      "D4 08:20 G=118 | 08:30 M=bagel C=22 | 13:15 G=112 | 13:25 M=soup C=8 | 17:15 G=58 Ex=walk | 19:10 M=pasta C=20 | 22:00 G=125",
+      "D5 08:05 G=105 | 08:15 M=eggs C=3 | 12:45 G=52 | 12:55 M=salad C=8 | --- GAP --- | 18:50 M=salmon C=4 | 22:10 G=110",
+      "D6 08:15 G=120 | 08:30 M=muffin C=18 | 13:05 G=58 | 13:15 M=sandwich C=20 | 16:45 G=50 Ex=jog | 19:25 M=chicken C=7 | 22:20 G=125",
+      "D7 07:45 G=110 | 08:00 M=pancake C=22 | 12:30 G=55 | 12:40 M=burger C=12 | 17:00 G=55 Ex=run | 18:40 M=pork C=5 | 21:50 G=112",
+      "D8 08:10 G=115 | 08:20 M=cereal C=20 | 13:10 G=115 | --- GAP --- | 17:20 G=60 Ex=swim | 19:00 M=fish C=5 | 22:00 G=118",
+      "D9 08:00 G=112 | 08:15 M=toast C=15 | 13:20 G=58 | 13:30 M=salad C=10 | 16:30 G=52 Ex=gym | 19:20 M=beef C=6 | 22:30 G=120",
+      "D10 08:25 G=122 | 08:35 M=waffle C=22 | 12:55 G=60 | 13:05 M=wrap C=15 | 17:10 G=58 Ex=run | 18:55 M=chicken C=7 | 22:15 G=122"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=58; D2 13:00 G=65 after walk; D3 17:30 G=55; D4 17:15 G=58; D6 16:45 G=50; D7 17:00 G=55; D8 17:20 G=60; D9 16:30 G=52; D10 17:10 G=58. Exercise consistently causes hypoglycemia 50-65 mg/dL.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D2 65; D3 55; D5 52; D6 58; D7 55; D9 58; D10 60. Lunchtime hypoglycemia 52-65 mg/dL without insulin therapy overlaps with exercise-induced pattern.",
+          "confidence": 0.88,
+          "trend": "stable"
+        }
+      ],
+      "message": "Young T2 patient (28F, 56kg) with dual hypoglycemic pattern: post-lunch (52-65 mg/dL) and exercise-induced (50-60 mg/dL). Low body weight (BMI ~19) with no insulin therapy suggests endogenous hyperinsulinemia or high insulin sensitivity. Recommend: pre-exercise carbohydrate snack (15-20g), structured mid-morning snack to prevent lunchtime lows, lower glycemic index breakfast, and evaluation for possible sulfonylurea use. Consider referral to endocrinology to rule out insulinoma or nesidioblastosis if hypoglycemia is severe and unexplained."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 41,
+      "weight_kg": 66,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=128 | 08:15 M=toast C=15 | 12:30 G=62 | 12:45 M=sandwich C=18 | 19:00 G=125 | 19:15 M=chicken C=6 | 22:00 G=120",
+      "D2 08:10 G=132 | 08:20 M=cereal C=20 | 13:00 G=58 | 13:10 M=salad C=10 | 18:45 G=118 | --- GAP --- | 22:30 G=115",
+      "D3 07:50 G=125 | 08:00 M=oatmeal C=18 | 12:40 G=55 | 12:50 M=wrap C=15 | 19:30 G=130 | 19:40 M=steak C=6 | 22:15 G=125",
+      "D4 08:20 G=130 | --- GAP --- | 13:15 G=60 | 13:25 M=soup C=8 | 19:10 G=122 | 19:20 M=pasta C=20 | 22:00 G=118",
+      "D5 08:05 G=122 | 08:15 M=eggs C=3 | 12:50 G=52 | 12:55 M=salad C=8 | 18:50 G=115 | 19:00 M=salmon C=4 | 22:10 G=110",
+      "D6 08:15 G=135 | 08:30 M=muffin C=18 | 13:05 G=58 | 13:15 M=sandwich C=20 | 19:25 G=128 | 19:35 M=chicken C=7 | 22:20 G=122",
+      "D7 07:45 G=120 | 08:00 M=pancake C=22 | 12:30 G=55 | 12:40 M=burger C=12 | 18:40 G=118 | 18:55 M=pork C=5 | 21:50 G=115",
+      "D8 08:10 G=128 | 08:20 M=cereal C=20 | --- GAP --- | 19:00 G=124 | 19:15 M=fish C=5 | 22:00 G=120",
+      "D9 08:00 G=126 | 08:15 M=toast C=15 | 13:20 G=60 | 13:30 M=salad C=10 | 19:20 G=118 | 19:30 M=beef C=6 | 22:30 G=115",
+      "D10 08:25 G=138 | 08:35 M=waffle C=22 | 12:55 G=58 | 13:05 M=wrap C=15 | 18:55 G=125 | 19:05 M=chicken C=7 | 22:15 G=122"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Morning Breakfast Spike",
+          "evidence": "D1 128; D2 132; D3 125; D4 130; D6 135; D8 128; D9 126; D10 138. Morning readings elevated 120-138 mg/dL post-breakfast.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62; D2 58; D3 55; D4 60; D5 52; D6 58; D7 55; D9 60; D10 58. Recurrent hypoglycemia 52-62 mg/dL post-lunch without insulin.",
+          "confidence": 0.92,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (41M, 66kg) with dual pattern: morning postprandial hyperglycemia (120-138 mg/dL) followed by post-lunch reactive hypoglycemia (52-62 mg/dL). The morning carbohydrate intake triggers exaggerated endogenous insulin secretion, leading to mid-day hypoglycemic trough. Lean body weight (BMI ~22) with possible early beta-cell dysfunction. Recommend: lower glycemic index breakfast with protein/fat, mid-morning snack (15g carbs), diabetes antibody testing to rule out LADA, and consideration of GLP-1 RA or DPP-4i for glucose-dependent insulin secretion."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 63,
+      "weight_kg": 77,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:30 G=118 | 09:00 M=toast C=15 | 13:00 G=62 | 13:30 M=soup C=10 | 19:00 G=130 | 19:30 M=chicken C=6 | 22:00 G=125",
+      "D2 --- GAP --- | 10:00 M=cereal C=20 | 14:00 G=58 | 14:30 M=sandwich C=18 | 20:00 G=128 | --- GAP --- | 23:00 G=120",
+      "D3 07:45 G=122 | 08:00 M=oatmeal C=18 | 12:30 G=55 | 13:00 M=salad C=8 | 18:30 G=135 | 19:00 M=steak C=6 | 22:15 G=130",
+      "D4 09:15 G=115 | 09:30 M=bagel C=22 | 13:45 G=60 | 14:15 M=wrap C=15 | 20:15 G=125 | 20:45 M=pasta C=20 | 22:30 G=128",
+      "D5 08:00 G=110 | 08:15 M=eggs C=3 | 13:30 G=52 | 14:00 M=burger C=12 | 18:00 G=122 | 18:30 M=salmon C=4 | 21:45 G=118",
+      "D6 10:15 G=125 | 10:30 M=muffin C=18 | 14:30 G=58 | 15:00 M=soup C=10 | 19:45 G=132 | 20:15 M=chicken C=7 | 22:30 G=128",
+      "D7 08:45 G=118 | 09:00 M=toast C=15 | 13:15 G=55 | 13:45 M=salad C=8 | 19:00 G=130 | 19:30 M=pork C=5 | 22:00 G=125",
+      "D8 --- GAP --- | 09:30 M=cereal C=20 | 14:15 G=60 | 14:45 M=sandwich C=18 | 20:30 G=128 | 21:00 M=fish C=5 | 22:45 G=122",
+      "D9 08:15 G=120 | 08:30 M=pancake C=22 | 13:00 G=58 | 13:30 M=wrap C=15 | 18:45 G=135 | 19:15 M=beef C=6 | 22:30 G=130",
+      "D10 09:30 G=122 | 10:00 M=waffle C=22 | 14:00 G=62 | 14:30 M=salad C=10 | 19:30 G=128 | 20:00 M=chicken C=8 | 22:15 G=125"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62; D2 58; D3 55; D4 60; D5 52; D6 58; D7 55; D8 60; D9 58; D10 62. Recurrent hypoglycemia 52-62 mg/dL in 12:30-14:30 window without insulin. Irregular meal timing and frequent logging gaps.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (63M, 77kg) with recurrent post-lunch hypoglycemia (52-62 mg/dL) without insulin therapy. Messy logging with irregular meal timing (breakfast 07:45-10:15, lunch 12:30-14:30) complicates pattern analysis. Reactive hypoglycemia from exaggerated endogenous insulin response to carbohydrate intake is likely. Recommend: structured meal timing (breakfast by 08:00, lunch by 12:30), lower glycemic index breakfast with protein, scheduled mid-morning snack (15g carbs), and medication review for sulfonylurea use. Consider GLP-1 RA for lower hypoglycemia risk."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 68,
+      "weight_kg": 118,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 07:30 G=158 | 08:00 M=toast C=15 I=6R | 12:00 G=118 | 12:30 M=soup C=10 I=5R | 15:00 G=115 | 18:30 M=chicken C=6 I=5R | 22:00 G=125 I=24L",
+      "D2 09:00 G=162 | 09:15 M=cereal C=20 I=8R | --- GAP --- | 14:00 M=sandwich C=18 I=8R | 16:30 G=120 | 19:00 M=fish C=5 I=5R | 22:30 G=118 I=24L",
+      "D3 06:45 G=165 | 07:00 M=oatmeal C=18 I=7R | 11:45 G=122 | 12:15 M=salad C=8 I=4R | 15:30 G=118 | 18:00 M=steak C=6 I=5R | 23:00 G=130 I=24L",
+      "D4 08:30 G=160 | 08:45 M=bagel C=22 I=8R | 13:30 G=125 | 14:00 M=wrap C=15 I=7R | --- GAP --- | 19:30 M=pasta C=20 I=9R | 22:15 G=135 I=24L",
+      "D5 07:00 G=168 | 07:20 M=eggs C=3 I=4R | 12:30 G=118 | 13:00 M=burger C=12 I=6R | 15:00 G=115 | 18:15 M=salmon C=4 I=4R | 21:00 G=120 I=24L",
+      "D6 09:15 G=172 | 09:30 M=pancake C=25 I=9R | --- GAP --- | 14:00 M=soup C=10 I=5R | 16:45 G=122 | 19:45 M=chicken C=7 I=6R | 22:30 G=128 I=24L",
+      "D7 06:50 G=158 | 07:10 M=toast C=15 I=6R | 12:15 G=120 | 12:45 M=salad C=8 I=4R | 15:15 G=118 | 18:30 M=pork C=5 I=5R | 21:45 G=122 I=24L",
+      "D8 08:00 G=165 | 08:20 M=muffin C=18 I=7R | 13:10 G=122 | 13:40 M=sandwich C=18 I=8R | --- GAP --- | 19:30 M=beef C=6 I=5R | 22:00 G=128 I=24L",
+      "D9 07:15 G=162 | 07:30 M=cereal C=20 I=8R | 12:45 G=118 | 13:15 M=wrap C=15 I=7R | 15:30 G=115 | 18:45 M=fish C=5 I=5R | 21:30 G=122 I=24L",
+      "D10 08:30 G=155 | 09:00 M=waffle C=22 I=8R | 13:20 G=120 | 13:50 M=salad C=10 I=5R | 16:00 G=118 | 19:00 M=chicken C=8 I=6R | 22:15 G=125 I=24L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Morning Breakfast Spike",
+          "evidence": "D1 158; D2 162; D3 165; D4 160; D5 168; D6 172; D7 158; D8 165; D9 162; D10 155. Fasting/pre-breakfast readings consistently 155-172 mg/dL despite 4-9R boluses and 24L basal.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Afternoon Stable",
+          "evidence": "D1 15:00 G=115; D3 15:30 G=118; D5 15:00 G=115; D7 15:15 G=118; D9 15:30 G=115; D10 16:00 G=118. Afternoon readings demonstrate stability at 115-122 mg/dL once morning hyperglycemia resolves.",
+          "confidence": 0.88,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (68M, 118kg) with combined morning hyperglycemia (155-172 mg/dL) and stable afternoon control (115-122 mg/dL). Morning pattern suggests inadequate overnight basal coverage and/or dawn phenomenon not controlled by current 24L basal insulin. Afternoons are well-controlled, indicating appropriate daytime insulin-to-carb ratios. Recommend: increase basal insulin to 26-28L, consider pre-bolus timing adjustment (15-20 min before breakfast), and morning insulin-to-carb ratio intensification. Obesity (BMI ~35) contributes to insulin resistance requiring higher doses."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 36,
+      "weight_kg": 78,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=132 | 08:15 M=toast C=15 | 12:30 G=108 | 12:40 M=sandwich C=18 | 15:00 G=105 | 19:00 M=chicken C=6 | 22:00 G=118",
+      "D2 08:10 G=128 | 08:20 M=cereal C=20 | 13:00 G=112 | 13:10 M=salad C=10 | 16:00 G=108 | 18:45 M=fish C=5 | 22:30 G=115",
+      "D3 07:50 G=135 | 08:00 M=oatmeal C=18 | 12:40 G=105 | 12:50 M=wrap C=15 | --- GAP --- | 19:30 M=steak C=6 | 22:15 G=120",
+      "D4 08:20 G=130 | 08:30 M=bagel C=22 | 13:15 G=118 | 13:25 M=soup C=8 | 15:30 G=110 | 19:10 M=pasta C=20 | 22:00 G=125",
+      "D5 08:05 G=125 | 08:15 M=eggs C=3 | 12:45 G=102 | 12:55 M=salad C=8 | 15:00 G=100 | 18:50 M=salmon C=4 | 22:10 G=108",
+      "D6 08:15 G=138 | 08:30 M=muffin C=18 | 13:05 G=115 | 13:15 M=sandwich C=20 | 16:00 G=108 | 19:25 M=chicken C=7 | 22:20 G=122",
+      "D7 07:45 G=122 | 08:00 M=pancake C=22 | 12:35 G=110 | 12:45 M=burger C=15 | 15:30 G=105 | 18:40 M=pork C=5 | 21:50 G=115",
+      "D8 08:10 G=132 | 08:20 M=cereal C=20 | 13:10 G=118 | --- GAP --- | 16:00 G=110 | 19:00 M=fish C=5 | 22:00 G=118",
+      "D9 08:00 G=128 | 08:15 M=toast C=15 | 12:50 G=108 | 13:00 M=wrap C=15 | 15:00 G=105 | 19:20 M=beef C=6 | 22:30 G=120",
+      "D10 08:25 G=135 | 08:35 M=waffle C=22 | 12:30 G=112 | 12:40 M=sandwich C=18 | 16:00 G=108 | 18:55 M=chicken C=7 | 22:15 G=122"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Morning Breakfast Spike",
+          "evidence": "D1 132; D2 128; D3 135; D4 130; D6 138; D8 132; D9 128; D10 135. Morning readings 122-138 mg/dL post-breakfast, indicating postprandial hyperglycemia.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Afternoon Stable",
+          "evidence": "D1 15:00 G=105; D2 16:00 G=108; D4 15:30 G=110; D5 15:00 G=100; D6 16:00 G=108; D7 15:30 G=105; D9 15:00 G=105; D10 16:00 G=108. Afternoon readings stable at 100-110 mg/dL, demonstrating excellent mid-afternoon control.",
+          "confidence": 0.9,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (36M, 78kg) with mild morning postprandial hyperglycemia (122-138 mg/dL) and excellent afternoon stability (100-110 mg/dL). Pattern suggests adequate endogenous insulin response by midday that compensates for morning carbohydrate intake. Overall control is good (range 100-138). Recommend: lower glycemic index breakfast to reduce morning peaks, maintain current afternoon regimen, and continue regular monitoring. Current management appears effective; no medication changes urgently needed."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 51,
+      "weight_kg": 101,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=128 | 08:15 M=toast C=15 | 12:30 G=62 | 12:45 M=sandwich C=18 | 19:00 G=125 | 19:15 M=chicken C=6 | 22:00 G=120",
+      "D2 08:10 G=132 | 08:20 M=cereal C=20 | 13:00 G=58 | 13:10 M=salad C=10 | 18:45 G=118 | 19:00 M=fish C=5 | 22:30 G=115",
+      "D3 07:50 G=125 | 08:00 M=oatmeal C=18 | 12:40 G=55 | 12:50 M=wrap C=15 | 19:30 G=130 | 19:40 M=steak C=6 | 22:15 G=125",
+      "D4 08:20 G=130 | 08:30 M=bagel C=22 | 13:15 G=60 | 13:25 M=soup C=8 | 19:10 G=122 | 19:20 M=pasta C=20 | 22:00 G=118",
+      "D5 08:05 G=122 | 08:15 M=eggs C=3 | 12:50 G=52 | 12:55 M=salad C=8 | 18:50 G=115 | 19:00 M=salmon C=4 | 22:10 G=110",
+      "D6 08:15 G=135 | 08:30 M=muffin C=18 | 13:05 G=58 | 13:15 M=sandwich C=20 | 19:25 G=128 | 19:35 M=chicken C=7 | 22:20 G=122",
+      "D7 07:45 G=120 | 08:00 M=pancake C=22 | 12:30 G=55 | 12:40 M=burger C=12 | 18:40 G=118 | 18:55 M=pork C=5 | 21:50 G=115",
+      "D8 08:10 G=128 | 08:20 M=cereal C=20 | 13:10 G=60 | 13:20 M=salad C=10 | 19:00 G=124 | 19:15 M=fish C=5 | 22:00 G=120",
+      "D9 08:00 G=126 | 08:15 M=toast C=15 | 13:20 G=58 | 13:30 M=salad C=10 | 19:20 G=118 | 19:30 M=beef C=6 | 22:30 G=115",
+      "D10 08:25 G=138 | 08:35 M=waffle C=22 | 12:55 G=62 | 13:05 M=wrap C=15 | 18:55 G=125 | 19:05 M=chicken C=7 | 22:15 G=122"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62; D2 58; D3 55; D4 60; D5 52; D6 58; D7 55; D8 60; D9 58; D10 62. Recurrent hypoglycemia 52-62 mg/dL post-lunch without insulin therapy.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Morning Breakfast Spike",
+          "evidence": "D1 128; D2 132; D3 125; D4 130; D6 135; D8 128; D9 126; D10 138. Morning readings 120-138 mg/dL post-breakfast precede the midday hypoglycemic trough.",
+          "confidence": 0.9,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (51F, 101kg) with dual pattern: morning postprandial hyperglycemia (120-138 mg/dL) and post-lunch reactive hypoglycemia (52-62 mg/dL). Morning carbohydrate intake triggers exaggerated endogenous insulin secretion in the setting of obesity-related insulin resistance (BMI ~36), causing mid-day hypoglycemic trough. Recommend: lower glycemic index breakfast with protein/fat, scheduled mid-morning snack (15g carbs), and medication review—if on sulfonylurea, consider dose reduction or switch to GLP-1 RA which provides glucose-dependent insulin secretion with lower hypoglycemia risk."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 52,
+      "weight_kg": 77,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=120 | 08:15 M=toast C=15 I=5R | 12:30 G=108 | 12:40 M=sandwich C=18 I=8R | 17:00 G=58 Ex=run | 19:00 G=115 | 19:15 M=chicken C=6 I=5R | 22:00 G=130 I=20L",
+      "D2 08:30 G=125 | 08:45 M=cereal C=18 I=7R | 13:00 G=112 | --- GAP --- | 16:30 G=52 Ex=gym | 18:45 G=108 | 19:00 M=fish C=5 I=4R | 22:30 G=122 I=20L",
+      "D3 07:00 G=135 | 07:15 M=oatmeal C=15 I=6R | 12:20 G=105 | 12:30 M=wrap C=15 I=7R | 17:30 G=55 Ex=cycle | 19:30 M=steak C=6 I=5R | 22:15 G=128 I=20L",
+      "D4 09:00 G=118 | 09:15 M=bagel C=22 I=8R | 14:00 G=115 | 14:10 M=soup C=8 I=4R | --- GAP --- | 19:10 M=pasta C=18 I=8R | 22:00 G=135 I=20L",
+      "D5 08:00 G=128 | 08:15 M=eggs C=3 I=4R | 13:30 G=100 | 13:45 M=salad C=8 I=4R | 17:00 G=58 Ex=walk | 18:50 M=salmon C=4 I=4R | 22:10 G=118 I=20L",
+      "D6 07:30 G=140 | 07:45 M=muffin C=18 I=7R | 12:00 G=110 | 12:15 M=sandwich C=20 I=8R | 16:45 G=50 Ex=jog | 19:25 M=chicken C=7 I=6R | 22:20 G=130 I=20L",
+      "D7 10:00 G=122 | 10:15 M=pancake C=22 I=8R | 13:00 G=108 | --- GAP --- | 17:15 G=55 Ex=jog | 18:40 M=pork C=5 I=5R | 21:50 G=125 I=20L",
+      "D8 08:15 G=130 | 08:30 M=cereal C=20 I=7R | 13:45 G=118 | 14:00 M=salad C=10 I=5R | 17:20 G=60 Ex=swim | 19:05 M=fish C=5 I=5R | 22:00 G=128 I=20L",
+      "D9 --- GAP --- | 09:00 M=toast C=15 I=6R | 12:45 G=106 | 13:00 M=wrap C=15 I=7R | 16:30 G=52 Ex=gym | 19:20 M=beef C=6 I=5R | 22:30 G=132 I=20L",
+      "D10 07:45 G=132 | 08:00 M=waffle C=22 I=8R | 12:30 G=112 | 12:40 M=sandwich C=18 I=8R | 17:10 G=58 Ex=run | 18:55 M=chicken C=7 I=6R | 22:15 G=130 I=20L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=58; D2 16:30 G=52; D3 17:30 G=55; D5 17:00 G=58; D6 16:45 G=50; D7 17:15 G=55; D8 17:20 G=60; D9 16:30 G=52; D10 17:10 G=58. Afternoon exercise consistently causes hypoglycemia 50-60 mg/dL.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Dawn Phenomenon",
+          "evidence": "D1 120; D2 125; D3 135; D5 128; D6 140; D7 122; D8 130; D10 132. Fasting/morning readings 118-140 with overnight elevation from bedtime (118-135 to morning 118-140) on 20L basal.",
+          "confidence": 0.88,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (52M, 77kg) with dual pattern: dawn phenomenon (fasting 118-140) and exercise-induced hypoglycemia (50-60 mg/dL). Messy logging with irregular timing complicates analysis. Basal insulin 20L may be insufficient for overnight control given dawn glucose rise. Recommend: increase basal to 22L, pre-exercise carbohydrate snack 15-20g, reduce lunch insulin by 1-2 units on exercise days, and establish consistent meal and monitoring schedule. Evening readings show mild hyperglycemia (118-135) suggesting room for basal optimization."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 53,
+      "weight_kg": 62,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=122 | 08:15 M=toast C=15 I=5R | 12:30 G=108 | 12:40 M=sandwich C=18 I=8R | 17:00 G=58 Ex=run | 19:00 G=115 | 19:15 M=chicken C=6 I=5R | 22:00 G=118 I=18L",
+      "D2 08:10 G=128 | 08:20 M=cereal C=18 I=7R | 13:00 G=112 | 13:10 M=salad C=10 I=5R | 16:30 G=52 Ex=gym | 18:45 G=108 | 19:00 M=fish C=5 I=4R | 22:30 G=115 I=18L",
+      "D3 07:50 G=130 | 08:00 M=oatmeal C=15 I=6R | 12:20 G=105 | --- GAP --- | 17:30 G=55 Ex=cycle | 19:30 M=steak C=6 I=5R | 22:15 G=120 I=18L",
+      "D4 08:20 G=125 | 08:30 M=bagel C=22 I=8R | 13:15 G=115 | 13:25 M=soup C=8 I=4R | 17:15 G=58 Ex=walk | 19:10 M=pasta C=18 I=8R | 22:00 G=125 I=18L",
+      "D5 08:05 G=118 | 08:15 M=eggs C=3 I=4R | 12:45 G=100 | 12:55 M=salad C=8 I=4R | --- GAP --- | 18:50 M=salmon C=4 I=4R | 22:10 G=110 I=18L",
+      "D6 08:15 G=132 | 08:30 M=muffin C=18 I=7R | 13:05 G=110 | 13:15 M=sandwich C=20 I=8R | 16:45 G=50 Ex=jog | 19:25 M=chicken C=7 I=6R | 22:20 G=120 I=18L",
+      "D7 07:45 G=120 | 08:00 M=pancake C=22 I=8R | 12:35 G=108 | 12:45 M=burger C=15 I=7R | 17:10 G=55 Ex=jog | 18:40 M=pork C=5 I=5R | 21:50 G=115 I=18L",
+      "D8 08:10 G=128 | 08:20 M=cereal C=20 I=7R | 13:10 G=118 | 13:20 M=salad C=10 I=5R | 17:20 G=58 Ex=swim | 19:00 M=fish C=5 I=5R | 22:00 G=118 I=18L",
+      "D9 08:00 G=124 | 08:15 M=toast C=15 I=6R | 12:50 G=106 | 13:00 M=wrap C=15 I=7R | 16:30 G=52 Ex=gym | 19:20 M=beef C=6 I=5R | 22:30 G=120 I=18L",
+      "D10 08:25 G=130 | 08:35 M=waffle C=22 I=8R | 12:30 G=112 | 12:40 M=sandwich C=18 I=8R | 17:05 G=58 Ex=run | 18:55 M=chicken C=7 I=6R | 22:15 G=122 I=18L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=58; D2 16:30 G=52; D3 17:30 G=55; D4 17:15 G=58; D6 16:45 G=50; D7 17:10 G=55; D8 17:20 G=58; D9 16:30 G=52; D10 17:05 G=58. Afternoon exercise consistently causes hypoglycemia 50-58 mg/dL.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Dawn Phenomenon",
+          "evidence": "D1 122; D2 128; D3 130; D4 125; D6 132; D8 128; D10 130. Morning readings 118-132 with bedtime readings 110-125, indicating overnight glucose rise on 18L basal.",
+          "confidence": 0.88,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (53F, 62kg) with dual pattern: dawn phenomenon (fasting 118-132) and exercise-induced hypoglycemia (50-58 mg/dL). Low body weight (BMI ~22) with 18L basal shows overnight glucose rise suggesting inadequate basal coverage. Recommend: increase basal to 20L to address dawn phenomenon, pre-exercise carbohydrate snack 15-20g, and reduce lunch insulin by 1-2 units on planned exercise days. Morning hyperglycemia may also be contributing to daytime insulin dosing that is slightly too high for afternoon activity."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 23,
+      "weight_kg": 56,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:30 G=158 | 08:00 M=toast C=15 | 12:00 G=62 | 12:30 M=soup C=10 | 18:00 G=142 | 18:30 M=chicken C=6 | 22:00 G=155",
+      "D2 09:00 G=165 | 09:15 M=cereal C=20 | --- GAP --- | 14:00 M=sandwich C=18 | 19:00 G=148 | 19:30 M=fish C=5 | 21:30 G=160",
+      "D3 06:45 G=170 | 07:00 M=oatmeal C=18 | 11:45 G=58 | 12:15 M=salad C=8 | --- GAP --- | 20:00 M=steak C=6 | 23:00 G=162",
+      "D4 08:10 G=160 | 08:30 M=bagel C=22 | 13:30 G=65 | 14:00 M=wrap C=15 | 18:30 G=145 | 19:00 M=pasta C=20 | 22:15 G=168",
+      "D5 07:00 G=162 | 07:20 M=eggs C=3 | 12:30 G=60 | 13:00 M=burger C=12 | 17:45 G=152 | 18:15 M=salmon C=4 | 21:00 G=158",
+      "D6 09:15 G=175 | 09:30 M=pancake C=25 | --- GAP --- | 14:00 M=soup C=10 | 19:15 G=155 | 19:45 M=chicken C=7 | 22:30 G=165",
+      "D7 06:50 G=168 | 07:10 M=toast C=15 | 12:15 G=58 | 12:45 M=salad C=8 | 18:00 G=150 | 18:30 M=pork C=5 | 21:45 G=160",
+      "D8 08:00 G=160 | 08:20 M=muffin C=18 | 13:10 G=63 | 13:40 M=sandwich C=18 | 19:30 G=155 | 20:00 M=beef C=6 | 22:00 G=158",
+      "D9 07:15 G=172 | 07:30 M=cereal C=20 | 12:45 G=60 | 13:15 M=wrap C=15 | 18:15 G=152 | 18:45 M=fish C=5 | 21:30 G=162",
+      "D10 08:30 G=158 | --- GAP --- | 13:20 G=62 | 13:50 M=salad C=10 | 19:00 G=148 | 19:30 M=chicken C=8 | 22:15 G=160"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Dawn Phenomenon",
+          "evidence": "D1 158; D2 165; D3 170; D4 160; D5 162; D6 175; D7 168; D8 160; D9 172; D10 158. Fasting glucose consistently 158-175 mg/dL.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 62; D3 58; D4 65; D5 60; D7 58; D8 63; D9 60; D10 62. Lunchtime hypoglycemia 58-65 mg/dL without insulin use.",
+          "confidence": 0.9,
+          "trend": "stable"
+        }
+      ],
+      "message": "Young T2 patient (23M, 56kg) with dual pattern: dawn phenomenon (fasting 158-175 mg/dL) and reactive post-lunch hypoglycemia (58-65 mg/dL). Low body weight (BMI ~18) raises concern for atypical diabetes—consider LADA or MODY. Morning hyperglycemia triggers exaggerated endogenous insulin response causing midday drops. Recommend: diabetes antibody testing (GAD, IA-2, ZnT8), lower glycemic index breakfast with protein, scheduled mid-morning snack, and endocrinology referral. If LADA confirmed, early insulin initiation may preserve beta-cell function."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 55,
+      "weight_kg": 58,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=108 | 08:15 M=toast C=15 I=5R | 12:30 G=105 | 12:40 M=sandwich C=18 I=8R | 17:00 G=58 Ex=run | 18:30 G=105 | 19:00 M=chicken C=6 I=5R | 22:00 G=108 I=18L",
+      "D2 08:10 G=112 | 08:20 M=cereal C=18 I=6R | 13:00 G=108 | 13:10 M=salad C=10 I=5R | 16:30 G=52 Ex=gym | 18:45 G=100 | 19:15 M=fish C=5 I=4R | 22:30 G=105 I=18L",
+      "D3 07:50 G=105 | 08:00 M=oatmeal C=15 I=6R | 12:20 G=102 | 12:30 M=wrap C=15 I=7R | 17:30 G=55 Ex=cycle | 19:30 M=steak C=6 I=5R | 22:15 G=110 I=18L",
+      "D4 08:20 G=115 | 08:30 M=bagel C=22 I=8R | 13:15 G=112 | 13:25 M=soup C=8 I=4R | 17:15 G=58 Ex=walk | 19:10 M=pasta C=18 I=8R | 22:00 G=115 I=18L",
+      "D5 08:05 G=102 | 08:15 M=eggs C=3 I=4R | 12:45 G=98 | 12:55 M=salad C=8 I=4R | 17:00 G=55 Ex=run | 18:50 M=salmon C=4 I=4R | 22:10 G=102 I=18L",
+      "D6 08:15 G=118 | 08:30 M=muffin C=18 I=7R | 13:05 G=108 | 13:15 M=sandwich C=20 I=8R | 16:45 G=50 Ex=jog | 19:25 M=chicken C=7 I=6R | 22:20 G=108 I=18L",
+      "D7 07:45 G=100 | 08:00 M=pancake C=22 I=8R | 12:35 G=105 | 12:45 M=burger C=15 I=7R | 17:10 G=55 Ex=jog | 18:40 M=pork C=5 I=5R | 21:50 G=105 I=18L",
+      "D8 08:10 G=112 | 08:20 M=cereal C=20 I=7R | 13:10 G=110 | 13:20 M=salad C=10 I=5R | 17:20 G=58 Ex=swim | 19:05 M=fish C=5 I=5R | 22:00 G=110 I=18L",
+      "D9 08:00 G=108 | 08:15 M=toast C=15 I=5R | 12:50 G=105 | 13:00 M=wrap C=15 I=7R | 16:30 G=52 Ex=gym | 19:10 M=beef C=6 I=5R | 22:30 G=108 I=18L",
+      "D10 08:25 G=120 | 08:35 M=waffle C=22 I=8R | 12:30 G=110 | 12:40 M=sandwich C=18 I=8R | 17:05 G=58 Ex=run | 18:55 M=chicken C=7 I=6R | 22:15 G=112 I=18L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=58; D2 16:30 G=52; D3 17:30 G=55; D4 17:15 G=58; D5 17:00 G=55; D6 16:45 G=50; D7 17:10 G=55; D8 17:20 G=58; D9 16:30 G=52; D10 17:05 G=58. Afternoon exercise consistently causes hypoglycemia 50-58 mg/dL despite excellent daytime control otherwise.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (55M, 58kg) with excellent overall glycemic control (fasting 100-120, daytime 98-115) except for predictable exercise-induced hypoglycemia (50-58 mg/dL). Clean log demonstrates tight management with 18L basal and appropriate meal boluses. Low body weight (BMI ~19) with high insulin sensitivity. Recommend: pre-exercise carbohydrate intake 15-20g 15-30 minutes before activity, or reduce lunch insulin by 1-2 units on exercise days. Overall diabetes management is excellent; this single correctable pattern is the only area for improvement."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 41,
+      "weight_kg": 83,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:00 G=105 | 08:15 M=toast C=15 I=5R | 12:30 G=102 | 12:40 M=sandwich C=18 I=8R | 15:00 G=100 | 17:00 G=58 Ex=run | 19:00 M=chicken C=6 I=5R | 22:00 G=108 I=20L",
+      "D2 08:10 G=108 | 08:20 M=cereal C=18 I=6R | 13:00 G=108 | 13:10 M=salad C=10 I=5R | 16:00 G=105 | 16:30 G=52 Ex=gym | 18:45 M=fish C=5 I=4R | 22:30 G=105 I=20L",
+      "D3 07:50 G=102 | 08:00 M=oatmeal C=15 I=6R | 12:20 G=100 | 12:30 M=wrap C=15 I=7R | 15:30 G=98 | 17:30 G=55 Ex=cycle | 19:30 M=steak C=6 I=5R | 22:15 G=110 I=20L",
+      "D4 08:20 G=110 | 08:30 M=bagel C=22 I=8R | 13:15 G=112 | 13:25 M=soup C=8 I=4R | 16:00 G=108 | 17:15 G=58 Ex=walk | 19:10 M=pasta C=18 I=8R | 22:00 G=115 I=20L",
+      "D5 08:05 G=100 | 08:15 M=eggs C=3 I=4R | 12:45 G=98 | 12:55 M=salad C=8 I=4R | 15:00 G=95 | --- GAP --- | 18:50 M=salmon C=4 I=4R | 22:10 G=102 I=20L",
+      "D6 08:15 G=112 | 08:30 M=muffin C=18 I=7R | 13:05 G=108 | 13:15 M=sandwich C=20 I=8R | 16:00 G=105 | 16:45 G=50 Ex=jog | 19:25 M=chicken C=7 I=6R | 22:20 G=108 I=20L",
+      "D7 07:45 G=98 | 08:00 M=pancake C=22 I=8R | 12:35 G=105 | 12:45 M=burger C=15 I=7R | 15:30 G=102 | 17:10 G=55 Ex=jog | 18:40 M=pork C=5 I=5R | 21:50 G=105 I=20L",
+      "D8 08:10 G=108 | 08:20 M=cereal C=20 I=7R | 13:10 G=110 | 13:20 M=salad C=10 I=5R | 16:00 G=105 | 17:20 G=58 Ex=swim | 19:00 M=fish C=5 I=5R | 22:00 G=110 I=20L",
+      "D9 08:00 G=105 | 08:15 M=toast C=15 I=5R | 12:50 G=102 | 13:00 M=wrap C=15 I=7R | 15:30 G=100 | 16:30 G=52 Ex=gym | 19:20 M=beef C=6 I=5R | 22:30 G=108 I=20L",
+      "D10 08:25 G=115 | 08:35 M=waffle C=22 I=8R | 12:30 G=110 | 12:40 M=sandwich C=18 I=8R | 16:00 G=108 | 17:05 G=58 Ex=run | 18:55 M=chicken C=7 I=6R | 22:15 G=112 I=20L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=58; D2 16:30 G=52; D3 17:30 G=55; D4 17:15 G=58; D6 16:45 G=50; D7 17:10 G=55; D8 17:20 G=58; D9 16:30 G=52; D10 17:05 G=58. Afternoon exercise consistently causes hypoglycemia 50-58 mg/dL from stable afternoon baseline 95-108.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Afternoon Stable",
+          "evidence": "D1 15:00 G=100; D2 16:00 G=105; D3 15:30 G=98; D4 16:00 G=108; D5 15:00 G=95; D6 16:00 G=105; D7 15:30 G=102; D8 16:00 G=105; D9 15:30 G=100; D10 16:00 G=108. Afternoon pre-exercise readings demonstrate excellent stability at 95-108 mg/dL.",
+          "confidence": 0.92,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (41M, 83kg) with excellent glycemic control and predictable afternoon stability (95-108 mg/dL) disrupted only by exercise-induced hypoglycemia (50-58 mg/dL). Clean log with consistent monitoring demonstrates tight management with 20L basal and appropriate meal boluses. Recommend: pre-exercise carbohydrate intake 15-20g 15-30 minutes before activity to prevent the drop from 95-108 to 50-58. Overall diabetes control is excellent with this single modifiable pattern identified."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 63,
+      "weight_kg": 68,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:00 G=145 | 07:15 M=toast C=15 | 12:30 G=118 | 12:40 M=sandwich C=18 | 18:45 G=125 | 19:00 M=chicken C=6 | 22:00 G=135",
+      "D2 07:10 G=148 | 07:20 M=cereal C=20 | 13:00 G=122 | 13:10 M=salad C=10 | 19:00 G=120 | 19:15 M=fish C=5 | 22:30 G=130",
+      "D3 06:50 G=142 | 07:00 M=oatmeal C=18 | 12:15 G=115 | 12:25 M=wrap C=15 | 18:30 G=128 | --- GAP --- | 21:45 G=140",
+      "D4 07:05 G=150 | 07:20 M=bagel C=22 | 13:30 G=125 | 13:40 M=soup C=8 | 19:15 G=118 | 19:30 M=pasta C=20 | 22:15 G=132",
+      "D5 07:00 G=140 | 07:15 M=eggs C=3 | 12:45 G=112 | 12:55 M=salad C=8 | 18:50 G=122 | 19:00 M=salmon C=4 | 22:00 G=128",
+      "D6 06:55 G=152 | 07:10 M=pancake C=25 | 13:00 G=128 | --- GAP --- | 19:20 G=124 | 19:35 M=chicken C=7 | 22:10 G=138",
+      "D7 07:15 G=146 | 07:25 M=toast C=15 | 12:30 G=118 | 12:40 M=soup C=10 | 18:40 G=125 | 18:55 M=pork C=5 | 22:20 G=135",
+      "D8 07:00 G=144 | 07:15 M=muffin C=18 | 13:15 G=120 | 13:25 M=salad C=10 | 19:05 G=122 | 19:20 M=beef C=6 | 22:00 G=132",
+      "D9 07:10 G=149 | 07:20 M=cereal C=20 | 12:50 G=122 | 13:00 M=wrap C=15 | 18:55 G=128 | 19:10 M=fish C=5 | 22:30 G=138",
+      "D10 06:45 G=143 | 07:00 M=oatmeal C=18 | 12:20 G=115 | 12:30 M=sandwich C=18 | 19:10 G=120 | 19:25 M=chicken C=8 | 21:50 G=130"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Dawn Phenomenon",
+          "evidence": "D1 fasting 145; D2 148; D3 142; D4 150; D5 140; D6 152; D7 146; D8 144; D9 149; D10 143. All fasting readings elevated 140-152 mg/dL with bedtime readings 128-140, indicating overnight glucose rise of 10-20 mg/dL.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (63M, 68kg) with consistent dawn phenomenon (fasting 140-152 mg/dL). Overnight glucose rises 10-20 mg/dL from bedtime (128-140) to morning despite no insulin therapy. Daytime control is reasonable (112-128 pre-meal). Recommend: consider bedtime metformin extended-release to suppress hepatic glucose output, or low-dose basal insulin if already on maximal oral therapy. A bedtime snack with protein may paradoxically help some patients. Evaluate current medication regimen and consider SGLT2i addition for overnight-fasting control."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 63,
+      "weight_kg": 84,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 07:00 G=132 | 07:15 M=toast C=15 | 12:30 G=108 | 12:40 M=sandwich C=18 | 17:00 G=58 Ex=run | 18:30 G=112 | 19:00 M=chicken C=6 | 22:00 G=125",
+      "D2 07:10 G=135 | 07:20 M=cereal C=20 | 13:00 G=112 | 13:10 M=salad C=10 | 16:30 G=52 Ex=gym | 18:45 G=108 | 19:15 M=fish C=5 | 22:30 G=120",
+      "D3 06:50 G=138 | 07:00 M=oatmeal C=18 | 12:20 G=105 | 12:30 M=wrap C=15 | 17:30 G=55 Ex=cycle | 19:30 M=steak C=6 | 22:15 G=128",
+      "D4 07:05 G=130 | 07:20 M=bagel C=22 | 13:30 G=118 | 13:40 M=soup C=8 | 17:15 G=58 Ex=walk | 19:10 M=pasta C=20 | 22:00 G=122",
+      "D5 07:00 G=128 | 07:15 M=eggs C=3 | 12:45 G=100 | 12:55 M=salad C=8 | --- GAP --- | 18:50 M=salmon C=4 | 22:10 G=118",
+      "D6 06:55 G=140 | 07:10 M=pancake C=25 | 13:00 G=115 | 13:15 M=sandwich C=20 | 16:45 G=50 Ex=jog | 19:25 M=chicken C=7 | 22:20 G=130",
+      "D7 07:15 G=132 | 07:25 M=toast C=15 | 12:30 G=108 | 12:40 M=burger C=12 | 17:00 G=55 Ex=run | 18:40 M=pork C=5 | 21:50 G=122",
+      "D8 07:00 G=134 | 07:15 M=muffin C=18 | 13:15 G=112 | 13:25 M=salad C=10 | 17:20 G=58 Ex=swim | 19:05 M=fish C=5 | 22:00 G=125",
+      "D9 07:10 G=137 | 07:20 M=cereal C=20 | 12:50 G=110 | 13:00 M=wrap C=15 | 16:30 G=52 Ex=gym | 19:20 M=beef C=6 | 22:30 G=128",
+      "D10 06:45 G=129 | 07:00 M=oatmeal C=18 | 12:20 G=105 | 12:30 M=sandwich C=18 | 17:10 G=58 Ex=run | 18:55 M=chicken C=7 | 22:15 G=124"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Exercise-Induced Drop",
+          "evidence": "D1 17:00 G=58; D2 16:30 G=52; D3 17:30 G=55; D4 17:15 G=58; D6 16:45 G=50; D7 17:00 G=55; D8 17:20 G=58; D9 16:30 G=52; D10 17:10 G=58. Afternoon exercise consistently causes hypoglycemia 50-58 mg/dL.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Dawn Phenomenon",
+          "evidence": "D1 132; D2 135; D3 138; D4 130; D5 128; D6 140; D7 132; D8 134; D9 137; D10 129. Fasting glucose 128-140 mg/dL with bedtime readings 118-130, indicating mild overnight glucose rise.",
+          "confidence": 0.88,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (63F, 84kg) with dual pattern: mild dawn phenomenon (fasting 128-140 mg/dL) and exercise-induced hypoglycemia (50-58 mg/dL). Morning hyperglycemia is mild; the more pressing concern is exercise-induced hypoglycemia occurring without insulin therapy, possibly related to sulfonylurea use or endogenous hyperinsulinemia. Recommend: pre-exercise carbohydrate snack 15-20g, medication review (especially sulfonylureas), and consider GLP-1 RA or SGLT2i which have lower hypoglycemia risk. Dawn phenomenon may respond to metformin optimization."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 64,
+      "weight_kg": 73,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=112 | 08:15 M=toast C=15 | 12:30 G=108 | 12:40 M=sandwich C=18 | 19:00 G=125 | 19:10 M=pizza C=30 | 23:00 G=182",
+      "D2 08:10 G=115 | 08:20 M=cereal C=20 | 13:00 G=112 | 13:10 M=salad C=10 | 18:45 G=118 | 19:00 M=burger C=28 | 23:15 G=188",
+      "D3 07:50 G=108 | 08:00 M=oatmeal C=18 | 12:40 G=105 | 12:50 M=wrap C=15 | 19:30 G=130 | 19:40 M=fried_chicken C=22 | 23:30 G=175",
+      "D4 08:20 G=118 | 08:30 M=bagel C=22 | 13:15 G=115 | 13:25 M=soup C=8 | 19:10 M=steak C=35 | 23:00 G=205",
+      "D5 08:05 G=108 | 08:15 M=eggs C=3 | 12:45 G=100 | 12:55 M=salad C=8 | 18:50 M=lasagna C=32 | 23:20 G=198",
+      "D6 08:15 G=120 | 08:30 M=muffin C=18 | 13:05 G=110 | 13:15 M=sandwich C=20 | 19:20 M=fish_and_chips C=30 | 22:45 G=180",
+      "D7 07:45 G=110 | 08:00 M=pancake C=22 | 12:35 G=108 | 12:45 M=burger C=15 | 18:40 M=curry C=28 | 23:10 G=195",
+      "D8 08:10 G=122 | 08:20 M=cereal C=20 | 13:10 G=118 | --- GAP --- | 19:05 M=kebab C=30 | 23:25 G=185",
+      "D9 08:00 G=114 | 08:15 M=toast C=15 | 12:50 G=106 | 13:00 M=wrap C=15 | 19:10 M=chinese C=35 | 23:00 G=210",
+      "D10 08:25 G=125 | 08:35 M=waffle C=22 | 12:30 G=112 | 12:40 M=sandwich C=18 | 18:55 M=chicken C=7 | 22:00 G=128"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Delayed High-Fat Spike",
+          "evidence": "D1 pizza -> 23:00 G=182; D2 burger -> G=188; D4 steak -> G=205; D5 lasagna -> G=198; D7 curry -> G=195; D9 chinese -> G=210. High-fat dinners cause delayed hyperglycemia 175-210 mg/dL at 3-5 hours post-meal without insulin therapy.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (64M, 73kg) with delayed postprandial hyperglycemia following high-fat evening meals (175-210 mg/dL). Daytime glucose control is adequate (100-125) without insulin. High-fat dinners consistently cause 3-5 hour delayed spikes. D10 demonstrates that lower-fat chicken dinner (G=128) resolves this pattern. Recommend: dietary education on fat content and portion control, lower-fat dinner alternatives, post-dinner walk (15-20 minutes) to improve glucose disposal, and consideration of GLP-1 RA for postprandial glucose control if pattern persists despite dietary modification."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 62,
+      "weight_kg": 74,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:30 G=148 | 09:00 M=toast C=15 I=6R | 13:00 G=118 | 13:30 M=soup C=10 I=5R | 19:00 G=130 | 19:30 M=chicken C=6 I=5R | 22:00 G=122 I=20L",
+      "D2 --- GAP --- | 09:30 M=cereal C=20 I=8R | 14:00 G=125 | 14:30 M=sandwich C=18 I=8R | 20:00 G=128 | 20:30 M=fish C=5 I=5R | 23:00 G=118 I=20L",
+      "D3 07:45 G=155 | 08:00 M=oatmeal C=18 I=7R | 12:30 G=115 | 13:00 M=salad C=8 I=4R | 18:30 G=135 | 19:00 M=steak C=6 I=5R | 22:15 G=130 I=20L",
+      "D4 09:15 G=142 | 09:30 M=bagel C=22 I=8R | 13:45 G=120 | 14:15 M=wrap C=15 I=7R | 20:15 G=125 | 20:45 M=pasta C=20 I=9R | 22:30 G=135 I=20L",
+      "D5 08:00 G=150 | 08:15 M=eggs C=3 I=4R | 13:30 G=112 | 14:00 M=burger C=12 I=6R | 18:00 G=132 | 18:30 M=salmon C=4 I=4R | 21:45 G=122 I=20L",
+      "D6 10:15 G=158 | 10:30 M=pancake C=25 I=9R | 14:30 G=125 | --- GAP --- | 19:45 G=130 | 20:15 M=chicken C=7 I=6R | 22:30 G=128 I=20L",
+      "D7 08:45 G=145 | 09:00 M=toast C=15 I=6R | 13:15 G=118 | 13:45 M=salad C=8 I=4R | 19:00 G=132 | 19:30 M=pork C=5 I=5R | 22:00 G=125 I=20L",
+      "D8 --- GAP --- | 09:30 M=cereal C=20 I=8R | 14:15 G=122 | 14:45 M=sandwich C=18 I=8R | 20:30 G=128 | 21:00 M=fish C=5 I=5R | 22:45 G=120 I=20L",
+      "D9 08:15 G=152 | 08:30 M=pancake C=22 I=8R | 13:00 G=118 | 13:30 M=wrap C=15 I=7R | 18:45 G=135 | 19:15 M=beef C=6 I=5R | 22:30 G=130 I=20L",
+      "D10 09:30 G=148 | 10:00 M=waffle C=22 I=8R | 14:00 G=120 | 14:30 M=salad C=10 I=5R | 19:30 M=chicken C=8 I=6R | 22:15 G=125 I=20L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Morning Breakfast Spike",
+          "evidence": "D1 148; D3 155; D4 142; D5 150; D6 158; D7 145; D9 152; D10 148. Morning readings consistently elevated 142-158 mg/dL with irregular meal timing and logging gaps.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (62F, 74kg) with persistent morning hyperglycemia (142-158 mg/dL) despite 4-9R breakfast boluses and 20L basal. Messy logging with irregular meal timing (07:45-10:15 breakfast) and multiple gaps complicates pattern assessment. Morning readings suggest inadequate breakfast insulin-to-carb ratio and possible dawn phenomenon. Recommend: consistent breakfast timing (by 08:00), increase morning rapid-acting insulin by 1-2 units with 15-20 minute pre-bolus, and consider basal increase to 22L. Regular monitoring schedule would improve pattern recognition and insulin adjustments."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 33,
+      "weight_kg": 108,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 08:30 G=155 | 09:00 M=toast C=15 I=6R | 13:00 G=118 | 13:30 M=soup C=10 I=5R | 15:00 G=115 | 19:00 M=chicken C=6 I=5R | 22:00 G=125 I=24L",
+      "D2 --- GAP --- | 09:30 M=cereal C=20 I=8R | 14:00 G=125 | 14:30 M=sandwich C=18 I=8R | 16:30 G=120 | 20:00 M=fish C=5 I=5R | 23:00 G=118 I=24L",
+      "D3 07:45 G=162 | 08:00 M=oatmeal C=18 I=7R | 12:30 G=115 | 13:00 M=salad C=8 I=4R | 15:30 G=118 | 18:30 M=steak C=6 I=5R | 22:15 G=130 I=24L",
+      "D4 09:15 G=158 | 09:30 M=bagel C=22 I=8R | 13:45 G=122 | --- GAP --- | 16:00 G=120 | 20:15 M=pasta C=20 I=9R | 22:30 G=135 I=24L",
+      "D5 08:00 G=165 | 08:15 M=eggs C=3 I=4R | 13:30 G=112 | 14:00 M=burger C=12 I=6R | 15:00 G=115 | 18:00 M=salmon C=4 I=4R | 21:45 G=122 I=24L",
+      "D6 10:15 G=170 | 10:30 M=pancake C=25 I=9R | 14:30 G=128 | 15:00 M=soup C=10 I=5R | --- GAP --- | 19:45 M=chicken C=7 I=6R | 22:30 G=128 I=24L",
+      "D7 08:45 G=158 | 09:00 M=toast C=15 I=6R | 13:15 G=118 | 13:45 M=salad C=8 I=4R | 15:15 G=115 | 19:00 M=pork C=5 I=5R | 22:00 G=125 I=24L",
+      "D8 --- GAP --- | 09:30 M=cereal C=20 I=8R | 14:15 G=122 | 14:45 M=sandwich C=18 I=8R | 16:45 G=118 | 20:30 M=fish C=5 I=5R | 22:45 G=120 I=24L",
+      "D9 08:15 G=160 | 08:30 M=pancake C=22 I=8R | 13:00 G=118 | 13:30 M=wrap C=15 I=7R | 15:30 G=115 | 18:45 M=beef C=6 I=5R | 22:30 G=130 I=24L",
+      "D10 09:30 G=155 | 10:00 M=waffle C=22 I=8R | 14:00 G=120 | 14:30 M=salad C=10 I=5R | 16:00 G=118 | 19:30 M=chicken C=8 I=6R | 22:15 G=125 I=24L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Morning Breakfast Spike",
+          "evidence": "D1 155; D3 162; D4 158; D5 165; D6 170; D7 158; D9 160; D10 155. Morning readings consistently elevated 155-170 mg/dL despite 4-9R boluses and 24L basal.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Afternoon Stable",
+          "evidence": "D1 15:00 G=115; D3 15:30 G=118; D5 15:00 G=115; D7 15:15 G=115; D9 15:30 G=115; D10 16:00 G=118. Afternoon readings stable at 115-120 mg/dL once morning hyperglycemia resolves.",
+          "confidence": 0.88,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (33M, 108kg) with combined morning hyperglycemia (155-170 mg/dL) and stable afternoon control (115-120 mg/dL). Messy logging with irregular meal timing and gaps. Obesity (BMI ~34) with 24L basal shows morning pattern suggesting inadequate overnight coverage and/or dawn phenomenon. Afternoons well-controlled indicate appropriate daytime ratios. Recommend: increase basal to 26-28L, consistent breakfast timing with 15-20 minute pre-bolus, and morning insulin-to-carb ratio intensification. Regular monitoring schedule would improve management precision."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "M",
+      "age": 49,
+      "weight_kg": 97,
+      "diabetes_type": "T2"
+    },
+    "daily_logs": [
+      "D1 08:00 G=130 | 08:15 M=toast C=15 | 12:30 G=108 | 12:40 M=sandwich C=18 | 19:00 G=125 | 19:15 M=chicken C=6 | 22:00 G=120",
+      "D2 08:10 G=135 | 08:20 M=cereal C=20 | 13:00 G=112 | 13:10 M=salad C=10 | 18:45 G=118 | --- GAP --- | 22:30 G=115",
+      "D3 07:50 G=128 | 08:00 M=oatmeal C=18 | 12:40 G=105 | 12:50 M=wrap C=15 | 19:30 G=130 | 19:40 M=steak C=6 | 22:15 G=125",
+      "D4 08:20 G=132 | 08:30 M=bagel C=22 | 13:15 G=118 | 13:25 M=soup C=8 | 19:10 G=122 | 19:20 M=pasta C=20 | 22:00 G=118",
+      "D5 08:05 G=125 | 08:15 M=eggs C=3 | 12:45 G=100 | 12:55 M=salad C=8 | 18:50 G=115 | 19:00 M=salmon C=4 | 22:10 G=110",
+      "D6 08:15 G=138 | 08:30 M=muffin C=18 | 13:05 G=115 | 13:15 M=sandwich C=20 | 19:25 G=128 | 19:35 M=chicken C=7 | 22:20 G=122",
+      "D7 07:45 G=122 | 08:00 M=pancake C=22 | 12:35 G=110 | 12:45 M=burger C=15 | 18:40 G=118 | 18:55 M=pork C=5 | 21:50 G=115",
+      "D8 08:10 G=132 | 08:20 M=cereal C=20 | 13:10 G=118 | --- GAP --- | 19:00 G=124 | 19:15 M=fish C=5 | 22:00 G=120",
+      "D9 08:00 G=128 | 08:15 M=toast C=15 | 12:50 G=108 | 13:00 M=wrap C=15 | 19:20 G=118 | 19:30 M=beef C=6 | 22:30 G=115",
+      "D10 08:25 G=135 | 08:35 M=waffle C=22 | 12:30 G=112 | 12:40 M=sandwich C=18 | 18:55 G=125 | 19:05 M=chicken C=7 | 22:15 G=122"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Morning Breakfast Spike",
+          "evidence": "D1 130; D2 135; D3 128; D4 132; D6 138; D8 132; D9 128; D10 135. Morning readings 122-138 mg/dL post-breakfast indicating mild postprandial hyperglycemia.",
+          "confidence": 0.95,
+          "trend": "stable"
+        }
+      ],
+      "message": "T2 patient (49M, 97kg) with mild morning postprandial hyperglycemia (122-138 mg/dL). Daytime and evening control is otherwise adequate (100-130). Pattern suggests morning carbohydrate intake exceeding early-day insulin sensitivity. Recommend: lower glycemic index breakfast options (steel-cut oats, whole grain toast with protein), inclusion of protein with breakfast, or 10-15 minute post-breakfast walk. Current overall control is reasonable; lifestyle modification may be sufficient. Consider metformin optimization if not already on maximal dose."
+    }
+  },
+  {
+    "basic_info": {
+      "sex": "F",
+      "age": 25,
+      "weight_kg": 80,
+      "diabetes_type": "T1"
+    },
+    "daily_logs": [
+      "D1 09:00 G=118 | 09:15 M=toast C=15 I=5R | 13:30 G=62 | 14:00 M=soup C=10 I=3R | 15:00 G=105 | 19:00 M=chicken C=6 I=5R | 22:00 G=118 I=18L",
+      "D2 08:30 G=112 | 09:00 M=cereal C=20 I=7R | 14:00 G=58 | 14:15 M=sandwich C=18 I=5R | --- GAP --- | 20:00 M=fish C=5 I=5R | 23:00 G=115 I=18L",
+      "D3 10:00 G=108 | 10:15 M=oatmeal C=15 I=6R | 13:00 G=55 | 13:15 M=salad C=8 I=3R | 15:30 G=102 | 18:30 M=steak C=6 I=5R | 22:15 G=120 I=18L",
+      "D4 08:00 G=120 | 08:15 M=bagel C=22 I=8R | 12:30 G=60 | --- GAP --- | 16:00 G=108 | 20:00 M=pasta C=20 I=9R | 22:30 G=125 I=18L",
+      "D5 09:15 G=105 | 09:30 M=eggs C=3 I=4R | 14:30 G=52 | 15:00 M=burger C=12 I=4R | 15:00 G=100 | 19:30 M=salmon C=4 I=4R | 22:00 G=108 I=18L",
+      "D6 07:45 G=122 | 08:00 M=muffin C=18 I=7R | 13:30 G=58 | 13:45 M=wrap C=15 I=5R | 16:30 G=108 | 18:00 M=chicken C=7 I=6R | 22:30 G=115 I=18L",
+      "D7 10:30 G=110 | --- GAP --- | 14:00 G=55 | 14:30 M=sandwich C=18 I=5R | 15:30 G=105 | 20:00 M=pork C=5 I=5R | 23:15 G=118 I=18L",
+      "D8 08:15 G=115 | 08:30 M=cereal C=20 I=7R | 13:00 G=60 | 13:15 M=salad C=10 I=3R | 16:00 G=108 | 19:00 M=fish C=5 I=5R | 21:50 G=112 I=18L",
+      "D9 09:30 G=112 | 09:45 M=toast C=15 I=5R | 14:15 G=58 | 14:30 M=salad C=10 I=3R | 15:30 G=105 | 18:30 M=beef C=6 I=5R | 22:30 G=118 I=18L",
+      "D10 08:45 G=125 | 09:00 M=waffle C=22 I=8R | 13:30 G=62 | 13:45 M=wrap C=15 I=5R | 16:00 G=110 | 19:30 M=chicken C=8 I=6R | 22:00 G=122 I=18L"
+    ],
+    "analysis": {
+      "feature": "PATTERNS",
+      "patterns": [
+        {
+          "name": "Post-Lunch Hypoglycemia",
+          "evidence": "D1 13:30 G=62; D2 14:00 G=58; D3 13:00 G=55; D4 12:30 G=60; D5 14:30 G=52; D6 13:30 G=58; D7 14:00 G=55; D8 13:00 G=60; D9 14:15 G=58; D10 13:30 G=62. Consistent hypoglycemia 52-62 mg/dL in post-lunch window with 3-5R insulin for 8-18g carbs.",
+          "confidence": 0.95,
+          "trend": "stable"
+        },
+        {
+          "name": "Afternoon Stable",
+          "evidence": "D1 15:00 G=105; D3 15:30 G=102; D4 16:00 G=108; D5 15:00 G=100; D6 16:30 G=108; D7 15:30 G=105; D8 16:00 G=108; D9 15:30 G=105; D10 16:00 G=110. Afternoon recovery to stable 100-110 mg/dL after hypoglycemic episodes.",
+          "confidence": 0.88,
+          "trend": "stable"
+        }
+      ],
+      "message": "T1 patient (25F, 80kg) with dual pattern: post-lunch hypoglycemia (52-62 mg/dL) followed by stable afternoon recovery (100-110 mg/dL). Messy logging with irregular meal timing (breakfast 07:45-10:30) creates insulin stacking where morning rapid-acting overlaps with lunch bolus. Lunch insulin-to-carb ratio appears too aggressive (3-5R for 8-18g carbs). Recommend: structured meal schedule (breakfast by 08:30, lunch 12:30-13:00), reduce lunch insulin to 1-2R, add mid-morning snack if breakfast is delayed, and consider basal reduction to 16L given recurrent hypoglycemia."
+    }
+  }
+]
